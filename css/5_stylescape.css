@@ -31,16 +31,40 @@
  */
 
 :root {
-	--light: #FFFFFF;
-	--neutral-1: #F2F3EB;
-	--neutral-2: #E3E2D8;
-	--neutral-3: #CCCCCC;
-	--neutral-4: #7C7577;
-	--dark: #231F20;
+	/* -- BFS Colors --  */
+	/*--light: #FFFFFF;*/
+	/*--neutral-1: #F2F3EB;*/
+	/*--neutral-2: #E3E2D8;*/
+	/*--neutral-3: #CCCCCC;*/
+	/*--neutral-4: #7C7577;*/
+	/*--dark: #231F20;*/
 	--black: #000000;
 	--teal: #18BA89;
 	--orange: #FF9439;
 	--pink: #FE4365;
+
+	/* -- WhiteGold Colors --  */
+	--light: #FFFFFF;
+	--neutral-1: #E9E9E7;
+	--neutral-2: #C6C6C7;
+	--neutral-3: #96979B;
+	--neutral-4: #4E5055;
+	--dark: #212322;
+	--black: #######;
+	--yellow-1: #FEE985;
+	--yellow-2: #FFC980;
+	--red-1: #FFB7AE;
+	--red-2: #FF6D6A;
+	--red-3: #ED4C3C;
+	--red-4: #AF231C;
+	--green-1: #35EB96;
+	--green-2: #5FE0B7;
+	--green-3: #31BF7D;
+	--blue-1: #537EFF;
+	--blue-2: #0A4FFD;
+	--blue-3: #0032A0;
+	--blue-4: #171C8F;
+	--blue-5: #211747;
 
 	--container-width: 300px;
 	--space-min : 10px;
