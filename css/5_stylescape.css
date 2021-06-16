@@ -69,7 +69,8 @@
 	--container-width: 300px;
 	--card: var(--container-width);
 	
-	--font-scale: 1.2;
+	/*--font-scale: 1.2;*/
+	--font-scale: 1.185;
 	--h1-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
 	--h2-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
 	--h3-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
@@ -145,7 +146,7 @@
 body, .body {
 	position: relative;
 	color: var(--dark);
-	font-family: 'Poppins', Arial, sans-serif;
+	font-family: 'aktiv-grotesk', Arial, sans-serif;
 	font-weight: 400;
 	font-size: 1.4rem;
 	line-height: 1.375;
@@ -174,7 +175,7 @@ p, small, label {
  */
 
 .h1, .h2, .h3, .h4 {
-	font-family: 'Poppins', 'Arial Black', Arial, sans-serif;
+	font-family: 'aktiv-grotesk', 'Arial Black', Arial, sans-serif;
 	line-height: 1.125;
 }
 
@@ -243,8 +244,9 @@ a {
 a * { pointer-events: none; }
 
 strong, .strong { font-weight: 700; }
+.medium { font-weight: 500; }
 em, .em { font-style: italic; }
-.cursive { font-family: 'Comic Neue', cursive; font-weight: 700; }
+/*.cursive { font-family: 'Comic Neue', cursive; font-weight: 700; }*/
 
 hr {
 	border-color: var(--dark);
@@ -271,46 +273,67 @@ hr {
  */
 
 .fill-light {
+	color: var(--dark);
 	background-color: var(--light); }
 .fill-neutral-1 {
+	color: var(--dark);
 	background-color: var(--neutral-1); }
 .fill-neutral-2 {
+	color: var(--light);
 	background-color: var(--neutral-2); }
 .fill-neutral-3 {
+	color: var(--light);
 	background-color: var(--neutral-3); }
 .fill-neutral-4 {
+	color: var(--light);
 	background-color: var(--neutral-4); }
 .fill-dark {
+	color: var(--light);
 	background-color: var(--dark); }
 .fill-black {
+	color: var(--light);
 	background-color: var(--black); }
 .fill-yellow-1 {
+	color: var(--light);
 	background-color: var(--yellow-1); }
 .fill-yellow-2 {
+	color: var(--light);
 	background-color: var(--yellow-2); }
 .fill-red-1 {
+	color: var(--light);
 	background-color: var(--red-1); }
 .fill-red-2 {
+	color: var(--light);
 	background-color: var(--red-2); }
 .fill-red-3 {
+	color: var(--light);
 	background-color: var(--red-3); }
 .fill-red-4 {
+	color: var(--light);
 	background-color: var(--red-4); }
 .fill-green-1 {
+	color: var(--light);
 	background-color: var(--green-1); }
 .fill-green-2 {
+	color: var(--light);
 	background-color: var(--green-2); }
 .fill-green-3 {
+	color: var(--light);
 	background-color: var(--green-3); }
 .fill-blue-1 {
+	color: var(--light);
 	background-color: var(--blue-1); }
 .fill-blue-2 {
+	color: var(--light);
 	background-color: var(--blue-2); }
 .fill-blue-3 {
+	color: var(--light);
 	background-color: var(--blue-3); }
 .fill-blue-4 {
+	color: var(--light);
 	background-color: var(--blue-4); }
 .fill-blue-5 {
+	color: var(--light);
 	background-color: var(--blue-5); }
 
 

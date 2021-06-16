@@ -1,0 +1,108 @@
+/*
+ * Sample Section
+ */
+
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
+
+
+
+
+
+/*
+ * Sell Gold Section
+ */
+
+.sell-gold-section {}
+.sell-gold-section .step-cards {}
+.sell-gold-section .step-cards .step-card-grid {
+	display: inline-grid;
+	grid-template-columns: 1fr;
+	grid-gap: var(--space-50);
+}
+.sell-gold-section .step-cards .step-break {
+	grid-column: span 1;
+}
+.sell-gold-section .step-cards .card {
+	padding: var(--space-75);
+	border-radius: var(--space-75);
+	/*margin-bottom: var(--space-75);*/
+}
+.sell-gold-section .step-cards .card .card-head {
+	display: block;
+	cursor: pointer;
+}
+.sell-gold-section .step-cards .card .card-head * {
+	pointer-events: none;
+}
+.sell-gold-section .step-cards .card .index {
+	display: inline-block;
+	text-align: center;
+	width: var(--space-100);
+	height: var(--space-100);
+	line-height: var(--space-100);
+	border-radius:  var(--space-25);
+	box-shadow: inset 0 0 0 calc(var(--space-25)/3) var(--yellow-2);
+}
+.sell-gold-section .step-cards .card .title {
+	line-height: 1;
+}
+.sell-gold-section .step-cards .card .toggle .arrow {
+	display: block;
+	width: var(--space-100);
+	height: var(--space-100);
+	/*background-color: purple;*/
+	position: relative;
+}
+.sell-gold-section .step-cards .card .toggle .arrow .a1,
+.sell-gold-section .step-cards .card .toggle .arrow .a2 {
+	position: absolute;
+	display: block;
+	width: 65%;
+	height: calc(var(--space-25)/4);
+	background-color: var(--yellow-2);
+	/*box-shadow: 0 0 0 calc(var(--space-25)/8) var(--yellow-2);*/
+	border-radius: calc(var(--space-25)/3.5);
+	border: solid calc(var(--space-25)/3.5) var(--yellow-2);
+	top: 50%;
+	transition: .3s ease-out;
+}
+.sell-gold-section .step-cards .card .toggle .arrow .a1 {
+	right: 46%;
+	transform-origin: right center;
+	transform: translateY(-50%) rotate(30deg);
+}
+.sell-gold-section .step-cards .card .toggle .arrow .a2 {
+	left: 46%;
+	transform-origin: left center;
+	transform: translateY(-50%) rotate(-30deg);
+}
+/*.sell-gold-section .step-cards .card .toggle > input:checked + .arrow {
+	background-color: green;
+}*/
+.sell-gold-section .step-cards .card .toggle > input:checked + .arrow .a1 {
+	transform: translateY(-50%) rotate(-30deg);
+}
+.sell-gold-section .step-cards .card .toggle > input:checked + .arrow .a2 {
+	transform: translateY(-50%) rotate(30deg);
+}
+
+@media( min-width: 640px )  {
+	.sell-gold-section .step-cards .step-card-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.sell-gold-section .step-cards .step-break {
+		grid-column: span 2;
+	}
+}
+@media( min-width: 1040px ) {
+	.sell-gold-section .step-cards .step-card-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.sell-gold-section .step-cards .step-break {
+		grid-column: span 3;
+	}
+}
+@media( min-width: 1480px ) {}

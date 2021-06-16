@@ -52,6 +52,6 @@ http_response_code( Router::$httpResponseCode );
 
 <div id="page-wrapper"><!-- Page Wrapper -->
 
-	<?php require_once __ROOT__ . '/inc/navigation.php'; ?>
+	<?php // require_once __ROOT__ . '/inc/navigation.php'; ?>
 
 	<div id="page-content"><!-- Page Content -->
