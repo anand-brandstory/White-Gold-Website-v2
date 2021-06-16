@@ -76,7 +76,11 @@ require_once __ROOT__ . '/inc/header.php';
 <section class="sell-gold-section">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-12">
+			<div class="intro columns small-12">
+				<div class="h1 strong text-yellow-2">Sell your Gold</div>
+				<div class="h1 strong text-blue-2">Seven easy steps</div>
+			</div>
+			<div class="sell-gold-cards columns small-12">
 				<!-- insert text -->
 			</div>
 		</div>
@@ -154,6 +158,7 @@ require_once __ROOT__ . '/inc/header.php';
 	</div>
 </section>
 <!-- END: Release Gold FAQs Section -->
+
 
 <!-- ## Find Branch Page -->
 <!-- Find Branch Section -->

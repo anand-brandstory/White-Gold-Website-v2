@@ -54,6 +54,18 @@
 .small-offset-10 { margin-left: 83.33333%; }
 .small-offset-11 { margin-left: 91.66667%; }
 
+@media ( min-width: 360px ) {
+	.container {
+		max-width: 340px;
+	}
+}
+
+@media ( min-width: 400px ) {
+	.container {
+		max-width: 380px;
+	}
+}
+
 @media ( min-width: 640px ) {
 	.container {
 		max-width: 600px;
@@ -158,17 +170,6 @@
 .row:after {
 	content: "";
 	display: table; clear: both; }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
