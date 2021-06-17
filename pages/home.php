@@ -89,10 +89,10 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="p strong columns small-6 text-right">&middot;&ensp;&middot;&ensp;&middot;</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">1</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">1</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Find a Branch</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -101,16 +101,19 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							49 Branches
-							across Karnataka
-
-							Find Branch
+							<div class="row">
+								<div class="columns small-9 small-offset-1 space-50-left-right">
+									<div class="h5 medium space-150-top">49 Branches</div>
+									<div class="h6 medium space-150-bottom">Across Karnataka</div>
+									<a href="" class="button">Find Branch</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">2</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">2</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Bring Original Bill</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -119,14 +122,18 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							Earn a bonus if you have the original bill.
-							Make your White Gold experience trouble free and get a better rate. Carry the original purchase bill.
+							<div class="row">
+								<div class="columns small-9 small-offset-1 space-50-left-right">
+									<div class="h5 medium space-150-top">Earn a bonus if you have the original bill.</div>
+									<div class="p space-150-top">Make your White Gold experience trouble free and get a better rate. Carry the original purchase bill.</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">3</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">3</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Carry ID proof</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -135,13 +142,28 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							AADHAAR Card
-							or
-							Photo ID Proof
-							Address Proof
-							
-							Photo ID and Address proof is required.
-							Carry your Aadhar card for easy KYC check.
+							<div class="row space-150-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">AADHAAR Card</div></div>
+							</div>
+							<div class="row space-50-top-bottom">
+								<div class="inline-middle columns small-1 text-center"><div class="small medium text-uppercase">or</div></div>
+								<div class="inline-middle columns small-8 space-50-left space-100-right"><hr class="fill-light"></div>
+							</div>
+							<div class="row">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
+							</div>
+							<div class="row space-25-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Address Proof</div></div>
+							</div>
+							<div class="row">
+								<div class="columns small-8 small-offset-1 space-50-left-right">
+									<div class="p space-150-top">Photo ID and Address proof is required.</div>
+									<div class="p space-150-top">Carry your Aadhar card for easy KYC check.</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -150,10 +172,10 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="p strong columns small-6 text-right">&middot;&ensp;&middot;&ensp;&middot;</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">4</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">4</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Check Gold Purity</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -162,18 +184,37 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							Tamper Proof
-							German Machines
-							Instant Valuation
-							
-							How is gold purity checked?
-							02:30
+							<div class="row space-150-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Tamper Proof</div></div>
+							</div>
+							<div class="row space-25-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-10 space-50-left-right"><div class="h5 medium">German Machines</div></div>
+							</div>
+							<div class="row space-25-top space-150-bottom">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Instant Valuation</div></div>
+							</div>
+							<div class="row">
+								<div class="columns small-12">
+									<a href="" class="watch-video block row fill-blue-1" tabindex="-1">
+										<div class="columns small-6">
+											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+										</div>
+										<div class="columns small-6 space-50-left space-25-right">
+											<div class="title h6 medium space-25-top-bottom">How is gold purity checked?</div>
+											<div class="timestamp small">02:30</div>
+										</div>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="card fill-dark text-yellow-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">5</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">5</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Check Gold Rate</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -182,18 +223,31 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							Check Live gold rate now
-
-							Based on the gold purity check we will give you a quotation. Our rate is transparent. 
-							
-							Why is the gold rate lower than I expected?
-							02:30
+							<div class="row space-150-top">
+								<div class="columns small-10 small-offset-1 space-50-left-right">
+									<a href class="button fill-yellow-2">Check Live gold rate now</a>
+									<div class="h5 medium space-150-top-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="columns small-12">
+									<a href="" class="watch-video block row fill-neutral-4" tabindex="-1">
+										<div class="columns small-6">
+											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+										</div>
+										<div class="columns small-6 space-50-left space-25-right">
+											<div class="title h6 medium space-25-top-bottom">Why is the gold rate lower than I expected?</div>
+											<div class="timestamp small">02:30</div>
+										</div>
+									</a>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">6</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">6</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">KYC Verification</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -202,19 +256,30 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							Photo ID Proof
-
-							Address Proof
-							We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhar Card has both. 
-
-							Verification Phone Call
-							As a fraud and safety feature, a verification phone call to your family is required.						
+							<div class="row space-150-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
+							</div>
+							<div class="row space-50-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right">
+									<div class="h5 medium">Address Proof</div>
+									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhar Card has both.</div>
+								</div>
+							</div>
+							<div class="row space-50-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-2">&check;</span></div>
+								<div class="columns small-8 space-50-left-right">
+									<div class="h5 medium">Verification Phone Call</div>
+									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
+								</div>
+							</div>
 						</div>
 					</div>
-					<div class="card fill-blue-1">
+					<div class="card fill-blue-2">
 						<div class="row">
-							<label class="card-head">
-								<div class="columns small-1"><span class="index h5 medium text-yellow-2">7</span></div>
+							<label class="card-head" tabindex="-1">
+								<div class="columns small-1"><span class="index h6 medium text-yellow-2">7</span></div>
 								<div class="title h3 medium columns small-10 space-50-left-right">Instant Bank Transfer</div>
 								<div class="toggle columns small-1">
 									<input class="visuallyhidden" type="checkbox">
@@ -223,9 +288,15 @@ require_once __ROOT__ . '/inc/header.php';
 							</label>
 						</div>
 						<div class="card-content">
-							For your security, we transfer the money to your bank account. You can confirm the money transfer before leaving our branch.
-
-							Your money is transferred instantly to your bank account.
+							<div class="row space-150-top">
+								<div class="columns small-9 small-offset-1 space-50-left-right">
+									<div class="p">For your security, we transfer the money to your bank account. You can confirm the money transfer before leaving our branch.</div>
+								</div>
+							</div>
+							<div class="row space-150-top">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-yellow-2 text-blue-2">&check;</span></div>
+								<div class="columns small-10 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
+							</div>
 						</div>
 					</div>
 				</div>
