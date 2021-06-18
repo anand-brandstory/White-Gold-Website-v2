@@ -177,7 +177,7 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <!-- Fonts -->
 <link rel="stylesheet" href="https://use.typekit.net/blr6yui.css">
 <!-- Icons -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 ARB
 ?>
 
