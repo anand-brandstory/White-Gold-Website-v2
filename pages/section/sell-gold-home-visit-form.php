@@ -5,8 +5,8 @@
 				<div class="h2 line-height-small">Sell your gold <span class="strong">from home</span></div>
 			</div><br>
 			<div class="columns small-6 space-100-bottom">
-				<div class="p strong inline fill-blue-2 space-50 opacity-75" style="border-radius: var(--space-25); margin-bottom: var(--space-50);">Minimum quantity <br><span class="no-wrap">25 grams</span></div>
-				<div class="p strong inline fill-blue-2 space-50 opacity-75" style="border-radius: var(--space-25);">Only 916 Hallmark <br>Jewellery</div>
+				<div class="p strong inline fill-blue-2 space-50 opacity-75 radius-25" style="margin: 0 var(--space-50) var(--space-50) 0;">Minimum quantity <br><span class="no-wrap">25 grams</span></div>
+				<div class="p strong inline fill-blue-2 space-50 opacity-75 radius-25">Only 916 Hallmark <br>Jewellery</div>
 			</div>
 			<div class="columns small-9">
 				<div class="form-card form-dark row fill-blue-2">
