@@ -1,4 +1,4 @@
-<section class="release-gold-section fill-neutral-1 space-100-top-bottom">
+<section class="release-gold-section fill-neutral-1 space-200-top-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12">
@@ -75,7 +75,7 @@
 							</div>
 							<div class="row space-50-top-bottom">
 								<div class="inline-middle columns small-1 text-center"><div class="small medium text-uppercase">or</div></div>
-								<div class="inline-middle columns small-8 space-50-left space-100-right"><hr class="fill-light"></div>
+								<div class="inline-middle columns small-8 space-50-left space-100-right"><hr class="fill-dark"></div>
 							</div>
 							<div class="row">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-2 text-light">&check;</span></div>

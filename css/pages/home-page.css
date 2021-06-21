@@ -27,7 +27,6 @@
 .step-cards .card {
 	padding: var(--space-75);
 	border-radius: var(--space-75);
-	/*margin-bottom: var(--space-75);*/
 	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
 }
 .step-cards .card .card-head {
@@ -129,3 +128,150 @@
 	}
 }
 @media( min-width: 1480px ) {}
+
+
+
+
+
+/*
+ *
+ *	Watch Video
+ *
+ */
+
+.watch-video {
+	position: relative;
+	padding: var(--space-25);
+	border-radius: var(--space-50);
+	cursor: pointer;
+}
+.watch-video * { pointer-events: none; }
+.watch-video .thumbnail{
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	padding-bottom: 75%;
+	border-radius: var(--space-25);
+	overflow: hidden;
+	background-color: var(--neutral-3);
+}
+.watch-video .thumbnail:after {
+	position: absolute;
+	z-index: 2;
+	content: '\25B6';
+	display: block;
+	left: 50%;
+	top: 50%;
+	width: var(--space-100);
+	height: var(--space-100);
+	overflow: hidden;
+	color: var(--blue-3);
+	font-size: var(--p);
+	text-align: center;
+	line-height: var(--space-100);
+	border-radius: var(--space-25);
+	background-color: var(--light);
+	transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+/*
+ *
+ *	Form Card
+ *
+ */
+
+.form-card {
+	position: relative;
+	padding: var(--space-50);
+	border-radius: var(--space-50);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+}
+
+.form-card .form-label {
+	position: relative;
+}
+
+.form-card .form-label .form-input-field {
+	color: var(--neutral-3);
+}
+
+.form-card .form-label .form-label-title {
+	display: inline-block;
+	font-size: var(--p);
+	transition: .3s ease-out;
+	position: absolute;
+	z-index: 5;
+	top: 0%;
+	left: var(--space-25);
+	padding: 0 var(--space-25);
+	font-size: var(--small);
+	color: var(--neutral-3);
+	transform: translateY(-50%);
+}
+
+.form-card .form-label > .form-input-field::placeholder {
+	opacity: 1;
+	color: var(--neutral-3);
+}
+
+.form-card .form-label > .form-input-field.placeholder-shown + .form-label-title,
+.form-card .form-label > .form-input-field:placeholder-shown + .form-label-title {
+	opacity: 0; }
+.form-card .form-label .form-label-title { opacity: 1; }
+
+.form-card .form-label:focus-within > .form-input-field,
+.form-card .form-label:focus-within > .form-label-title {
+	color: var(--blue-2);
+}
+
+/* -- Dark Mode --  */
+.form-card.form-dark .form-label .form-input-field {
+	color: var(--light);
+}
+
+.form-card.form-dark .form-label .form-label-title {
+	color: var(--light);
+}
+
+.form-card.form-dark .form-label > .form-input-field::placeholder {
+	color: var(--light);
+}
+
+.form-card.form-dark .form-label:focus-within > .form-input-field,
+.form-card.form-dark .form-label:focus-within > .form-label-title {
+	color: var(--yellow-2);
+}
+
+/* -- Phone Verify --  */
+.form-card .phone-verify {
+	position: relative;
+}
+.form-card .phone-verify .phone-number {
+	position: relative;
+	z-index: 1;
+	padding-left: calc((var(--space-100)*2) + var(--space-25));
+}
+.form-card .phone-verify .country-code,
+.form-card .phone-verify .country-code-label {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(var(--space-100)*2);
+}
+.form-card .phone-verify .country-code {
+	z-index: 3;
+	opacity: 0;
+}
+.form-card .phone-verify .country-code-label {
+	z-index: 2;
+	border: 0;
+	padding: 0;
+    text-align: center;
+}
+

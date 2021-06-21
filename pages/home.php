@@ -60,16 +60,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <!-- Sell Gold Form Section -->
-<section class="sell-gold-form-section space-100-top-bottom">
-	<div class="container">
-		<div class="row">
-			<div class="columns small-12">
-				<!-- insert text -->
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus minima itaque quam omnis possimus assumenda, a. Id temporibus esse, impedit, perspiciatis optio consectetur ullam veritatis, laudantium quo sequi assumenda, saepe.
-			</div>
-		</div>
-	</div>
-</section>
+<?php require_once __ROOT__ . '/pages/section/sell-gold-form.php'; ?>
 <!-- END: Sell Gold Form Section -->
 
 
@@ -79,15 +70,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <!-- Sell Gold Home Visit Form Section -->
-<section class="sell-gold-home-visit-form-section">
-	<div class="container">
-		<div class="row">
-			<div class="columns small-12">
-				<!-- insert text -->
-			</div>
-		</div>
-	</div>
-</section>
+<?php require_once __ROOT__ . '/pages/section/sell-gold-home-visit-form.php'; ?>
 <!-- END: Sell Gold Home Visit Form Section -->
 
 

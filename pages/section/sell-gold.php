@@ -1,4 +1,4 @@
-<section class="sell-gold-section fill-blue-3 space-100-top-bottom">
+<section class="sell-gold-section fill-blue-3 space-200-top-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12">
