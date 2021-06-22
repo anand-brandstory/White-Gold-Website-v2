@@ -227,6 +227,8 @@ add_filter( 'robots_txt', function ( $output, $isSitePublic ) {
 	if ( BFS_PRIVATE_SITE or ! $isSitePublic ) {
 		$output = 'User-agent: *'
 				. "\n"
+				. 'User-agent: AdsBot-Google'
+				. "\n"
 				. 'Disallow: /'
 				. "\n"
 				. 'Disallow: /*'
