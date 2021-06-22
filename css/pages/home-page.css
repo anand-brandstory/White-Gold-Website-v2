@@ -21,13 +21,11 @@
 	grid-template-columns: 1fr;
 	grid-gap: var(--space-50);
 }
-.step-cards .step-break {
-	grid-column: span 1;
-}
 .step-cards .card {
 	padding: var(--space-50);
 	border-radius: var(--space-50);
 	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
 }
 .step-cards .card .card-head {
 	display: block;
@@ -57,10 +55,15 @@
 .step-cards .card .card-head > .title {
 	line-height: 1;
 }
+.step-cards .card .toggle {
+	padding-top: var(--space-25);
+	padding-right: var(--space-25);
+	text-align: right;
+}
 .step-cards .card .toggle .arrow {
-	display: block;
-	width: var(--space-100);
-	height: var(--space-100);
+	display: inline-block;
+	width: var(--space-50);
+	height: var(--space-50);
 	position: relative;
 	transform: scale(0.75);
 }
@@ -68,11 +71,10 @@
 .step-cards .card .toggle .arrow .a2 {
 	position: absolute;
 	display: block;
-	width: 65%;
+	width: 100%;
 	height: calc(var(--space-25)/4);
 	background-color: var(--yellow-2);
-	border-radius: calc(var(--space-25)/4);
-	border: solid calc(var(--space-25)/4) var(--yellow-2);
+	box-shadow: 0 0 0 1px var(--yellow-2);
 	top: 50%;
 	transition: .3s ease-out;
 }
@@ -81,25 +83,36 @@
 .release-gold-section .step-cards .card .toggle .arrow .a1,
 .release-gold-section .step-cards .card .toggle .arrow .a2 {
 	background-color: var(--blue-3);
-	border: solid calc(var(--space-25)/4) var(--blue-3);
+	box-shadow: 0 0 0 1px var(--blue-3);
 }
 /* -- END:  exception -- */
 
 .step-cards .card .toggle .arrow .a1 {
-	right: 47%;
+	right: 50%;
 	transform-origin: right center;
 	transform: translateY(-50%) rotate(35deg);
 }
 .step-cards .card .toggle .arrow .a2 {
-	left: 47%;
+	left: 50%;
 	transform-origin: left center;
 	transform: translateY(-50%) rotate(-35deg);
 }
-.step-cards .card .toggle > input:checked + .arrow .a1 {
+.step-cards .card > input:checked + .card-head .toggle .arrow .a1 {
 	transform: translateY(-50%) rotate(-35deg);
 }
-.step-cards .card .toggle > input:checked + .arrow .a2 {
+.step-cards .card > input:checked + .card-head .toggle .arrow .a2 {
 	transform: translateY(-50%) rotate(35deg);
+}
+
+.step-cards .card .card-content {
+	max-height: 0;
+	opacity: 0;
+	transition: .6s ease-in-out;
+}
+
+.step-cards .card > input:checked + .card-head + .card-content {
+	max-height: 1000px;
+	opacity: 1;
 }
 .step-cards .card .card-content .checkmark {
 	display: inline-block;
@@ -113,20 +126,8 @@
 }
 
 @media( min-width: 640px )  {
-	.step-cards .step-card-grid {
-		grid-template-columns: 1fr 1fr;
-	}
-	.step-cards .step-break {
-		grid-column: span 2;
-	}
 }
 @media( min-width: 1040px ) {
-	.step-cards .step-card-grid {
-		grid-template-columns: 1fr 1fr 1fr;
-	}
-	.step-cards .step-break {
-		grid-column: span 3;
-	}
 }
 @media( min-width: 1480px ) {}
 
@@ -351,8 +352,6 @@
 	width: 100%;
 	height: calc(var(--space-25)/4);
 	background-color: var(--light);
-	/*border-radius: calc(var(--space-25)/4);*/
-	/*border: solid calc(var(--space-25)/4) var(--light);*/
 	box-shadow: 0 0 0 1px var(--light);
 	top: 50%;
 	transition: .3s ease-out;
@@ -378,13 +377,32 @@
 .articles-faqs .faq .answer {
 	max-height: 0px;
 	margin-bottom: 0;
+	opacity: 0;
 	transition: .6s ease-in-out;
 
 }
 .articles-faqs .faq > input:checked + .question + .answer {
 	max-height: 500px;
-	margin-bottom: var(--space-50);
+	margin-bottom: var(--space-75);
+	opacity: 1;
 }
+
+/* -- exception -- */
+.release-gold-faqs-section .articles-faqs .faq {
+	border-bottom: solid 1px var(--neutral-3);
+}
+
+.release-gold-faqs-section .articles-faqs .faq:last-child {
+	border-bottom: 0;
+}
+
+.release-gold-faqs-section .articles-faqs .faq .question .toggle .arrow .a1,
+.release-gold-faqs-section .articles-faqs .faq .question .toggle .arrow .a2 {
+	background-color: var(--neutral-4);
+	box-shadow: 0 0 0 1px var(--neutral-4);
+}
+
+/* -- END:  exception -- */
 
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {}
