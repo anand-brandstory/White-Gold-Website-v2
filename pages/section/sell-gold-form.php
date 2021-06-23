@@ -1,13 +1,16 @@
 <section class="sell-gold-form-section space-200-top-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-6 space-50-left space-100-bottom">
-				<div class="logo">WhiteGold</div>
+			<div class="columns small-6 medium-5 large-3 space-100-bottom">
+				<div class="logo space-75-bottom">
+					<img class="block" src="../media/whitegold-logo-dark.svg<?php echo $ver ?>">
+				</div>
 				<div class="h2 line-height-small">Turn your <span class="strong">gold into money</span></div>
 			</div>
-			<div class="columns small-9">
+			<br class="hide-large hide-xlarge">
+			<div class="columns small-9 medium-5 large-3 large-offset-1">
 				<div class="form-card row fill-light">
-					<div class="columns small-12 space-50-top">
+					<div class="columns small-12">
 						<label class="form-label block">
 							<input type="text" placeholder="Full Name" class="form-input-field block">
 							<span class="form-label-title medium fill-light cursor-pointer">Full Name</span>

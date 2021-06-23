@@ -2,8 +2,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
-				<div class="h1 strong text-blue-2">Release your Gold</div>
-				<div class="h1 strong text-neutral-3">Eight easy steps</div>
+				<div class="h2 strong text-blue-2">Release your Gold</div>
+				<div class="h2 strong text-neutral-3">Eight easy steps</div>
 			</div>
 			<div class="step-cards columns small-12 large-8">
 				<div class="step-card-grid row">
@@ -15,10 +15,10 @@
 					</div>
 					<!-- CARD: 1 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs1" type="radio" name="sell-gold-step" class="visuallyhidden" checked="">
+						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden" checked="">
 						<label for="rgs1" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">1</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Find a Branch</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Find a Branch</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -36,10 +36,10 @@
 					</div>
 					<!-- CARD: 2 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs2" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">2</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Bring Pledge Receipt</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Bring Pledge Receipt</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -56,10 +56,10 @@
 					</div>
 					<!-- CARD: 3 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs3" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs3" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">3</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Carry ID proof</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Carry ID proof</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -98,10 +98,10 @@
 					</div>
 					<!-- CARD: 4 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs4" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs4" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs4" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">4</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">KYC Verification</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -130,10 +130,10 @@
 					</div>
 					<!-- CARD: 5 -->
 					<div class="card columns small-12 fill-yellow-2">
-						<input id="rgs5" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs5" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">5</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Rate</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -169,10 +169,10 @@
 					</div>
 					<!-- CARD: 6 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs6" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs6" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs6" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">6</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Release your Gold</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Release your Gold</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -219,10 +219,10 @@
 					</div>
 					<!-- CARD: 7 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs7" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs7" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs7" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">7</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Purity</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -258,10 +258,10 @@
 					</div>
 					<!-- CARD: 8 -->
 					<div class="card columns small-12 fill-light">
-						<input id="rgs8" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="rgs8" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs8" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">8</span></div>
-							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Instant Bank Transfer</div>
+							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Instant Bank Transfer</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>

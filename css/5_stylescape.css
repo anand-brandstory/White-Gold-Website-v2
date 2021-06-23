@@ -72,8 +72,8 @@
 	--container-width: 300px;
 	--card: var(--container-width);
 	
-	/*--font-scale: 1.2;*/
-	--font-scale: 1.185;
+	--font-scale: 1.2;
+	/*--font-scale: 1.185;*/
 	--h1-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
 	--h2-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));
 	--h3-scale: calc(var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale) * var(--font-scale));

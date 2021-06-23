@@ -1,16 +1,18 @@
 <section class="sell-gold-home-visit-form-section space-200-bottom fill-blue-3">
 	<div class="container">
 		<div class="row">
-			<div class="columns small-6 space-50-left space-100-bottom">
-				<div class="h2 line-height-small">Sell your gold <span class="strong">from home</span></div>
-			</div><br>
-			<div class="columns small-6 space-100-bottom">
+			<div class="columns small-12 large-4 space-100-bottom">
+				<div class="h2 strong text-yellow-2">Sell your Gold</div>
+				<div class="h2 strong text-blue-1">from home</div>
+			</div>
+			<br class="hide-large hide-xlarge">
+			<div class="columns small-6 medium-3 large-2 space-100-bottom">
 				<div class="p strong inline fill-blue-2 space-50 opacity-75 radius-25" style="margin: 0 var(--space-50) var(--space-50) 0;">Minimum quantity <br><span class="no-wrap">25 grams</span></div>
 				<div class="p strong inline fill-blue-2 space-50 opacity-75 radius-25">Only 916 Hallmark <br>Jewellery</div>
 			</div>
-			<div class="columns small-9">
+			<div class="columns small-9 medium-5 large-3">
 				<div class="form-card form-dark row fill-blue-2">
-					<div class="columns small-12 space-50-top">
+					<div class="columns small-12">
 						<label class="form-label block">
 							<input type="text" placeholder="Pincode" class="form-input-field block">
 							<span class="form-label-title medium fill-blue-2 cursor-pointer">Pincode</span>

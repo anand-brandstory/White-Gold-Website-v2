@@ -52,9 +52,7 @@
 }
 /* -- END:  exception -- */
 
-.step-cards .card .card-head > .title {
-	line-height: 1;
-}
+.step-cards .card .card-head > .title {}
 .step-cards .card .toggle {
 	padding-top: var(--space-25);
 	padding-right: var(--space-25);
@@ -107,7 +105,7 @@
 .step-cards .card .card-content {
 	max-height: 0;
 	opacity: 0;
-	transition: .6s ease-in-out;
+	transition: .5s ease-in-out;
 }
 
 .step-cards .card > input:checked + .card-head + .card-content {
@@ -378,7 +376,7 @@
 	max-height: 0px;
 	margin-bottom: 0;
 	opacity: 0;
-	transition: .6s ease-in-out;
+	transition: .5s ease-in-out;
 
 }
 .articles-faqs .faq > input:checked + .question + .answer {
@@ -417,6 +415,9 @@
  */
 
 .header-section { position: relative; }
+.header-section .logo {
+	width: calc(var(--card)/2.5);
+}
 .header-section .select-region { position: relative; }
 .header-section .select-region .select-region-option {
 	cursor: pointer;
@@ -471,3 +472,48 @@
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}
 
+
+
+
+
+/*
+ * Sell Gold Form Sections
+ */
+
+.sell-gold-form-section {}
+
+.sell-gold-form-section .logo {
+	width: calc(var(--card)/2.5);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
+
+
+
+
+
+/*
+ * Report Malpractice Sections
+ */
+
+.report-malpractice-section {}
+
+.report-malpractice-section .report-malpractice-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: var(--space-50);
+}
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {
+	.report-malpractice-section .report-malpractice-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+	.report-malpractice-section .report-malpractice-grid .complaint {
+		grid-column: span 2;
+	}
+
+}
+@media( min-width: 1480px ) {}
