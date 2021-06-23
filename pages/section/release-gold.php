@@ -16,7 +16,7 @@
 					<!-- CARD: 1 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs1" type="radio" name="sell-gold-step" class="visuallyhidden" checked="">
-						<label for="rgs1" class="card-head row block" tabindex="-1">
+						<label for="rgs1" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">1</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Find a Branch</div>
 							<div class="toggle columns small-1">
@@ -37,7 +37,7 @@
 					<!-- CARD: 2 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs2" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs2" class="card-head row block" tabindex="-1">
+						<label for="rgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">2</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Bring Pledge Receipt</div>
 							<div class="toggle columns small-1">
@@ -57,7 +57,7 @@
 					<!-- CARD: 3 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs3" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs3" class="card-head row block" tabindex="-1">
+						<label for="rgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">3</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Carry ID proof</div>
 							<div class="toggle columns small-1">
@@ -99,7 +99,7 @@
 					<!-- CARD: 4 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs4" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs4" class="card-head row block" tabindex="-1">
+						<label for="rgs4" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">4</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
@@ -131,7 +131,7 @@
 					<!-- CARD: 5 -->
 					<div class="card columns small-12 fill-yellow-2">
 						<input id="rgs5" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs5" class="card-head row block" tabindex="-1">
+						<label for="rgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">5</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
@@ -148,7 +148,7 @@
 							</div>
 							<div class="row space-150-top">
 								<div class="columns small-12">
-									<a href="" class="watch-video block row fill-yellow-1" tabindex="-1">
+									<a href="" class="watch-video block row fill-yellow-1">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 										</div>
@@ -170,7 +170,7 @@
 					<!-- CARD: 6 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs6" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs6" class="card-head row block" tabindex="-1">
+						<label for="rgs6" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">6</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Release your Gold</div>
 							<div class="toggle columns small-1">
@@ -198,7 +198,7 @@
 							</div>
 							<div class="row">
 								<div class="columns small-12">
-									<a href="" class="watch-video block row fill-neutral-1" tabindex="-1">
+									<a href="" class="watch-video block row fill-neutral-1">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 										</div>
@@ -220,7 +220,7 @@
 					<!-- CARD: 7 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs7" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs7" class="card-head row block" tabindex="-1">
+						<label for="rgs7" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">7</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
@@ -243,7 +243,7 @@
 							</div>
 							<div class="row">
 								<div class="columns small-12">
-									<a href="" class="watch-video block row fill-neutral-1" tabindex="-1">
+									<a href="" class="watch-video block row fill-neutral-1">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 										</div>
@@ -259,7 +259,7 @@
 					<!-- CARD: 8 -->
 					<div class="card columns small-12 fill-light">
 						<input id="rgs8" type="radio" name="sell-gold-step" class="visuallyhidden">
-						<label for="rgs8" class="card-head row block" tabindex="-1">
+						<label for="rgs8" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium text-blue-2">8</span></div>
 							<div class="title h3 strong text-blue-2 columns small-10 space-50-left-right">Instant Bank Transfer</div>
 							<div class="toggle columns small-1">

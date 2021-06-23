@@ -31,7 +31,7 @@
 							<select class="form-input-field country-code">
 								<option value="">India (+91)</option>
 							</select>
-							<input type="text" disabled="" class="form-input-field country-code-label" value="+91" tabindex="-1">
+							<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
 							<span class="country-code-divider material-icons">unfold_more</span>
 							<span class="form-label-title medium fill-light cursor-pointer">Mobile Number</span>
 						</label>

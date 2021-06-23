@@ -8,7 +8,7 @@
 				<div class="row">
 					<div class="videos-faqs columns small-12">
 						<div class="videos-faqs-grid row">
-							<a href="" class="watch-video block row fill-blue-1" tabindex="-1">
+							<a href="" class="watch-video block row fill-blue-1">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -17,7 +17,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1" tabindex="-1">
+							<a href="" class="watch-video block row fill-blue-1">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -26,7 +26,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1" tabindex="-1">
+							<a href="" class="watch-video block row fill-blue-1">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -35,7 +35,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1" tabindex="-1">
+							<a href="" class="watch-video block row fill-blue-1">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
