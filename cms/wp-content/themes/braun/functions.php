@@ -146,61 +146,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_dequeue_style( 'wp-block-library' );
 	wp_dequeue_style( 'wp-block-library-theme' );
 
-
-	// global $versionNumber;
-	// $stylesheets = [
-	// 	// Base
-	// 	'normalize' => '1_normalize.css',
-	// 	'base' => '2_base.css',
-	// 	'grid' => '3_grid.css',
-	// 	'helper' => '4_helper.css',
-	// 	'stylescape' => '5_stylescape.css',
-	// 	// Modules
-	// 	'header' => 'modules/header.css',
-	// 	'video-embed' => 'modules/video-embed.css',
-	// 	'modal-box' => 'modules/modal-box.css',
-	// 	'lazaro-signature' => 'modules/lazaro-signature.css',
-	// 	// Pages + Sections + Modals
-	// 	'page' => 'pages/page.css',
-	// 	'modal-menu' => 'pages/modal/modal-menu.css',
-	// 	'sample-section' => 'pages/section/sample-section.css'
-	// ];
-
-	// foreach ( $stylesheets as $handle => $stylesheet )
-	// 	wp_enqueue_style( $handle, '/../css/' . $stylesheet, [ ], $versionNumber );
-
-	// wp_register_script(
-	// 	'twenty-twenty-one-ie11-polyfills-asset',
-	// 	get_template_directory_uri() . '/assets/js/polyfills.js',
-	// 	array(),
-	// 	wp_get_theme()->get( 'Version' ),
-	// 	true
-	// );
-
-	// wp_add_inline_script(
-	// 	'twenty-twenty-one-ie11-polyfills',
-	// 	wp_get_script_polyfill(
-	// 		$wp_scripts,
-	// 		array(
-	// 			'Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach' => 'twenty-twenty-one-ie11-polyfills-asset',
-	// 		)
-	// 	)
-	// );
-
 } );
 
 
-
-/**
- * Enqueue block editor script.
- *
- * @since Twenty Twenty-One 1.0
- *
- * @return void
- */
-add_action( 'enqueue_block_editor_assets', function () {
-	wp_enqueue_script( 'twentytwentyone-editor', get_theme_file_uri( '/assets/js/editor.js' ), array( 'wp-blocks', 'wp-dom' ), wp_get_theme()->get( 'Version' ), true );
-} );
 
 
 /**
