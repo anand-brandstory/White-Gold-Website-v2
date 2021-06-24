@@ -129,7 +129,7 @@
 						</div>
 					</div>
 					<!-- CARD: 5 -->
-					<div class="card columns small-12 fill-dark">
+					<div class="card columns small-12 fill-dark text-yellow-2">
 						<input id="rgs5" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">5</span></div>
