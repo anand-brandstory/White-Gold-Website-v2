@@ -28,6 +28,19 @@ require_once __DIR__ . '/../conf.php';
 
 
 /**
+ * References
+ *
+ * Store references to certain data points that'll will be used throughout
+ */
+if ( empty( $_SERVER ) )
+     $_SERVER = [ ];
+$documentRoot = $_SERVER[ 'DOCUMENT_ROOT' ] ?? '';
+$hostName = ( $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ] ) ?? '';
+$requestURI = $_SERVER[ 'REQUEST_URI' ] ?? '';
+
+
+
+/**
  * WordPress Locations (Frontend and Backend)
  *
  * Set it such that it is contextual to the domain that the site is hosted behind
@@ -37,7 +50,6 @@ if ( HTTPS_SUPPORT )
 else
 	$httpProtocol = 'http';
 
-$hostName = $_SERVER[ 'HTTP_HOST' ] ?: $_SERVER[ 'SERVER_NAME' ];
 define( 'WP_HOME', $httpProtocol . '://' . $hostName );
 if ( ! defined( 'WP_SITEURL' ) )
 	define( 'WP_SITEURL', $httpProtocol . '://' . $hostName . '/cms' );
@@ -51,8 +63,8 @@ if ( ! defined( 'WP_SITEURL' ) )
 // Fetch media files from the WIP server
 if ( CMS_FETCH_MEDIA_REMOTELY )
 	if ( $hostName !== CMS_REMOTE_ADDRESS )
-		if ( strpos( $_SERVER[ 'REQUEST_URI' ], '/content/cms/' ) !== false )
-			return header( 'Location: ' . $httpProtocol . '://' . CMS_REMOTE_ADDRESS . $_SERVER[ 'REQUEST_URI' ], true, 302 );
+		if ( strpos( $requestURI, '/content/cms/' ) !== false )
+			return header( 'Location: ' . $httpProtocol . '://' . CMS_REMOTE_ADDRESS . $requestURI, true, 302 );
 
 
 
