@@ -14,6 +14,27 @@ require get_template_directory() . '/inc/utils.php';
 
 
 
+
+
+
+	/*
+	 *
+	 * Show the Meta-data page if ACF is enabled
+	 *
+	 */
+	if ( function_exists( 'acf_add_options_page' ) ) {
+		acf_add_options_page( [
+			'page_title' => 'Metadata',
+			'menu_title' => 'Metadata',
+			'menu_slug' => 'metadata',
+			'capability' => 'edit_posts',
+			'parent_slug' => '',
+			'position' => '5',
+			'icon_url' => 'dashicons-info'
+		] );
+	}
+
+} );
 add_action( 'template_redirect', function () {
 
 	// If the URL slug is simply `cms`, then forward to the login or admin screen depending on if the user is already logged in or not
