@@ -480,16 +480,119 @@
  * Sell Gold Form Sections
  */
 
-.sell-gold-form-section {}
+.sell-gold-form-section {
+	position: relative;
+	overflow: hidden;
+}
+
+.sell-gold-form-section .sell-gold-form {
+	position: relative;
+	z-index: 3;
+}
+.sell-gold-form-section .char {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 50%;
+	width: var(--card);
+	transform: translateX(-30%) translateY(-75%) scale(1.25);
+}
+.sell-gold-form-section .char:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 35%);
+}
 
 .sell-gold-form-section .logo {
 	width: calc(var(--card)/2.5);
 }
 
-@media( min-width: 640px )  {}
-@media( min-width: 1040px ) {}
-@media( min-width: 1480px ) {}
+@media( min-width: 640px )  {
+	.sell-gold-form-section .char {
+		width: calc(var(--card) * 2);
+		transform: translateX(-35%) translateY(0%) scale(0.9);
+	}
+}
+@media( min-width: 1040px ) {
+	.sell-gold-form-section > .container {
+		padding-bottom: 140px;
+	}
+	.sell-gold-form-section .char {
+		width: calc(var(--card) * 2);
+		transform: translateX(-15%) translateY(10%) scale(1);
+	}
+}
+@media( min-width: 1480px ) {
+	.sell-gold-form-section > .container {
+		padding-bottom: 200px;
+	}
+}
 
+
+
+
+
+/*
+ * sell-gold-home-visit-form-section
+ */
+
+.sell-gold-home-visit-form-section {
+	position: relative;
+	overflow: hidden;
+}
+
+.sell-gold-home-visit-form-section .sell-gold-home-visit-form {
+	position: relative;
+	z-index: 3;
+}
+.sell-gold-home-visit-form-section .char {
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 50%;
+	width: var(--card);
+	transform: translateX(-10%) translateY(0%) scale(0.85);
+}
+.sell-gold-home-visit-form-section .char:after {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: auto;
+	background-image: linear-gradient(0deg, rgba(0,50,160,1) 0%, rgba(0,50,160,0) 35%);
+}
+
+@media( min-width: 640px )  {
+	.sell-gold-home-visit-form-section .char {
+		transform: translateX(20%) translateY(20%) scale(0.75);
+	}
+}
+@media( min-width: 1040px ) {
+	.sell-gold-home-visit-form-section > .container {
+		padding-bottom: 140px;
+	}
+	.sell-gold-home-visit-form-section .char {
+		transform: translateX(70%) translateY(20%) scale(0.9);
+	}
+}
+@media( min-width: 1480px ) {
+	.sell-gold-home-visit-form-section > .container {
+		padding-bottom: 200px;
+	}
+}
 
 
 

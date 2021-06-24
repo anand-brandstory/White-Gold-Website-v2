@@ -1,6 +1,6 @@
 <section class="sell-gold-form-section space-200-top-bottom">
 	<div class="container">
-		<div class="row">
+		<div class="row sell-gold-form">
 			<div class="columns small-6 medium-5 large-3 space-100-bottom">
 				<div class="logo space-75-bottom">
 					<img class="block" src="../media/whitegold-logo-dark.svg<?php echo $ver ?>">
@@ -51,5 +51,6 @@
 				</div>
 			</div>
 		</div>
+		<div class="char"><img class="block" src="../media/character/char-5.png<?php echo $ver ?>"></div>
 	</div>
 </section>

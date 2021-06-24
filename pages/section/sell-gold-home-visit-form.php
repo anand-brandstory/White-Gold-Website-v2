@@ -1,6 +1,6 @@
-<section class="sell-gold-home-visit-form-section space-200-bottom fill-blue-3">
+<section class="sell-gold-home-visit-form-section space-200-top-bottom fill-blue-3">
 	<div class="container">
-		<div class="row">
+		<div class="row sell-gold-home-visit-form">
 			<div class="columns small-12 large-4 space-100-bottom">
 				<div class="h2 strong text-yellow-2">Sell your Gold</div>
 				<div class="h2 strong text-blue-1">from home</div>
@@ -41,5 +41,6 @@
 				</div>
 			</div>
 		</div>
+		<div class="char"><img class="block" src="../media/character/char-1.png<?php echo $ver ?>"></div>
 	</div>
 </section>
