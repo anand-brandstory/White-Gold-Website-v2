@@ -17,8 +17,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs1" type="radio" name="sell-gold-step" class="visuallyhidden" checked="checked">
 						<label for="sgs1" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">1</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Find a Branch</div>
+							<div class="columns small-1"><span class="index h6 medium">1</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Find a Branch</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -37,8 +37,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs2" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">2</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Bring Original Bill</div>
+							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Bring Original Bill</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -56,8 +56,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs3" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">3</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Carry ID proof</div>
+							<div class="columns small-1"><span class="index h6 medium">3</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID proof</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -97,8 +97,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs4" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">4</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Purity</div>
+							<div class="columns small-1"><span class="index h6 medium">4</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -135,7 +135,7 @@
 					<div class="card columns small-12 fill-dark text-yellow-2">
 						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs5" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">5</span></div>
+							<div class="columns small-1"><span class="index h6 medium">5</span></div>
 							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -167,8 +167,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs6" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">6</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">KYC Verification</div>
+							<div class="columns small-1"><span class="index h6 medium">6</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -198,8 +198,8 @@
 					<div class="card columns small-12 fill-blue-2">
 						<input id="sgs7" type="radio" name="sell-gold-step" class="visuallyhidden">
 						<label for="sgs7" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-yellow-2">7</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Instant Bank Transfer</div>
+							<div class="columns small-1"><span class="index h6 medium">7</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Instant Bank Transfer</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>

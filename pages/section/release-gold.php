@@ -17,8 +17,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden" checked="">
 						<label for="rgs1" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">1</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Find a Branch</div>
+							<div class="columns small-1"><span class="index h6 medium">1</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Find a Branch</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -38,8 +38,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs2" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">2</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Bring Pledge Receipt</div>
+							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Bring Pledge Receipt</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -58,8 +58,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs3" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs3" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">3</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Carry ID proof</div>
+							<div class="columns small-1"><span class="index h6 medium">3</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Carry ID proof</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -100,8 +100,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs4" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs4" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">4</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">KYC Verification</div>
+							<div class="columns small-1"><span class="index h6 medium">4</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -129,11 +129,11 @@
 						</div>
 					</div>
 					<!-- CARD: 5 -->
-					<div class="card columns small-12 fill-yellow-2">
+					<div class="card columns small-12 fill-dark">
 						<input id="rgs5" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs5" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">5</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Rate</div>
+							<div class="columns small-1"><span class="index h6 medium">5</span></div>
+							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -143,12 +143,12 @@
 							<div class="row space-150-top">
 								<div class="columns small-10 small-offset-1 space-50-left-right">
 									<div class="h5 medium space-150-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
-									<a href class="button fill-dark">Check Live gold rate now</a>
+									<a href class="button fill-yellow-2">Check Live gold rate now</a>
 								</div>
 							</div>
 							<div class="row space-150-top">
 								<div class="columns small-12">
-									<a href="" class="watch-video block row fill-yellow-1">
+									<a href="" class="watch-video block row fill-neutral-4">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 										</div>
@@ -171,8 +171,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs6" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs6" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">6</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Release your Gold</div>
+							<div class="columns small-1"><span class="index h6 medium">6</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Release your Gold</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -221,8 +221,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs7" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs7" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">7</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Check Gold Purity</div>
+							<div class="columns small-1"><span class="index h6 medium">7</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -260,8 +260,8 @@
 					<div class="card columns small-12 fill-light">
 						<input id="rgs8" type="radio" name="release-gold-step" class="visuallyhidden">
 						<label for="rgs8" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium text-blue-2">8</span></div>
-							<div class="title h4 strong text-blue-2 columns small-10 space-50-left-right">Instant Bank Transfer</div>
+							<div class="columns small-1"><span class="index h6 medium">8</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Instant Bank Transfer</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
