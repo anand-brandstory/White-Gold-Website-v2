@@ -517,3 +517,66 @@
 
 }
 @media( min-width: 1480px ) {}
+
+
+
+
+
+/*
+ * Sample Section
+ */
+
+.find-branch-section {}
+.find-branch-section .branch-listing {}
+.find-branch-section .branch-listing .branch-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: var(--space-50);
+	grid-auto-rows: calc(var(--space-100)*6);
+}
+.find-branch-section .branch-listing .branch-grid .branch {
+	padding: var(--space-25);
+	border-radius: var(--space-50);
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,0.1);
+	grid-row: span 2;
+}
+.find-branch-section .branch-listing .branch-grid .branch:nth-child(2n) {
+	grid-row: 2 / span 2;
+    grid-column: 2;
+}
+.find-branch-section .branch-listing .branch-grid .branch .thumbnail {
+	width: 100%;
+	padding-top: 100%;
+}
+.find-branch-section .branch-listing .branch-grid .branch .check-distance {
+	display: inline-block;
+	cursor: pointer;
+	/*margin-bottom: var(--space-25);*/
+	border-radius: var(--space-25);
+}
+.find-branch-section .branch-listing .branch-grid .branch .check-distance * { pointer-events: none; }
+.find-branch-section .branch-listing .branch-grid .branch .check-distance .material-icons {
+	transform: scale(1.25);
+}
+
+@media( min-width: 640px )  {
+	.find-branch-section .branch-listing .branch-grid {
+		grid-auto-rows: auto;
+	}
+	.find-branch-section .branch-listing .branch-grid .branch:nth-child(2n) {
+		grid-row: auto;
+	    grid-column: auto;
+	}
+	/*.find-branch-section .branch-listing .branch-grid {
+		grid-auto-rows: calc(var(--space-100)*6.5);
+	}*/
+}
+@media( min-width: 1040px ) {
+	/*.find-branch-section .branch-listing .branch-grid {
+		grid-auto-rows: calc(var(--space-100)*7.5);
+	}*/
+	.find-branch-section .branch-listing .branch-grid .branch {
+		padding: var(--space-50);
+	}
+}
+@media( min-width: 1480px ) {}

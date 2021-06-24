@@ -213,7 +213,8 @@ button,
 	box-shadow: none;
 	border: none;
 	border-radius: var(--space-25);
-	filter: brightness(1);
+	transform: scale(1.0);
+	transition: transform .3s ease-out;
 }
 
 input[type="submit"]:hover,
@@ -221,7 +222,8 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	filter: brightness(1.375);
+	transform: scale(1.025);
+	
 }
 
 input[type="submit"]:focus,
@@ -230,7 +232,7 @@ input[type="button"]:focus,
 button:focus,
 .button:focus {
     outline: 0;
-    filter: brightness(1.5);
+    transform: scale(1.0125);
 }
 
 .button img {

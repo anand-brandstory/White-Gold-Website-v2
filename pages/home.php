@@ -86,23 +86,6 @@ require_once __ROOT__ . '/inc/header.php';
 <!-- END: Release Gold FAQs Section -->
 
 
-<!-- ## Find Branch Page -->
-<!-- Find Branch Section -->
-<section class="find-branch-section">
-	<div class="container">
-		<div class="row">
-			<div class="intro columns small-12">
-				<!-- insert text -->
-			</div>
-			<div class="branch-listing columns small-12">
-				<!-- insert text -->
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: Find Branch Section -->
-
-
 <!-- ## Live Gold Page -->
 <!-- Live Gold Section -->
 <section class="live-gold-section">
