@@ -65,7 +65,7 @@
 	box-shadow: inset 0 0 0 calc(var(--space-25)/3) var(--yellow-2);
 }
 
-.step-cards .card > input:checked + .card-head .index {
+.release-gold-section .step-cards .card > input:checked + .card-head .index {
 	color: var(--light);
 	background-color: var(--blue-2);
 }
