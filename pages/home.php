@@ -38,7 +38,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 <!-- ## Home Page -->
 <!-- Landing Carousel Section -->
-<section class="landing-carousel-section space-100-top space-200-bottom fill-blue-3">
+<section class="landing-carousel-section space-100-top space-200-bottom fill-blue-5">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12">

@@ -1,4 +1,4 @@
-<section class="header-section space-200-top space-100-bottom fill-blue-3">
+<section class="header-section space-200-top space-100-bottom fill-blue-5">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-6 inline-middle">

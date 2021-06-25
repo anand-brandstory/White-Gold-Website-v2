@@ -1,14 +1,14 @@
-<section class="sell-gold-faqs-section fill-blue-3 space-200-bottom">
+<section class="sell-gold-faqs-section fill-blue-5 space-200-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 large-4">
-				<div class="h2 strong text-blue-1 space-100-bottom">Frequently Asked Questions</div>
+				<div class="h2 strong text-blue-3 space-100-bottom">Frequently Asked Questions</div>
 			</div>
 			<div class="columns small-12 large-8">
 				<div class="row">
 					<div class="videos-faqs columns small-12">
 						<div class="videos-faqs-grid row">
-							<a href="" class="watch-video block row fill-blue-1">
+							<a href="" class="watch-video block row fill-blue-4">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -17,7 +17,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1">
+							<a href="" class="watch-video block row fill-blue-4">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -26,7 +26,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1">
+							<a href="" class="watch-video block row fill-blue-4">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -35,7 +35,7 @@
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
-							<a href="" class="watch-video block row fill-blue-1">
+							<a href="" class="watch-video block row fill-blue-4">
 								<div class="columns small-12 medium-6">
 									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
 								</div>
@@ -55,7 +55,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Maiores nihil ducimus nobis minus accusantium, sunt in repellendus libero, dignissimos quae voluptatum. Enim sunt ipsam laboriosam molestiae ea. Hic, eligendi architecto!</div>
 							</div>
 						</div>
@@ -67,7 +67,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corrupti ipsum explicabo sunt repellendus deserunt quas laboriosam nesciunt perferendis provident perspiciatis ad, nemo, quod est quaerat esse. In praesentium neque, cumque!</div>
 							</div>
 						</div>
@@ -79,7 +79,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus, commodi odio voluptates aliquam, quidem in, ducimus, corrupti vero dolorum molestias assumenda voluptatum harum. Repellat quidem iure suscipit, laboriosam et!</div>
 							</div>
 						</div>
@@ -91,7 +91,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem odit aliquid dignissimos amet, quia est, a nisi ex consequatur officiis necessitatibus, optio sequi, laudantium reiciendis deleniti iure esse. Enim.</div>
 							</div>
 						</div>
@@ -103,7 +103,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi! Illo sit optio saepe ut voluptatum provident asperiores, et explicabo velit dolores ipsum, sed veniam, repellat reprehenderit ab mollitia est?</div>
 							</div>
 						</div>
@@ -115,7 +115,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis voluptatum voluptatibus, perferendis nesciunt tempore dignissimos officiis a ipsum! Iure, nemo! Eligendi corrupti beatae ratione consequuntur est asperiores repellendus doloremque.</div>
 							</div>
 						</div>
@@ -127,7 +127,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Valuation is done based on a purity check. We use german spectrometers and precision weighing scales. This takes a maximum of 15 minutes.</div>
 							</div>
 						</div>
@@ -139,7 +139,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus nemo cum sit odio consectetur ducimus perferendis deleniti culpa, veniam impedit quisquam. Illum voluptatum inventore quisquam nesciunt provident facilis, quibusdam labore!</div>
 							</div>
 						</div>
@@ -151,7 +151,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Qui eaque perferendis officia necessitatibus. Voluptate neque temporibus quas sed ducimus, officiis. Earum, consequatur natus explicabo, incidunt sint itaque beatae nisi nostrum?</div>
 							</div>
 						</div>
@@ -163,7 +163,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, explicabo ex consequatur perferendis, fuga veritatis fugiat autem expedita voluptatum, aliquam sit cumque rem ut quod in tempora reprehenderit vitae asperiores.</div>
 							</div>
 						</div>
@@ -175,7 +175,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sit, magni non aliquam? Vel illo corrupti numquam aut consequatur, beatae laborum suscipit laboriosam inventore vitae! Debitis recusandae maxime temporibus laborum.</div>
 							</div>
 						</div>
@@ -187,7 +187,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel culpa eligendi laboriosam minima, at dolorem ut aperiam aliquid omnis, nulla commodi autem ullam pariatur, ex dolor praesentium cupiditate similique.</div>
 							</div>
 						</div>
@@ -199,7 +199,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse a quidem nisi beatae fugiat. Dicta harum iste soluta consequatur blanditiis id culpa natus, fugit dignissimos ipsum perspiciatis reiciendis, amet suscipit!</div>
 							</div>
 						</div>
@@ -211,7 +211,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Sint minima reprehenderit in repudiandae assumenda ratione incidunt nisi est magni iste, reiciendis recusandae aliquam aut officia sapiente facere perspiciatis? Fugit, consequatur.</div>
 							</div>
 						</div>
@@ -223,7 +223,7 @@
 								</div>
 								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 							</label>
-							<div class="answer fill-blue-2 radius-50">
+							<div class="answer fill-blue-4 radius-50">
 								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Temporibus quaerat nemo cum eaque rem neque, sit, dicta voluptate ad? Fugiat, repellat, vitae consequuntur modi soluta labore molestiae sequi hic ipsa.</div>
 							</div>
 						</div>

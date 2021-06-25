@@ -1,0 +1,38 @@
+/*
+ * Sell Gold Section
+ */
+
+.sell-gold-section {}
+
+.sell-gold-section .sgs1 .card-content {
+	background-size: cover;
+	background-position: center center;
+	background-image: linear-gradient(0deg, rgba(30,80,204,1) 0%, rgba(30,80,204,0.65) 25%, rgba(30,80,204,0.65) 75%, rgba(30,80,204,1) 100%), url('../../../media/background/find-branch.png');
+}
+
+.sell-gold-section .sgs2 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.75) translateX(45%) translateY(24%);
+}
+
+.sell-gold-section .sgs3 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.75) translateX(45%) translateY(15%);
+}
+
+@media( min-width: 640px )  {
+	.sell-gold-section .sgs2 .card-content .bg-img {
+		width: calc(var(--card)*1.25);
+		transform: scale(1) translateX(5%) translateY(40%);
+	}
+	.sell-gold-section .sgs3 .card-content .bg-img {
+		width: calc(var(--card)*1.25);
+		transform: scale(1) translateX(0%) translateY(0%);
+	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}

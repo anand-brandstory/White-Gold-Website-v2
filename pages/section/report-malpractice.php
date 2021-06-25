@@ -43,7 +43,7 @@
 					<div class="complaint fill-neutral-4 space-50 radius-50">
 						<div class="h5 medium space-50-bottom">Need to file an official complaint?</div>
 						<div class="p space-50-bottom opacity-75">We believe in a transparent Gold selling experience for every customer. However, there are times when we might be unable to detect malpractice at an individual branch level.</div>
-						<a href="" class="button fill-red-3">File Complaint</a>
+						<a href="" class="button fill-red-3"><img class="button-icon" src="../media/icon/info-outline.svg<?php echo $ver ?>" alt=""><span class="button-label">&ensp;File Complaint</span></a>
 					</div>
 				</div>
 			</div>

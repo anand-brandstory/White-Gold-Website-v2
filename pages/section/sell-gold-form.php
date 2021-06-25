@@ -45,7 +45,7 @@
 					<div class="columns small-12 space-50-top">
 						<label class="form-label block">
 							<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
-							<button class="button">Sell Gold</button>
+							<button class="button fill-blue-1">Sell Gold</button>
 						</label>
 					</div>
 				</div>
