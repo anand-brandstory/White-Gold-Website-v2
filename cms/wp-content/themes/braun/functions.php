@@ -44,6 +44,22 @@ add_action( 'acf/init', function () {
 		'render_callback' => 'acf_render_callback'
 	] );
 
+	// Branches
+	acf_register_block_type( [
+		'name' => 'bfs-branch',
+		'title' => __( 'Branch' ),
+		'description' => __( 'A branch is physical location where White Gold offer their services.' ),
+		'category' => 'white-gold',
+		'icon' => 'testimonial',
+		'align' => 'wide',
+		'mode' => 'edit',
+		'supports' => [
+			'multiple' => false,
+			'align' => [ 'wide' ]
+		],
+		'render_callback' => 'acf_render_callback'
+	] );
+
 	function acf_render_callback ( $block, $content, $is_preview, $post_id ) {
 		if ( ! class_exists( '\BFS\CMS' ) )
 			return;
@@ -65,6 +81,12 @@ add_action( 'after_setup_theme', function () {
 		if ( $postType === 'card' ) {
 			$args[ 'template' ] = [
 				[ 'acf/bfs-card' ]
+			];
+			$args[ 'template_lock' ] = 'all';
+		}
+		else if ( $postType === 'branch' ) {
+			$args[ 'template' ] = [
+				[ 'acf/bfs-branch' ]
 			];
 			$args[ 'template_lock' ] = 'all';
 		}
@@ -126,11 +148,12 @@ function card__SavePostHook ( $postId, $post, $postWasUpdated ) {
 	/*
 	 * Capture the "Regions" value as tags
 	 */
+	$regionsApplicable = $thePost->get( 'regions_applicable' ) ?? [ ];
 	$tagPrefix = '__region-';
 	$tagPrefixLength = strlen( $tagPrefix );
 	$tags = array_map( function ( $tag ) use ( $tagPrefix ) {
 		return $tagPrefix . $tag;
-	}, $thePost->get( 'regions_applicable' ) );
+	}, $regionsApplicable );
 
 	$allExistingPostTags = wp_get_post_tags( $postId, [ 'fields' => 'slugs' ] );
 	$allOtherTags = array_filter( $allExistingPostTags, function ( $tag ) use ( $tagPrefix, $tagPrefixLength ) {
@@ -150,6 +173,61 @@ add_action( 'save_post_card', 'card__SavePostHook', 100, 3 );
 
 
 
+
+
+/*
+ *
+ * ----- Branches
+ *	Capture certain ACF values and store them as native post (or post meta) attributes, or tags.
+ *	This is to optimize the post querying.
+ *
+ */
+function branch__SavePostHook ( $postId, $post, $postWasUpdated ) {
+
+	if ( get_post_type( $postId ) !== 'branch' )
+		return;
+
+	require_once __DIR__ . '/../../../../inc/cms.php';
+
+	// Unregister the save_post action hook to prevent an infinite loop
+	remove_action( 'save_post_branch', 'branch__SavePostHook', 100, 3 );
+
+	$thePost = \BFS\CMS::getPostById( $postId );
+
+	/*
+	 * Capture the "branch_name" value as the post title
+	 */
+	// Strip away all the HTML and newline characters
+	$text = strip_tags( str_replace( "\r\n", ' ', $thePost->get( 'branch_name' ) ) );
+	wp_update_post( [ 'ID' => $postId, 'post_title' => $text ], false, false );
+
+
+	/*
+	 * Capture the "Regions" value as tags
+	 */
+	$region = $thePost->get( 'regions_applicable' );
+	$tagPrefix = '__region-';
+	$tagPrefixLength = strlen( $tagPrefix );
+	$regionTag = $tagPrefix . $region;
+
+	$allExistingPostTags = wp_get_post_tags( $postId, [ 'fields' => 'slugs' ] );
+	$allOtherTags = array_filter( $allExistingPostTags, function ( $tag ) use ( $tagPrefix, $tagPrefixLength ) {
+		return substr( $tag, 0, $tagPrefixLength ) != $tagPrefix;
+	} );
+
+	$tagsToSet = array_merge( $allOtherTags, [ $regionTag ] );
+
+	wp_set_post_tags( $postId, $tagsToSet, false );
+
+	// Re-register the action hook
+	add_action( 'save_post_branch', 'branch__SavePostHook', 100, 3 );
+
+}
+// Register a `save_post` action hook for the branch (Carousel) post
+add_action( 'save_post_branch', 'branch__SavePostHook', 100, 3 );
+
+
+
 add_action( 'bfs/backend/on-editing-posts', function ( $postType ) {
 
 	if ( $postType === 'card' )
@@ -158,6 +236,14 @@ add_action( 'bfs/backend/on-editing-posts', function ( $postType ) {
 			get_template_directory_uri() . '/js/cards.js',
 			[ 'wp-data', 'wp-edit-post' ],
 			filemtime( get_template_directory() . '/js/cards.js' )
+		);
+
+	if ( $postType === 'branch' )
+		wp_enqueue_script(
+			'bfs-branches',
+			get_template_directory_uri() . '/js/branches.js',
+			[ 'wp-data', 'wp-edit-post' ],
+			filemtime( get_template_directory() . '/js/branches.js' )
 		);
 
 } );
