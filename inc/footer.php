@@ -15,7 +15,7 @@ use BFS\CMS;
 use BFS\Router;
 
 $footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
-$footerPost = CMS::getPostBySlug( "footer" );
+$footerPost = CMS::getPostBySlug( 'footer', 'page' );
 
 ?>
 		
