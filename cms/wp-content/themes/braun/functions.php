@@ -149,19 +149,18 @@ function card__SavePostHook ( $postId, $post, $postWasUpdated ) {
 	 * Capture the "Regions" value as tags
 	 */
 	$regionsApplicable = $thePost->get( 'regions_applicable' ) ?? [ ];
-	$tagPrefix = '__region-';
+	$tagPrefix = '__region';
 	$tagPrefixLength = strlen( $tagPrefix );
 	$tags = array_map( function ( $tag ) use ( $tagPrefix ) {
-		return $tagPrefix . $tag;
+		return $tagPrefix . '-' . $tag;
 	}, $regionsApplicable );
 
 	$allExistingPostTags = wp_get_post_tags( $postId, [ 'fields' => 'slugs' ] );
 	$allOtherTags = array_filter( $allExistingPostTags, function ( $tag ) use ( $tagPrefix, $tagPrefixLength ) {
-		return substr( $tag, 0, $tagPrefixLength ) != $tagPrefix;
+		return substr( $tag, 0, $tagPrefixLength ) !== $tagPrefix;
 	} );
 
 	$tagsToSet = array_merge( $allOtherTags, $tags );
-
 	wp_set_post_tags( $postId, $tagsToSet, false );
 
 	// Re-register the action hook
@@ -195,29 +194,39 @@ function branch__SavePostHook ( $postId, $post, $postWasUpdated ) {
 	$thePost = \BFS\CMS::getPostById( $postId );
 
 	/*
-	 * Capture the "branch_name" value as the post title
+	 * Capture the "branch_name" and "region" value as the post title
 	 */
 	// Strip away all the HTML and newline characters
-	$text = strip_tags( str_replace( "\r\n", ' ', $thePost->get( 'branch_name' ) ) );
-	wp_update_post( [ 'ID' => $postId, 'post_title' => $text ], false, false );
+	$branchName = strip_tags( str_replace( "\r\n", ' ', $thePost->get( 'branch_name' ) ) );
+	$region = $thePost->get( 'region' );
+	$postTitle = '(branch name)';
+	if ( ! empty( $branchName ) ) {
+		$postTitle = $branchName;
+		if ( ! empty( $region ) )
+			$postTitle = $postTitle . ', ' . strtoupper( $region );
+	}
+
+	wp_update_post( [ 'ID' => $postId, 'post_title' => $postTitle ], false, false );
 
 
 	/*
 	 * Capture the "Regions" value as tags
 	 */
-	$region = $thePost->get( 'regions_applicable' );
-	$tagPrefix = '__region-';
-	$tagPrefixLength = strlen( $tagPrefix );
-	$regionTag = $tagPrefix . $region;
+	$region = $thePost->get( 'region' );
+	if ( ! empty( $region ) ) {
+		$tagPrefix = '__region';
+		$tagPrefixLength = strlen( $tagPrefix );
+		$regionTag = $tagPrefix . '-' . $region;
 
-	$allExistingPostTags = wp_get_post_tags( $postId, [ 'fields' => 'slugs' ] );
-	$allOtherTags = array_filter( $allExistingPostTags, function ( $tag ) use ( $tagPrefix, $tagPrefixLength ) {
-		return substr( $tag, 0, $tagPrefixLength ) != $tagPrefix;
-	} );
+		$allExistingPostTags = wp_get_post_tags( $postId, [ 'fields' => 'slugs' ] );
+		$allOtherTags = array_filter( $allExistingPostTags, function ( $tag ) use ( $tagPrefix, $tagPrefixLength ) {
+			return substr( $tag, 0, $tagPrefixLength ) !== $tagPrefix;
+		} );
 
-	$tagsToSet = array_merge( $allOtherTags, [ $regionTag ] );
+		$tagsToSet = array_merge( $allOtherTags, [ $regionTag ] );
+		wp_set_post_tags( $postId, $tagsToSet, false );
+	}
 
-	wp_set_post_tags( $postId, $tagsToSet, false );
 
 	// Re-register the action hook
 	add_action( 'save_post_branch', 'branch__SavePostHook', 100, 3 );
@@ -234,7 +243,7 @@ add_action( 'bfs/backend/on-editing-posts', function ( $postType ) {
 		wp_enqueue_script(
 			'bfs-cards',
 			get_template_directory_uri() . '/js/cards.js',
-			[ 'wp-data', 'wp-edit-post' ],
+			[ 'wp-data', 'wp-hooks', 'wp-edit-post', 'lodash', 'jquery', 'acf', 'acf-input', 'acf-field-group' ],
 			filemtime( get_template_directory() . '/js/cards.js' )
 		);
 
@@ -242,7 +251,7 @@ add_action( 'bfs/backend/on-editing-posts', function ( $postType ) {
 		wp_enqueue_script(
 			'bfs-branches',
 			get_template_directory_uri() . '/js/branches.js',
-			[ 'wp-data', 'wp-edit-post' ],
+			[ 'wp-data', 'wp-hooks', 'wp-edit-post', 'lodash', 'jquery', 'acf', 'acf-input', 'acf-field-group' ],
 			filemtime( get_template_directory() . '/js/branches.js' )
 		);
 

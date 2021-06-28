@@ -7,6 +7,9 @@
 
 require_once __ROOT__ . '/inc/header.php';
 
+use BFS\CMS;
+CMS::setupContext();
+
 ?>
 
 
