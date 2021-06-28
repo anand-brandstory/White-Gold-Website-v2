@@ -64,7 +64,7 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-150-top space-50-left-right">
+							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
 								<div class="columns small-8 space-50-left-right"><div class="h5 medium">AADHAR Card</div></div>
 							</div>
@@ -82,7 +82,7 @@
 							</div>
 							<div class="row space-50-left-right space-200-bottom">
 								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
-									<div class="p space-150-top">Photo ID and Address proof is required.</div>
+									<div class="p space-200-top">Photo ID and Address proof is required.</div>
 									<div class="p space-50-top space-200-bottom">Carry your Aadhar card for easy KYC check.</div>
 								</div>
 							</div>
@@ -106,7 +106,7 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-150-top space-50-left-right">
+							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
 								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Tamper Proof</div></div>
 							</div>
@@ -145,9 +145,9 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-150-top space-50-left-right">
+							<div class="row space-200-top space-50-left-right">
 								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
-									<div class="h5 medium space-150-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
+									<div class="h5 medium space-200-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<a href class="button fill-yellow-2">Check Live gold rate now</a>
 								</div>
 							</div>
@@ -177,24 +177,25 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-150-top space-50-left-right">
+							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
+								<div class="columns small-8 medium-5 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
 							</div>
 							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right">
+								<div class="columns small-8 medium-5 space-50-left-right">
 									<div class="h5 medium">Address Proof</div>
 									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhar Card has both.</div>
 								</div>
 							</div>
-							<div class="row space-50-top space-50-left-right">
+							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right">
+								<div class="columns small-8 medium-5 space-50-left-right">
 									<div class="h5 medium">Verification Phone Call</div>
 									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
 								</div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-2.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 7 -->
@@ -208,15 +209,16 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-150-top space-50-left-right">
-								<div class="columns small-9 small-offset-1 space-50-left-right">
+							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
+								<div class="columns small-9 medium-5 small-offset-1 space-50-left-right">
 									<div class="p">For your security, we transfer the money to your bank account. You can confirm the money transfer before leaving our branch.</div>
 								</div>
 							</div>
-							<div class="row space-150-top space-50-left-right">
+							<div class="row space-200-top space-50-bottom space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-yellow-2 text-blue-4">&check;</span></div>
-								<div class="columns small-10 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
+								<div class="columns small-10 medium-5 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-3.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 				</div>
