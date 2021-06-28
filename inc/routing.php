@@ -13,7 +13,7 @@ class Router {
 
 	public static $httpResponseCode = 200;	// assume that it's going to go well
 
-	private static function getSanitizedURLSlug ( $path = null ) {
+	public static function getSanitizedURLSlug ( $path = null ) {
 		$pathString = $path ?: $_SERVER[ 'REQUEST_URI' ];
 		$pathStringMinusQueryParameters = strstr( $pathString, '?', true ) ?: $pathString;
 		return trim( $pathStringMinusQueryParameters, '/' );

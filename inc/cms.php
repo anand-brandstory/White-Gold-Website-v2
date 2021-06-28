@@ -2,6 +2,8 @@
 
 namespace BFS;
 
+require_once __DIR__ . '/routing.php';
+
 class CMS {
 
 	private static $dir = __DIR__;
@@ -227,21 +229,37 @@ class CMS {
 
 	}
 
-	public static function getNavigation ( $name, $urlPrefix = false ) {
+	public static function getNavigation ( $name, $urlPrefixForRelativeSectionURLs = false ) {
 
 		if ( ! self::$isEnabled )
 			return [ ];
 
 		$menuItems = \wp_get_nav_menu_items( $name ) ?: [ ];
-		// Convert from class instances to regular associate arrays
-		foreach ( $menuItems as &$item )
+		// Convert from class instances to regular associate arrays, and append any custom data (if there is)
+		foreach ( $menuItems as &$item ) {
 			$item = get_object_vars( $item );
+			$item[ 'acf' ] = get_fields( $item[ 'ID' ] );
+		}
 		unset( $item );
-		// Prepend a prefix if provided
-		if ( $urlPrefix )
+
+		// Relatively contextualize URLs that require it
+		$urlSlugParts = explode( '/', Router::getSanitizedURLSlug() );
+		foreach ( $menuItems as &$item ) {
+			$contextualizeToANestingLevel = $item[ 'acf' ][ 'relatively_contextualize_to_a_nesting_level' ];
+			if ( ! $contextualizeToANestingLevel )
+				continue;
+			$nestingLevel = $item[ 'acf' ][ 'relatively_contextual_nesting_level' ];
+			$item[ 'url' ] = implode( '/', array_slice( $urlSlugParts, 0, $nestingLevel ) )
+						. $item[ 'url' ];
+		}
+		unset( $item );
+
+
+		// Prepend a prefix (if provided) for URLs that are relative and start with a `#`
+		if ( $urlPrefixForRelativeSectionURLs )
 			foreach ( $menuItems as &$item )
 				if ( $item[ 'url' ][ 0 ] === '#' )
-					$item[ 'url' ] = $urlPrefix . $item[ 'url' ];
+					$item[ 'url' ] = $urlPrefixForRelativeSectionURLs . $item[ 'url' ];
 		unset( $item );
 
 		return $menuItems;
