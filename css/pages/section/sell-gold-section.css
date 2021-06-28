@@ -2,55 +2,64 @@
  * Sell Gold Section
  */
 
-.sell-gold-section {}
+.step-cards {}
 
-.sell-gold-section .sgs1 .card-content {
+.step-cards .sgs1 .card-content,
+.step-cards .rgs1 .card-content {
 	background-size: cover;
 	background-position: center center;
 	background-image: linear-gradient(0deg, rgba(30,80,204,1) 0%, rgba(30,80,204,0.65) 25%, rgba(30,80,204,0.65) 75%, rgba(30,80,204,1) 100%), url('../../../media/background/find-branch.png');
 }
 
-.sell-gold-section .sgs2 .card-content .bg-img {
+.step-cards .sgs2 .card-content .bg-img,
+.step-cards .rgs2 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(0.75) translateX(45%) translateY(24%);
 }
 
-.sell-gold-section .sgs3 .card-content .bg-img {
+.step-cards .sgs3 .card-content .bg-img,
+.step-cards .rgs3 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(0.75) translateX(45%) translateY(15%);
 }
 
-.sell-gold-section .sgs4 .card-content .bg-img {
+.step-cards .sgs4 .card-content .bg-img,
+.step-cards .rgs7 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(0.35) translateX(90%) translateY(20%);
 }
 
-.sell-gold-section .sgs6 .card-content .bg-img {
+.step-cards .sgs6 .card-content .bg-img,
+.step-cards .rgs4 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(.75) translateX(35%) translateY(20%);
 }
-.sell-gold-section .sgs6 .card-content .row.m-space {
+.step-cards .sgs6 .card-content .row.m-space,
+.step-cards .rgs4 .card-content .row.m-space {
 	margin-bottom: calc(var(--space-100)*4);
 }
 
-.sell-gold-section .sgs7 .card-content .bg-img {
+.step-cards .sgs7 .card-content .bg-img,
+.step-cards .rgs8 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(.85) translateX(15%) translateY(-30%);
 }
-.sell-gold-section .sgs7 .card-content .row.m-space {
+.step-cards .sgs7 .card-content .row.m-space,
+.step-cards .rgs8 .card-content .row.m-space {
 	margin-bottom: calc(var(--space-100)*4);
 }
-.sell-gold-section .sgs7 .card-content .bg-img:after {
+.step-cards .sgs7 .card-content .bg-img:after,
+.step-cards .rgs8 .card-content .bg-img:after {
 	content: '';
 	position: absolute;
 	z-index: 2;
@@ -62,26 +71,51 @@
 }
 
 @media( min-width: 640px )  {
-	.sell-gold-section .sgs2 .card-content .bg-img {
+	.step-cards .sgs2 .card-content .bg-img,
+	.step-cards .rgs2 .card-content .bg-img {
 		width: calc(var(--card)*1.25);
 		transform: scale(1) translateX(5%) translateY(40%);
 	}
-	.sell-gold-section .sgs3 .card-content .bg-img {
+	.step-cards .sgs3 .card-content .bg-img,
+	.step-cards .rgs3 .card-content .bg-img {
 		width: calc(var(--card)*1.25);
 		transform: scale(1) translateX(0%) translateY(0%);
 	}
-	.sell-gold-section .sgs4 .card-content .bg-img {
+	.step-cards .sgs4 .card-content .bg-img,
+	.step-cards .rgs7 .card-content .bg-img {
 		transform: scale(0.75) translateX(20%) translateY(18%);
 	}
-	.sell-gold-section .sgs6 .card-content .bg-img {
+	.step-cards .sgs6 .card-content .bg-img,
+	.step-cards .rgs4 .card-content .bg-img {
 		transform: scale(1) translateX(0%) translateY(0%);
 	}
-	.sell-gold-section .sgs7 .card-content .row.m-space {
+	.step-cards .sgs7 .card-content .row.m-space,
+	.step-cards .rgs8 .card-content .row.m-space {
 		margin-bottom: calc(var(--space-100)*0);
 	}
-	.sell-gold-section .sgs7 .card-content .bg-img {
+	.step-cards .sgs7 .card-content .bg-img,
+	.step-cards .rgs8 .card-content .bg-img {
 		transform: scale(1.125) translateX(0%) translateY(0%);
 	}
+}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
+
+
+
+
+/* -- Release Gold -- */
+
+.step-cards .rgs1 .card-content {
+	background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.65) 25%, rgba(255,255,255,0.65) 75%, rgba(255,255,255,1) 100%), url('../../../media/background/find-branch.png');
+}
+
+.step-cards .rgs8 .card-content .bg-img:after {
+	background-image: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 35%);
+}
+
+@media( min-width: 640px )  {
+
 }
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}

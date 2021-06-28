@@ -1,4 +1,4 @@
-<section class="sell-gold-form-section space-200-top-bottom">
+<section class="sell-gold-form-section space-200-top-bottom" id="sell-gold-form-section" data-section-title="Sell Gold Form Section" data-section-slug="sell-gold-form-section">
 	<div class="container">
 		<div class="row sell-gold-form">
 			<div class="columns small-6 medium-5 large-3 space-100-bottom">

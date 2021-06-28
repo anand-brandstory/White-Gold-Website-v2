@@ -1,4 +1,4 @@
-<section class="release-gold-faqs-section fill-neutral-1 space-200-bottom">
+<section class="release-gold-faqs-section fill-neutral-1 space-200-bottom" id="release-gold-faqs-section" data-section-title="Release Gold FAQs Section" data-section-slug="release-gold-faqs-section">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 large-4">

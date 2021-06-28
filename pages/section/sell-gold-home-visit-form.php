@@ -1,4 +1,4 @@
-<section class="sell-gold-home-visit-form-section space-200-top-bottom fill-blue-5">
+<section class="sell-gold-home-visit-form-section space-200-top-bottom fill-blue-5" id="sell-gold-home-visit-form-section" data-section-title="Sell Gold Home Visit Form Section" data-section-slug="sell-gold-home-visit-form-section">
 	<div class="container">
 		<div class="row sell-gold-home-visit-form">
 			<div class="columns small-12 large-4 space-100-bottom">

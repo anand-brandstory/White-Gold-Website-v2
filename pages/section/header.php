@@ -1,4 +1,4 @@
-<section class="header-section space-200-top space-100-bottom fill-blue-5">
+<section class="header-section space-200-top space-100-bottom fill-blue-5" id="header-section" data-section-title="Header Section" data-section-slug="header-section">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-6 inline-middle">

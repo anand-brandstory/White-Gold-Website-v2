@@ -1,4 +1,4 @@
-<section class="report-malpractice-section fill-dark space-200-top-bottom">
+<section class="report-malpractice-section fill-dark space-200-top-bottom" id="report-malpractice-section" data-section-title="Report Malpractice Section" data-section-slug="report-malpractice-section">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 space-100-bottom">
