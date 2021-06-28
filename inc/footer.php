@@ -15,7 +15,7 @@ use BFS\CMS;
 use BFS\Router;
 
 $footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
-$footerContent = CMS::getPostBySlug( "footer" )->get( 'post_content' );
+$footerPost = CMS::getPostBySlug( "footer" );
 
 ?>
 		
@@ -25,7 +25,7 @@ $footerContent = CMS::getPostBySlug( "footer" )->get( 'post_content' );
 				<div class="row">
 					<div class="columns small-12 medium-8 space-200-top">
 						<div class="footer-content">
-							<?= $footerContent ?>
+							<?= $footerPost->get( 'post_content' ) ?>
 						</div>
 					</div>
 					<div class="columns small-12 medium-3 medium-offset-1 space-200-top">
