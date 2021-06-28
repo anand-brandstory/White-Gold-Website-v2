@@ -14,7 +14,8 @@
 use BFS\CMS;
 use BFS\Router;
 
-$footerNavigationMenuItems = CMS::getNavigation( 'Footer', '/' );
+$footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
+$footerContent = CMS::getPostBySlug( "footer" )->get( 'post_content' );
 
 ?>
 		
@@ -24,12 +25,14 @@ $footerNavigationMenuItems = CMS::getNavigation( 'Footer', '/' );
 				<div class="row">
 					<div class="columns small-12 medium-8 space-200-top">
 						<div class="footer-content">
-							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis natus similique soluta modi nobis voluptates quod et reprehenderit? Quas ipsa similique facilis at reprehenderit aspernatur corrupti, perferendis nulla, beatae sequi?
+							<?= $footerContent ?>
 						</div>
 					</div>
 					<div class="columns small-12 medium-3 medium-offset-1 space-200-top">
 						<div class="footer-menu">
-							<a href="" class="block p strong">Link Title</a>
+							<?php foreach ( $footerNavigationMenuItems as $item ) : ?>
+								<a href="/<?= $item[ 'url' ] ?>" class="block p strong"><?= $item[ 'title' ] ?></a>
+							<?php endforeach; ?>
 						</div>
 					</div>
 				</div>
