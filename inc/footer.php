@@ -17,17 +17,19 @@ use BFS\Router;
 $footerNavigationMenuItems = CMS::getNavigation( 'Footer', '/' );
 
 ?>
+		
 		<!-- Footer Section -->
-		<section class="footer-section fill-blue-4 space-75-top-bottom" id="footer-section" data-section-title="Footer Section" data-section-slug="footer-section">
+		<section class="footer-section space-200-bottom fill-dark" id="footer-section" data-section-title="Footer Section" data-section-slug="footer-section">
 			<div class="container">
 				<div class="row">
-					<div class="columns small-12 medium-6 large-8 space-50-bottom">
-						<div class="row footer-navigation">
-							<div class="columns small-12 large-6 large-offset-12" style="columns: 2; column-gap: var(--space-min);">
-								<?php foreach ( $footerNavigationMenuItems as $item ) : ?>
-									<a href="<?= $item[ 'url' ] ?>" class="link h6 strong block text-red-2 line-height-large"><?= $item[ 'title' ] ?></a>
-								<?php endforeach; ?>
-							</div>
+					<div class="columns small-12 medium-8 space-200-top">
+						<div class="footer-content">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis natus similique soluta modi nobis voluptates quod et reprehenderit? Quas ipsa similique facilis at reprehenderit aspernatur corrupti, perferendis nulla, beatae sequi?
+						</div>
+					</div>
+					<div class="columns small-12 medium-3 medium-offset-1 space-200-top">
+						<div class="footer-menu">
+							<a href="" class="block p strong">Link Title</a>
 						</div>
 					</div>
 				</div>

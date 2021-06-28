@@ -131,21 +131,6 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 
-<!-- Footer Section -->
-<section class="footer-section">
-	<div class="container">
-		<div class="row">
-			<div class="columns small-12 space-50-top-bottom">
-				<div class="footer-content"><!-- insert text --></div>
-				<div class="footer-menu"><!-- insert text --></div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: Footer Section -->
-
-
-
 
 
 <?php require_once __ROOT__ . '/inc/footer.php'; ?>

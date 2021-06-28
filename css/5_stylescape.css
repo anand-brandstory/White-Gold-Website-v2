@@ -249,14 +249,14 @@ button:focus,
 	font-size: inherit;
 	line-height: inherit;
 	vertical-align: middle;
-	transform: translateY(-1px);
+	transform: translateY(-2px);
 }
 .button .button-icon {
 	pointer-events: none;
 	display: inline-block;
 	width: var(--space-75);
 	vertical-align: middle;
-	transform: translateY(-1px);
+	transform: translateY(-2px);
 }
 
 

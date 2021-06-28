@@ -50,7 +50,7 @@
 									<div class="p space-200-top-bottom">Make your White Gold experience trouble free and get a better rate. Carry the original purchase bill.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/character/char-7.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 3 -->
@@ -86,7 +86,7 @@
 									<div class="p space-50-top space-200-bottom">Carry your Aadhar card for easy KYC check.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/character/char-6.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -114,12 +114,12 @@
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
 								<div class="columns small-10 space-50-left-right"><div class="h5 medium">German Machines</div></div>
 							</div>
-							<div class="row space-25-top space-150-bottom space-50-left-right">
+							<div class="row space-25-top space-200-bottom space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
 								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Instant Valuation</div></div>
 							</div>
-							<div class="row space-50-left-right">
-								<div class="columns small-12">
+							<div class="row space-200-top space-50-bottom space-50-left-right">
+								<div class="columns small-12 medium-8">
 									<a href="" class="watch-video block row fill-blue-1">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
@@ -131,6 +131,7 @@
 									</a>
 								</div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/spectrometer-1.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 5 -->
@@ -145,13 +146,13 @@
 						</label>
 						<div class="card-content">
 							<div class="row space-150-top space-50-left-right">
-								<div class="columns small-10 small-offset-1 space-50-left-right">
+								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
 									<div class="h5 medium space-150-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<a href class="button fill-yellow-2">Check Live gold rate now</a>
 								</div>
 							</div>
-							<div class="row space-150-top space-50-left-right">
-								<div class="columns small-12">
+							<div class="row space-200-top space-50-bottom space-50-left-right">
+								<div class="columns small-12 medium-8">
 									<a href="" class="watch-video block row fill-neutral-4">
 										<div class="columns small-6">
 											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>

@@ -24,6 +24,13 @@
 	transform: scale(0.75) translateX(45%) translateY(15%);
 }
 
+.sell-gold-section .sgs4 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.35) translateX(90%) translateY(20%);
+}
+
 @media( min-width: 640px )  {
 	.sell-gold-section .sgs2 .card-content .bg-img {
 		width: calc(var(--card)*1.25);
@@ -32,6 +39,9 @@
 	.sell-gold-section .sgs3 .card-content .bg-img {
 		width: calc(var(--card)*1.25);
 		transform: scale(1) translateX(0%) translateY(0%);
+	}
+	.sell-gold-section .sgs4 .card-content .bg-img {
+		transform: scale(0.75) translateX(20%) translateY(18%);
 	}
 }
 @media( min-width: 1040px ) {}

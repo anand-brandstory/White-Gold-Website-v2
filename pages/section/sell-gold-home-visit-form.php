@@ -41,6 +41,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="char"><img class="block" src="../media/character/char-1.png<?php echo $ver ?>"></div>
+		<div class="char"><img class="block" src="../media/cutout/char-1.png<?php echo $ver ?>"></div>
 	</div>
 </section>
