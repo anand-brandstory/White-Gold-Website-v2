@@ -12,31 +12,53 @@
 			</div>
 			<div class="columns small-9 medium-5 large-3">
 				<div class="form-card form-dark row fill-blue-4">
-					<div class="columns small-12">
-						<label class="form-label block">
-							<input type="text" placeholder="Pincode" class="form-input-field block">
-							<span class="form-label-title medium fill-blue-4 cursor-pointer">Pincode</span>
-						</label>
+					<div class="form form-base">
+						<div class="columns small-12">
+							<label class="form-label block">
+								<input type="text" placeholder="Pincode" class="form-input-field block">
+								<span class="form-label-title medium fill-blue-4 cursor-pointer">Pincode</span>
+							</label>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="phone-verify form-label block">
+								<input type="text" class="form-input-field phone-number block">
+								<select class="form-input-field country-code">
+									<option value="">India (+91)</option>
+								</select>
+								<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
+								<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
+								<span class="form-label-title medium fill-blue-4 cursor-pointer">Mobile Number</span>
+							</label>
+						</div>
+						<div class="row space-25-top space-50-left-right">
+							<div class="small text-light">I hereby authorise, WHITE GOLD to call me on this number.</div>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="form-label block">
+								<span class="form-label-title hidden medium fill-blue-2 cursor-pointer">Submit</span>
+								<button class="button fill-light">Book Home Visit</button>
+							</label>
+						</div>
 					</div>
-					<div class="columns small-12 space-50-top">
-						<label class="phone-verify form-label block">
-							<input type="text" class="form-input-field phone-number block">
-							<select class="form-input-field country-code">
-								<option value="">India (+91)</option>
-							</select>
-							<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
-							<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
-							<span class="form-label-title medium fill-blue-4 cursor-pointer">Mobile Number</span>
-						</label>
+					<div class="form form-otp">
+						<div class="columns small-12">
+							<label class="form-label block">
+								<input type="text" placeholder="Enter OTP" class="form-input-field block">
+								<span class="form-label-title medium fill-blue-4 cursor-pointer">Enter OTP</span>
+							</label>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="form-label block">
+								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
+								<button class="button fill-light">Submit OTP</button>
+							</label>
+						</div>
 					</div>
-					<div class="row space-25-top space-50-left-right">
-						<div class="small text-light">I hereby authorise, WHITE GOLD to call me on this number.</div>
-					</div>
-					<div class="columns small-12 space-50-top">
-						<label class="form-label block">
-							<span class="form-label-title hidden medium fill-blue-2 cursor-pointer">Submit</span>
-							<button class="button fill-light">Book Home Visit</button>
-						</label>
+					<div class="form form-thankyou">
+						<div class="columns small-12">
+							<div class="h4 strong space-25-bottom">Thank You</div>
+							<div class="p">We'll get in touch with you soon.</div>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -10,43 +10,65 @@
 			<br class="hide-large hide-xlarge">
 			<div class="columns small-9 medium-5 large-3 large-offset-1">
 				<div class="form-card row fill-light">
-					<div class="columns small-12">
-						<label class="form-label block">
-							<input type="text" placeholder="Full Name" class="form-input-field block">
-							<span class="form-label-title medium fill-light cursor-pointer">Full Name</span>
-						</label>
+					<div class="form form-base">
+						<div class="columns small-12">
+							<label class="form-label block">
+								<input type="text" placeholder="Full Name" class="form-input-field block">
+								<span class="form-label-title medium fill-light cursor-pointer">Full Name</span>
+							</label>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="form-label block">
+								<select class="form-input-field block">
+									<option value="" selected="" disabled="">Choose Quantity</option>
+									<option value="">5g</option>
+									<option value="">10g</option>
+									<option value="">20g</option>
+									<option value="">15g</option>
+								</select>
+								<span class="form-label-title medium fill-light cursor-pointer">Quantity (in grams)</span>
+							</label>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="phone-verify form-label block">
+								<input type="text" class="form-input-field phone-number block">
+								<select class="form-input-field country-code">
+									<option value="">India (+91)</option>
+								</select>
+								<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
+								<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
+								<span class="form-label-title medium fill-light cursor-pointer">Mobile Number</span>
+							</label>
+						</div>
+						<div class="row space-25-top space-50-left-right">
+							<div class="small text-neutral-3">I hereby authorise, WHITE GOLD to call me on this number.</div>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="form-label block">
+								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
+								<button class="button fill-blue-1">Sell Gold</button>
+							</label>
+						</div>
 					</div>
-					<div class="columns small-12 space-50-top">
-						<label class="form-label block">
-							<select class="form-input-field block">
-								<option value="" selected="" disabled="">Choose Quantity</option>
-								<option value="">5g</option>
-								<option value="">10g</option>
-								<option value="">20g</option>
-								<option value="">15g</option>
-							</select>
-							<span class="form-label-title medium fill-light cursor-pointer">Quantity (in grams)</span>
-						</label>
+					<div class="form form-otp">
+						<div class="columns small-12">
+							<label class="form-label block">
+								<input type="text" placeholder="Enter OTP" class="form-input-field block">
+								<span class="form-label-title medium fill-light cursor-pointer">Enter OTP</span>
+							</label>
+						</div>
+						<div class="columns small-12 space-50-top">
+							<label class="form-label block">
+								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
+								<button class="button fill-blue-1">Submit OTP</button>
+							</label>
+						</div>
 					</div>
-					<div class="columns small-12 space-50-top">
-						<label class="phone-verify form-label block">
-							<input type="text" class="form-input-field phone-number block">
-							<select class="form-input-field country-code">
-								<option value="">India (+91)</option>
-							</select>
-							<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
-							<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
-							<span class="form-label-title medium fill-light cursor-pointer">Mobile Number</span>
-						</label>
-					</div>
-					<div class="row space-25-top space-50-left-right">
-						<div class="small text-neutral-3">I hereby authorise, WHITE GOLD to call me on this number.</div>
-					</div>
-					<div class="columns small-12 space-50-top">
-						<label class="form-label block">
-							<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
-							<button class="button fill-blue-1">Sell Gold</button>
-						</label>
+					<div class="form form-thankyou">
+						<div class="columns small-12">
+							<div class="h4 strong space-25-bottom">Thank You</div>
+							<div class="p">We'll get in touch with you soon.</div>
+						</div>
 					</div>
 				</div>
 			</div>

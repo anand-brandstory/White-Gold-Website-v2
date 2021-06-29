@@ -379,30 +379,6 @@ select { cursor: pointer; }
 .content-block label { font-size: var(--label); }
 .content-block small { font-size: var(--small); }
 
-@media( min-width: 640px )  {
-	.content-block h1 { font-size: calc(var(--h1)*1.25); }
-	.content-block h2 { font-size: calc(var(--h2)*1.25); }
-	.content-block h3 { font-size: calc(var(--h3)*1.25); }
-	.content-block h4 { font-size: calc(var(--h4)*1.25); }
-	.content-block h5 { font-size: calc(var(--h5)*1.25); }
-	.content-block h6 { font-size: calc(var(--h6)*1.25); }
-	.content-block p 	{ font-size: calc(var(--p)*1.25); }
-	.content-block label { font-size: calc(var(--label)*1.25); }
-	.content-block small { font-size: calc(var(--small)*1.25); }
-}
-@media( min-width: 1040px ) {
-	.content-block h1 { font-size: calc(var(--h1)*1.5); }
-	.content-block h2 { font-size: calc(var(--h2)*1.5); }
-	.content-block h3 { font-size: calc(var(--h3)*1.5); }
-	.content-block h4 { font-size: calc(var(--h4)*1.5); }
-	.content-block h5 { font-size: calc(var(--h5)*1.5); }
-	.content-block h6 { font-size: calc(var(--h6)*1.5); }
-	.content-block p 	{ font-size: calc(var(--p)*1.5); }
-	.content-block label { font-size: calc(var(--label)*1.5); }
-	.content-block small { font-size: calc(var(--small)*1.5); }
-}
-@media( min-width: 1480px ) {}
-
 .content-block h1, 
 .content-block h2, 
 .content-block h3, 

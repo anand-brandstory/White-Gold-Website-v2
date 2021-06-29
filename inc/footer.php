@@ -30,14 +30,15 @@ $citiesInRegions = [
 			<div class="container">
 				<div class="row">
 					<div class="columns small-12 medium-8 space-200-top">
-						<div class="footer-content">
+						<div class="footer-content content-block">
 							<?= $footerPost->get( 'post_content' ) ?>
 						</div>
 					</div>
 					<div class="columns small-12 medium-3 medium-offset-1 space-200-top">
 						<div class="footer-menu">
+							<div class="title h6 strong text-neutral-4 space-75-bottom">Quick Links:</div>
 							<?php foreach ( $footerNavigationMenuItems as $item ) : ?>
-								<a href="/<?= $item[ 'url' ] ?>" class="block p strong"><?= $item[ 'title' ] ?></a>
+								<a href="/<?= $item[ 'url' ] ?>" class="link h6 strong text-yellow-2"><?= $item[ 'title' ] ?></a><br>
 							<?php endforeach; ?>
 						</div>
 					</div>
