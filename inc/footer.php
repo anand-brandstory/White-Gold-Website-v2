@@ -17,6 +17,12 @@ use BFS\Router;
 $footerPost = CMS::getPostBySlug( 'footer', 'page' );
 $footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
 
+$citiesInRegions = [
+	'ka' => 'bangalore',
+	'tn' => 'chennai',
+	'kl' => 'kochi'
+];
+
 ?>
 		
 		<!-- Footer Section -->
@@ -39,6 +45,42 @@ $footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
 			</div>
 		</section>
 		<!-- END: Footer Section -->
+
+		<!-- Sitemap Section -->
+		<section class="visuallyhidden">
+			<nav>
+				<ul>
+					<li>
+						<a href="/">
+							<p>online gold buyers</p>
+							<p>buyers of gold near me</p>
+							<p>old gold buyers</p>
+							<p>selling gold for cash</p>
+							<p>resale value of gold</p>
+							<p>pledge gold release</p>
+							<p>pledge gold</p>
+							<p>old gold selling rate</p>
+							<p>best gold buyers</p>
+							<p>selling my gold</p>
+							<p>sell old gold</p>
+							<p>sell gold online</p>
+							<p>gold buying and selling</p>
+						</a>
+					</li>
+					<?php /* <li><a href="/<?= REGION ?>/gold-rate">gold selling rate today</a></li> */ ?>
+					<li>
+						<a href="/<?= REGION ?>">
+							<p>gold buyers <?= $citiesInRegions[ REGION ] ?></p>
+							<p>old gold buyers <?= $citiesInRegions[ REGION ] ?></p>
+							<p>sell gold in <?= $citiesInRegions[ REGION ] ?></p>
+							<p>cash for gold in <?= $citiesInRegions[ REGION ] ?></p>
+							<p>gold selling rate in <?= $citiesInRegions[ REGION ] ?></p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+		<!-- END: Sitemap Section -->
 
 	</div><!-- END: Page Content -->
 	<?php lazaro_signature(); ?>
