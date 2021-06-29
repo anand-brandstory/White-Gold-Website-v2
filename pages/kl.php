@@ -6,4 +6,6 @@
  *
  */
 
+const REGION = 'kl';
+
 require_once __ROOT__ . '/pages/home.php';

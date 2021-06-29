@@ -1,3 +1,20 @@
+<?php
+
+$regions = [
+	'ka' => 'Karnataka',
+	'tn' => 'Tamil Nadu',
+	'kl' => 'Kerala'
+];
+
+?>
+<?php /* Store data in JavaScript */ ?>
+<script type="text/javascript">
+	window.__BFS = window.__BFS || { };
+	window.__BFS.settings = window.__BFS.settings || { };
+	window.__BFS.settings.region = "<?= REGION ?>";
+</script>
+<?php /* END: Store data in JavaScript */ ?>
+
 <section class="header-section space-200-top space-100-bottom fill-blue-5" id="header-section" data-section-title="Header Section" data-section-slug="header-section">
 	<div class="container">
 		<div class="row">
@@ -7,14 +24,22 @@
 				</a>
 			</div>
 			<div class="columns small-6 inline-middle text-right">
-				<label class="select-region inline">
-					<select class="select-region-option input-field">
-						<option value="KA">Karnataka</option>
-						<option value="TN">Tamil Nadu</option>
-						<option value="KL">Kerala</option>
+				<label class="select-region inline js_region_selector_container">
+					<select class="select-region-option input-field js_region_selector">
+						<?php foreach ( $regions as $regionCode => $regionName ) : ?>
+							<option value="<?= $regionCode ?>" <?php if ( $regionCode === REGION ) : ?> selected <?php endif; ?>><?= $regionName ?></option>
+						<?php endforeach; ?>
 					</select>
-					<span class="select-region-label p medium">Karnataka</span>
+					<span class="select-region-label p medium js_region_label"><?= $regions[ REGION ] ?></span>
 				</label>
+				<?php /* This menu is _semantically marked up_ and is "visually" hidden, yet accessible to crawlers (and screen readers) which is crucial for SEO and accessibility */ ?>
+				<nav class="visuallyhidden js_region_nav">
+					<ul>
+						<?php foreach ( $regions as $regionCode => $regionName ) : ?>
+							<li><a href="/<?= $regionCode ?>" data-region="<?= $regionCode ?>"><?= $regionName ?></a></li>
+						<?php endforeach; ?>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>
