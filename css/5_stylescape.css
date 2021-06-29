@@ -368,33 +368,6 @@ select { cursor: pointer; }
 .line-height-xlarge { line-height: 1.625 }
 .line-height-xxlarge { line-height: 2; }
 
-/* -- Content Block -- */
-.content-block h1 { font-size: var(--h1); }
-.content-block h2 { font-size: var(--h2); }
-.content-block h3 { font-size: var(--h3); }
-.content-block h4 { font-size: var(--h4); }
-.content-block h5 { font-size: var(--h5); }
-.content-block h6 { font-size: var(--h6); }
-.content-block p 	{ font-size: var(--p); }
-.content-block label { font-size: var(--label); }
-.content-block small { font-size: var(--small); }
-
-.content-block h1, 
-.content-block h2, 
-.content-block h3, 
-.content-block h4, 
-.content-block h5, 
-.content-block h6{
-	display: block;
-	line-height: 1.125;
-}
-
-.content-block p, 
-.content-block label, 
-.content-block small {
-	line-height: 1.375;
-}
-
 
 
 
