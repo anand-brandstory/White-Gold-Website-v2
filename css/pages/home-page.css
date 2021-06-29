@@ -199,6 +199,8 @@
 	border-radius: var(--space-25);
 	overflow: hidden;
 	background-color: var(--neutral-3);
+	background-size: cover;
+	background-position: center center;
 }
 .watch-video .thumbnail:before {
 	position: absolute;
@@ -777,6 +779,8 @@
 .find-branch-section .branch-listing .branch-grid .branch .thumbnail {
 	width: 100%;
 	padding-top: 100%;
+	background-size: cover;
+	background-position: center center;
 }
 .find-branch-section .branch-listing .branch-grid .branch .check-distance {
 	display: inline-block;

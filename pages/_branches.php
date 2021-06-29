@@ -49,7 +49,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-6 medium-4 large-3 space-100-bottom">
-				<div class="title h2 strong text-blue-2">Find a WhiteGold <br><span class="text-neutral-3">near you</span></div>
+				<div class="title h2 strong text-blue-4">Find a WhiteGold <br><span class="text-neutral-3">near you</span></div>
 				<div class="char"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
 			</div>
 			<div class="branch-listing columns small-12 medium-7 medium-offset-1 large-6 large-offset-3">
@@ -65,13 +65,13 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 								<span class="inline-middle">&nbsp;Check Distance</span>
 							</div>
 							<div class="timings p text-neutral-3 space-50-bottom">Open Mon to Fri</div>
-							<a class="gmaps-link button" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
+							<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
 						</div>
 						<!-- END: Branch -->
 					<?php endforeach; ?>
 				</div>
 				<div class="branch-more space-100-top-bottom">
-					<button class="button fill-blue-2 order-by-nearest js_order_branches">Show Nearest Branch</button>
+					<button class="button fill-blue-5 order-by-nearest js_order_branches">Show Nearest Branch</button>
 				</div>
 			</div>
 		</div>
