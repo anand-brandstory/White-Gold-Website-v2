@@ -44,16 +44,7 @@ CMS::setupContext();
 
 <!-- ## Home Page -->
 <!-- Landing Carousel Section -->
-<section class="landing-carousel-section space-100-top space-200-bottom fill-blue-5" id="landing-carousel-section" data-section-title="Landing Carousel Section" data-section-slug="landing-carousel-section">
-	<div class="container">
-		<div class="row">
-			<div class="columns small-12">
-				<!-- insert text -->
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe, eaque quaerat, aliquam quae eligendi, qui a vel id molestias reprehenderit nesciunt maxime doloremque voluptatibus ipsum. Praesentium velit magnam quod at.
-			</div>
-		</div>
-	</div>
-</section>
+<?php require_once __ROOT__ . '/pages/section/landing-carousel.php'; ?>
 <!-- END: Landing Carousel Section -->
 
 

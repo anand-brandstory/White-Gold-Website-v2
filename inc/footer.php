@@ -99,6 +99,7 @@ $citiesInRegions = [
 <!-- <script type="text/javascript" src="/js/modules/device-charge.js<?= $ver ?>"></script> -->
 <script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/modal_box.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/form.js<?= $ver ?>"></script>
 <?php if ( ! BFS_ENV_PRODUCTION ) : ?>
 	<script type="text/javascript" src="/js/modules/disclaimer.js<?= $ver ?>"></script>

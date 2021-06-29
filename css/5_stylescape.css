@@ -368,6 +368,58 @@ select { cursor: pointer; }
 .line-height-xlarge { line-height: 1.625 }
 .line-height-xxlarge { line-height: 2; }
 
+/* -- Content Block -- */
+.content-block h1 { font-size: var(--h1); }
+.content-block h2 { font-size: var(--h2); }
+.content-block h3 { font-size: var(--h3); }
+.content-block h4 { font-size: var(--h4); }
+.content-block h5 { font-size: var(--h5); }
+.content-block h6 { font-size: var(--h6); }
+.content-block p 	{ font-size: var(--p); }
+.content-block label { font-size: var(--label); }
+.content-block small { font-size: var(--small); }
+
+@media( min-width: 640px )  {
+	.content-block h1 { font-size: calc(var(--h1)*1.25); }
+	.content-block h2 { font-size: calc(var(--h2)*1.25); }
+	.content-block h3 { font-size: calc(var(--h3)*1.25); }
+	.content-block h4 { font-size: calc(var(--h4)*1.25); }
+	.content-block h5 { font-size: calc(var(--h5)*1.25); }
+	.content-block h6 { font-size: calc(var(--h6)*1.25); }
+	.content-block p 	{ font-size: calc(var(--p)*1.25); }
+	.content-block label { font-size: calc(var(--label)*1.25); }
+	.content-block small { font-size: calc(var(--small)*1.25); }
+}
+@media( min-width: 1040px ) {
+	.content-block h1 { font-size: calc(var(--h1)*1.5); }
+	.content-block h2 { font-size: calc(var(--h2)*1.5); }
+	.content-block h3 { font-size: calc(var(--h3)*1.5); }
+	.content-block h4 { font-size: calc(var(--h4)*1.5); }
+	.content-block h5 { font-size: calc(var(--h5)*1.5); }
+	.content-block h6 { font-size: calc(var(--h6)*1.5); }
+	.content-block p 	{ font-size: calc(var(--p)*1.5); }
+	.content-block label { font-size: calc(var(--label)*1.5); }
+	.content-block small { font-size: calc(var(--small)*1.5); }
+}
+@media( min-width: 1480px ) {}
+
+.content-block h1, 
+.content-block h2, 
+.content-block h3, 
+.content-block h4, 
+.content-block h5, 
+.content-block h6{
+	display: block;
+	line-height: 1.125;
+}
+
+.content-block p, 
+.content-block label, 
+.content-block small {
+	line-height: 1.375;
+}
+
+
 
 
 
@@ -650,6 +702,7 @@ select { cursor: pointer; }
 
 .carousel .carousel-list {
 	position: relative;
+	z-index: 1;
 	display: block;
 	width: 100%;
 	white-space: nowrap;
@@ -657,30 +710,20 @@ select { cursor: pointer; }
 	overflow-y: hidden;
 	font-size: 0;
 	-webkit-overflow-scrolling: touch;
-	padding: 0 calc( (100vw - var(--container-width))/2 ) var(--space-50);
+	padding: 0 calc( (100vw - var(--container-width))/2 );
 	scroll-snap-type: x mandatory;
 }
 
 .carousel:before {
 	left: 0;
-	background-image: linear-gradient( to left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+	background-image: var(--fade-left);
 	opacity: 0.5;
 }
 
 .carousel:after {
 	right: 0;
-	background-image: linear-gradient( to right, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 90%);
+	background-image: var(--fade-right);
 	opacity: 0.5;
-}
-
-.carousel.fill-dark:before {
-	left: 0;
-	background-image: linear-gradient( to left, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
-}
-
-.carousel.fill-dark:after {
-	right: 0;
-	background-image: linear-gradient( to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 90%);
 }
 
 .carousel .carousel-list .carousel-list-item {
@@ -688,7 +731,8 @@ select { cursor: pointer; }
 	vertical-align: top;
 	position: relative;
 	white-space: normal;
-	width: calc( 4 * var(--space-100) );
+	/*width: calc( 4 * var(--space-100) );*/
+	width: 100vw;
 	scroll-snap-align: center;
 }
 
@@ -704,3 +748,61 @@ select { cursor: pointer; }
 	pointer-events: all;
 }
 
+/* -- WhiteGold Carousel Overwrites -- */
+.carousel .carousel-list .carousel-list-item .carousel-card {
+	min-height: calc( var(--container-width) * 1.25 );
+	background-repeat: no-repeat;
+	background-size: var(--card);
+}
+.carousel .carousel-controls {
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	height: auto;
+	transform: translateY(-50%);
+}
+
+.carousel .carousel-controls .carousel-button {
+	position: relative;
+	width: calc( (100vw - var(--container-width))/2 );
+	min-height: calc( var(--container-width) * 1.25 );
+	border-radius: 0;
+	background-color: transparent;
+}
+.carousel .carousel-controls .carousel-button .material-icons {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	transform: translate(-50%, -50%);
+}
+
+
+@media( min-width: 640px )  {
+	.carousel .carousel-list {
+		/* -- To Remove Scroll Bar on Non Mobile Screens -- */
+		overflow-x: hidden;
+		overflow-y: hidden;
+	}
+
+	.carousel .carousel-list .carousel-list-item .carousel-card {
+		background-size: calc( var(--card) * 1.5 );
+		min-height: calc( var(--container-width) * 0.75 );
+	}
+	.carousel .carousel-controls .carousel-button {
+		min-height: calc( var(--container-width) * 0.75 );
+	}
+}
+@media( min-width: 1040px ) {
+	.carousel .carousel-list .carousel-list-item .carousel-card {
+		background-size: calc( var(--card) * 1.75 );
+		min-height: calc( var(--container-width) * 0.5 );
+	}
+	.carousel .carousel-controls .carousel-button {
+		min-height: calc( var(--container-width) * 0.5 );
+	}
+}
+@media( min-width: 1480px ) {}
