@@ -758,6 +758,11 @@
 	grid-template-columns: 1fr 1fr;
 	grid-gap: var(--space-50);
 	grid-auto-rows: calc(var(--space-100)*5.3);
+	transition: opacity 0.25s ease-out;
+}
+.find-branch-section .branch-listing .branch-grid.fade-out {
+	opacity: 0;
+	transition: opacity 0.25s ease-in;
 }
 .find-branch-section .branch-listing .branch-grid .branch {
 	padding: var(--space-25);
@@ -811,6 +816,15 @@
 }
 @media( min-width: 1480px ) {}
 
+.find-branch-section .branch-listing .branch-more .order-by-nearest {
+	cursor: pointer;
+}
+.find-branch-section .branch-listing .branch-more .order-by-nearest.loading {
+	opacity: 0.75;
+	pointer-events: none;
+	cursor: not-allowed;
+	cursor: wait;
+}
 
 
 
@@ -853,5 +867,3 @@
 	line-height: 1.75;
 	margin-bottom: var(--space-25);
 }
-
-
