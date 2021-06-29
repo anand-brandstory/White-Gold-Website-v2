@@ -58,13 +58,13 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 						<!-- Branch -->
 						<div class="branch fill-light js_branch">
 							<div class="thumbnail fill-neutral-1 radius-25" <?php if ( $branch->get( 'branch_image' ) ) : ?>style="background-image: url( '<?= $branch->get( 'branch_image' ) ?>' );"<?php endif; ?>></div>
-							<div class="title h6 strong space-50-top-bottom"><?= $branch->get( 'branch_name' ) ?></div>
+							<div class="title h6 strong"><?= $branch->get( 'branch_name' ) ?></div>
+							<div class="timings p text-neutral-3 space-25-bottom">Open Mon to Fri</div>
 							<div class="distance h4 text-neutral-3 js_distance_from_user hidden"></div>
-							<div class="check-distance small medium text-uppercase text-blue-4 space-25 fill-neutral-1 js_check_distance hidden">
+							<div class="check-distance small medium text-uppercase text-blue-1 space-25 fill-blue-5 js_check_distance hidden">
 								<span class="material-icons inline-middle" data-icon="my_location"></span>
 								<span class="inline-middle">&nbsp;Check Distance</span>
 							</div>
-							<div class="timings p text-neutral-3 space-50-bottom">Open Mon to Fri</div>
 							<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
 						</div>
 						<!-- END: Branch -->
