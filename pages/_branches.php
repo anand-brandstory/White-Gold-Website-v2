@@ -71,7 +71,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 					<?php endforeach; ?>
 				</div>
 				<div class="branch-more space-100-top-bottom">
-					<div class="button fill-blue-2">Show Nearest Branch</div>
+					<button class="button fill-blue-2 order-by-nearest js_order_branches">Show Nearest Branch</button>
 				</div>
 			</div>
 		</div>
