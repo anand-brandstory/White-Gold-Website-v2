@@ -49,6 +49,7 @@
 	--neutral-2: #C6C6C7;
 	--neutral-3: #96979B;
 	--neutral-4: #4E5055;
+	--neutral-5: #333635;
 	--dark: #212322;
 	--black: #111111;
 	/*--yellow-1: #FEE985;*/
@@ -393,6 +394,9 @@ select { cursor: pointer; }
 .fill-neutral-4 {
 	color: var(--light);
 	background-color: var(--neutral-4); }
+.fill-neutral-5 {
+	color: var(--light);
+	background-color: var(--neutral-5); }
 .fill-dark {
 	color: var(--light);
 	background-color: var(--dark); }
@@ -468,6 +472,8 @@ select { cursor: pointer; }
 	color: var(--neutral-3); }
 .text-neutral-4 {
 	color: var(--neutral-4); }
+.text-neutral-5 {
+	color: var(--neutral-5); }
 .text-dark {
 	color: var(--dark); }
 .text-black {

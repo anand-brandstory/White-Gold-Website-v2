@@ -33,13 +33,12 @@ CMS::setupContext();
 
 
 <!-- ## General Page -->
-<!-- Header Section -->
 <?php require_once __ROOT__ . '/pages/section/header.php'; ?>
-<!-- END: Header Section -->
 
 
-<!-- Menu Section -->
-<!-- END: Menu Section -->
+<!-- Static Menu Section -->
+<!-- END: Static Menu Section -->
+
 
 
 <!-- ## Home Page -->
