@@ -1,4 +1,4 @@
-<section class="sell-gold-faqs-section fill-blue-5 space-200-bottom" id="sell-gold-faqs-section" data-section-title="Sell Gold FAQs Section" data-section-slug="sell-gold-faqs-section">
+<section class="sell-gold-faqs-section fill-blue-5 space-200-bottom js_section_sell_gold_faqs" id="sell-gold-faqs-section" data-section-title="Sell Gold FAQs Section" data-section-slug="sell-gold-faqs-section">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 large-4">
@@ -48,7 +48,7 @@
 					</div>
 					<div class="articles-faqs columns small-12">
 						<div class="faq">
-							<input id="sgq1" type="radio" name="sell-gold-faq" class="visuallyhidden" checked="">
+							<input id="sgq1" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle" checked>
 							<label for="sgq1" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Do you Release Pledged Gold?</div>
@@ -60,7 +60,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq2" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq2" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq2" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What ID Proof is Required For Selling Gold?</div>
@@ -72,7 +72,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq3" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq3" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq3" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What are your Branch Timings?</div>
@@ -84,7 +84,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq4" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq4" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq4" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Do you work on Sundays?</div>
@@ -96,7 +96,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq5" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq5" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq5" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Will you Buy Diamond And Silver?</div>
@@ -108,7 +108,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq6" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq6" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq6" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Mode of Payment?</div>
@@ -120,7 +120,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq7" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq7" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq7" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">How is Valuation done and how long does it take?</div>
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq8" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq8" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Will my ornaments get damaged due to Testing?</div>
@@ -144,7 +144,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq9" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq9" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq9" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">I am not a resident of Bangalore. Can I sell ornaments?</div>
@@ -156,7 +156,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq10" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq10" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq10" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Once sold, can I buy back my ornaments later?</div>
@@ -168,7 +168,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq11" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq11" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq11" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Can I sell my broken or tampered jewellery?</div>
@@ -180,7 +180,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq12" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq12" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq12" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Do you purchase white gold?</div>
@@ -192,7 +192,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq13" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq13" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq13" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">How long will this take and will I be paid instantly?</div>
@@ -204,7 +204,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq14" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq14" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq14" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Are there any additional service charges for this service?</div>
@@ -216,7 +216,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="sgq15" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="sgq15" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="sgq15" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Branch location?</div>
@@ -233,3 +233,32 @@
 		</div>
 	</div>
 </section>
+
+<script type="text/javascript">
+
+	$( function () {
+
+		/*
+		 *
+		 * ----- Allow the user to collapse an open FAQ in the Sell Gold FAQs section
+		 *
+		 */
+		var $sellGoldFAQsSection = $( ".js_section_sell_gold_faqs" );
+		var currentlyToggledCardId = $sellGoldFAQsSection.find( ".js_faq_toggle:checked" ).attr( "id" );
+		$sellGoldFAQsSection.on( "click", ".js_faq_toggle", function ( event ) {
+			var domCardToggle = event.target;
+			var newlyToggledCardId = domCardToggle.id;
+
+			if ( currentlyToggledCardId !== newlyToggledCardId )
+				return;
+
+			domCardToggle.checked = false;
+			currentlyToggledCardId = null;
+		} );
+		$sellGoldFAQsSection.on( "change", ".js_faq_toggle", function ( event ) {
+			currentlyToggledCardId = event.target.id;
+		} );
+
+	} );
+
+</script>
