@@ -111,6 +111,7 @@
 	--space-50 : calc(var(--space-100)/2);
 	--space-25 : calc(var(--space-50)/2);
 	--space-75 : calc(var(--space-50)*1.5);
+	--space-125 : calc(var(--space-100)*1.25);
 	--space-150 : calc(var(--space-100)*1.5);
 	--space-175 : calc(var(--space-100)*1.75);
 	--space-200 : calc(var(--space-100)*2);
