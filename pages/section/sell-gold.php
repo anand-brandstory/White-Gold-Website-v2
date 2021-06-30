@@ -1,4 +1,4 @@
-<section class="sell-gold-section fill-blue-5 space-200-top space-100-bottom" id="sell-gold-section" data-section-title="Sell Gold Section" data-section-slug="sell-gold-section">
+<section class="sell-gold-section fill-blue-5 space-200-top space-100-bottom js_section_sell_gold" id="sell-gold-section" data-section-title="Sell Gold Section" data-section-slug="sell-gold-section">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
@@ -15,7 +15,7 @@
 					</div>
 					<!-- CARD: 1 -->
 					<div class="card sgs1 columns small-12 fill-blue-4">
-						<input id="sgs1" type="radio" name="sell-gold-step" class="visuallyhidden" checked="checked">
+						<input id="sgs1" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle" checked>
 						<label for="sgs1" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">1</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Find a Branch</div>
@@ -35,7 +35,7 @@
 					</div>
 					<!-- CARD: 2 -->
 					<div class="card sgs2 columns small-12 fill-blue-4">
-						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">2</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Bring Original Bill</div>
@@ -55,7 +55,7 @@
 					</div>
 					<!-- CARD: 3 -->
 					<div class="card sgs3 columns small-12 fill-blue-4">
-						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">3</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID proof</div>
@@ -97,7 +97,7 @@
 					</div>
 					<!-- CARD: 4 -->
 					<div class="card sgs4 columns small-12 fill-blue-4">
-						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs4" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">4</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Check Gold Purity</div>
@@ -136,7 +136,7 @@
 					</div>
 					<!-- CARD: 5 -->
 					<div class="card sgs5 columns small-12 fill-dark text-yellow-2">
-						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">5</span></div>
 							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
@@ -168,7 +168,7 @@
 					</div>
 					<!-- CARD: 6 -->
 					<div class="card sgs6 columns small-12 fill-blue-4">
-						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs6" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">6</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">KYC Verification</div>
@@ -200,7 +200,7 @@
 					</div>
 					<!-- CARD: 7 -->
 					<div class="card sgs7 columns small-12 fill-blue-4">
-						<input id="sgs7" type="radio" name="sell-gold-step" class="visuallyhidden">
+						<input id="sgs7" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs7" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">7</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Instant Bank Transfer</div>
@@ -226,3 +226,32 @@
 		</div>
 	</div>
 </section>
+
+<script type="text/javascript">
+
+	$( function () {
+
+		/*
+		 *
+		 * ----- Allow the user to collapse an open procedure step (card) in the Sell Gold section
+		 *
+		 */
+		var $sellGoldSection = $( ".js_section_sell_gold" );
+		var currentlyToggledCardId = $sellGoldSection.find( ".js_card_toggle:checked" ).attr( "id" );
+		$sellGoldSection.on( "click", ".js_card_toggle", function ( event ) {
+			var domCardToggle = event.target;
+			var newlyToggledCardId = domCardToggle.id;
+
+			if ( currentlyToggledCardId !== newlyToggledCardId )
+				return;
+
+			domCardToggle.checked = false;
+			currentlyToggledCardId = null;
+		} );
+		$sellGoldSection.on( "change", ".js_card_toggle", function ( event ) {
+			currentlyToggledCardId = event.target.id;
+		} );
+
+	} );
+
+</script>
