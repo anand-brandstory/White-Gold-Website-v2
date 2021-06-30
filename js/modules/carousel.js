@@ -1,4 +1,10 @@
 
+( function () {
+
+
+
+
+
 /*
  *
  * This handles the interaction of the arrow buttons on either side of the
@@ -50,20 +56,84 @@ $( document ).on( "click", ".js_carousel_container .js_pager", function ( event 
 	// 	return;
 
 	var scrollOffset = domCarouselContent.scrollLeft;
+	var newScrollOffset;
 	var $carouselItem = $( domCarouselContent ).find( ".js_carousel_item" );
 	if ( scrollDirection == "left" )
-		scrollOffset -= $carouselItem.width();
+		newScrollOffset = scrollOffset - $carouselItem.width();
 	else
-		scrollOffset += $carouselItem.width();
+		newScrollOffset = scrollOffset + $carouselItem.width();
 
 	/*
 	 * 5. Finally, scroll the carousel.
 	 */
 	try {
-		domCarouselContent.scrollTo( { left: scrollOffset, behavior: "smooth" } );
+		domCarouselContent.scrollTo( { left: newScrollOffset, behavior: "smooth" } );
 	}
 	catch ( e ) {
-		domCarouselContent.scrollTo( scrollOffset, 0 );
+		domCarouselContent.scrollTo( newScrollOffset, 0 );
 	}
 
 } );
+
+
+
+/*
+ *
+ * When scrolling through a carousel, determine whether to hide/disable any of the directional buttons
+ *
+ */
+$( ".js_carousel_content" ).on( "scroll", window.__BFS.utils.throttle( function ( event ) {
+	hideOrShowCarouselButtons( event.target );
+}, 0.5 ) );
+
+
+
+/*
+ * ---- Determine whether to show or hide each of the two carousel's buttons
+ *
+ * 	(depending on the horizontal scroll position)
+ *
+ */
+function hideOrShowCarouselButtons ( domCarouselContent ) {
+
+	var $carouselContent = $( domCarouselContent );
+	var $carouselContainer = $carouselContent.closest( ".js_carousel_container" );
+	$carouselContainer.data( "leftPager", $carouselContainer.find( ".js_pager[ data-dir = 'left' ]" ) );
+	$carouselContainer.data( "rightPager", $carouselContainer.find( ".js_pager[ data-dir = 'right' ]" ) );
+
+	// Get the computed styles (from cache, else add it)
+	var carouselContentStyles = $carouselContent.data( "computedStyles" );
+	if ( ! carouselContentStyles ) {
+		carouselContentStyles = getComputedStyle( domCarouselContent );
+		$carouselContent.data( "computedStyles", carouselContentStyles );
+	}
+	var carouselContentPaddingLeft = parseInt( carouselContentStyles.paddingLeft );
+	var carouselContentPaddingRight = parseInt( carouselContentStyles.paddingRight );
+	var scrollWidth = domCarouselContent.scrollWidth;
+	var scrollLeft = domCarouselContent.scrollLeft;
+	var newCarouselEndOffset = scrollLeft + domCarouselContent.offsetWidth;
+	if ( inWithin( scrollLeft, 0, carouselContentPaddingLeft + 100 ) ) {
+		$carouselContainer.data( "leftPager" ).addClass( "fade-out" );
+		$carouselContainer.data( "rightPager" ).removeClass( "fade-out" );
+	}
+	else if ( inWithin( newCarouselEndOffset, scrollWidth - carouselContentPaddingRight - 100, scrollWidth ) ) {
+		$carouselContainer.data( "leftPager" ).removeClass( "fade-out" );
+		$carouselContainer.data( "rightPager" ).addClass( "fade-out" );
+	}
+
+}
+
+function inWithin ( number, startRange, endRange ) {
+	if ( startRange > endRange ) {
+		var tmp = startRange;
+		startRange = endRange;
+		endRange = tmp;
+	}
+	return number >= startRange && number <= endRange;
+}
+
+
+
+
+
+}() );

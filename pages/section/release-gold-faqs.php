@@ -1,4 +1,4 @@
-<section class="release-gold-faqs-section fill-neutral-1 space-200-bottom" id="release-gold-faqs-section" data-section-title="Release Gold FAQs Section" data-section-slug="release-gold-faqs-section">
+<section class="release-gold-faqs-section fill-neutral-1 space-200-bottom js_section_release_gold_faqs" id="release-gold-faqs-section" data-section-title="Release Gold FAQs Section" data-section-slug="release-gold-faqs-section">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12 large-4">
@@ -48,7 +48,7 @@
 					</div>
 					<div class="articles-faqs columns small-12">
 						<div class="faq">
-							<input id="rgq1" type="radio" name="sell-gold-faq" class="visuallyhidden" checked="">
+							<input id="rgq1" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle" checked>
 							<label for="rgq1" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Do you Release Pledged Gold?</div>
@@ -60,7 +60,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq2" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq2" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq2" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What ID Proof is Required For Selling Gold?</div>
@@ -72,7 +72,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq3" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq3" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq3" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What are your Branch Timings?</div>
@@ -84,7 +84,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq4" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq4" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq4" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Do you work on Sundays?</div>
@@ -96,7 +96,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq5" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq5" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq5" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Will you Buy Diamond And Silver?</div>
@@ -108,7 +108,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq6" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq6" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq6" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Mode of Payment?</div>
@@ -120,7 +120,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq7" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq7" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq7" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">How is Valuation done and how long does it take?</div>
@@ -132,7 +132,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq8" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq8" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Can you release Gold which has already been pledged in a Bank or Finance company?</div>
@@ -144,7 +144,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq9" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq9" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq9" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What if I am not satisfied with the valuation after the release of Gold?</div>
@@ -156,7 +156,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq10" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq10" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq10" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">What if the value of the gold turns out to be lower than the released value?</div>
@@ -168,7 +168,7 @@
 							</div>
 						</div>
 						<div class="faq">
-							<input id="rgq11" type="radio" name="sell-gold-faq" class="visuallyhidden">
+							<input id="rgq11" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 							<label for="rgq11" class="question block row space-25-top-bottom">
 								<div class="title columns small-11 space-25">
 									<div class="h6 medium">Can I keep some part of my Gold which has been released?</div>
@@ -185,3 +185,32 @@
 		</div>
 	</div>
 </section>
+
+<script type="text/javascript">
+
+	$( function () {
+
+		/*
+		 *
+		 * ----- Allow the user to collapse an open FAQ in the Release Gold FAQs section
+		 *
+		 */
+		var $releaseGoldFAQsSection = $( ".js_section_release_gold_faqs" );
+		var currentlyToggledCardId = $releaseGoldFAQsSection.find( ".js_faq_toggle:checked" ).attr( "id" );
+		$releaseGoldFAQsSection.on( "click", ".js_faq_toggle", function ( event ) {
+			var domCardToggle = event.target;
+			var newlyToggledCardId = domCardToggle.id;
+
+			if ( currentlyToggledCardId !== newlyToggledCardId )
+				return;
+
+			domCardToggle.checked = false;
+			currentlyToggledCardId = null;
+		} );
+		$releaseGoldFAQsSection.on( "change", ".js_faq_toggle", function ( event ) {
+			currentlyToggledCardId = event.target.id;
+		} );
+
+	} );
+
+</script>

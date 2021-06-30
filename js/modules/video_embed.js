@@ -105,7 +105,7 @@ function setupYoutubePlayers () {
 $( function () {
 
 	// Wait for a bit
-	waitFor( 3 )
+	window.__BFS.utils.waitFor( 3 )
 		.then( function () {
 			// Initialize, load and setup the video embeds and their players
 			initialiseVideoEmbeds();

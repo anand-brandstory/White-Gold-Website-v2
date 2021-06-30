@@ -1,4 +1,4 @@
-<section class="release-gold-section fill-neutral-1 space-200-top-bottom" id="release-gold-section" data-section-title="Release Gold Section" data-section-slug="release-gold-section">
+<section class="release-gold-section fill-neutral-1 space-200-top-bottom js_section_release_gold" id="release-gold-section" data-section-title="Release Gold Section" data-section-slug="release-gold-section">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
@@ -15,7 +15,7 @@
 					</div>
 					<!-- CARD: 1 -->
 					<div class="card rgs1 columns small-12 fill-light">
-						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden" checked="">
+						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle" checked>
 						<label for="rgs1" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">1</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Find a Branch</div>
@@ -36,7 +36,7 @@
 					</div>
 					<!-- CARD: 2 -->
 					<div class="card rgs2 columns small-12 fill-light">
-						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">2</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Bring Pledge Receipt</div>
@@ -57,7 +57,7 @@
 					</div>
 					<!-- CARD: 3 -->
 					<div class="card rgs3 columns small-12 fill-light">
-						<input id="rgs3" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs3" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">3</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Carry ID proof</div>
@@ -100,7 +100,7 @@
 					</div>
 					<!-- CARD: 4 -->
 					<div class="card rgs4 columns small-12 fill-light">
-						<input id="rgs4" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs4" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs4" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">4</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">KYC Verification</div>
@@ -133,7 +133,7 @@
 					</div>
 					<!-- CARD: 5 -->
 					<div class="card rgs5 columns small-12 fill-dark text-yellow-2">
-						<input id="rgs5" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs5" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">5</span></div>
 							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
@@ -172,7 +172,7 @@
 					</div>
 					<!-- CARD: 6 -->
 					<div class="card rgs6 columns small-12 fill-light">
-						<input id="rgs6" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs6" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs6" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">6</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Release your Gold</div>
@@ -222,7 +222,7 @@
 					</div>
 					<!-- CARD: 7 -->
 					<div class="card rgs7 columns small-12 fill-light">
-						<input id="rgs7" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs7" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs7" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">7</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Check Gold Purity</div>
@@ -262,7 +262,7 @@
 					</div>
 					<!-- CARD: 8 -->
 					<div class="card rgs8 columns small-12 fill-light">
-						<input id="rgs8" type="radio" name="release-gold-step" class="visuallyhidden">
+						<input id="rgs8" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs8" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">8</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Instant Bank Transfer</div>
@@ -289,3 +289,31 @@
 		</div>
 	</div>
 </section>
+<script type="text/javascript">
+
+	$( function () {
+
+		/*
+		 *
+		 * ----- Allow the user to collapse an open procedure step (card) in the Release Gold section
+		 *
+		 */
+		var $releaseGoldSection = $( ".js_section_release_gold" );
+		var currentlyToggledCardId = $releaseGoldSection.find( ".js_card_toggle:checked" ).attr( "id" );
+		$releaseGoldSection.on( "click", ".js_card_toggle", function ( event ) {
+			var domCardToggle = event.target;
+			var newlyToggledCardId = domCardToggle.id;
+
+			if ( currentlyToggledCardId !== newlyToggledCardId )
+				return;
+
+			domCardToggle.checked = false;
+			currentlyToggledCardId = null;
+		} );
+		$releaseGoldSection.on( "change", ".js_card_toggle", function ( event ) {
+			currentlyToggledCardId = event.target.id;
+		} );
+
+	} );
+
+</script>

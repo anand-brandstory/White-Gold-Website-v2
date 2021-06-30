@@ -726,6 +726,12 @@ select { cursor: pointer; }
 	min-height: calc( var(--container-width) * 1.25 );
 	border-radius: 0;
 	background-color: transparent;
+	transition: opacity 0.15s ease-out;
+}
+.carousel .carousel-controls .carousel-button.fade-out {
+	opacity: 0.25;
+	cursor: not-allowed;
+	transition: opacity 0.15s ease-in;
 }
 .carousel .carousel-controls .carousel-button .material-icons {
 	position: absolute;
