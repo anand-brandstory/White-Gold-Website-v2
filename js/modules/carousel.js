@@ -73,6 +73,8 @@ $( document ).on( "click", ".js_carousel_container .js_pager", function ( event 
 		domCarouselContent.scrollTo( newScrollOffset, 0 );
 	}
 
+	hideOrShowCarouselButtons( domCarouselContent, newScrollOffset );
+
 } );
 
 
@@ -82,9 +84,9 @@ $( document ).on( "click", ".js_carousel_container .js_pager", function ( event 
  * When scrolling through a carousel, determine whether to hide/disable any of the directional buttons
  *
  */
-$( ".js_carousel_content" ).on( "scroll", window.__BFS.utils.throttle( function ( event ) {
+$( ".js_carousel_content" ).on( "scroll", function ( event ) {
 	hideOrShowCarouselButtons( event.target );
-}, 0.5 ) );
+} );
 
 
 
@@ -94,7 +96,7 @@ $( ".js_carousel_content" ).on( "scroll", window.__BFS.utils.throttle( function 
  * 	(depending on the horizontal scroll position)
  *
  */
-function hideOrShowCarouselButtons ( domCarouselContent ) {
+var hideOrShowCarouselButtons = window.__BFS.utils.throttle( function hideOrShowCarouselButtons ( domCarouselContent, newScrollOffset ) {
 
 	var $carouselContent = $( domCarouselContent );
 	var $carouselContainer = $carouselContent.closest( ".js_carousel_container" );
@@ -110,7 +112,7 @@ function hideOrShowCarouselButtons ( domCarouselContent ) {
 	var carouselContentPaddingLeft = parseInt( carouselContentStyles.paddingLeft );
 	var carouselContentPaddingRight = parseInt( carouselContentStyles.paddingRight );
 	var scrollWidth = domCarouselContent.scrollWidth;
-	var scrollLeft = domCarouselContent.scrollLeft;
+	var scrollLeft = newScrollOffset || domCarouselContent.scrollLeft;
 	var newCarouselEndOffset = scrollLeft + domCarouselContent.offsetWidth;
 	if ( inWithin( scrollLeft, 0, carouselContentPaddingLeft + 100 ) ) {
 		$carouselContainer.data( "leftPager" ).addClass( "fade-out" );
@@ -121,7 +123,7 @@ function hideOrShowCarouselButtons ( domCarouselContent ) {
 		$carouselContainer.data( "rightPager" ).addClass( "fade-out" );
 	}
 
-}
+}, 0.5 );
 
 function inWithin ( number, startRange, endRange ) {
 	if ( startRange > endRange ) {
