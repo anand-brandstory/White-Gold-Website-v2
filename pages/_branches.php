@@ -74,7 +74,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 					</div>
 				</div>
 				<div class="hide-branches columns text-center space-100-top space-200-bottom fill-light small-12">
-					<label class="button" for="more-branches">All Branches</label>
+					<!-- <label class="button" for="more-branches">All Branches</label> -->
 					<button class="button fill-blue-5 order-by-nearest js_order_branches">Show Nearest Branch</button>
 				</div>
 			</div>
