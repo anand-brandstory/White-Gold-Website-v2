@@ -13,32 +13,11 @@
 							<div class="p strong columns small-6 text-right">&middot;&ensp;&middot;&ensp;&middot;</div>
 						</div>
 					</div>
-					<!-- CARD: 1 -->
-					<div class="card rgs1 columns small-12 fill-light">
-						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle" checked>
-						<label for="rgs1" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">1</span></div>
-							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Find a Branch</div>
-							<div class="toggle columns small-1">
-								<input class="visuallyhidden" type="checkbox">
-								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
-							</div>
-						</label>
-						<div class="card-content">
-							<div class="row space-50-left-right space-200-top-bottom">
-								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
-									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">49 Branches</div>
-									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">Across Karnataka</div>
-									<a href="" class="button">Find Branch</a>
-								</div>
-							</div>
-						</div>
-					</div>
 					<!-- CARD: 2 -->
 					<div class="card rgs2 columns small-12 fill-light">
-						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
+						<input id="rgs2" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle" checked>
 						<label for="rgs2" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="columns small-1"><span class="index h6 medium">1</span></div>
 							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Bring Pledge Receipt</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
@@ -59,8 +38,8 @@
 					<div class="card rgs3 columns small-12 fill-light">
 						<input id="rgs3" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs3" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">3</span></div>
-							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Carry ID proof</div>
+							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Carry ID Proof</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -90,6 +69,27 @@
 								</div>
 							</div>
 							<div class="bg-img"><img class="block" src="../media/cutout/char-6.png<?php echo $ver ?>"></div>
+						</div>
+					</div>
+					<!-- CARD: 1 -->
+					<div class="card rgs1 columns small-12 fill-light">
+						<input id="rgs1" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
+						<label for="rgs1" class="card-head row block">
+							<div class="columns small-1"><span class="index h6 medium">3</span></div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Find a Branch</div>
+							<div class="toggle columns small-1">
+								<input class="visuallyhidden" type="checkbox">
+								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
+							</div>
+						</label>
+						<div class="card-content">
+							<div class="row space-50-left-right space-200-top-bottom">
+								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
+									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">49 Branches</div>
+									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">Across Karnataka</div>
+									<a href="" class="button">Find Branch</a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -146,7 +146,7 @@
 							<div class="row space-200-top space-50-left-right">
 								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
 									<div class="h5 medium space-200-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
-									<a href class="button fill-yellow-2">Check Live gold rate now</a>
+									<a href class="button fill-yellow-2">Check Live Gold Rate Now</a>
 								</div>
 							</div>
 							<div class="row space-200-top space-50-bottom space-50-left-right">

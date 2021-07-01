@@ -58,7 +58,7 @@
 						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">3</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID proof</div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID Proof</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
@@ -148,7 +148,7 @@
 							<div class="row space-200-top space-50-left-right">
 								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
 									<div class="h5 medium space-200-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
-									<a href class="button fill-yellow-2">Check Live gold rate now</a>
+									<a href class="button fill-yellow-2">Check Live Gold Rate Now</a>
 								</div>
 							</div>
 							<div class="row space-200-top space-50-bottom space-50-left-right">

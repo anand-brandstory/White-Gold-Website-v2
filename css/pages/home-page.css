@@ -1021,6 +1021,7 @@
 	position: relative;
 	z-index: 1;
 	min-height: calc(var(--space-100)*4);
+	overflow: hidden;
 }
 .main-menu .menu-button-bg {
 	display: inline-block;
