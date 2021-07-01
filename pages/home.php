@@ -36,15 +36,21 @@ CMS::setupContext();
 <?php require_once __ROOT__ . '/pages/section/header.php'; ?>
 
 
-<!-- Static Menu Section -->
-<!-- END: Static Menu Section -->
-
-
-
 <!-- ## Home Page -->
 <!-- Landing Carousel Section -->
 <?php require_once __ROOT__ . '/pages/section/landing-carousel.php'; ?>
 <!-- END: Landing Carousel Section -->
+
+
+<!-- Home Menu Section -->
+<section class="home-menu-section">
+	<div class="container">
+		<div class="row">
+			<?php require __ROOT__ . '/pages/snippet/menu.php'; ?>
+		</div>
+	</div>
+</section>
+<!-- END: Home Menu Section -->
 
 
 <!-- Sell Gold Form Section -->

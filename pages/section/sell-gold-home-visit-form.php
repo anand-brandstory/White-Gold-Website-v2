@@ -7,7 +7,7 @@
 			</div>
 			<br class="hide-large hide-xlarge">
 			<div class="columns small-6 medium-3 large-2 space-100-bottom">
-				<div class="p strong inline fill-blue-4 space-50 opacity-75 radius-25" style="margin: 0 var(--space-50) var(--space-50) 0;">Minimum quantity <br><span class="no-wrap">25 grams</span></div>
+				<div class="p strong inline fill-blue-4 space-50 opacity-75 radius-25" style="margin: 0 var(--space-50) var(--space-50) 0;">Minimum quantity <br><span class="no-wrap">50 grams</span></div>
 				<div class="p strong inline fill-blue-4 space-50 opacity-75 radius-25">Only 916 Hallmark <br>Jewellery</div>
 			</div>
 			<div class="columns small-9 medium-5 large-3">
