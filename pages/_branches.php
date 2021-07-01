@@ -45,7 +45,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 
 
 <!-- Find Branch Section -->
-<section class="find-branch-section space-200-top-bottom">
+<section class="find-branch-section space-200-top">
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-6 medium-4 large-3 space-100-bottom">
@@ -53,24 +53,28 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 				<div class="char"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
 			</div>
 			<div class="branch-listing columns small-12 medium-7 medium-offset-1 large-6 large-offset-3">
-				<div class="branch-grid js_branches_container">
-					<?php foreach ( $branches as $branch ) : ?>
-						<!-- Branch -->
-						<div class="branch fill-light js_branch">
-							<div class="thumbnail fill-neutral-1 radius-25" <?php if ( $branch->get( 'branch_image' ) ) : ?>style="background-image: url( '<?= $branch->get( 'branch_image' ) ?>' );"<?php endif; ?>></div>
-							<div class="title h6 strong"><?= $branch->get( 'branch_name' ) ?></div>
-							<div class="timings p text-neutral-3 space-25-bottom">Open Mon to Fri</div>
-							<div class="distance h4 text-neutral-3 js_distance_from_user hidden"></div>
-							<div class="check-distance small medium text-uppercase text-blue-1 space-25 fill-blue-5 js_check_distance hidden">
-								<span class="material-icons inline-middle" data-icon="my_location"></span>
-								<span class="inline-middle">&nbsp;Check Distance</span>
+				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden">
+				<div class="branches space-200-bottom">
+					<div class="branch-grid js_branches_container">
+						<?php foreach ( $branches as $branch ) : ?>
+							<!-- Branch -->
+							<div class="branch fill-light js_branch">
+								<div class="thumbnail fill-neutral-1 radius-25" <?php if ( $branch->get( 'branch_image' ) ) : ?>style="background-image: url( '<?= $branch->get( 'branch_image' ) ?>' );"<?php endif; ?>></div>
+								<div class="title h6 strong"><?= $branch->get( 'branch_name' ) ?></div>
+								<div class="timings p text-neutral-3 space-25-bottom">Open Mon to Fri</div>
+								<div class="distance h4 text-neutral-3 js_distance_from_user hidden"></div>
+								<div class="check-distance small medium text-uppercase text-blue-1 space-25 fill-blue-5 js_check_distance hidden">
+									<span class="material-icons inline-middle" data-icon="my_location"></span>
+									<span class="inline-middle">&nbsp;Check Distance</span>
+								</div>
+								<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
 							</div>
-							<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
-						</div>
-						<!-- END: Branch -->
-					<?php endforeach; ?>
+							<!-- END: Branch -->
+						<?php endforeach; ?>
+					</div>
 				</div>
-				<div class="branch-more space-100-top-bottom">
+				<div class="hide-branches columns text-center space-100-top space-200-bottom fill-light small-12">
+					<label class="button" for="more-branches">All Branches</label>
 					<button class="button fill-blue-5 order-by-nearest js_order_branches">Show Nearest Branch</button>
 				</div>
 			</div>

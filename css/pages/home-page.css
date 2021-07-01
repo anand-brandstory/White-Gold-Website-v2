@@ -519,10 +519,11 @@
 
 
 /*
- * Header Section
+ * More Faqs
  */
 .articles-faqs .faqs {
 	position: relative;
+	z-index: 1;
 	max-height: var(--card);
 	transition: .5s ease-in-out;
 	overflow: hidden;
@@ -545,6 +546,8 @@
 .articles-faqs .more-faqs:checked + .faqs:after { display: none; }
 
 .articles-faqs .more-faqs + .faqs + .hide-faqs {
+	position: relative;
+	z-index: 2;
 	display: inline-block;
 	cursor: pointer;
 }
@@ -562,6 +565,65 @@
 @media( min-width: 1040px ) {}
 @media( min-width: 1480px ) {}
 
+
+
+/*
+ * More Branches
+ */
+
+.branch-listing {
+	position: relative;
+}
+.branch-listing .branches {
+	position: relative;
+	z-index: 1;
+	max-height: calc(var(--card)*2);
+	transition: 2s ease-in;
+}
+.branch-listing .more-branches:checked + .branches {
+	max-height: 8000px;
+}
+
+.branch-listing .branches:after {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: calc(var(--space-100)*6);
+	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+.branch-listing .more-branches:checked + .branches:after { display: none; }
+
+.branch-listing .more-branches + .branches + .hide-branches {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	cursor: pointer;
+}
+.branch-listing .more-branches:checked + .branches + .hide-branches {
+	display: none;
+}
+
+.branch-listing .hide-branches:before,
+.branch-listing .hide-branches:after {
+	display: block;
+	content: '';
+	position: absolute;
+	z-index: 3;
+	width: var(--space-100);
+	top: 0;
+	bottom: 0;
+	background-color: var(--light);
+}
+.branch-listing .hide-branches:before { left: 100%; }
+.branch-listing .hide-branches:after { right: 100%; }
+
+@media( min-width: 640px )  {}
+@media( min-width: 1040px ) {}
+@media( min-width: 1480px ) {}
 
 
 
@@ -785,7 +847,10 @@
  * Sample Section
  */
 
-.find-branch-section { position: relative; }
+.find-branch-section {
+	position: relative;
+	overflow: hidden; /* -- this is required for .more-branches, .hide-branches to function properly */
+}
 .find-branch-section .intro { position: relative; }
 .find-branch-section .intro .title {
 	position: relative;
