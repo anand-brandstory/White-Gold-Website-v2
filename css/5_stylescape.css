@@ -768,3 +768,12 @@ select { cursor: pointer; }
 	}
 }
 @media( min-width: 1480px ) {}
+
+
+/* -- Exception -- */
+.landing-carousel-section .carousel .carousel-list {
+	padding: 0;
+}
+
+/* -- END: Exception -- */
+
