@@ -62,8 +62,8 @@ require_once __ROOT__ . '/inc/header.php';
 					</div>
 					<div class="form form-thankyou">
 						<div class="columns small-12">
-							<div class="h4 strong space-25-bottom">Thank You</div>
-							<div class="p">We'll get in touch with you soon.</div>
+							<div class="h4 strong space-50-bottom">Launching on <br>31st July, 2021.</div>
+							<div class="p">The Live Gold Rate Feature will ensure that you get the same gold rate across all our branches.</div>
 						</div>
 					</div>
 				</div>
