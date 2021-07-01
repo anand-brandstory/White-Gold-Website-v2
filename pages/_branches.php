@@ -53,7 +53,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 				<div class="char"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
 			</div>
 			<div class="branch-listing columns small-12 medium-7 medium-offset-1 large-6 large-offset-3">
-				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden">
+				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden js_more_branches">
 				<div class="branches space-200-bottom">
 					<div class="branch-grid js_branches_container">
 						<?php foreach ( $branches as $branch ) : ?>

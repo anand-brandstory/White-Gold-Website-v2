@@ -241,8 +241,13 @@ input[type="reset"]:focus,
 input[type="button"]:focus,
 button:focus,
 .button:focus {
-    outline: 0;
-    /*transform: scale(1.0125);*/
+	outline: 0;
+	/*transform: scale(1.0125);*/
+}
+
+input[ disabled ],
+button[ disabled ] {
+	cursor: not-allowed;
 }
 
 .button .button-label {
@@ -744,10 +749,17 @@ select { cursor: pointer; }
 
 
 @media( min-width: 640px )  {
+	/* -- To Remove Scroll Bar on Non Mobile Screens, except for Safari -- */
 	.carousel .carousel-list {
-		/* -- To Remove Scroll Bar on Non Mobile Screens -- */
 		overflow-x: hidden;
 		overflow-y: hidden;
+	}
+	/* -- Browser detection -- */
+	/* This media query detects Safari */
+	@media not all and ( min-resolution: 0.001dpcm ) {
+		.carousel .carousel-list {
+			overflow-x: auto;
+		}
 	}
 
 	.carousel .carousel-list .carousel-list-item .carousel-card {
