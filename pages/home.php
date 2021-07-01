@@ -68,7 +68,7 @@ CMS::setupContext();
 
 
 <!-- Report Malpractice Section -->
-<?php require_once __ROOT__ . '/pages/section/report-malpractice.php'; ?>
+<?php //require_once __ROOT__ . '/pages/section/report-malpractice.php'; ?>
 <!-- END: Report Malpractice Section -->
 
 

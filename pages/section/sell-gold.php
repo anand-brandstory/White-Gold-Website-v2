@@ -120,9 +120,9 @@
 							</div>
 							<div class="row space-200-top space-50-bottom space-50-left-right">
 								<div class="columns small-12 medium-8">
-									<a href="" class="watch-video block row fill-blue-1">
+									<a href="" class="watch-video invisible block row fill-blue-1">
 										<div class="columns small-6">
-											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+											<div class="thumbnail" style="background-image: url('');"></div>
 										</div>
 										<div class="columns small-6 space-50-left space-25-right">
 											<div class="title h6 medium space-25-top-bottom">How is gold purity checked?</div>
@@ -153,15 +153,17 @@
 							</div>
 							<div class="row space-200-top space-50-bottom space-50-left-right">
 								<div class="columns small-12 medium-8">
+									<?php /* -- php hide -- */ /*
 									<a href="" class="watch-video block row fill-neutral-4">
 										<div class="columns small-6">
-											<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+											<div class="thumbnail" style="background-image: url('');"></div>
 										</div>
 										<div class="columns small-6 space-50-left space-25-right">
 											<div class="title h6 medium space-25-top-bottom">Why is the gold rate lower than I expected?</div>
 											<div class="timestamp small">02:30</div>
 										</div>
 									</a>
+									*/ /* -- END: php hide -- */ ?>
 								</div>
 							</div>
 						</div>

@@ -6,11 +6,12 @@
 			</div>
 			<div class="columns small-12 large-8">
 				<div class="row">
+					<?php /* -- php hide -- */ /*
 					<div class="videos-faqs columns small-12">
 						<div class="videos-faqs-grid row">
 							<a href="" class="watch-video block row fill-light">
 								<div class="columns small-12 medium-6">
-									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
 									<div class="title h6 medium space-25-top-bottom">Why should you bring your Aadhar card?</div>
@@ -19,7 +20,7 @@
 							</a>
 							<a href="" class="watch-video block row fill-light">
 								<div class="columns small-12 medium-6">
-									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
 									<div class="title h6 medium space-25-top-bottom">What is the gold valuation process?</div>
@@ -28,7 +29,7 @@
 							</a>
 							<a href="" class="watch-video block row fill-light">
 								<div class="columns small-12 medium-6">
-									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
 									<div class="title h6 medium space-25-top-bottom">Why is the gold rate low?</div>
@@ -37,7 +38,7 @@
 							</a>
 							<a href="" class="watch-video block row fill-light">
 								<div class="columns small-12 medium-6">
-									<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
 									<div class="title h6 medium space-25-top-bottom">Why are you calling my family for clarification?</div>
@@ -46,6 +47,7 @@
 							</a>
 						</div>
 					</div>
+					*/ /* -- END: php hide -- */ ?>
 					<div class="articles-faqs columns small-12">
 						<input id="more-release-gold-faqs" type="checkbox" name="more-release-gold-faqs" class="more-faqs visuallyhidden">
 						<div class="faqs">

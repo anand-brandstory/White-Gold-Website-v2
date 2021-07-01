@@ -21,7 +21,7 @@
 					<div class="video">
 						<a href="" class="watch-video block row fill-neutral-4">
 							<div class="columns small-6">
-								<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+								<div class="thumbnail" style="background-image: url('');"></div>
 							</div>
 							<div class="columns small-6 space-50-left space-25-right">
 								<div class="title h5 medium space-25-top-bottom">How is gold purity checked?</div>
@@ -32,7 +32,7 @@
 					<div class="video">
 						<a href="" class="watch-video block row fill-neutral-4">
 							<div class="columns small-6">
-								<div class="thumbnail" style="background-image: url(/* -- insert url here -- */);"></div>
+								<div class="thumbnail" style="background-image: url('');"></div>
 							</div>
 							<div class="columns small-6 space-50-left space-25-right">
 								<div class="title h5 medium space-25-top-bottom">Why is the gold rate lower than I expected?</div>
