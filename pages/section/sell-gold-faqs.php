@@ -47,186 +47,192 @@
 						</div>
 					</div>
 					<div class="articles-faqs columns small-12">
-						<div class="faq">
-							<input id="sgq1" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle" checked>
-							<label for="sgq1" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Do you Release Pledged Gold?</div>
+						<input id="more-sell-gold-faqs" type="checkbox" name="more-sell-gold-faqs" class="more-faqs visuallyhidden">
+						<div class="faqs">
+							<div class="faq">
+								<input id="sgq1" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle" checked>
+								<label for="sgq1" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Do you Release Pledged Gold?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Maiores nihil ducimus nobis minus accusantium, sunt in repellendus libero, dignissimos quae voluptatum. Enim sunt ipsam laboriosam molestiae ea. Hic, eligendi architecto!</div>
 								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Maiores nihil ducimus nobis minus accusantium, sunt in repellendus libero, dignissimos quae voluptatum. Enim sunt ipsam laboriosam molestiae ea. Hic, eligendi architecto!</div>
+							</div>
+							<div class="faq">
+								<input id="sgq2" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq2" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">What ID Proof is Required For Selling Gold?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corrupti ipsum explicabo sunt repellendus deserunt quas laboriosam nesciunt perferendis provident perspiciatis ad, nemo, quod est quaerat esse. In praesentium neque, cumque!</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq3" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq3" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">What are your Branch Timings?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus, commodi odio voluptates aliquam, quidem in, ducimus, corrupti vero dolorum molestias assumenda voluptatum harum. Repellat quidem iure suscipit, laboriosam et!</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq4" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq4" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Do you work on Sundays?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem odit aliquid dignissimos amet, quia est, a nisi ex consequatur officiis necessitatibus, optio sequi, laudantium reiciendis deleniti iure esse. Enim.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq5" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq5" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Will you Buy Diamond And Silver?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi! Illo sit optio saepe ut voluptatum provident asperiores, et explicabo velit dolores ipsum, sed veniam, repellat reprehenderit ab mollitia est?</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq6" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq6" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Mode of Payment?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis voluptatum voluptatibus, perferendis nesciunt tempore dignissimos officiis a ipsum! Iure, nemo! Eligendi corrupti beatae ratione consequuntur est asperiores repellendus doloremque.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq7" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq7" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">How is Valuation done and how long does it take?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Valuation is done based on a purity check. We use german spectrometers and precision weighing scales. This takes a maximum of 15 minutes.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq8" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Will my ornaments get damaged due to Testing?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus nemo cum sit odio consectetur ducimus perferendis deleniti culpa, veniam impedit quisquam. Illum voluptatum inventore quisquam nesciunt provident facilis, quibusdam labore!</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq9" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq9" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">I am not a resident of Bangalore. Can I sell ornaments?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Qui eaque perferendis officia necessitatibus. Voluptate neque temporibus quas sed ducimus, officiis. Earum, consequatur natus explicabo, incidunt sint itaque beatae nisi nostrum?</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq10" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq10" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Once sold, can I buy back my ornaments later?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, explicabo ex consequatur perferendis, fuga veritatis fugiat autem expedita voluptatum, aliquam sit cumque rem ut quod in tempora reprehenderit vitae asperiores.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq11" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq11" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Can I sell my broken or tampered jewellery?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sit, magni non aliquam? Vel illo corrupti numquam aut consequatur, beatae laborum suscipit laboriosam inventore vitae! Debitis recusandae maxime temporibus laborum.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq12" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq12" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Do you purchase white gold?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel culpa eligendi laboriosam minima, at dolorem ut aperiam aliquid omnis, nulla commodi autem ullam pariatur, ex dolor praesentium cupiditate similique.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq13" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq13" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">How long will this take and will I be paid instantly?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse a quidem nisi beatae fugiat. Dicta harum iste soluta consequatur blanditiis id culpa natus, fugit dignissimos ipsum perspiciatis reiciendis, amet suscipit!</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq14" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq14" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Are there any additional service charges for this service?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Sint minima reprehenderit in repudiandae assumenda ratione incidunt nisi est magni iste, reiciendis recusandae aliquam aut officia sapiente facere perspiciatis? Fugit, consequatur.</div>
+								</div>
+							</div>
+							<div class="faq">
+								<input id="sgq15" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
+								<label for="sgq15" class="question block row space-25-top-bottom">
+									<div class="title columns small-11 space-25">
+										<div class="h6 medium">Branch location?</div>
+									</div>
+									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
+								</label>
+								<div class="answer fill-blue-4 radius-50">
+									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Temporibus quaerat nemo cum eaque rem neque, sit, dicta voluptate ad? Fugiat, repellat, vitae consequuntur modi soluta labore molestiae sequi hic ipsa.</div>
+								</div>
 							</div>
 						</div>
-						<div class="faq">
-							<input id="sgq2" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq2" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">What ID Proof is Required For Selling Gold?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corrupti ipsum explicabo sunt repellendus deserunt quas laboriosam nesciunt perferendis provident perspiciatis ad, nemo, quod est quaerat esse. In praesentium neque, cumque!</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq3" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq3" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">What are your Branch Timings?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus, commodi odio voluptates aliquam, quidem in, ducimus, corrupti vero dolorum molestias assumenda voluptatum harum. Repellat quidem iure suscipit, laboriosam et!</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq4" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq4" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Do you work on Sundays?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem odit aliquid dignissimos amet, quia est, a nisi ex consequatur officiis necessitatibus, optio sequi, laudantium reiciendis deleniti iure esse. Enim.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq5" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq5" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Will you Buy Diamond And Silver?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi! Illo sit optio saepe ut voluptatum provident asperiores, et explicabo velit dolores ipsum, sed veniam, repellat reprehenderit ab mollitia est?</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq6" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq6" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Mode of Payment?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis voluptatum voluptatibus, perferendis nesciunt tempore dignissimos officiis a ipsum! Iure, nemo! Eligendi corrupti beatae ratione consequuntur est asperiores repellendus doloremque.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq7" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq7" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">How is Valuation done and how long does it take?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Valuation is done based on a purity check. We use german spectrometers and precision weighing scales. This takes a maximum of 15 minutes.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq8" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Will my ornaments get damaged due to Testing?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus nemo cum sit odio consectetur ducimus perferendis deleniti culpa, veniam impedit quisquam. Illum voluptatum inventore quisquam nesciunt provident facilis, quibusdam labore!</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq9" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq9" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">I am not a resident of Bangalore. Can I sell ornaments?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Qui eaque perferendis officia necessitatibus. Voluptate neque temporibus quas sed ducimus, officiis. Earum, consequatur natus explicabo, incidunt sint itaque beatae nisi nostrum?</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq10" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq10" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Once sold, can I buy back my ornaments later?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, explicabo ex consequatur perferendis, fuga veritatis fugiat autem expedita voluptatum, aliquam sit cumque rem ut quod in tempora reprehenderit vitae asperiores.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq11" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq11" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Can I sell my broken or tampered jewellery?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sit, magni non aliquam? Vel illo corrupti numquam aut consequatur, beatae laborum suscipit laboriosam inventore vitae! Debitis recusandae maxime temporibus laborum.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq12" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq12" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Do you purchase white gold?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel culpa eligendi laboriosam minima, at dolorem ut aperiam aliquid omnis, nulla commodi autem ullam pariatur, ex dolor praesentium cupiditate similique.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq13" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq13" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">How long will this take and will I be paid instantly?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse a quidem nisi beatae fugiat. Dicta harum iste soluta consequatur blanditiis id culpa natus, fugit dignissimos ipsum perspiciatis reiciendis, amet suscipit!</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq14" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq14" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Are there any additional service charges for this service?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Sint minima reprehenderit in repudiandae assumenda ratione incidunt nisi est magni iste, reiciendis recusandae aliquam aut officia sapiente facere perspiciatis? Fugit, consequatur.</div>
-							</div>
-						</div>
-						<div class="faq">
-							<input id="sgq15" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
-							<label for="sgq15" class="question block row space-25-top-bottom">
-								<div class="title columns small-11 space-25">
-									<div class="h6 medium">Branch location?</div>
-								</div>
-								<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-							</label>
-							<div class="answer fill-blue-4 radius-50">
-								<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Temporibus quaerat nemo cum eaque rem neque, sit, dicta voluptate ad? Fugiat, repellat, vitae consequuntur modi soluta labore molestiae sequi hic ipsa.</div>
-							</div>
-						</div>
+						<label class="hide-faqs columns small-12 text-center" for="more-sell-gold-faqs">
+							<div class="button fill-blue-3">Show All FAQs</div>
+						</label>
 					</div>
 				</div>
 			</div>

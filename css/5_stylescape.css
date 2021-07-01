@@ -46,7 +46,7 @@
 	/* -- WhiteGold Colors --  */
 	--light: #FFFFFF;
 	--neutral-1: #E9E9E7;
-	--neutral-2: #C6C6C7;
+	--neutral-2: #D1D1D4;
 	--neutral-3: #96979B;
 	--neutral-4: #4E5055;
 	--neutral-5: #333635;
@@ -387,7 +387,7 @@ select { cursor: pointer; }
 	color: var(--dark);
 	background-color: var(--neutral-1); }
 .fill-neutral-2 {
-	color: var(--light);
+	color: var(--dark);
 	background-color: var(--neutral-2); }
 .fill-neutral-3 {
 	color: var(--light);
