@@ -52,7 +52,7 @@ $regions = [
 <section class="sticky-menu-section">
 	<div class="container">
 		<div class="row">
-			<?php require __ROOT__ . '/pages/snippet/menu.php'; ?>
+			<?php //require __ROOT__ . '/pages/snippet/menu.php'; ?>
 		</div>
 	</div>
 </section>
