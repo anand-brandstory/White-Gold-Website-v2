@@ -14,7 +14,7 @@
 use BFS\CMS;
 use BFS\Router;
 
-$footerPost = CMS::getPostBySlug( 'footer', 'page' );
+$footerPost = CMS::getPostBySlug( 'footer', 'wp_block' );
 $footerNavigationMenuItems = CMS::getNavigation( 'Footer' );
 
 $citiesInRegions = [
