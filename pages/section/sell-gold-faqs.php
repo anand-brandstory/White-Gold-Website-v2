@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details click here.</div>
+									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details <a class="text-yellow-2" target="_blank" href="">click here</a>.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -84,7 +84,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus, commodi odio voluptates aliquam, quidem in, ducimus, corrupti vero dolorum molestias assumenda voluptatum harum. Repellat quidem iure suscipit, laboriosam et!</div>
+									<div class="p space-50">Our branches are open Monday to Friday from 9am to 6pm.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -228,7 +228,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Temporibus quaerat nemo cum eaque rem neque, sit, dicta voluptate ad? Fugiat, repellat, vitae consequuntur modi soluta labore molestiae sequi hic ipsa.</div>
+									<div class="p space-50">We have multiple branches, to find the nearest branch <a class="text-yellow-2" target="_blank" href="">click here</a>.</div>
 								</div>
 							</div>
 						</div>

@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details click here.</div>
+									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details <a class="text-blue-4" target="_blank" href="">click here</a>.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -84,7 +84,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque accusamus, commodi odio voluptates aliquam, quidem in, ducimus, corrupti vero dolorum molestias assumenda voluptatum harum. Repellat quidem iure suscipit, laboriosam et!</div>
+									<div class="p space-50">Our branches are open Monday to Friday from 9am to 6pm.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -139,7 +139,7 @@
 								<input id="rgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 								<label for="rgq8" class="question block row space-25-top-bottom">
 									<div class="title columns small-11 space-25">
-										<div class="h6 medium">Can you release Gold which has already been pledged in a Bank or Finance company?</div>
+										<div class="h6 medium">Yes, you just have to bring your pledge receipt to our branch. We will use our money to pay the bank or finance company.</div>
 									</div>
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
@@ -156,7 +156,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Qui eaque perferendis officia necessitatibus. Voluptate neque temporibus quas sed ducimus, officiis. Earum, consequatur natus explicabo, incidunt sint itaque beatae nisi nostrum?</div>
+									<div class="p space-50">If you are not satisfied, you can pay us the ‘gold release value + 5%’ and take back your gold.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -168,7 +168,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, explicabo ex consequatur perferendis, fuga veritatis fugiat autem expedita voluptatum, aliquam sit cumque rem ut quod in tempora reprehenderit vitae asperiores.</div>
+									<div class="p space-50">You will have to pay us the difference amount.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -180,7 +180,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sit, magni non aliquam? Vel illo corrupti numquam aut consequatur, beatae laborum suscipit laboriosam inventore vitae! Debitis recusandae maxime temporibus laborum.</div>
+									<div class="p space-50">Yes, only if you inform our branch executive in advance. </div>
 								</div>
 							</div>
 						</div>

@@ -1318,7 +1318,7 @@
  	z-index: 1;
  	display: inline-block;
  	font-size: var(--p);
- 	line-height: var(--space-50);
+ 	line-height: 1.25;
  	padding: var(--space-50);
  	border-radius: var(--space-25);
  	min-height: var(--space-150);

@@ -85,8 +85,8 @@
 						<div class="card-content">
 							<div class="row space-50-left-right space-200-top-bottom">
 								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
-									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">49 Branches</div>
-									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">Across Karnataka</div>
+									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">50 Branches</div>
+									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">Across Karnataka, <br>Tamil Nadu & Kerala</div>
 									<a href="" class="button">Find Branch</a>
 								</div>
 							</div>
