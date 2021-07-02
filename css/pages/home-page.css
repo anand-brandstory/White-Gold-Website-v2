@@ -1080,6 +1080,7 @@
 
 .main-menu .whatsapp {
 	position: relative;
+	opacity: 0.15;
 }
 .main-menu .whatsapp .menu-button {
 	position: relative;
