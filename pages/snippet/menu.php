@@ -1,6 +1,7 @@
 <!-- Main Menu -->
 <div class="main-menu columns small-12 medium-6 medium-offset-3 large-12 large-offset-0 fill-dark radius-50">
 	<div class="row">
+		<input id="toggle-menu-open" type="checkbox" name="toggle-menu-open" class="toggle-menu-open visuallyhidden">
 		<div class="menu-content columns small-12 large-9">
 			<div class="row space-25">
 				<div class="columns small-6 large-4 space-25">
@@ -40,7 +41,9 @@
 					<a class="menu-button block fill-neutral-5" href="">+91 99860 99860</a>
 				</div>
 				<div class="toggle-menu columns small-2 small-offset-1 large-3 large-offset-0 space-25 hide-large hide-xlarge">
-					<a class="menu-button block fill-neutral-5" href=""><span class="material-icons" data-icon="menu"></span></a>
+					<label class="menu-button block fill-neutral-5" for="toggle-menu-open">
+						<span class="material-icons" data-icon="menu"></span>
+					</label>
 				</div>
 			</div>
 		</div>
