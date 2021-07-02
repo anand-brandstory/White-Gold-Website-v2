@@ -1218,6 +1218,12 @@
 .home-menu-section .main-menu {
 	transform: translateY(calc(var(--space-125) * -1)) scale(1);
 }
+.home-menu-section .main-menu .menu-head .phone-number {
+	width: 75%;
+}
+.home-menu-section .main-menu .menu-head .phone-number .menu-button {
+	font-size: var(--h6);
+}
 .home-menu-section .main-menu .menu-head .toggle-menu {
 	display: none;
 }
@@ -1230,6 +1236,9 @@
 @media( min-width: 1040px ) {
 	.home-menu-section .main-menu {
 		transform: translateY(calc(var(--space-125) * -1)) scale(1);
+	}
+	.home-menu-section .main-menu .menu-head .phone-number .menu-button {
+		font-size: var(--p);
 	}
 }
 @media( min-width: 1480px ) {}
@@ -1280,10 +1289,11 @@
 	}
 }
 @media( min-width: 1040px ) {
-	.sticky-menu-section .main-menu,
+	.sticky-menu-section .main-menu {
+		transform: translateY(200%) scale(1);
+	}
 	.show-menu .sticky-menu-section .main-menu {
 		transform: translateY( calc((100% + var(--space-75) ) * -1) ) scale(1);
-		transition: none;
 	}
 	.sticky-menu-section .main-menu .menu-content {
 		max-height: 500px;

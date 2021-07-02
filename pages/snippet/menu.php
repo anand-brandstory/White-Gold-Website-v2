@@ -37,8 +37,8 @@
 						<img class="block" src="../media/icon/whatsapp-outline.svg<?php echo $ver ?>">
 					</a>
 				</div>
-				<div class="columns small-6 small-offset-1 large-9 large-offset-0 space-25">
-					<a class="menu-button block fill-neutral-5" href="">+91 99860 99860</a>
+				<div class="phone-number columns small-6 small-offset-1 large-9 large-offset-0 space-25">
+					<a class="menu-button block fill-neutral-5 text-center" href="">+91 99860 99860</a>
 				</div>
 				<div class="toggle-menu columns small-2 small-offset-1 large-3 large-offset-0 space-25 hide-large hide-xlarge">
 					<label class="menu-button block fill-neutral-5" for="toggle-menu-open">
