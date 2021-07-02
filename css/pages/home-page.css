@@ -1150,7 +1150,7 @@
 	z-index: 1;
 	top: 50%;
 	left: 50%;
-	width: 55%;
+	width: 50%;
 	height: 2px;
 	background-color: var(--light);
 	transform: translateX(-50%) translateY(-50%) rotate(0);
@@ -1247,8 +1247,14 @@
 }
 .sticky-menu-section .main-menu {
 	transform-origin: bottom center;
-	transform: translateY( calc((100% + var(--space-100) ) * -1) ) scale(1);
+	transform: translateY(200%) scale(1);
+	transition: .5s ease-in-out;
 }
+
+.show-menu .sticky-menu-section .main-menu {
+	transform: translateY( calc((100% + var(--space-75) ) * -1) ) scale(1);
+}
+
 .sticky-menu-section .main-menu .menu-content {
 	overflow: hidden;
 	max-height: 0;
@@ -1267,15 +1273,21 @@
 
 @media( min-width: 640px )  {
 	.sticky-menu-section .main-menu {
-		transform: translateY( calc((100% + var(--space-100) ) * -1) ) scale(1.25);
+		transform: translateY(200%) scale(1.25);
+	}
+	.show-menu .sticky-menu-section .main-menu {
+		transform: translateY( calc((100% + var(--space-75) ) * -1) ) scale(1.25);
 	}
 }
 @media( min-width: 1040px ) {
-	.sticky-menu-section .main-menu {
-		transform: translateY( calc((100% + var(--space-100) ) * -1) ) scale(1);
+	.sticky-menu-section .main-menu,
+	.show-menu .sticky-menu-section .main-menu {
+		transform: translateY( calc((100% + var(--space-75) ) * -1) ) scale(1);
+		transition: none;
 	}
 	.sticky-menu-section .main-menu .menu-content {
 		max-height: 500px;
+		transition: none;
 	}
 	.sticky-menu-section .main-menu .menu-content:after {
 		display: none;
