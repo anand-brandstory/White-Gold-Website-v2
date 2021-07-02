@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Maiores nihil ducimus nobis minus accusantium, sunt in repellendus libero, dignissimos quae voluptatum. Enim sunt ipsam laboriosam molestiae ea. Hic, eligendi architecto!</div>
+									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details click here.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -72,7 +72,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corrupti ipsum explicabo sunt repellendus deserunt quas laboriosam nesciunt perferendis provident perspiciatis ad, nemo, quod est quaerat esse. In praesentium neque, cumque!</div>
+									<div class="p space-50">Simple, just bring your Aadhar card. If you don’t have an Aadhar card, carry one Photo ID and one Address Proof.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -96,7 +96,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem odit aliquid dignissimos amet, quia est, a nisi ex consequatur officiis necessitatibus, optio sequi, laudantium reiciendis deleniti iure esse. Enim.</div>
+									<div class="p space-50">We are officially closed on Sunday. However, you can make an appointment and we will open the required branch on Sunday.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -108,7 +108,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi! Illo sit optio saepe ut voluptatum provident asperiores, et explicabo velit dolores ipsum, sed veniam, repellat reprehenderit ab mollitia est?</div>
+									<div class="p space-50">No, we do not buy diamonds and silver.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -120,7 +120,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis voluptatum voluptatibus, perferendis nesciunt tempore dignissimos officiis a ipsum! Iure, nemo! Eligendi corrupti beatae ratione consequuntur est asperiores repellendus doloremque.</div>
+									<div class="p space-50">Your money will be immediately remitted to your bank account via an online transfer.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -144,7 +144,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus nemo cum sit odio consectetur ducimus perferendis deleniti culpa, veniam impedit quisquam. Illum voluptatum inventore quisquam nesciunt provident facilis, quibusdam labore!</div>
+									<div class="p space-50">No, your ornaments will not be damaged during the testing process.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -156,7 +156,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Qui eaque perferendis officia necessitatibus. Voluptate neque temporibus quas sed ducimus, officiis. Earum, consequatur natus explicabo, incidunt sint itaque beatae nisi nostrum?</div>
+									<div class="p space-50">Yes, just carry your address proof and photo ID proof.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -168,7 +168,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, explicabo ex consequatur perferendis, fuga veritatis fugiat autem expedita voluptatum, aliquam sit cumque rem ut quod in tempora reprehenderit vitae asperiores.</div>
+									<div class="p space-50">No, all sales are final and binding. You cannot buy back your ornaments.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -180,7 +180,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam sit, magni non aliquam? Vel illo corrupti numquam aut consequatur, beatae laborum suscipit laboriosam inventore vitae! Debitis recusandae maxime temporibus laborum.</div>
+									<div class="p space-50">Yes you can, as long as you have the original purchase bill and the correct KYC documents. </div>
 								</div>
 							</div>
 							<div class="faq">
@@ -192,7 +192,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem, ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel culpa eligendi laboriosam minima, at dolorem ut aperiam aliquid omnis, nulla commodi autem ullam pariatur, ex dolor praesentium cupiditate similique.</div>
+									<div class="p space-50">No, we do not purchase white gold.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -204,7 +204,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse a quidem nisi beatae fugiat. Dicta harum iste soluta consequatur blanditiis id culpa natus, fugit dignissimos ipsum perspiciatis reiciendis, amet suscipit!</div>
+									<div class="p space-50">The gold purity check and KYC takes 10-15 minutes. Then the transfer is immediate.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -216,7 +216,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing, elit. Sint minima reprehenderit in repudiandae assumenda ratione incidunt nisi est magni iste, reiciendis recusandae aliquam aut officia sapiente facere perspiciatis? Fugit, consequatur.</div>
+									<div class="p space-50">Yes, we charge a 3% transaction fee</div>
 								</div>
 							</div>
 							<div class="faq">

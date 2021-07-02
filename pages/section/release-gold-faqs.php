@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Maiores nihil ducimus nobis minus accusantium, sunt in repellendus libero, dignissimos quae voluptatum. Enim sunt ipsam laboriosam molestiae ea. Hic, eligendi architecto!</div>
+									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details click here.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -72,7 +72,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem, ipsum dolor sit amet consectetur adipisicing, elit. Corrupti ipsum explicabo sunt repellendus deserunt quas laboriosam nesciunt perferendis provident perspiciatis ad, nemo, quod est quaerat esse. In praesentium neque, cumque!</div>
+									<div class="p space-50">Simple, just bring your Aadhar card. If you don’t have an Aadhar card, carry one Photo ID and one Address Proof.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -96,7 +96,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio autem odit aliquid dignissimos amet, quia est, a nisi ex consequatur officiis necessitatibus, optio sequi, laudantium reiciendis deleniti iure esse. Enim.</div>
+									<div class="p space-50">We are officially closed on Sunday. However, you can make an appointment and we will open the required branch on Sunday.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -108,7 +108,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, excepturi! Illo sit optio saepe ut voluptatum provident asperiores, et explicabo velit dolores ipsum, sed veniam, repellat reprehenderit ab mollitia est?</div>
+									<div class="p space-50">No, we do not buy diamonds and silver.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -120,7 +120,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia omnis voluptatum voluptatibus, perferendis nesciunt tempore dignissimos officiis a ipsum! Iure, nemo! Eligendi corrupti beatae ratione consequuntur est asperiores repellendus doloremque.</div>
+									<div class="p space-50">Your money will be immediately remitted to your bank account via an online transfer.</div>
 								</div>
 							</div>
 							<div class="faq">
