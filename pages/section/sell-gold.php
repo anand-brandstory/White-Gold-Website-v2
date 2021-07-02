@@ -28,7 +28,10 @@
 								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
 									<div class="h5 medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">49 Branches</div>
 									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka</div>
-									<a href="" class="button fill-light">Find Branch</a>
+									<a href="" class="button fill-light">
+										<span class="button-label">Find Branch&ensp;</span>
+										<img class="button-icon tall" src="../media/icon/location-tall-red.svg<?php echo $ver ?>">
+									</a>
 								</div>
 							</div>
 						</div>

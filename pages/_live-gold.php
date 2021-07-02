@@ -42,7 +42,10 @@ require_once __ROOT__ . '/inc/header.php';
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
 								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
-								<button class="button fill-blue-7">Get OTP</button>
+								<button class="button fill-dark">
+									<span class="button-label">Get OTP&ensp;</span>
+									<img class="button-icon tall" src="../media/icon/sms-tall-green.svg<?php echo $ver ?>">
+								</button>
 							</label>
 						</div>
 					</div>

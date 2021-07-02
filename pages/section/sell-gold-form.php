@@ -46,7 +46,10 @@
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
 								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
-								<button class="button fill-blue-1">Sell Gold</button>
+								<button class="button fill-blue-1">
+									<span class="button-label">Sell Gold</span>
+									<img class="button-icon tall" src="../media/icon/rupee-tall-blue.svg<?php echo $ver ?>">
+								</button>
 							</label>
 						</div>
 					</div>
