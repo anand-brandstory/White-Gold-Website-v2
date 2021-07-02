@@ -42,7 +42,9 @@
 				</div>
 				<div class="toggle-menu columns small-2 small-offset-1 large-3 large-offset-0 space-25 hide-large hide-xlarge">
 					<label class="menu-button block fill-neutral-5" for="toggle-menu-open">
-						<span class="material-icons" data-icon="menu"></span>
+						<span class="l1"></span>
+						<span class="l2"></span>
+						<span class="l3"></span>
 					</label>
 				</div>
 			</div>

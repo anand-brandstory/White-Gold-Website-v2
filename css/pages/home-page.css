@@ -1125,8 +1125,11 @@
 	position: relative;
 }
 .main-menu .toggle-menu .menu-button {
+	display: block;
 	position: relative;
+	cursor: pointer;
 }
+.main-menu .toggle-menu .menu-button * { pointer-events: none; }
 .main-menu .toggle-menu .menu-button:before {
 	content: '';
 	position: absolute;
@@ -1138,6 +1141,41 @@
 	background-image: url('/media/icon/vertical-dots.white.svg');
 	opacity: 0.3;
 	transform: translateY(-50%) translateX(-50%) scale(0.5);
+}
+
+.main-menu .toggle-menu .menu-button .l1,
+.main-menu .toggle-menu .menu-button .l2,
+.main-menu .toggle-menu .menu-button .l3 {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 55%;
+	height: 2px;
+	background-color: var(--light);
+	transform: translateX(-50%) translateY(-50%) rotate(0);
+	transition: .4s ease-out;
+}
+
+.main-menu .toggle-menu .menu-button .l1 {
+	transform: translateX(-50%) translateY(calc(-50% + var(--space-25))) rotate(0);
+}
+.main-menu .toggle-menu .menu-button .l2 {
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(0);
+}
+.main-menu .toggle-menu .menu-button .l3 {
+	transform: translateX(-50%) translateY(calc(-50% - var(--space-25))) rotate(0);
+}
+
+.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l1 {
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(45deg);
+}
+.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l2 {
+	width: 0;
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(0);
+}
+.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l3 {
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(-45deg);
 }
 
 @media( min-width: 640px )  {}
