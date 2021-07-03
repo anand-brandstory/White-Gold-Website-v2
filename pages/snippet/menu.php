@@ -1,3 +1,12 @@
+<?php
+
+$contactNumbersForRegions = [
+	'ka' => '+91 95907 04444',
+	'tn' => '+91 80951 00700',
+	'kl' => '+91 95622 62222'
+];
+
+?>
 <!-- Main Menu -->
 <div class="main-menu columns small-12 medium-6 medium-offset-3 large-12 large-offset-0 fill-dark radius-50">
 	<div class="row">
@@ -5,7 +14,7 @@
 		<div class="menu-content columns small-12 large-9">
 			<div class="row space-25">
 				<div class="columns small-6 large-4 space-25">
-					<a class="menu-button menu-button-large block fill-blue-4" href="">
+					<a class="menu-button menu-button-large block fill-blue-4" href="/<?= REGION ?>/branches">
 						<span class="menu-button-bg" style="background-image: url('../media/background/find-branch.png<?php echo $ver ?>'); filter: brightness(0.9);" alt=""></span>
 						<span class="menu-button-icon">
 							<img class="block" src="../media/icon/location-white.svg<?php echo $ver ?>">
@@ -14,7 +23,7 @@
 					</a>
 				</div>
 				<div class="columns small-6 large-4 space-25">
-					<a class="menu-button menu-button-large block fill-yellow-2 text-light" href="">
+					<a class="menu-button menu-button-large block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
 						<span class="menu-button-bg fill-dark" style="background-image: url('../media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 						<span class="menu-button-icon">
 							<img class="block" src="../media/icon/rupee-white.svg<?php echo $ver ?>">
@@ -23,10 +32,10 @@
 					</a>
 				</div>
 				<div class="columns small-6 large-2 space-25">
-					<a class="menu-button block fill-blue-5" href="">Sell Gold</a>
+					<a class="menu-button block fill-blue-5" href="/<?= REGION ?>#sell-gold-section">Sell Gold</a>
 				</div>
 				<div class="columns small-6 large-2 space-25">
-					<a class="menu-button block fill-light" href="">Release Gold</a>
+					<a class="menu-button block fill-light" href="/<?= REGION ?>#release-gold-section">Release Gold</a>
 				</div>
 			</div>
 		</div>
@@ -38,7 +47,7 @@
 					</a>
 				</div>
 				<div class="phone-number columns small-6 small-offset-1 large-9 large-offset-0 space-25">
-					<a class="menu-button block fill-neutral-5 text-center" href="">+91 99860 99860</a>
+					<a class="menu-button block fill-neutral-5 text-center" href="tel:<?= $contactNumbersForRegions[ REGION ] ?>"><?= $contactNumbersForRegions[ REGION ] ?></a>
 				</div>
 				<div class="toggle-menu columns small-2 small-offset-1 large-3 large-offset-0 space-25 hide-large hide-xlarge">
 					<label class="menu-button block fill-neutral-5" for="toggle-menu-open">
@@ -49,6 +58,6 @@
 				</div>
 			</div>
 		</div>
-	</div>				
+	</div>
 </div>
 <!-- END: Main Menu -->

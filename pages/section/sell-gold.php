@@ -28,7 +28,7 @@
 								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
 									<div class="h5 medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
 									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu & Kerala</div>
-									<a href="" class="button fill-light">
+									<a href="/<?= REGION ?>/branches" class="button fill-light">
 										<span class="button-label">Find Branch&ensp;</span>
 										<img class="button-icon tall" src="../media/icon/location-tall-red.svg<?php echo $ver ?>">
 									</a>
@@ -152,7 +152,7 @@
 								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
 									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
-										<a class="picture-button block fill-yellow-2 text-light" href="">
+										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
 											<span class="picture-button-bg fill-dark" style="background-image: url('../media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 											<span class="picture-button-icon">
 												<img class="block" src="../media/icon/rupee-white.svg<?php echo $ver ?>">

@@ -52,18 +52,6 @@
 						<input id="more-release-gold-faqs" type="checkbox" name="more-release-gold-faqs" class="more-faqs visuallyhidden">
 						<div class="faqs">
 							<div class="faq">
-								<input id="rgq1" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle" checked>
-								<label for="rgq1" class="question block row space-25-top-bottom">
-									<div class="title columns small-11 space-25">
-										<div class="h6 medium">Do you Release Pledged Gold?</div>
-									</div>
-									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
-								</label>
-								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details <a class="text-blue-4" target="_blank" href="">click here</a>.</div>
-								</div>
-							</div>
-							<div class="faq">
 								<input id="rgq2" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 								<label for="rgq2" class="question block row space-25-top-bottom">
 									<div class="title columns small-11 space-25">

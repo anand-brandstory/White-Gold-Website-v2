@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details <a class="text-yellow-2" target="_blank" href="">click here</a>.</div>
+									<div class="p space-50">Yes we will help you close your gold loan and release your pledged gold. For more details <a class="text-yellow-2" target="_blank" href="/<?= REGION ?>#release-gold-section">click here</a>.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -228,7 +228,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">We have multiple branches, to find the nearest branch <a class="text-yellow-2" target="_blank" href="">click here</a>.</div>
+									<div class="p space-50">We have multiple branches, to find the nearest branch <a class="text-yellow-2" target="_blank" href="/<?= REGION ?>/branches">click here</a>.</div>
 								</div>
 							</div>
 						</div>
