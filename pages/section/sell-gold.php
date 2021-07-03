@@ -36,11 +36,31 @@
 							</div>
 						</div>
 					</div>
+					<!-- CARD: 2 -->
+					<div class="card sgs2 columns small-12 fill-blue-4">
+						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
+						<label for="sgs2" class="card-head row block">
+							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Bring Original Bill</div>
+							<div class="toggle columns small-1">
+								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
+							</div>
+						</label>
+						<div class="card-content">
+							<div class="row space-50-left-right">
+								<div class="columns small-9 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
+									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
+									<div class="p space-200-top-bottom">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
+								</div>
+							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
+						</div>
+					</div>
 					<!-- CARD: 3 -->
 					<div class="card sgs3 columns small-12 fill-blue-4">
 						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs3" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">2</span></div>
+							<div class="columns small-1"><span class="index h6 medium">3</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID Proof</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -82,7 +102,7 @@
 					<div class="card sgs4 columns small-12 fill-blue-4">
 						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs4" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">3</span></div>
+							<div class="columns small-1"><span class="index h6 medium">4</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -121,7 +141,7 @@
 					<div class="card sgs5 columns small-12 fill-dark text-yellow-2">
 						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs5" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">4</span></div>
+							<div class="columns small-1"><span class="index h6 medium">5</span></div>
 							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -163,7 +183,7 @@
 					<div class="card sgs6 columns small-12 fill-blue-4">
 						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs6" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">5</span></div>
+							<div class="columns small-1"><span class="index h6 medium">6</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -189,26 +209,6 @@
 								</div>
 							</div>
 							<div class="bg-img"><img class="block" src="../media/cutout/char-2.png<?php echo $ver ?>"></div>
-						</div>
-					</div>
-					<!-- CARD: 2 -->
-					<div class="card sgs2 columns small-12 fill-blue-4">
-						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
-						<label for="sgs2" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">6</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Bring Original Bill</div>
-							<div class="toggle columns small-1">
-								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
-							</div>
-						</label>
-						<div class="card-content">
-							<div class="row space-50-left-right">
-								<div class="columns small-9 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
-									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
-									<div class="p space-200-top-bottom">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
-								</div>
-							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 7 -->
