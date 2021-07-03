@@ -48,7 +48,7 @@
 						<div class="card-content">
 							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">AADHAR Card</div></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Aadhaar Card</div></div>
 							</div>
 							<div class="row space-50-top-bottom space-50-left-right">
 								<div class="inline-middle columns small-1"><div class="small medium text-uppercase" style="width: var(--space-75); text-align: center;">or</div></div>
@@ -60,12 +60,12 @@
 							</div>
 							<div class="row space-25-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Address Proof</div></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Local Address Proof</div></div>
 							</div>
 							<div class="row space-50-left-right space-200-bottom">
 								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
 									<div class="p space-200-top">Photo ID and Address proof is required.</div>
-									<div class="p space-50-top space-200-bottom">Carry your Aadhar card for easy KYC check.</div>
+									<div class="p space-50-top space-200-bottom">Carry your Aadhaar card for easy KYC check.</div>
 								</div>
 							</div>
 							<div class="bg-img"><img class="block" src="../media/cutout/char-6.png<?php echo $ver ?>"></div>
@@ -118,7 +118,7 @@
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
 								<div class="columns small-8 medium-5 space-50-left-right">
 									<div class="h5 medium">Address Proof</div>
-									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhar Card has both.</div>
+									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhaar Card has both.</div>
 								</div>
 							</div>
 							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
@@ -254,7 +254,7 @@
 							</div>
 							<div class="row space-25-top space-200-bottom space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
-								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Instant Valuation</div></div>
+								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Accurate Valuation</div></div>
 							</div>
 							<div class="row space-200-top space-50-bottom space-50-left-right">
 								<div class="columns small-12 medium-8">

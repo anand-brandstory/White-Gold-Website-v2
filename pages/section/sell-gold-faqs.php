@@ -14,7 +14,7 @@
 									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
-									<div class="title h6 medium space-25-top-bottom">Why should you bring your Aadhar card?</div>
+									<div class="title h6 medium space-25-top-bottom">Why should you bring your Aadhaar card?</div>
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
@@ -72,7 +72,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Simple, just bring your Aadhar card. If you don’t have an Aadhar card, carry one Photo ID and one Address Proof.</div>
+									<div class="p space-50">Simple, just bring your Aadhaar card. If you don’t have an Aadhaar card, carry one Photo ID and one Address Proof.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -84,7 +84,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Our branches are open Monday to Friday from 9am to 6pm.</div>
+									<div class="p space-50">Our branches are open Monday to Saturday from 9:30Am to 6:30PM.</div>
 								</div>
 							</div>
 							<div class="faq">

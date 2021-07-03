@@ -14,7 +14,7 @@
 									<div class="thumbnail" style="background-image: url('');"></div>
 								</div>
 								<div class="info columns small-12 medium-6 space-25-left-right">
-									<div class="title h6 medium space-25-top-bottom">Why should you bring your Aadhar card?</div>
+									<div class="title h6 medium space-25-top-bottom">Why should you bring your Aadhaar card?</div>
 									<div class="timestamp small">02:30</div>
 								</div>
 							</a>
@@ -60,7 +60,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Simple, just bring your Aadhar card. If you don’t have an Aadhar card, carry one Photo ID and one Address Proof.</div>
+									<div class="p space-50">Simple, just bring your Aadhaar card. If you don’t have an Aadhaar card, carry one Photo ID and one Address Proof.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -72,7 +72,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Our branches are open Monday to Friday from 9am to 6pm.</div>
+									<div class="p space-50">Our branches are open Monday to Saturday from 9:30Am to 6:30PM.</div>
 								</div>
 							</div>
 							<div class="faq">
@@ -127,12 +127,12 @@
 								<input id="rgq8" type="radio" name="sell-gold-faq" class="visuallyhidden js_faq_toggle">
 								<label for="rgq8" class="question block row space-25-top-bottom">
 									<div class="title columns small-11 space-25">
-										<div class="h6 medium">Yes, you just have to bring your pledge receipt to our branch. We will use our money to pay the bank or finance company.</div>
+										<div class="h6 medium">Can you release Gold which has already been pledged in a Bank or Finance company?</div>
 									</div>
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-neutral-2 radius-50">
-									<div class="p space-50">Yes, you just have to bring your pledge receipt to our branch. We will help you close your gold loan.</div>
+									<div class="p space-50">Yes, you just have to bring your pledge receipt to our branch. We will use our money to pay the bank or finance company.</div>
 								</div>
 							</div>
 							<div class="faq">
