@@ -603,7 +603,7 @@
 	display: inline-block;
 	cursor: pointer;
 }
-.branch-listing .more-branches:checked + .branches + .hide-branches {
+.branch-listing .more-branches:checked + .branches + .hide-branches > .more-branches {
 	display: none;
 }
 

@@ -54,7 +54,7 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 			</div>
 			<div class="branch-listing columns small-12 medium-7 medium-offset-1 large-6 large-offset-3">
 				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden js_more_branches">
-				<div class="branches space-200-bottom">
+				<div class="branches space-50-bottom">
 					<div class="branch-grid js_branches_container">
 						<?php foreach ( $branches as $branch ) : ?>
 							<!-- Branch -->
@@ -67,14 +67,17 @@ $branches = array_filter( $allBranches, function ( $branch ) {
 									<span class="material-icons inline-middle" data-icon="my_location"></span>
 									<span class="inline-middle">&nbsp;Check Distance</span>
 								</div>
-								<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">Open in Maps <!-- google maps icon --></a>
+								<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">
+									<span class="button-label">Open in Maps&nbsp;</span>
+									<img class="button-icon tall" src="../media/icon/gmaps-tall-color.svg<?php echo $ver ?>">
+								</a>
 							</div>
 							<!-- END: Branch -->
 						<?php endforeach; ?>
 					</div>
 				</div>
-				<div class="hide-branches columns text-center space-100-top space-200-bottom fill-light small-12">
-					<button class="button js_show_more_branches">All Branches</button>
+				<div class="hide-branches columns text-center space-50-top space-200-bottom fill-light small-12">
+					<button class="button fill-blue-1 more-branches js_show_more_branches">All Branches</button>&emsp;
 					<button class="button fill-blue-5 order-by-nearest js_order_branches">Show Nearest Branch</button>
 				</div>
 			</div>
