@@ -46,6 +46,13 @@ $( document ).on( "click", ".js_check_distance", function ( event ) {
 
 
 
+// If the user clicks on the "All branches" button, reveal all the branches
+$( document ).on( "click", ".js_show_more_branches", function ( event ) {
+	$( ".js_more_branches" ).get( 0 ).checked = true;
+} );
+
+
+
 // If the user clicks on the "Show Nearest Branch" button, order the branches by distance
 $( document ).on( "click", ".js_order_branches", function ( event ) {
 
