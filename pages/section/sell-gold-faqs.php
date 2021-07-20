@@ -84,7 +84,7 @@
 									<div class="toggle columns small-1"><div class="arrow"><span class="a1"></span><span class="a2"></span></div></div>
 								</label>
 								<div class="answer fill-blue-4 radius-50">
-									<div class="p space-50">Our branches are open Monday to Saturday from 9:30Am to 6:30PM.</div>
+									<div class="p space-50">Our branches are open Monday to Saturday from 9:30 am to 6:30 pm.</div>
 								</div>
 							</div>
 							<div class="faq">
