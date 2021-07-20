@@ -82,7 +82,7 @@
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
+						<div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )">
 							<div class="row space-50-left-right space-200-top-bottom">
 								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
 									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">50 Branches</div>

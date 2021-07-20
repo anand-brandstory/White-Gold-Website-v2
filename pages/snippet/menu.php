@@ -42,15 +42,15 @@ $contactNumbersForRegions = [
 		<div class="menu-head columns small-12 large-3">
 			<div class="row space-25">
 				<div class="whatsapp columns small-2 large-3 space-25">
-					<a class="menu-button block fill-neutral-5" href="">
 						<img class="block" src="../media/icon/whatsapp-outline.svg<?php echo $ver ?>">
+					<a class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" href="">
 					</a>
 				</div>
 				<div class="phone-number columns small-6 small-offset-1 large-9 large-offset-0 space-25">
 					<a class="menu-button block fill-neutral-5 text-center" href="tel:<?= $contactNumbersForRegions[ REGION ] ?>"><?= $contactNumbersForRegions[ REGION ] ?></a>
 				</div>
 				<div class="toggle-menu columns small-2 small-offset-1 large-3 large-offset-0 space-25 hide-large hide-xlarge">
-					<label class="menu-button block fill-neutral-5" for="toggle-menu-open">
+					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" for="toggle-menu-open">
 						<span class="l1"></span>
 						<span class="l2"></span>
 						<span class="l3"></span>
