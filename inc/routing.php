@@ -21,6 +21,9 @@ class Router {
 
 	public static function route ( $path = null ) {
 
+		if ( BFS_PRIVATE_SITE )
+			header( 'X-Robots-Tag: noindex' );
+
 		self::$urlSlug = self::getSanitizedURLSlug( $path );
 
 		// If the URL resembles that of a post that has never been published (even once), and is a "preview" or "revision", i.e. like so
