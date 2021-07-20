@@ -4,6 +4,7 @@
 
 /conf.php
 /conf.*.php
+/commits.md
 
 # the content directory
 /content
