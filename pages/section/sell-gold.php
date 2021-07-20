@@ -41,7 +41,7 @@
 						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">2</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Earn a bonus</div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Earn a Bonus</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
