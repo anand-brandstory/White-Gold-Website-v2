@@ -64,7 +64,7 @@ function getRegionSpecificURL ( region, browserLocation ) {
 		return browserLocation.href;
 
 	pathNameParts[ 1 ] = region;
-	var url = pathNameParts.join( "/" ) + browserLocation.search + browserLocation.hash;
+	var url = pathNameParts.join( "/" ) + browserLocation.search;
 
 	return url;
 
