@@ -1,4 +1,4 @@
-<section class="sell-gold-home-visit-form-section space-200-top-bottom fill-blue-5" id="sell-gold-home-visit-form-section" data-section-title="Sell Gold Home Visit Form Section" data-section-slug="sell-gold-home-visit-form-section">
+<section class="sell-gold-home-visit-form-section space-200-top-bottom fill-blue-5 js_home_visit_form_section" id="sell-gold-home-visit-form-section" data-section-title="Sell Gold Home Visit Form Section" data-section-slug="sell-gold-home-visit-form-section">
 	<div class="container">
 		<div class="row sell-gold-home-visit-form">
 			<div class="columns small-12 large-4 space-100-bottom">
@@ -12,21 +12,21 @@
 			</div>
 			<div class="columns small-9 medium-5 large-3">
 				<div class="form-card form-dark row fill-blue-4">
-					<div class="form form-base">
+					<form class="form form-base js_home_visit_form" onsubmit="event.preventDefault()">
 						<div class="columns small-12">
 							<label class="form-label block">
-								<input type="text" placeholder="Pincode" class="form-input-field block">
+								<input type="text" placeholder="Pincode" class="form-input-field block" id="js_home_visit_form_input_pincode">
 								<span class="form-label-title medium fill-blue-4 cursor-pointer">Pincode</span>
 							</label>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<label class="phone-verify form-label block">
-								<input type="text" class="form-input-field phone-number block">
-								<select class="form-input-field country-code">
-									<option value="">India (+91)</option>
+								<input type="text" class="form-input-field phone-number block" id="js_home_visit_form_input_phone">
+								<select class="form-input-field country-code js_phone_country_code">
+									<?php require __ROOT__ . '/inc/phone-country-codes.php' ?>
 								</select>
 								<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
-								<input type="text" disabled="" class="form-input-field country-code-label" value="+91">
+								<input type="text" disabled="" class="form-input-field country-code-label js_phone_country_code_label" value="+91" id="js_home_visit_form_input_phone_country_code">
 								<span class="form-label-title medium fill-blue-4 cursor-pointer">Mobile Number</span>
 							</label>
 						</div>
@@ -36,17 +36,17 @@
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
 								<span class="form-label-title hidden medium fill-blue-2 cursor-pointer">Submit</span>
-								<button class="button fill-light">
+								<button class="button fill-light" type="submit">
 									<span class="button-label">Book Home Visit&ensp;</span>
 									<img class="button-icon tall" src="../media/icon/submit-tall-blue.svg<?php echo $ver ?>">
 								</button>
 							</label>
 						</div>
-					</div>
-					<div class="form form-otp">
+					</form>
+					<form class="form form-otp js_otp_form js_otp_form_home_visit" onsubmit="event.preventDefault()">
 						<div class="columns small-12">
 							<label class="form-label block">
-								<input type="text" placeholder="Enter OTP" class="form-input-field block">
+								<input type="text" placeholder="Enter OTP" class="form-input-field block" id="js_form_input_otp_home_visit">
 								<span class="form-label-title medium fill-blue-4 cursor-pointer">Enter OTP</span>
 							</label>
 						</div>
@@ -56,7 +56,7 @@
 								<button class="button fill-light">Submit OTP</button>
 							</label>
 						</div>
-					</div>
+					</form>
 					<div class="form form-thankyou">
 						<div class="columns small-12">
 							<div class="h4 strong space-25-bottom">Thank You</div>

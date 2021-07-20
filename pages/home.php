@@ -136,3 +136,6 @@ CMS::setupContext();
 
 
 <?php require_once __ROOT__ . '/inc/footer.php'; ?>
+<script type="text/javascript" src="/js/pages/home/sell-gold-form.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/pages/home/home-visit-form.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/pages/home/login-prompts.js<?= $ver ?>"></script>

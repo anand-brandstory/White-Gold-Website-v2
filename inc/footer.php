@@ -96,12 +96,16 @@ $citiesInRegions = [
 
 <!-- JS Modules -->
 <script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/plugins/base64/js-base64-v3.6.0.min.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/region-selector.js<?= $ver ?>"></script>
 <!-- <script type="text/javascript" src="/js/modules/device-charge.js<?= $ver ?>"></script> -->
 <script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/modal_box.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/form.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/phone-country-code.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/cupid/user.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/forms.js<?= $ver ?>"></script>
 <?php if ( ! BFS_ENV_PRODUCTION ) : ?>
 	<script type="text/javascript" src="/js/modules/disclaimer.js<?= $ver ?>"></script>
 <?php endif; ?>
