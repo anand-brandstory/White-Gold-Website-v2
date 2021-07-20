@@ -123,6 +123,21 @@ $postId = null;
 
 /*
  *
+ * ----- Returns a string built from interpolating text enclosed in double curly braces (like this — {{ field }}) with values found in the provided context
+ *
+ */
+function interpolateString ( $string, $context = [ ] ) {
+	$formattedContext = [ ];
+	foreach ( $context as $key => $value )
+		$formattedContext[ '{{ ' . $key . ' }}' ] = $value;
+
+	return str_replace( array_keys( $formattedContext ), array_values( $formattedContext ), $string );
+}
+
+
+
+/*
+ *
  * Dump the values on the page and onto JavaScript memory, finally end the script
  *
  */
