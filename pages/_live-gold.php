@@ -5,6 +5,14 @@
  *
  */
 
+$postTitle = 'View the Real-time Gold Rate';
+
+require_once __ROOT__ . '/inc/utils.php';
+require_once __ROOT__ . '/inc/cms.php';
+
+use BFS\CMS;
+CMS::setupContext();
+
 require_once __ROOT__ . '/inc/header.php';
 
 ?>
