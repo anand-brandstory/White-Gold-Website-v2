@@ -176,6 +176,23 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 
 <!-- Stylesheet -->
 <?php require __ROOT__ . '/style.php'; ?>
+
+<script type="text/javascript">
+
+	window.__BFS = window.__BFS || { };
+	window.__BFS.CONF = {
+		trackingURL: "<?= BFS_TRACKING_URL ?>",
+		cupid: {
+			client: "<?= CUPID_CLIENT ?>",
+			clientSlug: "<?= CUPID_CLIENT_SLUG ?>",
+			sourceMedium: "<?= CUPID_SOURCE_MEDIUM ?>",
+			cupidApiEndpoint: "<?= CUPID_CUPID_API_ENDPOINT ?>",
+			authCookieName: "<?= CUPID_AUTH_COOKIE_NAME ?>"
+		}
+	};
+
+</script>
+
 <!-- jQuery 3 -->
 <script type="text/javascript" src="/plugins/jquery/jquery-3.0.0.min.js<?= $ver ?>"></script>
 <!-- Slick Carousel -->
