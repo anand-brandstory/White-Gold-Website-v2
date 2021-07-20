@@ -10,6 +10,8 @@ require_once __ROOT__ . '/inc/header.php';
 use BFS\CMS;
 CMS::setupContext();
 
+$postTitle = 'Find a White Gold Branch Near You';
+
 $allBranches = CMS::getPostsOf( 'branch' );
 $branches = array_filter( $allBranches, function ( $branch ) {
 	return $branch->get( 'region' ) === REGION;

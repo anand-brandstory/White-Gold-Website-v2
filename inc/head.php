@@ -18,10 +18,14 @@ $regionCodesWithNames = [
 // Get the absolute URL of the page
 $pageURL = $siteUrl . '/' . $requestPath;
 
+
 // Construct the document's title ( for use in the <title></title> tag )
 	// ( if an explicit one is set, use that )
 if ( CMS::$isEnabled and CMS::$onlySetupContext and empty( $documentTitle ) ) {
-	$siteTitle = $siteTitle ?? get_bloginfo( 'name' ) ?: '';
+	$siteTitle = $siteTitle ?? get_bloginfo( 'name' );
+	$siteTitle = interpolateString( $siteTitle, [
+		'regionName' => $regionCodesWithNames[ REGION ]
+	] );
 	$sectionTitle = $sectionTitle ?? '';
 	if ( Router::$urlSlug == '' )	// i.e. home page
 		$postTitle = $postTitle ?? '';
@@ -45,9 +49,17 @@ if ( CMS::$isEnabled and CMS::$onlySetupContext and empty( $documentTitle ) ) {
 /*
  * Meta / SEO
  */
-$metaDescription = htmlentities( strip_tags( $metaDescription ?? CMS::get( 'meta_description' ) ?? '' ) );
+$metaDescription = $metaDescription ?? ( CMS::$isEnabled ? get_bloginfo( 'description' ) : '' );
+$metaDescription = interpolateString( $metaDescription, [
+	'regionName' => $regionCodesWithNames[ REGION ]
+] );
+// if ( defined( 'REGION' ) )
+// 	$metaDescription .= ' in ' . $regionCodesWithNames[ REGION ];
+// $metaDescription .= '.';
+
+$metaDescription = htmlentities( strip_tags( $metaDescription ) );
 $metaImage = $metaImage ?? CMS::get( 'meta_image' ) ?? [ ];
-$metaImage = $metaImage[ 'sizes' ][ 'medium' ] ?? $metaImage[ 'sizes' ][ 'small' ] ?? $metaImage[ 'sizes' ][ 'thumbnail' ] ?? $metaImage[ 'url' ] ?? ( $siteUrl . '/media/fallback-image.png' );
+$metaImage = $metaImage[ 'sizes' ][ 'medium' ] ?? $metaImage[ 'sizes' ][ 'small' ] ?? $metaImage[ 'sizes' ][ 'thumbnail' ] ?? $metaImage[ 'url' ] ?? ( $siteUrl . '/media/logo.png' );
 
 
 $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
@@ -87,7 +99,7 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 - -->
 <!-- Links to information about the author(s) of the document -->
 <meta name="author" content="Lazaro Advertising">
-<link rel="author" href="humans.txt">
+<!-- <link rel="author" href="humans.txt"> -->
 
 
 <!--
@@ -155,7 +167,7 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <!-- Facebook Open Graph -->
 <meta property="og:url" content="<?= $pageURL ?>">
 <meta property="og:type" content="website">
-<meta property="og:title" content="<?= $pageTitle ?? '' ?>">
+<meta property="og:title" content="<?= $documentTitle ?>">
 <?php if ( $metaDescription ) : ?>
 <meta property="og:description" content="<?= $metaDescription ?>">
 <?php endif; ?>
@@ -166,7 +178,7 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 
 
 <!-- Schema.org / Google+ -->
-<meta itemprop="name" content="<?= $pageTitle ?? '' ?>">
+<meta itemprop="name" content="<?= $documentTitle ?>">
 <?php if ( $metaDescription ) : ?>
 <meta itemprop="description" content="<?= $metaDescription ?>">
 <?php endif; ?>
