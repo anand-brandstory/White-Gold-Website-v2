@@ -30,7 +30,7 @@
 									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu & Kerala</div>
 									<a href="/<?= REGION ?>/branches" class="button fill-light">
 										<span class="button-label">Find Branch&ensp;</span>
-										<img class="button-icon tall" src="../media/icon/location-tall-red.svg<?php echo $ver ?>">
+										<img class="button-icon tall" src="/media/icon/location-tall-red.svg<?= $ver ?>">
 									</a>
 								</div>
 							</div>
