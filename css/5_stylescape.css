@@ -248,7 +248,7 @@ button:focus,
 
 input[ disabled ],
 button[ disabled ] {
-	cursor: not-allowed;
+	cursor: auto;
 }
 
 .button .button-label {
@@ -740,7 +740,7 @@ select { cursor: pointer; }
 }
 .carousel .carousel-controls .carousel-button.fade-out {
 	opacity: 0.25;
-	cursor: not-allowed;
+	cursor: auto;
 	transition: opacity 0.15s ease-in;
 }
 .carousel .carousel-controls .carousel-button .material-icons {
