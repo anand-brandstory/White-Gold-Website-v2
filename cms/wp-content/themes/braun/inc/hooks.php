@@ -2,7 +2,7 @@
 
 add_action( 'init', function () {
 
-	if ( is_admin() )
+	if ( is_admin() or is_customize_preview() )
 		do_action( 'bfs/init/backend' );
 	else
 		do_action( 'bfs/init/frontend' );
