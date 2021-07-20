@@ -5,9 +5,6 @@
  *
  */
 
-if ( ! defined( 'REGION' ) )
-	define( 'REGION', 'ka' );
-
 require_once __ROOT__ . '/inc/header.php';
 
 use BFS\CMS;

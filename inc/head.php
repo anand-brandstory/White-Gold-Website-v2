@@ -6,6 +6,15 @@ use BFS\Router;
 global $requestPath;
 global $post;	// WordPress' global post object
 
+if ( ! defined( 'REGION' ) )
+	define( 'REGION', 'ka' );
+
+$regionCodesWithNames = [
+	'ka' => 'Karnataka',
+	'tn' => 'Tamil Nadu',
+	'kl' => 'Kerala'
+];
+
 // Get the absolute URL of the page
 $pageURL = $siteUrl . '/' . $requestPath;
 
