@@ -24,8 +24,8 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <!-- Live Gold Section -->
-<section class="live-gold-section fill-blue-7 space-200-top-bottom js_live_gold_form_section" style="min-height: 70vh;">
-	<div class="container">
+<section class="live-gold-section fill-dark">
+	<div class="container space-200-top-bottom js_live_gold_form_section hidden">
 		<div class="row sell-gold-form">
 			<div class="columns small-9 medium-5 large-3">
 				<div class="form-card row fill-light">
@@ -81,9 +81,9 @@ require_once __ROOT__ . '/inc/header.php';
 			</div>
 		</div>
 	</div>
-	<div class="container hidden">
-		<div class="row">
-			<div class="inline-modal columns small-12">
+	<div class="inline-modal">
+		<div class="container">
+			<div class="row">
 				<div class="otp-verify">
 					<!-- insert text -->
 				</div>
@@ -97,26 +97,99 @@ require_once __ROOT__ . '/inc/header.php';
 					<!-- insert text -->
 				</div>
 			</div>
-			<div class="live-gold columns small-12">
-				<div class="row">
-					<div class="live-gold-graph columns small-12">
-						<!-- insert text -->
+		</div>
+	</div>
+	<div class="live-gold space-200-top-bottom">
+		<div class="row">
+			<div class="container">
+				<div class="live-gold-data columns small-12 medium-5 large-4 space-200-bottom">
+					<div class="title h2 strong space-25-bottom">White Gold <br><span class="text-yellow-2">Live Gold Rate</span></div>
+					<div class="date label space-150-bottom">12 June 2021&ensp;&bull;&ensp;9:45:00 AM IST</div>
+					<div class="data inline">
+						<div class="24k space-50-bottom">
+							<div class="h6 text-yellow-2">24 Karat Gold</div>
+							<div class="live-rate">
+								<span class="rate h2 medium text-yellow-2 inline">₹ 5,011.4</span>
+								<span class="trend inline space-25-left-right">
+									<img src="/media/icon/trend-up.svg<?= $ver ?>" style="width: var(--h5);">
+								</span>
+								<span class="unit h6 inline"> per gram</span>
+							</div>
+						</div>
+						<hr class="fill-light">
+						<div class="22k space-50-top">
+							<div class="h6 text-yellow-2">22 Karat Gold</div>
+							<div class="live-rate">
+								<span class="rate h2 medium text-yellow-2 inline">₹ 4,900.3</span>
+								<span class="trend inline space-25-left-right">
+									<img src="/media/icon/trend-down.svg<?= $ver ?>" style="width: var(--h5);">
+								</span>
+								<span class="unit h6 inline"> per gram</span>
+							</div>
+						</div>
 					</div>
-					<div class="live-gold-data columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-quote columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-alert-form columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-video columns small-12">
-						<!-- insert text -->
-					</div>
+				</div>
+				<div class="live-gold-graph columns small-12 medium-7 large-8 space-200-bottom">
+					<img class="block" src="https://via.placeholder.com/800x600" alt="">
 				</div>
 			</div>
 		</div>
+		<div class="row">
+			<div class="container">
+				<div class="live-gold-quote columns small-12 medium-6 medium-offset-5 large-5 large-offset-4 space-200-bottom">
+					<div class="form-card row fill-light">
+						<form class="form form-base" onsubmit="event.preventDefault()">
+							<div class="columns small-12">
+								<div class="h3 strong">Quick Quotation</div>
+							</div>
+							<div class="columns small-12 space-50-top">
+								<label class="form-label block">
+									<input type="text" placeholder="Quantity (in grams)" class="form-input-field block" id="js_sell_gold_form_input_quantity">
+									<span class="form-label-title medium fill-light cursor-pointer">Quantity (in grams)</span>
+								</label>
+							</div>
+							<div class="columns small-12 space-50-top space-100-bottom">
+								<label class="form-label block">
+									<select class="block" id="purity">
+										<option value="24">24 Karat</option>
+										<option value="22">22 Karat</option>
+									</select>
+									<span class="form-label-title medium fill-light cursor-pointer">Purity</span>
+								</label>
+							</div>
+							<div class="quote-output fill-yellow-1 columns small-12 radius-25" style="overflow: hidden;">
+								<div class="row">
+									<div class="p inline-middle columns small-5 space-50">Basic Rate</div>
+									<div class="value h6 inline-middle columns small-7 space-50 text-right">₹ 5,39,000</div>
+								</div>
+								<div class="row space-50-left-right"><hr class="fill-neutral-4 opacity-25"></div>
+								<div class="row">
+									<div class="p inline-middle columns small-6 space-50">3% Service Charge</div>
+									<div class="value h6 inline-middle columns small-6 space-50 text-right">- ₹ 16,170</div>
+								</div>
+								<div class="row fill-yellow-2">
+									<div class="p inline-middle columns small-5 space-50">Final Quotation</div>
+									<div class="value h4 strong inline-middle columns small-7 space-50 text-right">₹ 5,22,830</div>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+				<div class="live-gold-video columns small-12 medium-6 medium-offset-5 large-5 large-offset-4" style="margin-top: 25vw;">
+					<a href="" class="watch-video block row fill-blue-1">
+						<div class="columns small-6">
+							<div class="thumbnail" style="background-image: url('');"></div>
+						</div>
+						<div class="columns small-6 space-50-left space-25-right">
+							<div class="title h6 medium space-25-top-bottom">Why is the gold rate lower than I expected?</div>
+							<div class="timestamp small">02:30</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="background row fill-yellow-2" style="background-image: linear-gradient(0deg, rgba(255,201,128,0.4) 40%, rgba(33,35,34,1) 98%), url('/media/background/sell-gold.png<?= $ver ?>');"></div>
 	</div>
 </section>
 <!-- END: Live Gold Section -->

@@ -85,50 +85,6 @@ CMS::setupContext();
 <!-- END: Release Gold FAQs Section -->
 
 
-<!-- ## Live Gold Page -->
-<!-- Live Gold Section -->
-<section class="live-gold-section">
-	<div class="container">
-		<div class="row">
-			<div class="inline-modal columns small-12">
-				<div class="otp-verify">
-					<!-- insert text -->
-				</div>
-				<div class="off-hrs">
-					<!-- insert text -->
-				</div>
-				<div class="holiday">
-					<!-- insert text -->
-				</div>
-				<div class="number-blocked">
-					<!-- insert text -->
-				</div>
-			</div>
-			<div class="live-gold columns small-12">
-				<div class="row">
-					<div class="live-gold-graph columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-data columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-quote columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-alert-form columns small-12">
-						<!-- insert text -->
-					</div>
-					<div class="live-gold-video columns small-12">
-						<!-- insert text -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: Live Gold Section -->
-
-
 
 
 
