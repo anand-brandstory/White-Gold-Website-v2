@@ -136,7 +136,7 @@ require_once __ROOT__ . '/inc/header.php';
 		</div>
 		<div class="row">
 			<div class="container">
-				<div class="live-gold-quote columns small-12 medium-6 medium-offset-5 large-5 large-offset-4 space-200-bottom">
+				<div class="live-gold-quote columns small-12 medium-7 medium-offset-5 large-5 large-offset-4 space-200-bottom">
 					<div class="form-card row fill-light">
 						<form class="form form-base" onsubmit="event.preventDefault()">
 							<div class="columns small-12">
@@ -176,7 +176,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 					</div>
 				</div>
-				<div class="live-gold-video columns small-12 medium-6 medium-offset-5 large-5 large-offset-4" style="margin-top: 25vw;">
+				<div class="live-gold-video columns small-12 medium-7 medium-offset-5 large-5 large-offset-4" style="margin-top: 25vw;">
 					<a href="" class="watch-video block row fill-blue-1">
 						<div class="columns small-6">
 							<div class="thumbnail" style="background-image: url('');"></div>
