@@ -1378,6 +1378,17 @@
 	overflow: hidden;
 }
 
+.live-gold-section .live-gold {
+	position: relative;
+	z-index: 1;
+	filter: none;
+	transition: filter .5s .3s ease-out;
+}
+
+.live-gold-section.hide .live-gold {
+	filter: blur(6px);
+}
+
 .live-gold-section .live-gold .container {
 	position: relative;
 	z-index: 2;
@@ -1397,14 +1408,56 @@
 	transform: scale(1.025);
 }
 
+.live-gold-section .hide-live-gold {
+	display: none;
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(33,35,34,0.85);
+	opacity: 0;
+	transition: opacity .5s .3s ease-out;
+}
+
+.live-gold-section.hide .hide-live-gold {
+	display: block;
+	opacity: 0;
+	animation: hide-live-gold-reveal .5s ease-out forwards .3s;
+}
+@keyframes hide-live-gold-reveal {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.live-gold-section .hide-live-gold .message {
+	display: none;
+}
+
+.live-gold-section.otp-verify-message .hide-live-gold .message.otp-verify { display: block; }
+.live-gold-section.off-hrs-message .hide-live-gold .message.off-hrs { display: block; }
+.live-gold-section.holiday-message .hide-live-gold .message.holiday { display: block; }
+.live-gold-section.end-session .hide-live-gold .message.holiday { display: block; }
+.live-gold-section.number-blocked-message .hide-live-gold .message.number-blocked { display: block; }
+
+
+
+
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {
+	.live-gold-section.hide .live-gold {
+		filter: blur(8px);
+	}
 	.live-gold-section .live-gold .background {
 		filter: blur(5px);
 	}
 
 }
 @media( min-width: 1480px ) {
+	.live-gold-section.hide .live-gold {
+		filter: blur(10px);
+	}
 	.live-gold-section .live-gold .background {
 		filter: blur(7px);
 	}
