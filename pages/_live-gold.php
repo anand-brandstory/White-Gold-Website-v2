@@ -24,7 +24,8 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <!-- Live Gold Section :: Note : add a 'hide' class with corresponding message class like 'otp-verify-message' to display the appropriate message card -->
-<section class="live-gold-section hide otp-verify-message fill-dark">
+<!-- <section class="live-gold-section hide otp-verify-message fill-dark"> -->
+<section class="live-gold-section fill-dark">
 	<!-- Live Gold Content -->
 	<div class="live-gold space-200-top-bottom">
 		<div class="row">
@@ -57,7 +58,7 @@ require_once __ROOT__ . '/inc/header.php';
 					</div>
 				</div>
 				<div class="live-gold-graph columns small-12 medium-7 large-8 space-200-bottom">
-					<img class="block" src="https://via.placeholder.com/800x600" alt="">
+					<?php require_once __ROOT__ . '/pages/snippet/live-gold-graph.php'; ?>
 				</div>
 			</div>
 		</div>
