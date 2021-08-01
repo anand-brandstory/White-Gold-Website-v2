@@ -8,3 +8,6 @@
 
 # the content directory
 /content
+
+# WP Cloudflare Super Page Cache
+/cms/wp-content/wp-cloudflare-super-page-cache
