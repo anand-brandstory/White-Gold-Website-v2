@@ -37,9 +37,9 @@ require_once __ROOT__ . '/inc/header.php';
 						<div class="24k space-50-bottom">
 							<div class="h6 text-yellow-2">24 Karat Gold</div>
 							<div class="live-rate">
-								<span class="rate h2 medium text-yellow-2 inline">₹ 5,011.4</span>
+								<span class="rate h2 medium text-yellow-2 inline trend-up">₹ 5,011.4</span>
 								<span class="trend inline space-25-left-right">
-									<img src="/media/icon/trend-up.svg<?= $ver ?>" style="width: var(--h5);">
+									<span class="trend-icon"></span>
 								</span>
 								<span class="unit h6 inline"> per gram</span>
 							</div>
@@ -48,9 +48,9 @@ require_once __ROOT__ . '/inc/header.php';
 						<div class="22k space-50-top">
 							<div class="h6 text-yellow-2">22 Karat Gold</div>
 							<div class="live-rate">
-								<span class="rate h2 medium text-yellow-2 inline">₹ 4,900.3</span>
+								<span class="rate h2 medium text-yellow-2 inline trend-down">₹ 4,900.3</span>
 								<span class="trend inline space-25-left-right">
-									<img src="/media/icon/trend-down.svg<?= $ver ?>" style="width: var(--h5);">
+									<span class="trend-icon"></span>
 								</span>
 								<span class="unit h6 inline"> per gram</span>
 							</div>

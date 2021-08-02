@@ -1441,7 +1441,25 @@
 .live-gold-section.end-session .hide-live-gold .message.holiday { display: block; }
 .live-gold-section.number-blocked-message .hide-live-gold .message.number-blocked { display: block; }
 
-
+/* -- trend up|down -- */
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate + .trend {
+	display: inline-block;
+}
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate + .trend .trend-icon {
+	display: block;
+	width: var(--h5);
+	height: var(--h5);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate.trend-up + .trend .trend-icon {
+	background-image: url('/media/icon/trend-up.svg');
+}
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate.trend-down + .trend .trend-icon {
+	background-image: url('/media/icon/trend-down.svg');
+}
+/* -- end: trend up|down -- */
 
 
 @media( min-width: 640px )  {}
