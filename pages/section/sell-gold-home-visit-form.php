@@ -42,6 +42,15 @@
 								</button>
 							</label>
 						</div>
+						<div class="columns small-12 space-50-top">
+							<a class="inline phone-call" href="tel:<?= $contactNumbersForRegions[ REGION ] ?>">
+								<img class="icon inline-middle" style="width: calc( var(--h6) * 2 );" src="../media/icon/phone-call-light.svg<?php echo $ver ?>">
+								<div class="inline-middle space-25-left">
+									<span class="inline label strong text-uppercase line-height-small">Or call</span><br>
+									<span class="inline h6 strong line-height-small"><?= $contactNumbersForRegions[ REGION ] ?></span>
+								</div>
+							</a>
+						</div>
 					</form>
 					<form class="form form-otp js_otp_form js_otp_form_home_visit" onsubmit="event.preventDefault()">
 						<div class="columns small-12">

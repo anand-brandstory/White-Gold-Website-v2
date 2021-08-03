@@ -203,7 +203,7 @@
 						backgroundColor: gradient
 					},
 					point: {
-						radius: 5,
+						radius: 3,
 						backgroundColor: "rgb(255,201,128)",
 					}
 				},

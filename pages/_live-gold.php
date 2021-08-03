@@ -24,8 +24,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <!-- Live Gold Section :: Note : add a 'hide' class with corresponding message class like 'otp-verify-message' to display the appropriate message card -->
-<!-- <section class="live-gold-section hide otp-verify-message fill-dark"> -->
-<section class="live-gold-section fill-dark">
+<section class="live-gold-section hide otp-verify-message fill-dark">
 	<!-- Live Gold Content -->
 	<div class="live-gold space-200-top-bottom">
 		<div class="row">

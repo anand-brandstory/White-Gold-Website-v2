@@ -713,7 +713,7 @@
 	bottom: 0;
 	left: 50%;
 	width: var(--card);
-	transform: translateX(-30%) translateY(-75%) scale(1.25);
+	transform: translateX(-30%) translateY(-100%) scale(1.25);
 }
 .sell-gold-form-section .char:after {
 	content: '';
@@ -736,12 +736,12 @@
 @media( min-width: 640px )  {
 	.sell-gold-form-section .char {
 		width: calc(var(--card) * 2);
-		transform: translateX(-35%) translateY(0%) scale(0.9);
+		transform: translateX(-30%) translateY(0%) scale(0.95);
 	}
 }
 @media( min-width: 1040px ) {
 	.sell-gold-form-section > .container {
-		padding-bottom: 140px;
+		padding-bottom: 80px;
 	}
 	.sell-gold-form-section .char {
 		width: calc(var(--card) * 2);
@@ -750,7 +750,7 @@
 }
 @media( min-width: 1480px ) {
 	.sell-gold-form-section > .container {
-		padding-bottom: 200px;
+		padding-bottom: 120px;
 	}
 }
 
@@ -777,7 +777,7 @@
 	bottom: 0;
 	left: 50%;
 	width: var(--card);
-	transform: translateX(-10%) translateY(0%) scale(0.85);
+	transform: translateX(-10%) translateY(-10%) scale(0.85);
 }
 .sell-gold-home-visit-form-section .char:after {
 	content: '';
@@ -795,7 +795,7 @@
 
 @media( min-width: 640px )  {
 	.sell-gold-home-visit-form-section .char {
-		transform: translateX(20%) translateY(20%) scale(0.75);
+		transform: translateX(25%) translateY(15%) scale(0.80);
 	}
 }
 @media( min-width: 1040px ) {
@@ -803,7 +803,7 @@
 		padding-bottom: 140px;
 	}
 	.sell-gold-home-visit-form-section .char {
-		transform: translateX(70%) translateY(20%) scale(0.9);
+		transform: translateX(70%) translateY(10%) scale(0.9);
 	}
 }
 @media( min-width: 1480px ) {
@@ -1438,7 +1438,7 @@
 .live-gold-section.otp-verify-message .hide-live-gold .message.otp-verify { display: block; }
 .live-gold-section.off-hrs-message .hide-live-gold .message.off-hrs { display: block; }
 .live-gold-section.holiday-message .hide-live-gold .message.holiday { display: block; }
-.live-gold-section.end-session .hide-live-gold .message.holiday { display: block; }
+.live-gold-section.end-session-message .hide-live-gold .message.end-session { display: block; }
 .live-gold-section.number-blocked-message .hide-live-gold .message.number-blocked { display: block; }
 
 /* -- trend up|down -- */
@@ -1482,3 +1482,17 @@
 }
 
 
+
+
+
+
+/*
+ * Phone Call
+ */
+
+.phone-call {
+	cursor: pointer;
+}
+.phone-call * {
+	pointer-events: none;
+}

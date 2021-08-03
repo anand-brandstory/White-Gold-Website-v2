@@ -1,12 +1,4 @@
-<?php
 
-$contactNumbersForRegions = [
-	'ka' => '+91 95907 04444',
-	'tn' => '+91 80951 00700',
-	'kl' => '+91 95622 62222'
-];
-
-?>
 <!-- Main Menu -->
 <div class="main-menu columns small-12 medium-6 medium-offset-3 large-12 large-offset-0 fill-dark radius-50">
 	<div class="row">
