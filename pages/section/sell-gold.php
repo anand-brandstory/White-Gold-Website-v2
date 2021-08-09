@@ -26,10 +26,10 @@
 						<!-- <div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )"> -->
 						<div class="card-content">
 							<div class="row space-50-left-right space-200-top-bottom">
-								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
-									<div class="h5 medium" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
-									<div class="h6 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu & Kerala</div>
-									<a href="/<?= REGION ?>/branches" class="button fill-light">
+								<div class="columns small-9 small-offset-1 space-50-left-right space-50-bottom">
+									<div class="h4 medium space-25-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
+									<div class="h5 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu and <br>Kerala</div>
+									<a href="/<?= REGION ?>/branches" class="button fill-light" style="margin-top: var(--space-150);">
 										<span class="button-label">Find Branch&ensp;</span>
 										<img class="button-icon tall" src="/media/icon/location-tall-red.svg<?= $ver ?>">
 									</a>
@@ -50,9 +50,9 @@
 						</label>
 						<div class="card-content">
 							<div class="row space-50-left-right">
-								<div class="columns small-8 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
+								<div class="columns small-7 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
 									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
-									<div class="p space-200-top-bottom">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
+									<div class="p space-200-top space-100-right">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
 								</div>
 							</div>
 							<div class="bg-img"><img class="block" src="../media/cutout/char-6237.png<?php echo $ver ?>"></div>
@@ -88,7 +88,7 @@
 							<div class="row space-50-left-right space-200-bottom">
 								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
 									<div class="p space-200-top">Photo ID and Address proof is required.</div>
-									<div class="p space-50-top space-200-bottom">Carry your Aadhaar card for easy KYC check.</div>
+									<div class="p space-50-top">Carry your Aadhaar card for easy KYC check.</div>
 								</div>
 							</div>
 							<div class="bg-img"><img class="block" src="../media/cutout/char-6269.png<?php echo $ver ?>"></div>
