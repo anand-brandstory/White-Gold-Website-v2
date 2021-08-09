@@ -13,9 +13,17 @@ CMS::setupContext();
 $postTitle = 'Find a White Gold Branch Near You';
 
 $allBranches = CMS::getPostsOf( 'branch' );
-$branches = array_filter( $allBranches, function ( $branch ) {
+$branches = array_values( array_filter( $allBranches, function ( $branch ) {
 	return $branch->get( 'region' ) === REGION;
-} );
+} ) );
+$branches = array_map( function ( $branch ) {
+	$image = $branch->get( 'branch_image' );
+	if ( $image ) {
+		$imageURL = $image[ 'sizes' ][ 'small' ] ?? $image[ 'sizes' ][ 'medium' ] ?? $image[ 'sizes' ][ 'large' ] ?? $image[ 'url' ];
+		$branch->set( 'branch_image', $imageURL );
+	}
+	return $branch;
+}, $branches );
 
 ?>
 
