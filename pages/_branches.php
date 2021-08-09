@@ -42,7 +42,7 @@ require_once __ROOT__ . '/inc/header.php';
 	window.__BFS.settings.region = "<?= REGION ?>";
 	window.__BFS.data = window.__BFS.data || { };
 	window.__BFS.data.branches = <?= json_encode( array_map( function ( $branch ) {
-		return $branch->get( 'acf' );
+		return array_merge( $branch->get( 'acf' ), $branch->get( '__custom' ) );
 	}, $allBranches ) ) ?>;
 	window.__BFS.data.branchesInRegion = window.__BFS.data.branches.filter( function ( branch ) {
 		return branch.region === window.__BFS.settings.region
