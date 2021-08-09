@@ -5,7 +5,8 @@
  *
  */
 
-require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/inc/utils.php';
+require_once __ROOT__ . '/inc/cms.php';
 
 use BFS\CMS;
 CMS::setupContext();
@@ -24,6 +25,8 @@ $branches = array_map( function ( $branch ) {
 	}
 	return $branch;
 }, $branches );
+
+require_once __ROOT__ . '/inc/header.php';
 
 ?>
 
