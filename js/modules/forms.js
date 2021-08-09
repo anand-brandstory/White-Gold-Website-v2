@@ -47,7 +47,7 @@ BFSForm.prototype.enable = function enable ( fn ) {
 		fn.call( this, this.domForm );
 };
 BFSForm.prototype.giveFeedback = function giveFeedback ( message ) {
-	var $submitButton = $( this.domForm ).find( "[ type = 'submit' ]" );
+	var $submitButton = $( this.domForm ).find( ".js_submit_label" );
 	// Backup the initial label of the button
 	if ( $submitButton.data( "initial-label" ) === void 0 /* i.e. `undefined` */ )
 		$submitButton.data( "initial-label", $submitButton.text() );
@@ -55,7 +55,7 @@ BFSForm.prototype.giveFeedback = function giveFeedback ( message ) {
 	$submitButton.text( message );
 }
 BFSForm.prototype.setSubmitButtonLabel = function setSubmitButtonText ( label ) {
-	var $submitButton = $( this.domForm ).find( "[ type = 'submit' ]" );
+	var $submitButton = $( this.domForm ).find( ".js_submit_label" );
 	var label = label || $submitButton.data( "initial-label" );
 	$submitButton.text( label );
 }

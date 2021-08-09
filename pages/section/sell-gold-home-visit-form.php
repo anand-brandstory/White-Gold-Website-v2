@@ -37,7 +37,7 @@
 							<label class="form-label block">
 								<span class="form-label-title hidden medium fill-blue-2 cursor-pointer">Submit</span>
 								<button class="button fill-light" type="submit">
-									<span class="button-label">Book Home Visit&ensp;</span>
+									<span class="button-label js_submit_label">Book Home Visit&ensp;</span>
 									<img class="button-icon tall" src="../media/icon/submit-tall-blue.svg<?php echo $ver ?>">
 								</button>
 							</label>

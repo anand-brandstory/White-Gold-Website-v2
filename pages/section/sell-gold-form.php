@@ -41,7 +41,7 @@
 							<label class="form-label block">
 								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
 								<button class="button fill-blue-1" type="submit">
-									<span class="button-label">Sell Gold</span>
+									<span class="button-label js_submit_label">Sell Gold</span>
 									<img class="button-icon tall" src="../media/icon/rupee-tall-blue.svg<?php echo $ver ?>">
 								</button>
 							</label>
