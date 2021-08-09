@@ -27,6 +27,9 @@ add_action( 'bfs/init/backend', function () {
 		if ( ! current_user_can( 'edit_user_auth' ) )
 			remove_action( 'show_user_profile', [ Two_Factor_Core::class, 'user_two_factor_options' ] );
 
+	// Gold Parameters Settings page
+	require_once __DIR__ . '/inc/gold-rate-parameters-settings.php';
+
 } );
 
 
