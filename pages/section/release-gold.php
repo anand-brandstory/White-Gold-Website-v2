@@ -31,7 +31,7 @@
 									<div class="h5 medium space-200-top-bottom">Check your gold loan documents. Bring the Pledge Receipt.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-7094.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 3 -->
@@ -68,7 +68,7 @@
 									<div class="p space-50-top space-200-bottom">Carry your Aadhaar card for easy KYC check.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-6.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6269.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 1 -->
@@ -82,7 +82,8 @@
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )">
+						<!-- <div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )"> -->
+						<div class="card-content">
 							<div class="row space-50-left-right space-200-top-bottom">
 								<div class="columns small-9 small-offset-1 space-50-left-right space-200-top-bottom">
 									<div class="h5 medium" style="text-shadow: 1px 1px 1px rgba(0,0,0,0.15)">50 Branches</div>
@@ -90,6 +91,7 @@
 									<a href="/<?= REGION ?>/branches" class="button">Find Branch</a>
 								</div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6200.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -128,7 +130,7 @@
 									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-2.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6932.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 5 -->
@@ -172,6 +174,7 @@
 									*/ /* -- END: php hide -- */ ?>
 								</div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6907.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -269,7 +272,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/spectrometer-1.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6319.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 8 -->
@@ -293,7 +296,7 @@
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
 								<div class="columns small-10 medium-5 space-50-left-right"><div class="h3 text-blue-4 medium">Your money is transferred instantly to your bank account.</div></div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-3.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6948.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 				</div>

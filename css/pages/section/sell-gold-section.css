@@ -4,11 +4,19 @@
 
 .step-cards {}
 
-.step-cards .sgs1 .card-content,
+/*.step-cards .sgs1 .card-content,
 .step-cards .rgs1 .card-content {
 	background-size: cover;
 	background-position: center center;
 	background-image: linear-gradient(0deg, rgba(30,80,204,1) 0%, rgba(30,80,204,0.65) 25%, rgba(30,80,204,0.65) 75%, rgba(30,80,204,1) 100%), var(--bg-image);
+}*/
+
+.step-cards .sgs1 .card-content .bg-img,
+.step-cards .rgs1 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.7) translateX(40%) translateY(18%);
 }
 
 .step-cards .sgs2 .card-content .bg-img,
@@ -16,7 +24,7 @@
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
-	transform: scale(0.75) translateX(45%) translateY(24%);
+	transform: scale(0.7) translateX(40%) translateY(18%);
 }
 
 .step-cards .sgs3 .card-content .bg-img,
@@ -71,10 +79,15 @@
 }
 
 @media( min-width: 640px )  {
+	.step-cards .sgs1 .card-content .bg-img,
+	.step-cards .rgs1 .card-content .bg-img {
+		width: calc(var(--card)*1.5);
+		transform: scale(0.6) translateX(25%) translateY(60%);
+	}
 	.step-cards .sgs2 .card-content .bg-img,
 	.step-cards .rgs2 .card-content .bg-img {
-		width: calc(var(--card)*1.25);
-		transform: scale(1) translateX(5%) translateY(40%);
+		width: calc(var(--card)*1.5);
+		transform: scale(0.6) translateX(25%) translateY(60%);
 	}
 	.step-cards .sgs3 .card-content .bg-img,
 	.step-cards .rgs3 .card-content .bg-img {
