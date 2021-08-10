@@ -18,21 +18,18 @@
 	width: calc(var(--card)*1);
 	transform: scale(0.7) translateX(42%) translateY(20%);
 }
-
 .step-cards .sgs2 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(0.7) translateX(40%) translateY(21%);
 }
-
 .step-cards .rgs2 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
 	transform: scale(0.7) translateX(40%) translateY(21%);
 }
-
 .step-cards .sgs3 .card-content .bg-img,
 .step-cards .rgs3 .card-content .bg-img {
 	bottom: 0;
@@ -40,33 +37,52 @@
 	width: calc(var(--card)*1);
 	transform: scale(0.73) translateX(38%) translateY(15%);
 }
-
 .step-cards .sgs4 .card-content .bg-img,
 .step-cards .rgs7 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
-	transform: scale(0.35) translateX(90%) translateY(20%);
+	transform: scale(0.7) translateX(25%) translateY(33%);
 }
-
+.step-cards .sgs5 .card-content .bg-img,
+.step-cards .rgs5 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.8) translateX(0%) translateY(60%);
+}
+.step-cards .sgs5 .card-content .row.m-space,
+.step-cards .rgs5 .card-content .row.m-space {
+	margin-bottom: calc(var(--space-100)*5);
+}
+.step-cards .sgs5 .card-content .bg-img:after,
+.step-cards .rgs5 .card-content .bg-img:after {
+	content: '';
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient(0deg, rgba(33,35,34,1) 40%, rgba(33,35,34,0) 60%);
+}
 .step-cards .sgs6 .card-content .bg-img,
 .step-cards .rgs4 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
-	transform: scale(.75) translateX(35%) translateY(20%);
+	transform: scale(0.8) translateX(42%) translateY(10%);
 }
 .step-cards .sgs6 .card-content .row.m-space,
 .step-cards .rgs4 .card-content .row.m-space {
 	margin-bottom: calc(var(--space-100)*4);
 }
-
 .step-cards .sgs7 .card-content .bg-img,
 .step-cards .rgs8 .card-content .bg-img {
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
-	transform: scale(.85) translateX(15%) translateY(-30%);
+	transform: scale(0.75) translateX(20%) translateY(18%);
 }
 .step-cards .sgs7 .card-content .row.m-space,
 .step-cards .rgs8 .card-content .row.m-space {
@@ -81,7 +97,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-image: linear-gradient(0deg, rgba(30,80,204,1) 0%, rgba(30,80,204,0) 35%);
+	background-image: linear-gradient(0deg, rgba(30,80,204,1) 25%, rgba(30,80,204,0) 50%);
 }
 
 @media( min-width: 640px )  {
@@ -92,25 +108,35 @@
 	}
 	.step-cards .sgs2 .card-content .bg-img {
 		width: calc(var(--card)*1.5);
-		transform: scale(0.6) translateX(25%) translateY(60%);
+		transform: scale(0.58) translateX(25%) translateY(70%);
 	}
-	
 	.step-cards .rgs2 .card-content .bg-img {
 		width: calc(var(--card)*1.5);
 		transform: scale(0.6) translateX(25%) translateY(60%);
 	}
 	.step-cards .sgs3 .card-content .bg-img,
 	.step-cards .rgs3 .card-content .bg-img {
-		width: calc(var(--card)*1.25);
-		transform: scale(1) translateX(0%) translateY(0%);
+		width: calc(var(--card)*1.5);
+		transform: scale(0.7) translateX(15%) translateY(60%);
 	}
 	.step-cards .sgs4 .card-content .bg-img,
 	.step-cards .rgs7 .card-content .bg-img {
-		transform: scale(0.75) translateX(20%) translateY(18%);
+		width: calc(var(--card)*1.5);
+		transform: scale(0.65) translateX(10%) translateY(45%);
+	}
+	.step-cards .sgs5 .card-content .bg-img,
+	.step-cards .rgs5 .card-content .bg-img {
+		width: calc(var(--card)*1.5);
+		transform: scale(0.7) translateX(15%) translateY(60%);
+	}
+	.step-cards .sgs5 .card-content .row.m-space,
+	.step-cards .rgs5 .card-content .row.m-space {
+		margin-bottom: calc(var(--space-100)*0);
 	}
 	.step-cards .sgs6 .card-content .bg-img,
 	.step-cards .rgs4 .card-content .bg-img {
-		transform: scale(1) translateX(0%) translateY(0%);
+		width: calc(var(--card)*1.5);
+		transform: scale(0.7) translateX(20%) translateY(55%);
 	}
 	.step-cards .sgs7 .card-content .row.m-space,
 	.step-cards .rgs8 .card-content .row.m-space {
@@ -118,7 +144,8 @@
 	}
 	.step-cards .sgs7 .card-content .bg-img,
 	.step-cards .rgs8 .card-content .bg-img {
-		transform: scale(1.125) translateX(0%) translateY(0%);
+		width: calc(var(--card)*1.5);
+		transform: scale(0.7) translateX(25%) translateY(55%);
 	}
 }
 @media( min-width: 1040px ) {}

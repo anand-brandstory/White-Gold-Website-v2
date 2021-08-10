@@ -150,8 +150,8 @@
 							</div>
 						</label>
 						<div class="card-content">
-							<div class="row space-200-top space-50-left-right">
-								<div class="columns small-10 small-offset-1 medium-7 space-50-left-right">
+							<div class="row m-space space-100-top space-50-left-right">
+								<div class="columns small-10 small-offset-1 medium-6 space-50-left-right">
 									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
 										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
@@ -199,14 +199,14 @@
 							</div>
 							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 medium-5 space-50-left-right">
+								<div class="columns small-7 medium-5 space-50-left-right">
 									<div class="h5 medium">Address Proof</div>
 									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhaar Card has both.</div>
 								</div>
 							</div>
 							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 medium-5 space-50-left-right">
+								<div class="columns small-7 medium-5 space-50-left-right">
 									<div class="h5 medium">Verification Phone Call</div>
 									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
 								</div>
