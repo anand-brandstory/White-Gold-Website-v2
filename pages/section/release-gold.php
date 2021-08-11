@@ -26,12 +26,12 @@
 						</label>
 						<div class="card-content">
 							<div class="row space-50-left-right">
-								<div class="columns small-9 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
+								<div class="columns small-7 medium-5 small-offset-1 space-50-left-right space-100-top space-200-bottom">
 									<div class="p">To close your Gold loan and get your gold released, you need to bring the pledge receipt given to you by the gold loan provider.</div>
-									<div class="h5 medium space-200-top-bottom">Check your gold loan documents. Bring the Pledge Receipt.</div>
+									<div class="h5 medium space-100-top-bottom">Check your gold loan documents. Bring the Pledge Receipt.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-7094.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6237.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 3 -->

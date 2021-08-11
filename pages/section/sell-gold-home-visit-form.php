@@ -75,6 +75,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="char"><img class="block" src="../media/cutout/char-7364.png<?php echo $ver ?>"></div>
+		<div class="char"><img class="block" src="../media/cutout/char-7341.png<?php echo $ver ?>"></div>
 	</div>
 </section>
