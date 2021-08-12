@@ -96,6 +96,7 @@ $citiesInRegions = [
 
 <!-- JS Modules -->
 <script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/navigation.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/plugins/base64/js-base64-v3.6.0.min.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/region-selector.js<?= $ver ?>"></script>
 <!-- <script type="text/javascript" src="/js/modules/device-charge.js<?= $ver ?>"></script> -->
