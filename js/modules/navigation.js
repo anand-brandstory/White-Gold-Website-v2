@@ -67,6 +67,40 @@ $( document ).on( "click", "a[ href ]", function ( event ) {
 
 /*
  *
+ * ----- Menu
+ *
+ */
+// Show or Hide the floating menu depending on the direction of scroll
+var domInlineMenuWidget = $( ".js_inline_menu_widget" ).get( 0 );
+window.__BFS.utils.onScroll( function () {
+	var currentScrollY = window.scrollY || document.body.scrollTop;
+	var previousScrollY = currentScrollY;
+	var scrollThreshold = 50;
+
+	var $body = $( document.body );
+
+	return function () {
+		currentScrollY = window.scrollY || document.body.scrollTop;
+
+		if ( domInlineMenuWidget && currentScrollY < domInlineMenuWidget.offsetTop + 100 )
+			$body.removeClass( "show-menu" );
+		else
+			$body.addClass( "show-menu" );
+
+		previousScrollY = currentScrollY;
+	};
+
+}(), { frequencyMode: "throttle", interval: 0.25 } );
+
+// By default, show the floating menu **initially**
+// 	**if** there is no above-the-fold inline version of it for that page
+if ( ! domInlineMenuWidget )
+	$( document.body ).addClass( "show-menu" );
+
+
+
+/*
+ *
  * When scrolling through the page, communicate with GTM if the user is viewing a section for longer than a threshold amount of time
  *
  */
