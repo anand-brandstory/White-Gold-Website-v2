@@ -49,7 +49,7 @@
 	transition:  .3s ease-out;
 }
 
-.step-cards .card > input:checked + .card-head .index {
+.step-cards .card > input:checked ~ .card-head .index {
 	color: var(--yellow-2);
 	background-color: transparent;
 }
@@ -60,7 +60,7 @@
 	background-color: var(--blue-4);
 	box-shadow: inset 0 0 0 calc(var(--space-25)/3) var(--blue-4);
 }
-.release-gold-section .step-cards .card > input:checked + .card-head .index {
+.release-gold-section .step-cards .card > input:checked ~ .card-head .index {
 	color: var(--blue-4);
 	background-color: transparent;
 }
@@ -70,7 +70,7 @@
 	background-color: var(--yellow-2);
 	box-shadow: inset 0 0 0 calc(var(--space-25)/3) var(--yellow-2);
 }
-.step-cards .card.fill-dark > input:checked + .card-head .index {
+.step-cards .card.fill-dark > input:checked ~ .card-head .index {
 	color: var(--yellow-2);
 	background-color: transparent;
 }
@@ -126,10 +126,10 @@
 	transform-origin: left center;
 	transform: translateY(-50%) rotate(-35deg);
 }
-.step-cards .card > input:checked + .card-head .toggle .arrow .a1 {
+.step-cards .card > input:checked ~ .card-head .toggle .arrow .a1 {
 	transform: translateY(-50%) rotate(-35deg);
 }
-.step-cards .card > input:checked + .card-head .toggle .arrow .a2 {
+.step-cards .card > input:checked ~ .card-head .toggle .arrow .a2 {
 	transform: translateY(-50%) rotate(35deg);
 }
 
@@ -152,7 +152,7 @@
 	background-repeat: no-repeat;
 }
 
-.step-cards .card > input:checked + .card-head + .card-content {
+.step-cards .card > input:checked ~ .card-head + .card-content {
 	max-height: 1000px;
 	opacity: 1;
 }
@@ -472,10 +472,10 @@
 	transform-origin: left center;
 	transform: translateY(-50%) rotate(-35deg);
 }
-.articles-faqs .faq > input:checked + .question .toggle .arrow .a1 {
+.articles-faqs .faq > input:checked ~ .question .toggle .arrow .a1 {
 	transform: translateY(-50%) rotate(-35deg);
 }
-.articles-faqs .faq > input:checked + .question .toggle .arrow .a2 {
+.articles-faqs .faq > input:checked ~ .question .toggle .arrow .a2 {
 	transform: translateY(-50%) rotate(35deg);
 }
 
@@ -487,7 +487,7 @@
 	transition: .5s ease-in-out;
 
 }
-.articles-faqs .faq > input:checked + .question + .answer {
+.articles-faqs .faq > input:checked ~ .question + .answer {
 	max-height: 500px;
 	margin-bottom: var(--space-75);
 	opacity: 1;
@@ -528,7 +528,7 @@
 	transition: .5s ease-in-out;
 	overflow: hidden;
 }
-.articles-faqs .more-faqs:checked + .faqs {
+.articles-faqs .more-faqs:checked ~ .faqs {
 	max-height: 2000px;
 }
 
@@ -543,7 +543,7 @@
 	height: calc(var(--space-100)*4);
 	background-image: linear-gradient(180deg, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 100%);
 }
-.articles-faqs .more-faqs:checked + .faqs:after { display: none; }
+.articles-faqs .more-faqs:checked ~ .faqs:after { display: none; }
 
 .articles-faqs .more-faqs + .faqs + .hide-faqs {
 	position: relative;
@@ -551,7 +551,7 @@
 	display: inline-block;
 	cursor: pointer;
 }
-.articles-faqs .more-faqs:checked + .faqs + .hide-faqs {
+.articles-faqs .more-faqs:checked ~ .faqs + .hide-faqs {
 	display: none;
 }
 
@@ -580,7 +580,7 @@
 	max-height: calc(var(--card)*2);
 	transition: 2s ease-in;
 }
-.branch-listing .more-branches:checked + .branches {
+.branch-listing .more-branches:checked ~ .branches {
 	max-height: 8000px;
 }
 
@@ -595,7 +595,7 @@
 	height: calc(var(--space-100)*6);
 	background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
 }
-.branch-listing .more-branches:checked + .branches:after { display: none; }
+.branch-listing .more-branches:checked ~ .branches:after { display: none; }
 
 .branch-listing .more-branches + .branches + .hide-branches {
 	position: relative;
@@ -603,7 +603,7 @@
 	display: inline-block;
 	cursor: pointer;
 }
-.branch-listing .more-branches:checked + .branches + .hide-branches > .more-branches {
+.branch-listing .more-branches:checked ~ .branches + .hide-branches > .more-branches {
 	display: none;
 }
 
@@ -1078,17 +1078,15 @@
 	transform: translateX(-50%);
 }
 
-.main-menu .whatsapp {
+.main-menu .toggle-whatsapp {
 	position: relative;
-	/*opacity: 0.15;*/
-	/*pointer-events: none;*/
 }
-.main-menu .whatsapp .menu-button {
+.main-menu .toggle-whatsapp .menu-button {
 	position: relative;
 	text-align: center;
 	padding: 0;
 }
-.main-menu .whatsapp .menu-button img {
+.main-menu .toggle-whatsapp .menu-button img {
 	position: absolute;
 	z-index: 1;
 	display: inline-block;
@@ -1096,10 +1094,41 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: .4s ease-out;
 }
 
-.main-menu .whatsapp .menu-button:before,
-.main-menu .whatsapp .menu-button:after {
+.main-menu .toggle-whatsapp .menu-button .l1,
+.main-menu .toggle-whatsapp .menu-button .l2 {
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 2px;
+	background-color: var(--light);
+	transform: translateX(-50%) translateY(-50%) rotate(0);
+	opacity: 0;
+	transition: .4s ease-out;
+}
+
+.main-menu .toggle-whatsapp .menu-button .l1 {
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(45deg);
+}
+.main-menu .toggle-whatsapp .menu-button .l2 {
+	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(-45deg);
+}
+
+.main-menu .toggle-whatsapp-open:checked ~ .menu-head .toggle-whatsapp .menu-button img {
+	opacity: 0;
+}
+.main-menu .toggle-whatsapp-open:checked ~ .menu-head .toggle-whatsapp .menu-button .l1,
+.main-menu .toggle-whatsapp-open:checked ~ .menu-head .toggle-whatsapp .menu-button .l2 {
+	opacity: 1;
+}
+
+.main-menu .toggle-whatsapp .menu-button:before,
+.main-menu .toggle-whatsapp .menu-button:after {
 	content: '';
 	position: absolute;
 	z-index: 1;
@@ -1109,14 +1138,13 @@
 	background-image: var(--bg-image);
 	opacity: 0.3;
 	transform: translateY(-50%) translateX(-50%) scale(0.5);
-	/*background-color: red;*/
 }
 
-.main-menu .whatsapp .menu-button:after {
+.main-menu .toggle-whatsapp .menu-button:after {
 	display: block;
 	left: 150%;
 }
-.main-menu .whatsapp .menu-button:before {
+.main-menu .toggle-whatsapp .menu-button:before {
 	display: none;
 	left: -30%;
 }
@@ -1167,15 +1195,80 @@
 	transform: translateX(-50%) translateY(calc(-50% - var(--space-25))) rotate(0);
 }
 
-.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l1 {
+.main-menu .toggle-menu-open:checked ~ .menu-content + .menu-head .toggle-menu .menu-button .l1 {
 	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(45deg);
 }
-.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l2 {
+.main-menu .toggle-menu-open:checked ~ .menu-content + .menu-head .toggle-menu .menu-button .l2 {
 	width: 0;
 	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(0);
 }
-.main-menu .toggle-menu-open:checked + .menu-content + .menu-head .toggle-menu .menu-button .l3 {
+.main-menu .toggle-menu-open:checked ~ .menu-content + .menu-head .toggle-menu .menu-button .l3 {
 	transform: translateX(-50%) translateY(calc(-50% + 0px)) rotate(-45deg);
+}
+
+
+/* -- Whatsapp Form -- */
+.main-menu .whatsapp-form {
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+	transform: translateY(calc((var(--space-200) + var(--space-50)) * -1));
+	border-top-left-radius: var(--space-50);
+	border-top-right-radius: var(--space-50);
+	border-radius: var(--space-50);
+	overflow: hidden;
+    max-height: 0;
+    transition: .4s ease-in-out;
+}
+.main-menu .whatsapp-form:before {
+	display: block;
+	content: '';
+	position: absolute;
+	bottom: 1px;
+	left: 0;
+	z-index: 1;
+	width: 100%; 
+	height: var(--space-50); 
+	background-color: var(--dark);
+	transform: translateY(97.5%);
+}
+.main-menu .whatsapp-form:after {
+	display: block;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	z-index: 2;
+	height: 1px; 
+	background-color: var(--light);
+	transform: translateX(-50%);
+	opacity: 0.25;
+	width: 0px;
+	transition: width .6s ease-in-out;
+}
+.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form {
+	max-height: 500px;
+}
+.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after {
+	width: calc(100% - var(--space-100)); 
+}
+
+.main-menu .whatsapp-form .send-to-whatsapp {
+	position: relative;
+	background-color: #25D366;
+}
+.main-menu .whatsapp-form .send-to-whatsapp img {
+	position: absolute;
+	z-index: 1;
+	display: inline-block;
+	width: var(--space-75);
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+	transition: .4s ease-out;
 }
 
 @media( min-width: 640px )  {}
@@ -1200,22 +1293,15 @@
 		display: none;
 	}
 
-	.main-menu .whatsapp .menu-button:after {
+	.main-menu .toggle-whatsapp .menu-button:after {
 		display: none;
 	}
-	.main-menu .whatsapp .menu-button:before {
+	.main-menu .toggle-whatsapp .menu-button:before {
 		display: block;
 	}
 }
 @media( min-width: 1480px ) {}
 
-
-/* -- Whatsapp Form -- */
-.main-menu .whatsapp-form {
-	position: absolute;
-	/*bottom: calc(var(--space-200)+var(--space-100);*/
-	left: 0;
-}
 
 
 /* -- Home Menu -- */
@@ -1277,14 +1363,14 @@
 	max-height: 0;
 	transition: .4s ease-in-out;
 }
-.sticky-menu-section .main-menu .toggle-menu-open:checked + .menu-content {
+.sticky-menu-section .main-menu .toggle-menu-open:checked ~ .menu-content {
 	max-height: 500px;
 }
 .sticky-menu-section .main-menu .menu-content:after {
 	width: 0px;
 	transition: width .6s ease-in-out;
 }
-.sticky-menu-section .main-menu .toggle-menu-open:checked + .menu-content:after {
+.sticky-menu-section .main-menu .toggle-menu-open:checked ~ .menu-content:after {
 	width: calc(100% - var(--space-100));
 }
 

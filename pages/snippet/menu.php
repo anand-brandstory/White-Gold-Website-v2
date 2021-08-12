@@ -3,6 +3,7 @@
 <div class="main-menu columns small-12 medium-6 medium-offset-3 large-12 large-offset-0 fill-dark radius-50">
 	<div class="row">
 		<input id="toggle-menu-open" type="checkbox" name="toggle-menu-open" class="toggle-menu-open visuallyhidden">
+		<input id="toggle-whatsapp-open" type="checkbox" name="toggle-whatsapp-open" class="toggle-whatsapp-open visuallyhidden">
 		<div class="menu-content columns small-12 large-9">
 			<div class="row space-25">
 				<div class="columns small-6 large-4 space-25">
@@ -31,33 +32,14 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="whatsapp-form columns small-12 large-3">
-			<div class="form-card form-dark fill-dark radius-50 space-25">
-				<form class="row">
-					<div class="columns small-12 space-25">
-						<label class="form-label block">
-							<textarea class="form-input-field block" placeholder="Your Message" id=""></textarea>
-							<span class="form-label-title medium fill-dark cursor-pointer">Your Message</span>
-						</label>
-					</div>
-					<div class="columns small-8 space-25">
-						<label class="form-label block">
-							<input type="text" placeholder="Mobile Number" class="form-input-field block" id="">
-							<span class="form-label-title medium fill-dark cursor-pointer">Mobile Number</span>
-						</label>
-					</div>
-					<div class="columns small-4 space-25">
-						<button class="block fill-blue-4">Send</button>
-					</div>
-				</form>
-			</div>
-		</div> -->
 		<div class="menu-head columns small-12 large-3">
 			<div class="row space-25">
-				<div class="whatsapp columns small-2 large-3 space-25">
-					<a class="menu-button block fill-neutral-5" target="_blank" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" href="https://wa.me/+919590304444">
+				<div class="toggle-whatsapp columns small-2 large-3 space-25">
+					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" for="toggle-whatsapp-open">
+						<span class="l1"></span>
+						<span class="l2"></span>
 						<img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>">
-					</a>
+					</label>
 				</div>
 				<div class="phone-number columns small-6 small-offset-1 large-9 large-offset-0 space-25">
 					<a class="menu-button block fill-neutral-5 text-center" href="tel:<?= $contactNumbersForRegions[ REGION ] ?>"><?= $contactNumbersForRegions[ REGION ] ?></a>
@@ -69,6 +51,32 @@
 						<span class="l3"></span>
 					</label>
 				</div>
+			</div>
+		</div>
+		<div class="whatsapp-form fill-dark columns small-12 large-4">
+			<div class="">
+				<form class="form-card form-dark row space-25">
+					<div class="columns small-12 space-25">
+						<label class="form-label block">
+							<textarea class="form-input-field block" placeholder="Your Message" id=""></textarea>
+							<span class="form-label-title medium fill-dark cursor-pointer">Your Message</span>
+						</label>
+					</div>
+					<div class="columns small-10 space-25">
+						<label class="phone-verify form-label block">
+							<input type="text" class="form-input-field phone-number block" id="js_home_visit_form_input_phone">
+							<select class="form-input-field country-code js_phone_country_code">
+								<?php require __ROOT__ . '/inc/phone-country-codes.php' ?>
+							</select>
+							<span class="country-code-divider material-icons" data-icon="unfold_more"></span>
+							<input type="text" disabled="" class="form-input-field country-code-label js_phone_country_code_label" value="+91" id="js_home_visit_form_input_phone_country_code">
+							<span class="form-label-title medium fill-dark cursor-pointer">Mobile Number</span>
+						</label>
+					</div>
+					<div class="columns small-2 space-25">
+						<button class="send-to-whatsapp block fill-blue-4"><img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>"></button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
