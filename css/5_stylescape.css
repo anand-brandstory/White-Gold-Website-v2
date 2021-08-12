@@ -307,7 +307,9 @@ select {
 }
 
 textarea {
-	min-height: var(--space-200);
+	padding-top: var(--space-50);
+	padding-bottom: var(--space-50);
+	min-height: calc(var(--space-100)*3);
 }
 
 .input-field:focus,

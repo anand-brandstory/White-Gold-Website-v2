@@ -1080,8 +1080,8 @@
 
 .main-menu .whatsapp {
 	position: relative;
-	opacity: 0.15;
-	pointer-events: none;
+	/*opacity: 0.15;*/
+	/*pointer-events: none;*/
 }
 .main-menu .whatsapp .menu-button {
 	position: relative;
@@ -1208,6 +1208,14 @@
 	}
 }
 @media( min-width: 1480px ) {}
+
+
+/* -- Whatsapp Form -- */
+.main-menu .whatsapp-form {
+	position: absolute;
+	/*bottom: calc(var(--space-200)+var(--space-100);*/
+	left: 0;
+}
 
 
 /* -- Home Menu -- */
