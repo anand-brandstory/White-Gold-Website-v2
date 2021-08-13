@@ -1,9 +1,16 @@
+<?php
+
+function navigationMenuComponent ( $whatsappid, $contactNumbersForRegions ) {
+?>
 
 <!-- Main Menu -->
 <div class="main-menu columns small-12 medium-6 medium-offset-3 large-12 large-offset-0 fill-dark radius-50">
 	<div class="row">
+		<!-- Menu Switcher Checkbox -->
 		<input id="toggle-menu-open" type="checkbox" name="toggle-menu-open" class="toggle-menu-open visuallyhidden">
-		<input id="toggle-whatsapp-open" type="checkbox" name="toggle-whatsapp-open" class="toggle-whatsapp-open visuallyhidden">
+		<!-- Whatsapp Switcher Checkbox -->
+		<input id="toggle-whatsapp-open<?= $whatsappid ?>" type="checkbox" name="toggle-whatsapp-open" class="toggle-whatsapp-open visuallyhidden">
+		<!-- Menu Content -->
 		<div class="menu-content columns small-12 large-9">
 			<div class="row space-25">
 				<div class="columns small-6 large-4 space-25">
@@ -32,10 +39,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- Menu Controls -->
 		<div class="menu-head columns small-12 large-3">
 			<div class="row space-25">
 				<div class="toggle-whatsapp columns small-2 large-3 space-25">
-					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" for="toggle-whatsapp-open">
+					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" for="toggle-whatsapp-open<?= $whatsappid ?>">
 						<span class="l1"></span>
 						<span class="l2"></span>
 						<img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>">
@@ -53,6 +61,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Whatsapp Form -->
 		<div class="whatsapp-form fill-dark columns small-12 large-4">
 			<div class="">
 				<form class="form-card form-dark row space-25">
@@ -82,3 +91,6 @@
 	</div>
 </div>
 <!-- END: Main Menu -->
+
+<?php
+}

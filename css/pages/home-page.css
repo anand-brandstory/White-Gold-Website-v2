@@ -1248,10 +1248,12 @@
 	width: 0px;
 	transition: width .6s ease-in-out;
 }
-.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form {
+.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form,
+.home-menu-section .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form {
 	max-height: 500px;
 }
-.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after {
+.show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after,
+.home-menu-section .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after {
 	width: calc(100% - var(--space-100)); 
 }
 

@@ -6,6 +6,8 @@ $regions = [
 	'kl' => 'Kerala'
 ];
 
+require_once __ROOT__ . '/pages/snippet/menu.php'; 
+
 ?>
 <?php /* Store data in JavaScript */ ?>
 <script type="text/javascript">
@@ -52,7 +54,7 @@ $regions = [
 <section class="sticky-menu-section">
 	<div class="container">
 		<div class="row">
-			<?php require __ROOT__ . '/pages/snippet/menu.php'; ?>
+			<?php navigationMenuComponent('-sticky', $contactNumbersForRegions); ?>
 		</div>
 	</div>
 </section>
