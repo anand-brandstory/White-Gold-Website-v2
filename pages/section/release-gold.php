@@ -31,7 +31,7 @@
 									<div class="h5 medium space-100-top-bottom">Check your gold loan documents. Bring the Pledge Receipt.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-6237.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6237-2.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 3 -->

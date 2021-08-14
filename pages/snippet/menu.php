@@ -43,7 +43,7 @@ function navigationMenuComponent ( $whatsappid, $contactNumbersForRegions ) {
 		<div class="menu-head columns small-12 large-3">
 			<div class="row space-25">
 				<div class="toggle-whatsapp columns small-2 large-3 space-25">
-					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' )" for="toggle-whatsapp-open<?= $whatsappid ?>">
+					<label class="menu-button block fill-neutral-5" style="--bg-image: url( '/media/icon/vertical-dots.white.svg<?= $ver ?>' ); background-color: #32AF74;" for="toggle-whatsapp-open<?= $whatsappid ?>">
 						<span class="l1"></span>
 						<span class="l2"></span>
 						<img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>">
@@ -83,7 +83,7 @@ function navigationMenuComponent ( $whatsappid, $contactNumbersForRegions ) {
 						</label>
 					</div>
 					<div class="columns small-2 space-25">
-						<button class="send-to-whatsapp block fill-blue-4"><img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>"></button>
+						<button class="send-to-whatsapp block fill-neutral-5"><img class="block" src="/media/icon/whatsapp-outline.svg<?= $ver ?>"></button>
 					</div>
 				</form>
 			</div>
