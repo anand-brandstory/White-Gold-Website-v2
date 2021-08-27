@@ -11,7 +11,7 @@ use BFS\CMS;
 
 require_once __ROOT__ . '/inc/header.php';
 
-$faqs = CMS::getPostsOf( 'faq', [
+$faqs = CMS::getPostsOf( 'faqs', [
 	's' => get_query_var( 's' )
 ] );
 foreach ( $faqs as $faq ) {

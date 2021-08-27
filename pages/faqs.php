@@ -29,7 +29,7 @@ if ( empty( $thePost ) ) {
 	exit;
 }
 
-$faqs = CMS::getPostsOf( 'faq' );
+$faqs = CMS::getPostsOf( 'faqs' );
 $faqs__Tree = [ ];
 foreach ( $faqs as $faq ) {
 	$faq->set( 'url', get_permalink( $faq->get( 'ID' ) ) );
