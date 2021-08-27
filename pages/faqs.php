@@ -149,3 +149,31 @@ require __ROOT__ . '/pages/snippet/search-bar.php';
 </script>
 
 <?php require_once __ROOT__ . '/inc/footer.php'; ?>
+
+<?php
+/*
+ | If there are any carousels on the page, initiate them
+ */
+?>
+<script type="text/javascript" src="/plugins/slick/slick.min.js"></script>
+<script type="text/javascript">
+( function () {
+
+	let galleryBlockCarousel = $( ".blocks-gallery-grid" ).slick( {
+		arrows: true,
+		dots: false,
+		infinite: true,
+		speed: 800,
+		autoplaySpeed: 3000,
+		slidesToShow: 1,
+		centerMode: true,
+		variableWidth: true,
+		lazyLoad: 'ondemand'
+	} )
+
+	setTimeout( function () {
+		galleryBlockCarousel.slick( "slickNext" );
+	}, 150 )
+
+}() )
+</script>
