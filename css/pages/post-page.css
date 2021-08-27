@@ -280,24 +280,24 @@
 
 /* -- FAQs Page Overwrites -- */
 @media( min-width: 1040px ) {
-	.content-block .wp-block-gallery {
+	.post-content .wp-block-gallery {
 		width: var(--container-width);
 	}
 
-	.faq-content .content-block .wp-block-gallery {
+	.faq-content .post-content .wp-block-gallery {
 		width: calc( var(--space-100) * 8 );
 	}
 
-	.faq-content .content-block .wp-block-gallery .blocks-gallery-grid .blocks-gallery-item figure img {
+	.faq-content .post-content .wp-block-gallery .blocks-gallery-grid .blocks-gallery-item figure img {
 		height: calc( var(--space-100) * 4 );
 	}
 
-	.faq-content .content-block .wp-block-image.alignfull {
+	.faq-content .post-content .wp-block-image.alignfull {
 		width: calc( ((100vw - var(--container-width)) /2 ) + (var(--space-100) * 8) );
 		margin-left: 0;
 	}
 
-	.faq-content .content-block .wp-block-image.alignwide {
+	.faq-content .post-content .wp-block-image.alignwide {
 		width: calc( var(--space-100) * 8 );
 	}
 }
