@@ -211,11 +211,11 @@
 								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Sign Term Sheet</div></div>
 							</div>
 							<div class="row space-200-top space-50-left-right">
-								<div class="columns small-8 small-offset-1 medium-7 space-50-left-right">
+								<div class="columns small-8 small-offset-1 medium-5 space-50-left-right">
 									<div class="h5 medium text-blue-4">We will send our representative with you to close your Gold loan.</div>
 								</div>
 							</div>
-							<div class="row space-200-top space-50-bottom space-50-left-right">
+							<div class="row space-200-top space-200-bottom space-50-left-right">
 								<div class="columns small-12 medium-8">
 									<?php /* -- php hide -- */ /*
 									<a href="" class="watch-video block row fill-neutral-1">
@@ -230,6 +230,7 @@
 									*/ /* -- END: php hide -- */ ?>
 								</div>
 							</div>
+							<div class="bg-img"><img class="block" src="../media/cutout/char-6943.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">

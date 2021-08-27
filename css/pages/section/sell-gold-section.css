@@ -78,6 +78,12 @@
 .step-cards .rgs4 .card-content .row.m-space {
 	margin-bottom: calc(var(--space-100)*4);
 }
+.step-cards .rgs6 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.675) translateX(50%) translateY(24%);
+}
 .step-cards .sgs7 .card-content .bg-img,
 .step-cards .rgs8 .card-content .bg-img {
 	bottom: 0;
@@ -134,6 +140,10 @@
 	.step-cards .sgs5 .card-content .row.m-space,
 	.step-cards .rgs5 .card-content .row.m-space {
 		margin-bottom: calc(var(--space-100)*0);
+	}
+	.step-cards .rgs6 .card-content .bg-img {
+		width: calc(var(--card)*1.5);
+		transform: scale(0.8) translateX(15%) translateY(42%);
 	}
 	.step-cards .sgs6 .card-content .bg-img,
 	.step-cards .rgs4 .card-content .bg-img {
