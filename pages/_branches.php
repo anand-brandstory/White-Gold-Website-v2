@@ -63,7 +63,7 @@ require_once __ROOT__ . '/inc/header.php';
 		<div class="row">
 			<div class="intro columns small-6 medium-4 large-3 space-100-bottom">
 				<div class="title h2 strong text-blue-4">Find a <span class="no-wrap">White Gold</span> branch <br><span class="text-neutral-3">near you</span></div>
-				<div class="char"><img class="block" src="../media/cutout/char-7094.png<?php echo $ver ?>"></div>
+				<div class="char"><img class="block" src="/media/cutout/char-7094.png<?php echo $ver ?>"></div>
 			</div>
 			<div class="branch-listing columns small-12 medium-7 medium-offset-1 large-6 large-offset-3">
 				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden js_more_branches">
@@ -82,7 +82,7 @@ require_once __ROOT__ . '/inc/header.php';
 								</div>
 								<a class="gmaps-link button fill-blue-1" href="<?= $branch->get( 'google_maps' ) ?>" target="_blank">
 									<span class="button-label">Open in Maps&nbsp;</span>
-									<img class="button-icon tall" src="../media/icon/gmaps-tall-color.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/gmaps-tall-color.svg<?php echo $ver ?>">
 								</a>
 							</div>
 							<!-- END: Branch -->

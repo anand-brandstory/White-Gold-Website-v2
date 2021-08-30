@@ -15,18 +15,18 @@ function navigationMenuComponent ( $whatsappid, $contactNumbersForRegions ) {
 			<div class="row space-25">
 				<div class="columns small-6 large-4 space-25">
 					<a class="menu-button menu-button-large block fill-blue-4" href="/<?= REGION ?>/branches">
-						<span class="menu-button-bg" style="background-image: url('../media/background/find-branch.png<?php echo $ver ?>'); filter: brightness(0.9);" alt=""></span>
+						<span class="menu-button-bg" style="background-image: url('/media/background/find-branch.png<?php echo $ver ?>'); filter: brightness(0.9);" alt=""></span>
 						<span class="menu-button-icon">
-							<img class="block" src="../media/icon/location-white.svg<?php echo $ver ?>">
+							<img class="block" src="/media/icon/location-white.svg<?php echo $ver ?>">
 						</span>
 						<span class="menu-button-label">Find Nearest <br class="hide-large hide-xlarge">Branch</span>
 					</a>
 				</div>
 				<div class="columns small-6 large-4 space-25">
 					<a class="menu-button menu-button-large block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
-						<span class="menu-button-bg fill-dark" style="background-image: url('../media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
+						<span class="menu-button-bg fill-dark" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 						<span class="menu-button-icon">
-							<img class="block" src="../media/icon/rupee-white.svg<?php echo $ver ?>">
+							<img class="block" src="/media/icon/rupee-white.svg<?php echo $ver ?>">
 						</span>
 						<span class="menu-button-label">Live Gold <br class="hide-large hide-xlarge">Rate</span>
 					</a>

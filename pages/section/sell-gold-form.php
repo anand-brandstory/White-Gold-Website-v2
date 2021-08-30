@@ -3,7 +3,7 @@
 		<div class="row sell-gold-form">
 			<div class="columns small-6 medium-5 large-3 space-100-bottom">
 				<div class="logo space-75-bottom">
-					<img class="block" src="../media/whitegold-logo-dark.svg<?php echo $ver ?>">
+					<img class="block" src="/media/whitegold-logo-dark.svg<?php echo $ver ?>">
 				</div>
 				<div class="h2 line-height-small">Turn your <span class="strong">gold into money</span></div>
 			</div>
@@ -42,13 +42,13 @@
 								<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
 								<button class="button fill-blue-1" type="submit">
 									<span class="button-label js_submit_label">Sell Gold</span>
-									<img class="button-icon tall" src="../media/icon/rupee-tall-blue.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/rupee-tall-blue.svg<?php echo $ver ?>">
 								</button>
 							</label>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<a class="inline phone-call" href="tel:<?= $contactNumbersForRegions[ REGION ] ?>">
-								<img class="icon inline-middle" style="width: calc( var(--h6) * 2 );" src="../media/icon/phone-call-dark.svg<?php echo $ver ?>">
+								<img class="icon inline-middle" style="width: calc( var(--h6) * 2 );" src="/media/icon/phone-call-dark.svg<?php echo $ver ?>">
 								<div class="inline-middle space-25-left">
 									<span class="inline label strong text-uppercase line-height-small">Or call</span><br>
 									<span class="inline h6 strong line-height-small"><?= $contactNumbersForRegions[ REGION ] ?></span>
@@ -79,6 +79,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="char"><img class="block" src="../media/cutout/char-6085.png<?php echo $ver ?>"></div>
+		<div class="char"><img class="block" src="/media/cutout/char-6085.png<?php echo $ver ?>"></div>
 	</div>
 </section>

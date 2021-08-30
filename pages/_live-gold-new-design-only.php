@@ -148,7 +148,7 @@ require_once __ROOT__ . '/inc/header.php';
 									<span class="form-label-title hidden medium fill-light cursor-pointer">Submit</span>
 									<button class="button fill-dark" type="submit">
 										<span class="button-label js_submit_label">Get OTP&ensp;</span>
-										<img class="button-icon tall" src="../media/icon/sms-tall-green.svg<?php echo $ver ?>">
+										<img class="button-icon tall" src="/media/icon/sms-tall-green.svg<?php echo $ver ?>">
 									</button>
 								</label>
 							</div>
@@ -185,7 +185,7 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="columns small-12 space-75-top">
 								<a href="/" class="button fill-blue-1">
 									<span class="button-label">Back to Homepage&ensp;</span>
-									<img class="button-icon tall" src="../media/icon/back-tall-blue.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/back-tall-blue.svg<?php echo $ver ?>">
 								</a>
 							</div>
 						</form>
@@ -201,7 +201,7 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="columns small-12 space-75-top">
 								<a href="/" class="button fill-blue-1">
 									<span class="button-label">Back to Homepage&ensp;</span>
-									<img class="button-icon tall" src="../media/icon/back-tall-blue.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/back-tall-blue.svg<?php echo $ver ?>">
 								</a>
 							</div>
 						</form>
@@ -217,7 +217,7 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="columns small-12 space-75-top">
 								<a href="/" class="button fill-blue-1">
 									<span class="button-label">Back to Homepage&ensp;</span>
-									<img class="button-icon tall" src="../media/icon/back-tall-blue.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/back-tall-blue.svg<?php echo $ver ?>">
 								</a>
 							</div>
 						</form>
@@ -233,7 +233,7 @@ require_once __ROOT__ . '/inc/header.php';
 							<div class="columns small-12 space-75-top">
 								<a href="/" class="button fill-blue-1">
 									<span class="button-label">Back to Homepage&ensp;</span>
-									<img class="button-icon tall" src="../media/icon/back-tall-blue.svg<?php echo $ver ?>">
+									<img class="button-icon tall" src="/media/icon/back-tall-blue.svg<?php echo $ver ?>">
 								</a>
 							</div>
 						</form>

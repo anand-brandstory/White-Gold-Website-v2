@@ -53,7 +53,7 @@
 									<div class="p space-200-top-bottom">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-7.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-7.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 3 -->
@@ -89,7 +89,7 @@
 									<div class="p space-50-top space-200-bottom">Carry your Aadhaar card for easy KYC check.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-6.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-6.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<div class="step-break columns small-12">
@@ -134,7 +134,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/spectrometer-1.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/spectrometer-1.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 5 -->
@@ -153,9 +153,9 @@
 									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
 										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
-											<span class="picture-button-bg fill-dark" style="background-image: url('../media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
+											<span class="picture-button-bg fill-dark" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 											<span class="picture-button-icon">
-												<img class="block" src="../media/icon/rupee-white.svg<?php echo $ver ?>">
+												<img class="block" src="/media/icon/rupee-white.svg<?php echo $ver ?>">
 											</span>
 											<span class="picture-button-label">Check Live Gold Rate Now</span>
 										</a>
@@ -208,7 +208,7 @@
 									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-2.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-2.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 7 -->
@@ -231,7 +231,7 @@
 								<div class="columns small-1"><span class="checkmark h5 medium fill-yellow-2 text-blue-4">&check;</span></div>
 								<div class="columns small-10 medium-5 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
 							</div>
-							<div class="bg-img"><img class="block" src="../media/cutout/char-3.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-3.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 				</div>

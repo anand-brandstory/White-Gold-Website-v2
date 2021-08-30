@@ -10,6 +10,7 @@ if ( ! empty( $_GET[ 'bfs_hi_puf' ] ) ) {
 use BFS\CMS;
 
 require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/pages/section/header.php';
 
 $faqs = CMS::getPostsOf( 'faqs', [
 	's' => get_query_var( 's' )
@@ -34,7 +35,7 @@ foreach ( $faqs as $faq ) {
 ?>
 
 
-<section class="faq-header-section fill-blue-5 space-75-top-bottom">
+<section class="faq-header-section fill-blue-5 space-75-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="columns small-12">
@@ -52,12 +53,12 @@ require __ROOT__ . '/pages/snippet/search-bar.php';
 <section class="search-listing-section space-50-top space-75-bottom">
 	<div class="container">
 		<div class="row">
-			<div class="search-listing columns small-12 large-8 xlarge-7">
+			<div class="search-listing columns small-12 large-9">
 				<?php if ( ! empty( $faqs ) ) : ?>
 					<?php foreach ( $faqs as $faq ) : ?>
-						<a class="item block space-25-top-bottom" href="<?= $faq->get( 'url' ) ?>">
-							<div class="title h5 strong space-25-bottom"><?= $faq->get( 'post_title' ) ?></div>
-							<div class="description h6 opacity-50 space-25-bottom"><?= $faq->get( 'content' ) ?></div>
+						<a class="item block space-50 fill-blue-1 radius-25" href="<?= $faq->get( 'url' ) ?>">
+							<div class="title h6 strong space-25-bottom"><?= $faq->get( 'post_title' ) ?></div>
+							<div class="description p opacity-50 space-25-bottom"><?= $faq->get( 'content' ) ?></div>
 							<span class="label inline text-lowercase">Read More <span class="material-icons">subject</span></span>
 						</a>
 					<?php endforeach; ?>
