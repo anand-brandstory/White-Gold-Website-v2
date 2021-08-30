@@ -10,7 +10,7 @@ function Clock ( timeElementSelector, dateElementSelector ) {
 	this.timeoutId = null
 }
 Clock.months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]
-Clock.getCurrentDateAndTime = function () {
+Clock.getCurrentDateAndTime = function getCurrentDateAndTime () {
 	let date = new Date
 
 	let year = date.getFullYear()
@@ -33,18 +33,25 @@ Clock.getCurrentDateAndTime = function () {
 	return [ timeAsString, dateAsString ]
 }
 
-Clock.prototype.render = function ( time, date ) {
+Clock.prototype.render = function render ( time, date ) {
 	this.timeDOMNode.innerText = time;
 	this.dateDOMNode.innerText = date;
 };
 
-Clock.prototype.run = function () {
+Clock.prototype.run = function run () {
+	// If the clock is already in the midst of execution, don't schedule the next cycle
+	if ( this.timeoutId !== null )
+		return
+
 	let [ time, date ] = Clock.getCurrentDateAndTime()
 	this.render( time, date )
+
 	this.timeoutId = setTimeout( () => {
+		this.stop()
 		this.run()
 	}, 1000 )
 };
-Clock.prototype.pause = function () {
+Clock.prototype.stop = function stop () {
 	clearTimeout( this.timeoutId )
+	this.timeoutId = null
 };
