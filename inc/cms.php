@@ -292,25 +292,33 @@ class Content {
 		}
 	}
 
-	public function getAll () {
-		return CMS::$postCache[ $this->postIdentifier ];
-	}
-
 	public function get ( $key ) {
 
 		// Get a reference to the post's cache
 		$postCache = CMS::$postCache[ $this->postIdentifier ];
 
+		// Get all the parts of the key
+		$keyParts = explode( ' / ', $key );
+		$baseKey = $keyParts[ 0 ];
+
 		// Get the value from the cache
-		if ( isset( $postCache[ '__custom' ][ $key ] ) )
-			return $postCache[ '__custom' ][ $key ];
-		else if ( ! empty( $postCache[ 'acf' ] ) and isset( $postCache[ 'acf' ][ $key ] ) )
-			return $postCache[ 'acf' ][ $key ];
-		else if ( isset( $postCache[ $key ] ) )
-			return $postCache[ $key ];
+		if ( isset( $postCache[ '__custom' ][ $baseKey ] ) )
+			$value = $postCache[ '__custom' ][ $baseKey ];
+		else if ( ! empty( $postCache[ 'acf' ] ) and isset( $postCache[ 'acf' ][ $baseKey ] ) )
+			$value = $postCache[ 'acf' ][ $baseKey ];
+		else if ( isset( $postCache[ $baseKey ] ) )
+			$value = $postCache[ $baseKey ];
 		else
 			return null;
 
+		// If a nested field is being queried, query through all the nested keys
+		if ( count( $keyParts ) > 1 and ! empty( $value ) ) {
+			$remainderKeyParts = array_slice( $keyParts, 1 );
+			foreach ( $remainderKeyParts as $keyPart )
+				$value = $value[ $keyPart ] ?? null;
+		}
+
+		return $value;
 
 
 
@@ -342,6 +350,33 @@ class Content {
 
 		// return $post[ $key ];
 
+	}
+
+	public function getJSON ( ...$keys ) {
+
+		if ( count( $keys ) > 0 ) {
+			foreach ( $keys as $key )
+				$post[ $key ] = $this->get( $key );
+			return json_encode( $post );
+		}
+
+		// Get a reference to the post's cache
+		$postCache = CMS::$postCache[ $this->postIdentifier ];
+
+		// Merge and overwrite the custom fields on top of the default ones
+		$post = array_merge(
+			$postCache,
+			$postCache[ 'acf' ],
+			$postCache[ '__custom' ]
+		);
+		unset( $post[ 'acf' ], $post[ '__custom' ] );
+
+		return json_encode( $post );
+
+	}
+
+	public function getAll () {
+		return CMS::$postCache[ $this->postIdentifier ];
 	}
 
 	public function set ( $key, $value ) {
