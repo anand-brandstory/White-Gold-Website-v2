@@ -10,6 +10,7 @@ class Router {
 	public static $routeWithCMS = false;
 
 	public static $urlSlug = null;
+	public static $postSlug = null;
 
 	public static $httpResponseCode = 200;	// assume that it's going to go well
 
@@ -61,7 +62,7 @@ class Router {
 							. implode( '/', array_slice( $urlSlugParts, 0, $i ) )
 							. '.php';
 			if ( file_exists( $routeFilename ) ) {
-				$postSlug = implode( '/', array_slice( $urlSlugParts, $i ) );
+				self::$postSlug = implode( '/', array_slice( $urlSlugParts, $i ) );
 				return require_once $routeFilename;
 			}
 		}
