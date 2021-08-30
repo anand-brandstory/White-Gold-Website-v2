@@ -12,6 +12,7 @@ function GoldRates ( region, nodeSelectors ) {
 	this.timeoutId = null
 	this.listeners = [ ]
 }
+GoldRates.apiEndpointBase = window.__BFS.CONF.goldRates.apiEndpoint
 GoldRates.formatAsRupee = function formatAsRupee ( amount ) {
 
 	let pattern = "! #"
@@ -43,14 +44,30 @@ GoldRates.formatAsTime = function formatAsTime ( date ) {
 	return `${hour}:${minutes} ${meridian}`
 }
 GoldRates.getCurrent = function ( region ) {
-	return fetch( "https://api.whitegold.money/v1/gold-rates/current?region=" + region )
-		.then( response => response.json() )
-		.then( response => response.data )
+	return fetch( GoldRates.apiEndpointBase + "/v2/gold-rates/current?region=" + region )
+		// .then( response => response.json() )
+		// .then( response => response.data )
+		.then( response => response.text() )
+		.then( responseText => JSON.parse( responseText ) )
+		.then( parsedResponse => {
+			parsedResponse[ 0 ] = parsedResponse[ 0 ] > 0 ? ( ( parsedResponse[ 0 ] - 1 ) % 256 ) : 255
+			return parsedResponse
+		} )
+		.then( processedResponse => JSON.parse( buffer( processedResponse ).toString() ) )
+		.then( responseObject => responseObject.data )
 }
 GoldRates.getRelevantRatesFromTheDay = function ( region ) {
-	return fetch( "https://api.whitegold.money/v1/gold-rates?region=" + region )
-		.then( response => response.json() )
-		.then( response => response.data )
+	return fetch( GoldRates.apiEndpointBase + "/v2/gold-rates?region=" + region )
+		// .then( response => response.json() )
+		// .then( response => response.data )
+		.then( response => response.text() )
+		.then( responseText => JSON.parse( responseText ) )
+		.then( parsedResponse => {
+			parsedResponse[ 0 ] = parsedResponse[ 0 ] > 0 ? ( ( parsedResponse[ 0 ] - 1 ) % 256 ) : 255
+			return parsedResponse
+		} )
+		.then( processedResponse => JSON.parse( buffer( processedResponse ).toString() ) )
+		.then( recoveredResponse => recoveredResponse.data )
 		.then( data => {
 			return data.map( function ( rate ) {
 				return {
@@ -62,10 +79,15 @@ GoldRates.getRelevantRatesFromTheDay = function ( region ) {
 		} )
 }
 GoldRates.prototype.render = function ( { cost__24KaratGold__perGram, cost__22KaratGold__perGram } ) {
+	let valueHasChanged = true
 	if ( this.previous ) {
 		let previous = this.previous
-		let className
 
+		valueHasChanged = cost__24KaratGold__perGram !== previous.cost__24KaratGold__perGram
+		if ( ! valueHasChanged )
+			return
+
+		let className
 		className = cost__24KaratGold__perGram > previous.cost__24KaratGold__perGram ? "trend-up" : cost__24KaratGold__perGram < previous.cost__24KaratGold__perGram ? "trend-down" : null
 		if ( className ) {
 			this.dom24KaratPerGram.classList.remove( "trend-up", "trend-down" )
@@ -83,16 +105,31 @@ GoldRates.prototype.render = function ( { cost__24KaratGold__perGram, cost__22Ka
 	this.dom22KaratPerGram.innerText = GoldRates.formatAsRupee( cost__22KaratGold__perGram )
 };
 GoldRates.prototype.startTracking = async function () {
-	let data = await GoldRates.getCurrent( this.region )
-	this.render( data )
-	this.broadcast( data )
-	this.previous = data
+	// If the gold rates are already in the midst of tracking, don't schedule the next cycle
+	if ( this.timeoutId !== null )
+		return
+
+	let data
+	try {
+		data = await GoldRates.getCurrent( this.region )
+	}
+	catch ( e ) {
+		data = { }
+	}
+	if ( Object.keys( data ).length ) {
+		this.render( data )
+		this.broadcast( data )
+		this.previous = data
+	}
+	let timeUntilNextFetch = Object.keys( data ).length ? 1000 : 19000
 	this.timeoutId = setTimeout( () => {
+		this.stopTracking()
 		this.startTracking()
-	}, 1000 )
+	}, timeUntilNextFetch )
 };
 GoldRates.prototype.stopTracking = function () {
 	clearTimeout( this.timeoutId )
+	this.timeoutId = null
 };
 GoldRates.prototype.subscribe = function ( callbackFunction ) {
 	this.listeners = this.listeners.concat( callbackFunction )
@@ -105,6 +142,8 @@ GoldRates.prototype.broadcast = function ( data ) {
 		try {
 			callbackFunction( data )
 		}
-		catch ( e ) {}
+		catch ( e ) {
+			console.error( e )
+		}
 	} )
 }
