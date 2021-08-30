@@ -1,25 +1,22 @@
 
 /*
- * ----- the Form class
+ |
+ | the Form class
+ |
  */
-function BFSForm ( className ) {
+function BFSForm ( selector ) {
 
-	className = className.replace( /^\./, "" ).trim();
+	selector = selector.trim()
 
-	/*
-	 * ----- Get a reference to the form
-	 */
-	if ( ! className )
-		throw new Error( "Form class name not provided." );
-	var domForms = document.getElementsByClassName( className );
-	if ( ! domForms.length )
-		throw new Error( "Form could not be found." );
-	this.domForm = domForms[ 0 ];
+	if ( ! selector )
+		this.formSelector = "html"
+	if ( selector )
+		this.formSelector = selector
 
 	this.fields = { };
 
 }
-BFSForm.getErrorResponse = function getErrorResponse () {
+BFSForm.getErrorResponse = function getErrorResponse ( jqXHR, textStatus, e ) {
 	var code = -1;
 	var message;
 	if ( jqXHR.responseJSON ) {
@@ -36,26 +33,55 @@ BFSForm.getErrorResponse = function getErrorResponse () {
 	error.code = code;
 	return error;
 }
+BFSForm.prototype.getFormNode = function getFormNode () {
+	return this.$formNode || $( this.formSelector )
+}
+BFSForm.prototype.bind = function bind ( formNode ) {
+	var $formNode
+	if ( formNode instanceof HTMLElement )
+		$formNode = $( formNode )
+	else if ( ! ( formNode instanceof jQuery ) )
+		throw new Error( "A DOM node or jQuery object must be provided." )
+	else
+		$formNode = formNode
+
+	// Clone the form instance
+	var newBFSForm = new BFSForm( this.formSelector )
+	newBFSForm.$formNode = $formNode
+	newBFSForm.submit = this.submit
+		// Clone the fields
+	for ( let fieldName in this.fields ) {
+		newBFSForm.fields[ fieldName ] = Object.create( Object.getPrototypeOf( this.fields[ fieldName ] ) )
+		newBFSForm.fields[ fieldName ].bfsForm = newBFSForm
+	}
+
+	return newBFSForm
+}
+
 BFSForm.prototype.disable = function disable ( fn ) {
-	$( this.domForm ).find( "input, textarea, select, button" ).prop( "disabled", true );
+	var $formNode = this.getFormNode()
+	$formNode.find( "input, textarea, select, button" ).prop( "disabled", true );
 	if ( Object.prototype.toString.call( fn ).toLowerCase() === "[object function]" )
-		fn.call( this, this.domForm );
+		fn.call( this, $formNode.get( 0 ) );
 };
 BFSForm.prototype.enable = function enable ( fn ) {
-	$( this.domForm ).find( "input, textarea, select, button" ).prop( "disabled", false );
+	var $formNode = this.getFormNode()
+	$formNode.find( "input, textarea, select, button" ).prop( "disabled", false );
 	if ( Object.prototype.toString.call( fn ).toLowerCase() === "[object function]" )
-		fn.call( this, this.domForm );
-};
+		fn.call( this, $formNode.get( 0 ) );
+}
 BFSForm.prototype.giveFeedback = function giveFeedback ( message ) {
-	var $submitButton = $( this.domForm ).find( ".js_submit_label" );
+	var $formNode = this.getFormNode()
+	var $submitButton = $formNode.find( ".js_submit_label" );
 	// Backup the initial label of the button
 	if ( $submitButton.data( "initial-label" ) === void 0 /* i.e. `undefined` */ )
 		$submitButton.data( "initial-label", $submitButton.text() );
 
 	$submitButton.text( message );
 }
-BFSForm.prototype.setSubmitButtonLabel = function setSubmitButtonText ( label ) {
-	var $submitButton = $( this.domForm ).find( ".js_submit_label" );
+BFSForm.prototype.setSubmitButtonLabel = function setSubmitButtonLabel ( label ) {
+	var $formNode = this.getFormNode()
+	var $submitButton = $formNode.find( ".js_submit_label" );
 	var label = label || $submitButton.data( "initial-label" );
 	$submitButton.text( label );
 }
@@ -77,24 +103,78 @@ BFSForm.prototype.getFieldValue = function getFieldValue ( domField ) {
 	return value;
 }
 
-BFSForm.prototype.addField = function addField ( name, domFields, fn ) {
-	if ( ! Array.isArray( domFields ) )
-		domFields = [ domFields ];
-	this.fields[ name ] = {
-		domFields: domFields,
-		validateAndAssemble: fn,
-		// isRequired: isRequired
-	};
-};
+BFSForm.prototype.addField = function addField ( name, selectors, fn ) {
+	if ( ! Array.isArray( selectors ) )
+		selectors = [ selectors ];
+
+	// The approach taken below is solely to serve the requirements of the `bind` method
+		// When a BFSForm is bound to a form DOM node (using the `bind` method), we clone the BFSForm
+		//  and swap out the context under which all the methods
+		//  (especially the ones created for the field below) operate against.
+		// The approach of storing the "field"'s properties and methods in its prototype is to facilitate
+		//  cloning of the BFSForm with a low memory usage overhead. The fields property on the new
+		//  BFSForm instance is the exact same object as that on the source BFSForm instance. Only the
+		//  context (i.e. `bfsForm` property in this case) is different.
+	let field = Object.create( {
+		name,
+		selectors,
+		set ( valueParts ) {
+			return this.bfsForm.setFieldValue( this.name, valueParts )
+		},
+		focus ( domNodeIndex ) {
+			return this.bfsForm.focus( this.name, domNodeIndex )
+		},
+		validateAndAssemble ( ...args ) {
+			try {
+				return fn.apply( null, args )
+			}
+			catch ( e ) {
+				e.fieldName = this.name
+				throw e
+			}
+		},
+	} )
+	// Associate the field with the BFSForm instance
+	field.bfsForm = this
+
+	this.fields[ name ] = field
+}
+
+BFSForm.prototype.setFieldValue = function setFieldValue ( name, valueParts ) {
+	if ( ! Array.isArray( valueParts ) )
+		valueParts = [ valueParts ];
+
+	var $formNode = this.getFormNode()
+	var field = this.fields[ name ];
+	var $fields = field.selectors.map( s => $formNode.find( s ) )
+	$fields.forEach( function ( $el, index ) {
+		$el.val( valueParts[ index ] )
+	} )
+}
 
 BFSForm.prototype.getData = function getData () {
+	var $formNode = this.getFormNode()
+
 	this.data = { };
 	var _key;
 	for ( _key in this.fields ) {
 		var field = this.fields[ _key ];
-		var valueParts = field.domFields.map( this.getFieldValue );
+		var domFields = field.selectors.map( s => $formNode.find( s ).get( 0 ) )
+		var valueParts = domFields.map( this.getFieldValue );
 		var value = field.validateAndAssemble( valueParts );
 		this.data[ _key ] = value;
 	}
+
 	return this.data;
-};
+}
+// A form field can be comprised of one or more underlying DOM nodes,
+//  hence when a field is to be "focused" on, the index of the DOM node needs to be provided
+BFSForm.prototype.focus = function focus ( name, domNodeIndex ) {
+	var $formNode = this.getFormNode()
+	if ( typeof domNodeIndex !== "number" || Number.isNaN( domNodeIndex ) )
+		domNodeIndex = 0
+	var field = this.fields[ name ]
+	var domFields = field.selectors.map( s => $formNode.find( s ).get( 0 ) )
+	if ( domFields[ domNodeIndex ] )
+		domFields[ domNodeIndex ].focus()
+}
