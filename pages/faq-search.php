@@ -33,6 +33,16 @@ foreach ( $faqs as $faq ) {
 
 ?>
 
+
+<section class="faq-header-section fill-blue-5 space-75-top-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="columns small-12">
+				<div class="h1 strong">Search Results</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php /* ----- Search Section ----- */
 require __ROOT__ . '/pages/snippet/search-bar.php';
 ?>
@@ -46,8 +56,8 @@ require __ROOT__ . '/pages/snippet/search-bar.php';
 				<?php if ( ! empty( $faqs ) ) : ?>
 					<?php foreach ( $faqs as $faq ) : ?>
 						<a class="item block space-25-top-bottom" href="<?= $faq->get( 'url' ) ?>">
-							<div class="title h5 strong space-min-bottom"><?= $faq->get( 'post_title' ) ?></div>
-							<div class="description h6 opacity-50 space-min-bottom"><?= $faq->get( 'content' ) ?></div>
+							<div class="title h5 strong space-25-bottom"><?= $faq->get( 'post_title' ) ?></div>
+							<div class="description h6 opacity-50 space-25-bottom"><?= $faq->get( 'content' ) ?></div>
 							<span class="label inline text-lowercase">Read More <span class="material-icons">subject</span></span>
 						</a>
 					<?php endforeach; ?>

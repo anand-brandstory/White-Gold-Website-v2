@@ -30,24 +30,29 @@
 	position: relative;
 	z-index: 1;
 	display: inline-block;
-	width: 66.66666%;
-	padding: var(--space-min);
-	padding-left: calc(var(--space-min)*3);
+	width: 91.66667%;
+	padding: var(--space-50);
+	padding-left: calc(var(--space-50)*3);
 	font-weight: 700;
 	font-size: 1.6rem;
 	transition: .2s ease-out; 
 	line-height: 1;
+	transition: background-color .25s .25s ease-in-out;
 }
 
-.faq-content-section .faq-sidebar .faq-hierarchy ul li.active > a,
 .faq-content-section .faq-sidebar .faq-hierarchy ul li a:hover {
 	background-color: var(--neutral-1);
+	transition: background-color .25s ease-in-out;
+}
+.faq-content-section .faq-sidebar .faq-hierarchy ul li.active > a{
+	background-color: var(--blue-1);
 }
 
 /* -- Level 2 -- */
 /*.faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li {} */
 .faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li a { 
-	margin-left: 16.66666%;
+	width: 83.33333%;
+	margin-left: 8.33333%;
 	font-weight: 400; 
 	font-size: 1.1rem; 
 	line-height: 1.5;
@@ -56,7 +61,8 @@
 /* -- Level 3 -- */
 /*.faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li > ul li {}*/
 .faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li > ul li a {
-	margin-left: 33.33333%;
+	width: 75%;
+	margin-left: 16.66666%;
 	font-size: 1.1rem;
 }
 
@@ -81,20 +87,21 @@
 .faq-content-section .faq-sidebar .faq-hierarchy ul li a + ul + .hierarchy-toggle {
 	position: absolute;
 	z-index: 2;
-	top: calc(8px - (var(--space-min)/2));
+	top: calc(8px - (var(--space-50)/2));
 	left: 0;
 	padding: 0;
-	line-height: calc(var(--space-min)*3);
-	width: calc(var(--space-min)*3);
-	height: calc(var(--space-min)*3);
+	line-height: calc(var(--space-50)*3);
+	width: calc(var(--space-50)*3);
+	height: calc(var(--space-50)*3);
 	cursor: pointer;
+	color:  inherit;
 	background-color: transparent;
 }
 .faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li a + ul + .hierarchy-toggle {
-	left: 16.66666%;
+	left: 8.33333%;
 }
 .faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li > ul li a + ul + .hierarchy-toggle {
-	left: 33.33333%;
+	left: 16.66666%;
 }
 
 .faq-content-section .faq-sidebar .faq-hierarchy ul li a + ul + .hierarchy-toggle {
@@ -133,7 +140,7 @@
 	.faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li > ul li a { font-size: 1.3rem; }
 	/* -- Toggle -- */
 	.faq-content-section .faq-sidebar .faq-hierarchy ul li a + ul + .hierarchy-toggle {
-		top: calc(10px - (var(--space-min)/2));
+		top: calc(10px - (var(--space-50)/2));
 	}
 }
 
@@ -146,45 +153,48 @@
 	.faq-content-section .faq-sidebar .faq-hierarchy ul li > ul li > ul li a { font-size: 1.5rem; }
 	/* -- Toggle -- */
 	.faq-content-section .faq-sidebar .faq-hierarchy ul li a + ul + .hierarchy-toggle {
-		top: calc(13px - (var(--space-min)/2));
+		top: calc(13px - (var(--space-50)/2));
 	}
 }
 
 
 /*
- * Search Section
+ * FAQs Search
  */
 
-.search-section {
+.faqs-search {
 	/*position: absolute;*/
 	/*width: 100%;*/
 	/*z-index: 2;*/
 	/*transform: translateY(-50%);*/
 	border-bottom: 2px solid var(--blue-4);
 }
-.search-section .search-bar {
+.faqs-search .search-bar {
 	display: flex;
 	transition: .2s ease-out;
 }
-.search-section .search-bar:focus-within {
-	background-color: var(--light);
-}
-.search-section .search-bar .search-input {
+.faqs-search .search-bar .search-input {
 	flex-grow: 1;
 	flex-shrink: 1;
 	flex-basis: 0%;
 	background-color: transparent;
 	color: var(--light);
 }
-.search-section .search-bar:focus-within .search-input,
-.search-section .search-bar .search-input:focus {
+
+.faqs-search .search-bar:focus-within .search-input,
+.faqs-search .search-bar .search-input:focus {
+	background-color: var(--light);
 	color: var(--dark);
 }
-.search-section .search-bar .search-input:focus {
+.faqs-search .search-bar .search-input:focus {
 	outline: none;
 	box-shadow: none;
 }
-.search-section .search-bar .search-button {}
+.faqs-search .search-bar .search-button {
+	margin-left: var(--space-50);
+	background-color: var(--light);
+	color: var(--blue-5);
+}
 
 @media( min-width: 640px )  {}
 @media( min-width: 1040px ) {}

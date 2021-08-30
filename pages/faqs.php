@@ -63,6 +63,7 @@ function getFAQHierarchyMarkup ( $faqs__Tree, $parentId ) {
 $sectionTitle = 'Help Center';
 
 require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/pages/section/header.php';
 
 ?>
 
@@ -73,24 +74,33 @@ require_once __ROOT__ . '/inc/header.php';
 	};
 </script>
 
+
+<section class="faq-header-section fill-blue-5 space-75-bottom">
+	<div class="container">
+		<div class="row">
+			<div class="columns small-12">
+				<div class="h1 strong">Help Center</div>
+			</div>
+		</div>
+	</div>
+</section>
 <?php /* ----- Search Section ----- */
 require __ROOT__ . '/pages/snippet/search-bar.php';
 ?>
 
-
 <!-- FAQ Content Section -->
-<section class="faq-content-section space-50-top-bottom">
+<section class="faq-content-section space-75-top-bottom">
 	<div class="container">
 		<div class="row">
 			<div class="faq-sidebar columns small-12 large-4 js_faq_sidebar">
-				<div class="sidebar-min fill-blue-1 hide-large hide-xlarge space-min cursor-pointer js_toggle_sidebar" tabindex="-1">
-					<div class="sidebar-min-label h5 text-blue-4 opacity-50 clearfix"><span class="label float-left">Help Center Menu</span> <span class="icon material-icons float-right">expand_more</span></div>
-					<div class="active-title h6 text-blue-4 js_current_category">Lumpsum</div>
+				<div class="sidebar-min fill-blue-1 hide-large hide-xlarge space-50 cursor-pointer js_toggle_sidebar" tabindex="-1">
+					<div class="sidebar-min-label h5 text-blue-5 opacity-50 clearfix"><span class="label float-left">Help Center Menu</span> <span class="icon material-icons float-right">expand_more</span></div>
+					<div class="active-title h6 text-blue-5 js_current_category">Lumpsum</div>
 				</div>
 				<div class="faq-hierarchy js_faq_listing"><?= getFAQHierarchyMarkup( $faqs__Tree, 0, $thePost->get( 'ID' ) ) ?></div>
 			</div>
 			<div class="faq-content columns small-12 large-8 xlarge-7">
-				<div class="title h4 strong space-50-bottom">
+				<div class="title h3 strong text-blue-4 space-75-bottom">
 					<?= $thePost->get( 'post_title' ) ?>
 				</div>
 				<div class="post-content">
