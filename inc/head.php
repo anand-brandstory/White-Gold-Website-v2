@@ -208,8 +208,8 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <!-- jQuery 3 -->
 <script type="text/javascript" src="/plugins/jquery/jquery-3.0.0.min.js<?= $ver ?>"></script>
 <!-- Slick Carousel -->
-<link rel="stylesheet" type="text/css" href="plugins/slick/slick.css<?= $ver ?>"/>
-<link rel="stylesheet" type="text/css" href="plugins/slick/slick-theme.css<?= $ver ?>"/>
+<link rel="stylesheet" type="text/css" href="/plugins/slick/slick.css<?= $ver ?>"/>
+<link rel="stylesheet" type="text/css" href="/plugins/slick/slick-theme.css<?= $ver ?>"/>
 
 <?= CMS::get( 'fonts_and_icons_embed' ) ?? <<<ARB
 <!-- Fonts -->

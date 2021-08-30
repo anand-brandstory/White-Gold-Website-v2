@@ -103,7 +103,7 @@ require __ROOT__ . '/pages/snippet/search-bar.php';
 				<div class="title h3 strong text-blue-4 space-75-bottom">
 					<?= $thePost->get( 'post_title' ) ?>
 				</div>
-				<div class="post-content">
+				<div class="content-block">
 					<?= $thePost->get( 'post_content' ) ?>
 				</div>
 			</div>
