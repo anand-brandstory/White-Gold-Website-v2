@@ -1,36 +1,37 @@
 
 $( function () {
 
+	/*
+	 | Save references to certain DOM nodes
+	 */
 	const $quantity = $( "#js_quotation_form_input_quantity" )
 	const $purity = $( "#js_quotation_form_input_purity" )
 	const $basicRate = $( ".js_basic_rate" )
 	const $serviceCharge = $( ".js_service_charge" )
 	const $finalQuotation = $( ".js_final_quotation" )
-
-
+	/*
+	 | Set up some global references
+	 */
 	let quantity
 	let selectedGoldPurity = $purity.val()
 	let currentGoldRateData
 
 
-
-	let unsubscribe = window.__BFS.goldRateTracker.subscribe( function ( data ) {
-		currentGoldRateData = data;
-		$( document ).trigger( "gold-rates/input/change" )
-	} )
-
+	// When the gold purity value is updated, trigger a re-calculation of the quote
 	$purity.on( "change", function ( event ) {
 		selectedGoldPurity = event.target.value
 		$( document ).trigger( "gold-rates/input/change" )
 	} )
 
+	// When the quantity value is updated, trigger a re-calculation of the quote
 	$quantity.on( "input", function ( event ) {
 		quantity = event.target.value
 		quantity = quantity.trim()
-		quantity = parseInt( quantity, 10 )
+		quantity = parseFloat( quantity )
 		$( document ).trigger( "gold-rates/input/change" )
 	} )
 
+	// When the any of the values the quote depends on changes (including the gold rate itself), re-calculate the quote
 	$( document ).on( "gold-rates/input/change", function () {
 		let stubValue = "₹ --,---"
 
@@ -58,5 +59,32 @@ $( function () {
 		$serviceCharge.text( "- " + serviceCharge )
 		$finalQuotation.text( finalQuotation )
 	} )
+
+
+
+
+	/*
+	 | Finally, subscribe to the gold rate feed
+	 */
+	let unsubscribe
+	function bindQuotationCalculatorToGoldRateFeed () {
+		unsubscribe = window.__BFS.goldRateTracker.subscribe( function ( data ) {
+			currentGoldRateData = data;
+			$( document ).trigger( "gold-rates/input/change" )
+		} )
+	}
+	function unbindQuotationCalculatorFromGoldRateFeed () {
+		unsubscribe()
+	}
+
+
+
+	/*
+	 |
+	 | Exports
+	 |
+	 */
+	window.__BFS.bindQuotationCalculatorToGoldRateFeed = bindQuotationCalculatorToGoldRateFeed
+	window.__BFS.unbindQuotationCalculatorFromGoldRateFeed = unbindQuotationCalculatorFromGoldRateFeed
 
 } )
