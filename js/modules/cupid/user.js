@@ -75,7 +75,19 @@ LoginPrompt.prototype.triggerFlowOn = function triggerFlowOn ( event, elementSel
 	let loginPrompt = this;
 	return $( elementSelector ).on( event, function ( event ) {
 
-		if ( getUser() ) {
+		let user = getUser()
+
+		// If the user exists, but the data they entered is not consistent with what is on file
+		// (i.e. the cookie), then log them out, assume a new session
+		if ( user ) {
+			if ( !user.dataIsConsistentWith( loginPrompt.getDataThatShouldBeConsistent ) ) {
+				user.logout()
+				user = null
+			}
+		}
+
+		if ( user ) {
+
 			// Restore any hyperlinks
 			loginPrompt.$site.find( "a" ).each( function ( _i, domAnchor ) {
 				var $anchor = $( domAnchor );
@@ -84,7 +96,7 @@ LoginPrompt.prototype.triggerFlowOn = function triggerFlowOn ( event, elementSel
 					$anchor.attr( "href", url );
 			} );
 			// Take any other preparatory action
-			loginPrompt.trigger( "prepare", getUser() );
+			loginPrompt.trigger( "prepare", user );
 			loginPrompt.off( "prepare" );
 			// Default to the default behavior
 			return;
@@ -106,7 +118,7 @@ LoginPrompt.prototype.on = function on ( event, fn ) {
 	else
 		this.eventHandlers[ event ] = [ fn ];
 };
-LoginPrompt.prototype.off = function on ( event ) {
+LoginPrompt.prototype.off = function off ( event ) {
 	if ( this.eventHandlers[ event ] )
 		this.eventHandlers[ event ] = [ ];
 };
@@ -137,8 +149,13 @@ function Person ( phoneNumber, sourcePoint ) {
 		this.source.point = sourcePoint;
 
 }
+Person.isLoggedIn = getUser
 // Make this function accessible on the Cupid namespace
 __.Person = Person;
+
+Person.prototype.logout = function logout () {
+	utils.unsetCookie( __.settings.authCookieName );
+}
 
 Person.prototype.hasDeviceId = function hasDeviceId ( id ) {
 	if ( typeof id == "string" )
@@ -181,7 +198,7 @@ Person.prototype.isInterestedIn = function isInterestedIn ( things ) {
 
 Person.prototype.appendAdditionalData = function appendAdditionalData ( data ) {
 
-	if ( typeof data != "object" && ! Array.isArray( data ) )
+	if ( typeof data !== "object" || Array.isArray( data ) )
 		return this;
 
 	this.other = Object.assign( { }, this.other, data );
@@ -190,6 +207,64 @@ Person.prototype.appendAdditionalData = function appendAdditionalData ( data ) {
 
 };
 
+Person.prototype.getExtendedAttributes = async function getExtendedAttributes ( ...attributeNames ) {
+
+	attributeNames = attributeNames.flat().filter( e => e )
+
+	let attributes = { }
+	let missingAttributeNames = [ ]
+	let userExtendedAttributes = this.other || { }
+	for ( let name of attributeNames )
+		if ( userExtendedAttributes[ name ] )
+			attributes[ name ] = userExtendedAttributes[ name ]
+		else
+			missingAttributeNames = missingAttributeNames.concat( name )
+
+	let missingAttributes = { }
+	if ( missingAttributeNames.length > 0 ) {
+		try {
+			missingAttributes = await this.getExtendedAttributesFromDB( missingAttributeNames )
+		}
+		catch ( e ) {}
+
+		attributes = { ...attributes, ...missingAttributes }
+	}
+
+	return attributes;
+
+};
+
+Person.prototype.getExtendedAttributesFromDB = function getExtendedAttributesFromDB ( ...attributeNames ) {
+
+	attributeNames = attributeNames.flat().filter( e => e )
+
+	var queryParams = new URLSearchParams()
+	queryParams.append( "client", this.client )
+	queryParams.append( "phoneNumber", this.phoneNumber )
+	queryParams.append( "extended", true )
+	for ( let attributeName of attributeNames )
+		queryParams.append( "attributes", attributeName )
+
+	var apiEndpoint = __.settings.cupidApiEndpoint;
+	var url = apiEndpoint + "/v2/people" + "?" + queryParams.toString();
+
+	var ajaxRequest = $.ajax( {
+		url: url,
+		method: "GET",
+		dataType: "json"
+	} );
+
+	return new Promise( function ( resolve, reject ) {
+		ajaxRequest.done( function ( response ) {
+			resolve( response.data.extendedAttributes );
+		} );
+		ajaxRequest.fail( function ( jqXHR, textStatus, e ) {
+			var errorResponse = utils.getErrorResponse( jqXHR, textStatus, e );
+			reject( errorResponse );
+		} );
+	} );
+
+}
 
 /*
  * Fetch the person from the database
@@ -314,7 +389,7 @@ Person.prototype.requestOTP = function requestOTP ( product, phoneNumber ) {
 			// Message reads as follows:
 				// Invalid Phone Number - Length Mismatch(Expected: 10)
 			if ( /invalid/.test( responseErrorMessage ) ) {
-				reject( { code: 1, message: "The phone number you've provided is not valid. Please try again." } );
+				reject( { code: 1, codeWord: "PHONE_INVALID", message: "The phone number you've provided is not valid. Please try again." } );
 				return;
 			}
 			else {
@@ -479,6 +554,38 @@ Person.prototype.update = function update () {
 
 
 /*
+ |
+ | Check if the data returned by the given function is consistent with what's on file
+ |
+ | 	This use-case for this method is when we want to determine if a *logged-in* user
+ | 	inputs the same number that is on record (i.e. in the cookie).
+ | 	If it does not match, we log them out and assume the number as new, and continue with the regular flow.
+ |
+ */
+Person.prototype.dataIsConsistentWith = function dataIsConsistentWith ( dataGetterFunction ) {
+
+	if ( typeof dataGetterFunction !== "function" )
+		return true;
+
+	let data
+	try {
+		data = dataGetterFunction()
+	}
+	catch ( e ) {
+		return false
+	}
+
+	for ( let key in data )
+		if ( this[ key ] !== data[ key ] )
+			return false
+
+	return true
+
+}
+
+
+
+/*
  *
  * ----- Update the Person's profile
  *
@@ -611,12 +718,12 @@ Person.prototype.submitMessage = function submitMessage ( message, format ) {
  * ----- Submit the Person's data
  *
  */
-Person.prototype.submitData = function submitData ( data ) {
+Person.prototype.submitData = function submitData () {
 
 	var data = {
 		client: this.client,
 		phoneNumber: this.phoneNumber,
-		data: data
+		data: this.other || { }
 	};
 
 	var apiEndpoint = __.settings.cupidApiEndpoint;

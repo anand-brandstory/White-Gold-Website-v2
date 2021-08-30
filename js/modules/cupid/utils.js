@@ -398,6 +398,11 @@ utils.setCookie = function setCookie ( name, data, duration ) {
 
 }
 
+utils.unsetCookie = function unsetCookie ( name ) {
+	utils.CookieJar.remove( name, { secure: false } );
+	utils.CookieJar.remove( name, { secure: true } );
+}
+
 utils.getCookie = function getCookie ( name ) {
 	var cookieString;
 	var cookieData;
