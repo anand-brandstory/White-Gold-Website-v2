@@ -1550,6 +1550,23 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+@keyframes colorFlashUp {
+	to {
+		color: #ff6d6a;
+	}
+}
+@keyframes colorFlashDown {
+	to {
+		color: #30bf7c;
+		animation-timing-function: ease-out;
+	}
+}
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate.trend-up {
+	animation: colorFlashDown 1.5s 2 cubic-bezier( 0, 1.57, 0.49, 0.72 ) forwards alternate;
+}
+.live-gold-section .live-gold .live-gold-data .data .live-rate .rate.trend-down {
+	animation: colorFlashUp 1.5s 2 cubic-bezier( 0, 1.57, 0.49, 0.72 ) forwards alternate;
+}
 .live-gold-section .live-gold .live-gold-data .data .live-rate .rate.trend-up + .trend .trend-icon {
 	background-image: url('/media/icon/trend-up.svg');
 }
