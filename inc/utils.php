@@ -29,6 +29,18 @@ function initWordPress () {
 	}
 }
 
+/*
+ |
+ | Prevent the page from being cached
+ |
+ */
+function dontCachePage () {
+	header( 'Surrogate-Control: no-store' );
+	header( 'Cache-Control: max-age=0, s-maxage=0, no-store, no-cache, must-revalidate, proxy-revalidate' );
+	header( 'Pragma: no-cache' );
+	header( 'Expires: 0' );
+}
+
 
 /*
  *
