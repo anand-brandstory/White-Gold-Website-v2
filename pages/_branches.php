@@ -103,7 +103,7 @@ require_once __ROOT__ . '/inc/header.php';
 
 
 <script type="text/javascript" src="/plugins/geolib/geolib-v3.3.1.min.js"></script>
-<script type="text/javascript" src="/js/pages/branch-finder.js"></script>
+<script type="text/javascript" src="/js/pages/branch-finder.js<?= $ver ?>"></script>
 
 </script>
 
