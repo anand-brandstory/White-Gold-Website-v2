@@ -263,6 +263,7 @@ require_once __ROOT__ . '/inc/header.php';
 	window.__BFS.CONF.region = "<?= REGION ?>";
 
 </script>
+<script type="text/javascript" src="/plugins/buffer/buffer-v5.6.0-custom.min.js"></script>
 <script type="text/javascript" src="/plugins/chartjs/chart.v3.4.1.min.js"></script>
 <script type="text/javascript" src="/js/modules/clock.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/gold-rates.js<?= $ver ?>"></script>
