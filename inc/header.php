@@ -36,11 +36,7 @@ $languageAttributes = CMS::$isEnabled ? get_language_attributes() : 'lang="en" x
 
 http_response_code( Router::$httpResponseCode );
 
-$contactNumbersForRegions = [
-    'ka' => '+91 95907 04444',
-    'tn' => '+91 80951 00700',
-    'kl' => '+91 95622 62222'
-];
+$contactNumbersForRegions = PHONE_NUMBERS;
 
 ?>
 <!doctype html>
