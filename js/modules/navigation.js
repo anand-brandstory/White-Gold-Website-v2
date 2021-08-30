@@ -67,7 +67,7 @@ $( document ).on( "click", "a[ href ]", function ( event ) {
 
 /*
  *
- * ----- Menu
+ * ----- Floating Menu logic
  *
  */
 // Show or Hide the floating menu depending on the direction of scroll
@@ -96,6 +96,43 @@ window.__BFS.utils.onScroll( function () {
 // 	**if** there is no above-the-fold inline version of it for that page
 if ( ! domInlineMenuWidget )
 	$( document.body ).addClass( "show-menu" );
+
+
+
+/*
+ *
+ * ----- Menu toggling, opening and closing
+ *
+ */
+// On opening the _primary_ menu, ensure that the _WhatsApp_ menu is closed (if not already)
+$( ".js_main_menu" ).on( "click", ".js_primary_toggle_menu", function ( event ) {
+	var $menu = $( event.target ).closest( ".js_main_menu" )
+	closeWhatsAppSubMenu( $menu )
+} )
+// Likewise, on opening the _WhatsApp_ menu, ensure that the _primary_ menu is closed (if not already)
+$( ".js_main_menu" ).on( "click", ".js_wa_toggle_menu", function ( event ) {
+	if ( ! window.__CUPID.Person.isLoggedIn() ) {
+		var $menu = $( event.target ).closest( ".js_main_menu" )
+		closePrimarySubMenu( $menu )
+		return;
+	}
+
+	// Prevent the WhatsApp sub-menu from opening
+	event.preventDefault();
+	// Navigate to WhatsApp
+	let phoneNumber = window.__BFS.UI.whatsappForm.bfsFormInstance.getFormNode().data( "number" ).replace( /\s+/g, "" )
+	var url = `https://wa.me/${ phoneNumber }`
+	window.open( url, "_blank" )
+} )
+
+function closePrimarySubMenu ( $menuContainer ) {
+	var domSubMenu = $menuContainer.find( ".js_primary_toggle_menu" ).get( 0 )
+	domSubMenu.checked = false
+}
+function closeWhatsAppSubMenu ( $menuContainer ) {
+	var domSubMenu = $menuContainer.find( ".js_wa_toggle_menu" ).get( 0 )
+	domSubMenu.checked = false
+}
 
 
 
