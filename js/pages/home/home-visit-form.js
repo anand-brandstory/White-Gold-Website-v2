@@ -14,15 +14,12 @@ window.__BFS.UI = window.__BFS.UI || { };
  * ----- Set up the Sell Gold Form
  */
 window.__BFS.UI.homeVisitForm = window.__BFS.UI.homeVisitForm || { };
-window.__BFS.UI.homeVisitForm.bfsFormInstance = new BFSForm( "js_home_visit_form" );
+window.__BFS.UI.homeVisitForm.bfsFormInstance = new BFSForm( ".js_home_visit_form" );
 
 var homeVisitForm = window.__BFS.UI.homeVisitForm.bfsFormInstance
-	var domInputPincode = document.getElementById( "js_home_visit_form_input_pincode" );
-	var domInputPhoneCountryCode = document.getElementById( "js_home_visit_form_input_phone_country_code" );
-	var domInputPhoneNumber = document.getElementById( "js_home_visit_form_input_phone" );
 
 	// Pincode
-homeVisitForm.addField( "pincode", domInputPincode, function ( values ) {
+homeVisitForm.addField( "pincode", "#js_home_visit_form_input_pincode", function ( values ) {
 	var pincode = values[ 0 ].trim();
 
 	if ( pincode === "" )
@@ -38,22 +35,11 @@ homeVisitForm.addField( "pincode", domInputPincode, function ( values ) {
 } );
 
 	// Phone number
-homeVisitForm.addField( "phoneNumber", [ domInputPhoneCountryCode, domInputPhoneNumber ], function ( values ) {
-	var phoneCountryCode = values[ 0 ].trim();
-	var phoneNumberLocal = values[ 1 ].trim();
-	var phoneNumber = phoneCountryCode + phoneNumberLocal;
+homeVisitForm.addField( "phoneNumber", [ "#js_home_visit_form_input_phone_country_code", "#js_home_visit_form_input_phone" ], function ( values ) {
+	var phoneCountryCode = values[ 0 ]
+	var phoneNumberLocal = values[ 1 ]
 
-	if ( phoneNumberLocal.length <= 1 )
-		throw new Error( "Please provide a valid phone number." );
-
-	if ( phoneNumberLocal.length > 1 )
-		if ( ! (
-			phoneNumber.match( /^\+\d[\d\-]+\d$/ )	// this is not a perfect regex, but it's close
-			&& phoneNumberLocal.replace( /\D/g, "" ).length > 3
-		) )
-			throw new Error( "Please provide a valid phone number." );
-
-	return phoneNumber;
+	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
 
 
@@ -78,9 +64,10 @@ homeVisitForm.submit = function submit ( data ) {
 
 
 /*
- * ----- Contact Form submission handler
+ * ----- Form submission event handler
  */
 $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
+	let homeVisitForm = window.__BFS.UI.homeVisitForm.bfsFormInstance
 
 	/*
 	 * ----- Prevent default browser behaviour
@@ -107,6 +94,8 @@ $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
 		alert( error.message )
 		console.error( error.message )
 		homeVisitForm.enable();
+		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
+		homeVisitForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		homeVisitForm.setSubmitButtonLabel();
 		return;
 	}
@@ -119,7 +108,7 @@ $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
 			/*
 			 * ----- Provide further feedback to the user
 			 */
-			homeVisitForm.domForm.parentNode.className += " show-thankyou";
+			homeVisitForm.getFormNode().parent().addClass( "show-thankyou" )
 
 		} )
 

@@ -14,17 +14,13 @@ window.__BFS.UI = window.__BFS.UI || { };
  * ----- Set up the Sell Gold Form
  */
 window.__BFS.UI.sellGoldForm = window.__BFS.UI.sellGoldForm || { };
-window.__BFS.UI.sellGoldForm.bfsFormInstance = new BFSForm( "js_sell_gold_form" );
+window.__BFS.UI.sellGoldForm.bfsFormInstance = new BFSForm( ".js_sell_gold_form" );
 
 var sellGoldForm = window.__BFS.UI.sellGoldForm.bfsFormInstance
-	var domInputName = document.getElementById( "js_sell_gold_form_input_name" );
-	var domInputQuantity = document.getElementById( "js_sell_gold_form_input_quantity" );
-	var domInputPhoneCountryCode = document.getElementById( "js_sell_gold_form_input_phone_country_code" );
-	var domInputPhoneNumber = document.getElementById( "js_sell_gold_form_input_phone" );
 
 // Set up the form's input fields, data validators and data assemblers
 	// Name
-sellGoldForm.addField( "name", domInputName, function ( values ) {
+sellGoldForm.addField( "name", "#js_sell_gold_form_input_name", function ( values ) {
 	var name = values[ 0 ].trim();
 
 	if ( name === "" )
@@ -37,7 +33,7 @@ sellGoldForm.addField( "name", domInputName, function ( values ) {
 } );
 
 	// Quantity
-sellGoldForm.addField( "quantity", domInputQuantity, function ( values ) {
+sellGoldForm.addField( "quantity", "#js_sell_gold_form_input_quantity", function ( values ) {
 	var quantity = values[ 0 ].trim();
 
 	if ( quantity === "" )
@@ -51,22 +47,11 @@ sellGoldForm.addField( "quantity", domInputQuantity, function ( values ) {
 } );
 
 	// Phone number
-sellGoldForm.addField( "phoneNumber", [ domInputPhoneCountryCode, domInputPhoneNumber ], function ( values ) {
-	var phoneCountryCode = values[ 0 ].trim();
-	var phoneNumberLocal = values[ 1 ].trim();
-	var phoneNumber = phoneCountryCode + phoneNumberLocal;
+sellGoldForm.addField( "phoneNumber", [ "#js_sell_gold_form_input_phone_country_code", "#js_sell_gold_form_input_phone" ], function ( values ) {
+	var phoneCountryCode = values[ 0 ]
+	var phoneNumberLocal = values[ 1 ]
 
-	if ( phoneNumberLocal.length <= 1 )
-		throw new Error( "Please provide a valid phone number." );
-
-	if ( phoneNumberLocal.length > 1 )
-		if ( ! (
-			phoneNumber.match( /^\+\d[\d\-]+\d$/ )	// this is not a perfect regex, but it's close
-			&& phoneNumberLocal.replace( /\D/g, "" ).length > 3
-		) )
-			throw new Error( "Please provide a valid phone number." );
-
-	return phoneNumber;
+	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
 
 
@@ -122,6 +107,8 @@ $( document ).on( "submit", ".js_sell_gold_form", function ( event ) {
 		console.error( error.message )
 		sellGoldForm.enable();
 		sellGoldForm.setSubmitButtonLabel();
+		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
+		sellGoldForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		return;
 	}
 
@@ -133,7 +120,7 @@ $( document ).on( "submit", ".js_sell_gold_form", function ( event ) {
 			/*
 			 * ----- Provide further feedback to the user
 			 */
-			sellGoldForm.domForm.parentNode.className += " show-thankyou";
+			sellGoldForm.getFormNode().parent().addClass( "show-thankyou" )
 
 		} )
 

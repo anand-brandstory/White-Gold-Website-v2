@@ -11,46 +11,30 @@ window.__BFS.UI = window.__BFS.UI || { };
 
 
 /*
- * ----- Set up the Sell Gold Form
+ * ----- Set up the Live Gold Form
  */
 window.__BFS.UI.liveGoldForm = window.__BFS.UI.liveGoldForm || { };
-window.__BFS.UI.liveGoldForm.bfsFormInstance = new BFSForm( "js_live_gold_form" );
+window.__BFS.UI.liveGoldForm.bfsFormInstance = new BFSForm( ".js_live_gold_form" );
 
 var liveGoldForm = window.__BFS.UI.liveGoldForm.bfsFormInstance
-	var domInputPhoneCountryCode = document.getElementById( "js_live_gold_form_input_phone_country_code" );
-	var domInputPhoneNumber = document.getElementById( "js_live_gold_form_input_phone" );
 
 	// Phone number
-liveGoldForm.addField( "phoneNumber", [ domInputPhoneCountryCode, domInputPhoneNumber ], function ( values ) {
-	var phoneCountryCode = values[ 0 ].trim();
-	var phoneNumberLocal = values[ 1 ].trim();
-	var phoneNumber = phoneCountryCode + phoneNumberLocal;
+liveGoldForm.addField( "phoneNumber", [ ".js_form_input_phone_country_code", ".js_form_input_phone_number" ], function ( values ) {
+	var phoneCountryCode = values[ 0 ]
+	var phoneNumberLocal = values[ 1 ]
 
-	if ( phoneNumberLocal.length <= 1 )
-		throw new Error( "Please provide a valid phone number." );
-
-	if ( phoneNumberLocal.length > 1 )
-		if ( ! (
-			phoneNumber.match( /^\+\d[\d\-]+\d$/ )	// this is not a perfect regex, but it's close
-			&& phoneNumberLocal.replace( /\D/g, "" ).length > 3
-		) )
-			throw new Error( "Please provide a valid phone number." );
-
-	return phoneNumber;
+	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
 
 
 
-liveGoldForm.submit = function submit ( data ) {
+liveGoldForm.submit = async function submit ( data ) {
 
 	var __ = window.__CUPID;
 
-	var extendedAttributes = {
-		interestInLiveGoldRate: true
-	};
-
-	__.user.appendAdditionalData( extendedAttributes );
-	__.user.submitData( extendedAttributes );
+	const sessionDurationLimit = window.__BFS.CONF.goldRates.sessionDurationLimit
+	if ( await __.user.sessionHasExpiredOrHasNotBegun( "liveGoldRate", sessionDurationLimit ) )
+		await __.user.startSession( "liveGoldRate" )
 
 	return Promise.resolve();
 
@@ -59,9 +43,10 @@ liveGoldForm.submit = function submit ( data ) {
 
 
 /*
- * ----- Contact Form submission handler
+ * ----- Form submission event handler
  */
 $( document ).on( "submit", ".js_live_gold_form", function ( event ) {
+	let liveGoldForm = window.__BFS.UI.liveGoldForm.bfsFormInstance
 
 	/*
 	 * ----- Prevent default browser behaviour
@@ -88,6 +73,8 @@ $( document ).on( "submit", ".js_live_gold_form", function ( event ) {
 		alert( error.message )
 		console.error( error.message )
 		liveGoldForm.enable();
+		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
+		liveGoldForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		liveGoldForm.setSubmitButtonLabel();
 		return;
 	}
@@ -96,13 +83,7 @@ $( document ).on( "submit", ".js_live_gold_form", function ( event ) {
 	 * ----- Submit data
 	 */
 	liveGoldForm.submit( data )
-		.then( function ( response ) {
-			/*
-			 * ----- Provide further feedback to the user
-			 */
-			liveGoldForm.domForm.parentNode.className += " show-thankyou";
-
-		} )
+		.then( window.__BFS.runUserFlow )
 
 } );
 

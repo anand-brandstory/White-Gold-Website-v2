@@ -58,6 +58,9 @@ window.__BFS.loginPrompts = loginPrompts;
 loginPrompts.sellGoldForm = new __.LoginPrompt( "Sell Gold Form", $( ".js_sell_gold_form_section" ) );
 loginPrompts.sellGoldForm.conversionSlug = "sell-gold-form";
 loginPrompts.sellGoldForm.$primaryForm = loginPrompts.sellGoldForm.$site.find( ".js_sell_gold_form" );
+loginPrompts.sellGoldForm.getDataThatShouldBeConsistent = function getDataThatShouldBeConsistent () {
+	return window.__BFS.UI.sellGoldForm.bfsFormInstance.getData()
+}
 // loginPrompts.sellGoldForm.context = loginPrompts.sellGoldForm.$primaryForm.data( "context" ) || "Sell Gold Form";
 var sellGold__BFSForm = window.__BFS.UI.sellGoldForm.bfsFormInstance;
 
@@ -66,11 +69,10 @@ var sellGold__BFSForm = window.__BFS.UI.sellGoldForm.bfsFormInstance;
  * ----- Set up the OTP form **in** the Sell Gold section
  *
  */
-var sellGoldOTP__BFSForm = new BFSForm( "js_otp_form_sell_gold" );
+var sellGoldOTP__BFSForm = new BFSForm( ".js_otp_form_sell_gold" );
 window.__BFS.UI.sellGoldOTPForm = { bfsFormInstance: sellGoldOTP__BFSForm };
-	var domInputOTPSellGold = document.getElementById( "js_form_input_otp_sell_gold" );
 
-sellGoldOTP__BFSForm.addField( "otp", domInputOTPSellGold, function ( values ) {
+sellGoldOTP__BFSForm.addField( "otp", "#js_form_input_otp_sell_gold", function ( values ) {
 	var otp = values[ 0 ].trim();
 
 	if ( otp === "" )
@@ -89,6 +91,7 @@ loginPrompts.sellGoldForm.on( "requirePhone", function ( event ) {
 // When the phone number is to be submitted
 loginPrompts.sellGoldForm.on( "phoneSubmit", function ( event ) {
 	var loginPrompt = this;
+	var sellGold__BFSForm = window.__BFS.UI.sellGoldForm.bfsFormInstance;
 
 	/*
 	 * ----- Prevent interaction with the form
@@ -100,10 +103,13 @@ loginPrompts.sellGoldForm.on( "phoneSubmit", function ( event ) {
 	try {
 		formData = sellGold__BFSForm.getData();
 	}
-	catch ( e ) {
+	catch ( error ) {
 		// Report the message
-		alert( e.message );
+		alert( error.message );
 		sellGold__BFSForm.enable();
+		sellGold__BFSForm.setSubmitButtonLabel();
+		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
+		sellGold__BFSForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		return;
 	}
 
@@ -157,7 +163,8 @@ loginPrompts.sellGoldForm.on( "phoneSubmit", function ( event ) {
 
 // When the OTP is required
 loginPrompts.sellGoldForm.on( "requireOTP", function ( event, phoneNumber ) {
-	var loginPrompt = this;
+	var loginPrompt = this
+	var sellGoldOTP__BFSForm = window.__BFS.UI.sellGoldOTPForm.bfsFormInstance
 
 	__.tempUser.requestOTP( loginPrompt.context )
 		.then( function ( otpSessionId ) {
@@ -166,15 +173,19 @@ loginPrompts.sellGoldForm.on( "requireOTP", function ( event, phoneNumber ) {
 			sellGoldOTP__BFSForm.enable();
 		} )
 		.catch( function ( e ) {
-			alert( e.message );
-			sellGold__BFSForm.enable();
+			alert( e.message )
+			if ( e.codeWord === "PHONE_INVALID" ) {
+				var bfsForm = window.__BFS.UI.sellGoldForm.bfsFormInstance;
+				bfsForm.enable();
+				bfsForm.fields[ "phoneNumber" ].focus( 1 )
+			}
 		} )
 } );
 
 
 loginPrompts.sellGoldForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
-
 	var loginPrompt = this;
+	var sellGoldOTP__BFSForm = window.__BFS.UI.sellGoldOTPForm.bfsFormInstance
 
 	/*
 	 * ----- Prevent interaction with the form
@@ -186,10 +197,11 @@ loginPrompts.sellGoldForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
 	try {
 		formData = sellGoldOTP__BFSForm.getData();
 	}
-	catch ( e ) {
+	catch ( error ) {
 		// Report the message
-		alert( e.message );
+		alert( error.message );
 		sellGoldOTP__BFSForm.enable();
+		sellGoldOTP__BFSForm.fields[ error.fieldName ].focus()
 		return;
 	}
 
@@ -206,6 +218,9 @@ loginPrompts.sellGoldForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
 
 loginPrompts.sellGoldForm.on( "OTPError", function ( e ) {
 	alert( e.message );
+	var sellGoldOTP__BFSForm = window.__BFS.UI.sellGoldOTPForm.bfsFormInstance
+	sellGoldOTP__BFSForm.enable()
+	sellGoldOTP__BFSForm.fields[ "otp" ].focus()
 } );
 loginPrompts.sellGoldForm.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
@@ -233,19 +248,20 @@ loginPrompts.sellGoldForm.on( "postLogin", function ( user ) {
 loginPrompts.homeVisitForm = new __.LoginPrompt( "Home Visit Form", $( ".js_home_visit_form_section" ) );
 loginPrompts.homeVisitForm.conversionSlug = "home-visit-form";
 loginPrompts.homeVisitForm.$primaryForm = loginPrompts.homeVisitForm.$site.find( ".js_home_visit_form" );
+loginPrompts.sellGoldForm.getDataThatShouldBeConsistent = function getDataThatShouldBeConsistent () {
+	return window.__BFS.UI.homeVisitForm.bfsFormInstance.getData()
+}
 // loginPrompts.homeVisitForm.context = loginPrompts.homeVisitForm.$primaryForm.data( "context" ) || "Home Visit Form";
-var homeVisit__BFSForm = window.__BFS.UI.homeVisitForm.bfsFormInstance;
 
 /*
  *
  * ----- Set up the OTP form **in** the Sell Gold section
  *
  */
-var homeVisitOTP__BFSForm = new BFSForm( "js_otp_form_home_visit" );
+var homeVisitOTP__BFSForm = new BFSForm( ".js_otp_form_home_visit" );
 window.__BFS.UI.homeVisitOTPForm = { bfsFormInstance: homeVisitOTP__BFSForm };
-	var domInputOTPHomeVisit = document.getElementById( "js_form_input_otp_home_visit" );
 
-homeVisitOTP__BFSForm.addField( "otp", domInputOTPHomeVisit, function ( values ) {
+homeVisitOTP__BFSForm.addField( "otp", "#js_form_input_otp_home_visit", function ( values ) {
 	var otp = values[ 0 ].trim();
 
 	if ( otp === "" )
@@ -264,6 +280,7 @@ loginPrompts.homeVisitForm.on( "requirePhone", function ( event ) {
 // When the phone number is to be submitted
 loginPrompts.homeVisitForm.on( "phoneSubmit", function ( event ) {
 	var loginPrompt = this;
+	var homeVisit__BFSForm = window.__BFS.UI.homeVisitForm.bfsFormInstance;
 
 	/*
 	 * ----- Prevent interaction with the form
@@ -275,10 +292,12 @@ loginPrompts.homeVisitForm.on( "phoneSubmit", function ( event ) {
 	try {
 		formData = homeVisit__BFSForm.getData();
 	}
-	catch ( e ) {
+	catch ( error ) {
 		// Report the message
-		alert( e.message );
+		alert( error.message );
 		homeVisit__BFSForm.enable();
+		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
+		homeVisit__BFSForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		return;
 	}
 
@@ -337,24 +356,29 @@ loginPrompts.homeVisitForm.on( "phoneSubmit", function ( event ) {
 
 // When the OTP is required
 loginPrompts.homeVisitForm.on( "requireOTP", function ( event, phoneNumber ) {
-	var loginPrompt = this;
+	var loginPrompt = this
 
 	__.tempUser.requestOTP( loginPrompt.context )
 		.then( function ( otpSessionId ) {
 			__.tempUser.otpSessionId = otpSessionId;
 			loginPrompt.$primaryForm.parent().addClass( "show-otp" );
+			var homeVisitOTP__BFSForm = window.__BFS.UI.homeVisitOTPForm.bfsFormInstance
 			homeVisitOTP__BFSForm.enable();
 		} )
 		.catch( function ( e ) {
 			alert( e.message );
-			homeVisit__BFSForm.enable();
+			if ( e.codeWord === "PHONE_INVALID" ) {
+				var bfsForm = window.__BFS.UI.homeVisitForm.bfsFormInstance;
+				bfsForm.enable();
+				bfsForm.fields[ "phoneNumber" ].focus( 1 )
+			}
 		} )
 } );
 
 
 loginPrompts.homeVisitForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
-
 	var loginPrompt = this;
+	var homeVisitOTP__BFSForm = window.__BFS.UI.homeVisitOTPForm.bfsFormInstance
 
 	/*
 	 * ----- Prevent interaction with the form
@@ -366,10 +390,11 @@ loginPrompts.homeVisitForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
 	try {
 		formData = homeVisitOTP__BFSForm.getData();
 	}
-	catch ( e ) {
+	catch ( error ) {
 		// Report the message
-		alert( e.message );
+		alert( error.message );
 		homeVisitOTP__BFSForm.enable();
+		homeVisitOTP__BFSForm.fields[ error.fieldName ].focus()
 		return;
 	}
 
@@ -386,6 +411,9 @@ loginPrompts.homeVisitForm.on( "OTPSubmit", function onOTPSubmit ( event ) {
 
 loginPrompts.homeVisitForm.on( "OTPError", function ( e ) {
 	alert( e.message );
+	var homeVisitOTP__BFSForm = window.__BFS.UI.homeVisitOTPForm.bfsFormInstance
+	homeVisitOTP__BFSForm.enable()
+	homeVisitOTP__BFSForm.fields[ "otp" ].focus()
 } );
 loginPrompts.homeVisitForm.on( "OTPVerified", onOTPVerified );
 // When the user is logged in
