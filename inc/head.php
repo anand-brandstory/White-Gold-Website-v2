@@ -200,6 +200,11 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 			sourceMedium: "<?= CUPID_SOURCE_MEDIUM ?>",
 			cupidApiEndpoint: "<?= CUPID_CUPID_API_ENDPOINT ?>",
 			authCookieName: "<?= CUPID_AUTH_COOKIE_NAME ?>"
+		},
+		goldRates: {
+			apiEndpoint: "<?= GOLD_RATE_API_ENDPOINT ?>",
+			trialDuration: <?= GOLD_RATE_TRIAL_DURATION ?>,
+			sessionDurationLimit: <?= GOLD_RATE_SESSION_DURATION_LIMIT ?>
 		}
 	};
 
