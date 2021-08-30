@@ -270,3 +270,4 @@ require_once __ROOT__ . '/inc/header.php';
 <script type="text/javascript" src="/js/pages/live-gold/quotation-calculator.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/pages/live-gold/live-gold-form.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/pages/live-gold/login-prompts.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/pages/live-gold/index.js<?= $ver ?>"></script>
