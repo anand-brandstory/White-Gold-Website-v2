@@ -138,7 +138,7 @@ $metaCharset = CMS::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
 <link rel="manifest" href="/media/favicon/manifest.json">
 <meta name="msapplication-TileColor" content="#444444">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="msapplication-TileImage" content="/media/favicon/ms-icon-144x144.png">
 
 
 <!-- ~ iOS ~ -->
