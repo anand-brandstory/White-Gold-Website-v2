@@ -33,14 +33,19 @@
 .content-block h5, 
 .content-block h6{
 	display: block;
-	line-height: 1.125;
-	padding-bottom: var(--space-75);
+	line-height: 1;
+	padding-bottom: var(--space-50);
 }
 
 .content-block p {
 	display: block;
 	line-height: 1.375;
 	padding-bottom: var(--space-75);
+}
+
+.content-block a {
+	color: var(--black);
+	text-decoration: underline;
 }
 
 .content-block label, 

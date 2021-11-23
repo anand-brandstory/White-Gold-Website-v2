@@ -8,15 +8,20 @@
  *
  */
 
+\BFS\CMS\WordPress::setupContext();
+
 // If a post revision or preview is being viewed, and the user is not authorized to view it, simply return to the home page
 // NOTE: The revision / preview URLs of **unpublished** posts have no URL slugs, only query parameters, i.e. they essential resemble that of the home page URL
 if ( \BFS\Router::$urlSlug == '' )
 	return require_once __ROOT__ . '/pages/home.php';
 
 \BFS\Router::$httpResponseCode = 404;
-require_once __ROOT__ . '/inc/header.php';
+
+require_once __ROOT__ . '/pages/partials/header.php';
 
 ?>
+
+<?php require_once __ROOT__ . '/pages/section/header.php'; ?>
 
 	<section class="space-50-top">
 		<div class="container">
@@ -36,4 +41,4 @@ require_once __ROOT__ . '/inc/header.php';
 	</section>
 
 <?php
-require_once __ROOT__ . '/inc/footer.php';
+require_once __ROOT__ . '/pages/partials/footer.php';

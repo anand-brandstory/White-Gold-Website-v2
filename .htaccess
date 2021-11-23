@@ -20,7 +20,6 @@ RewriteRule ^/?(api/.*) server/$1.php [NC,QSA,L]
 RewriteRule ^/?wp\-json(/.*)$ "/cms/?rest_route=$1" [NC,QSA,L]
 
 
-# RewriteCond %{REQUEST_URI} !^/?cms/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php [NC,QSA,L]

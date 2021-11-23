@@ -9,5 +9,8 @@
 # the content directory
 /content
 
+# WP Debug Log file
+/cms/wp-content/debug.log
+
 # WP Cloudflare Super Page Cache
 /cms/wp-content/wp-cloudflare-super-page-cache

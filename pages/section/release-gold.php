@@ -284,7 +284,7 @@
 						<input id="rgs8" type="radio" name="release-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="rgs8" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">8</span></div>
-							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Instant Bank Transfer</div>
+							<div class="title h4 strong text-dark columns small-10 space-50-left-right">Instant Payment</div>
 							<div class="toggle columns small-1">
 								<input class="visuallyhidden" type="checkbox">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>

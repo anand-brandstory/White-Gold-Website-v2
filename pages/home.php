@@ -1,32 +1,32 @@
 <?php
-/*
- *
- * This is a sample page you can copy and use as boilerplate for any new page.
- *
+/**
+ |
+ | Home page
+ |
  */
 
-require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/types/cards/cards.php';
+require_once __ROOT__ . '/types/faqs/faqs.php';
+require_once __ROOT__ . '/types/videos/videos.php';
 
-use BFS\CMS;
-CMS::setupContext();
+use \BFS\Types\FAQs;
+use \BFS\Types\Videos;
+use \BFS\Types\Cards;
+
+$carouselSlides = Cards::getByRegion( REGION );
+$sellGoldFAQs = FAQs::getByRegionAndSection( REGION, 'sell-gold' );
+$sellGoldVideos = Videos::getByRegionAndSection( REGION, 'sell-gold' );
+$releaseGoldFAQs = FAQs::getByRegionAndSection( REGION, 'release-gold' );
+$releaseGoldVideos = Videos::getByRegionAndSection( REGION, 'release-gold' );
+
+
+
+require_once __ROOT__ . '/pages/partials/header.php';
 
 ?>
 
 
 
-
-
-<!-- Sample Section -->
-<section class="sample-section">
-	<div class="container">
-		<div class="row">
-			<div class="columns small-12">
-				<!-- insert text -->
-			</div>
-		</div>
-	</div>
-</section>
-<!-- END: Sample Section -->
 
 
 <!-- ## General Page -->
@@ -43,7 +43,7 @@ CMS::setupContext();
 <section class="home-menu-section js_inline_menu_widget">
 	<div class="container">
 		<div class="row">
-			<?php navigationMenuComponent('-home', $contactNumbersForRegions); ?>
+			<?php navigationMenuComponent( 'home', $contactNumbersForRegions ); ?>
 		</div>
 	</div>
 </section>
@@ -71,7 +71,8 @@ CMS::setupContext();
 
 
 <!-- Report Malpractice Section -->
-<?php //require_once __ROOT__ . '/pages/section/report-malpractice.php'; ?>
+<!-- aka "Don't Get Cheated", "File Complaint" -->
+<?php require_once __ROOT__ . '/pages/section/report-malpractice.php'; ?>
 <!-- END: Report Malpractice Section -->
 
 
@@ -88,7 +89,8 @@ CMS::setupContext();
 
 
 
-<?php require_once __ROOT__ . '/inc/footer.php'; ?>
+<?php require_once __ROOT__ . '/pages/partials/footer.php'; ?>
+
 <script type="text/javascript" src="/js/pages/home/sell-gold-form.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/pages/home/home-visit-form.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/pages/home/login-prompts.js<?= $ver ?>"></script>

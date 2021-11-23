@@ -27,7 +27,7 @@
 							<label class="phone-verify form-label block">
 								<input type="text" class="form-input-field phone-number block" id="js_sell_gold_form_input_phone">
 								<select class="form-input-field country-code js_phone_country_code">
-									<?php require __ROOT__ . '/inc/phone-country-codes.php' ?>
+									<?php require __ROOT__ . '/pages/snippet/phone-country-codes.php' ?>
 								</select>
 								<input type="text" disabled="" class="form-input-field country-code-label js_phone_country_code_label" value="+91" id="js_sell_gold_form_input_phone_country_code">
 								<span class="country-code-divider material-icons" data-icon="unfold_more"></span>

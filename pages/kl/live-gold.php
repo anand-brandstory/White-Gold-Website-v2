@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * This is the Kerala-specific branch page.
+ * This is the Kerala-specific live gold page.
  *
  */
 

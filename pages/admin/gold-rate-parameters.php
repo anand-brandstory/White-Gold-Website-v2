@@ -1,15 +1,15 @@
 <?php
-/*
+/**
  |
  | Gold Rate Parameters page
  |
+ | This is the template for the "Gold Rate Parameters" page on the WordPress backend
+ |
  */
 
-// require_once __ROOT__ . '/inc/utils.php';
-require_once __ROOT__ . '/inc/cms.php';
+require_once __ROOT__ . '/lib/providers/wordpress.php';
 
-use BFS\CMS;
-CMS::setupContext();
+\BFS\CMS\WordPress::setupContext();
 
 if ( ! current_user_can( 'edit_gold_rate_parameters' ) )
 	return;
@@ -23,7 +23,7 @@ $regions = [
 	'kl' => 'Kerala'
 ];
 
-require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/pages/partials/header.php';
 
 ?>
 <style type="text/css">
@@ -47,31 +47,31 @@ require_once __ROOT__ . '/inc/header.php';
 
 			<div class="live-gold-quote columns small-12 large-8 large-offset-4 space-200-bottom">
 				<div class="form-card row fill-light">
-					<form class="form form-base js_<?= $regionCode ?>_rates_form" onsubmit="event.preventDefault()">
+					<form class="form form-base js_rate_parameters_form" data-region-code="<?= $regionCode ?>" onsubmit="event.preventDefault()">
 						<div class="columns small-12">
 							<div class="h3 strong space-50-bottom"><?= $regionName ?></div>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
-								<input type="text" placeholder="Stop loss" class="form-input-field block" id="js_<?= $regionCode ?>_rates_form_input_stop_loss">
+								<input type="text" placeholder="Stop loss" class="form-input-field block js_form_input_stop_loss">
 								<span class="form-label-title medium fill-light cursor-pointer">Stop loss</span>
 							</label>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
-								<input type="text" placeholder="Margin %" class="form-input-field block" id="js_<?= $regionCode ?>_rates_form_input_margin_percentage">
+								<input type="text" placeholder="Margin %" class="form-input-field block js_form_input_margin_percentage">
 								<span class="form-label-title medium fill-light cursor-pointer">Margin %</span>
 							</label>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
-								<input type="text" placeholder="22 Karat %" class="form-input-field block" id="js_<?= $regionCode ?>_rates_form_input_22_karat_percentage">
+								<input type="text" placeholder="22 Karat %" class="form-input-field block js_form_input_22_karat_percentage">
 								<span class="form-label-title medium fill-light cursor-pointer">22 Karat %</span>
 							</label>
 						</div>
 						<div class="columns small-12 space-50-top" <?php if ( ! current_user_can( 'edit_gold_rate_pipeline' ) ) : ?> style="display: none;" <?php endif; ?>>
 							<label class="form-label block">
-								<input type="text" placeholder="Data Pipeline file" class="form-input-field block" id="js_<?= $regionCode ?>_rates_form_input_data_pipeline_filename" _disabled>
+								<input type="text" placeholder="Data Pipeline file" class="form-input-field block js_form_input_data_pipeline_filename">
 								<span class="form-label-title medium fill-light cursor-pointer">Data Pipeline file</span>
 							</label>
 						</div>
@@ -167,170 +167,170 @@ require_once __ROOT__ . '/inc/header.php';
 		window.__BFS = window.__BFS || { };
 		window.__BFS.UI = window.__BFS.UI || { };
 
-
 		/*
 		 * ----- Set up the Gold Rate Parameters forms for the various regions
 		 */
+		let rateParametersForm = new BFSForm( ".js_rate_parameters_form" )
+		window.__BFS.UI[ "rateParametersForm" ] = { bfsFormInstance: rateParametersForm }
 
-		let regions = window.__BFS.CONF.regions
-		Object.keys( regions ).forEach( function ( regionCode ) {
+			// Stop loss
+		rateParametersForm.addField( "stopLoss", ".js_form_input_stop_loss", function ( values ) {
+			var stopLoss = values[ 0 ].trim();
 
-			window.__BFS.UI[ regionCode + "RatesForm" ] = window.__BFS.UI[ regionCode + "RatesForm" ] || { };
-			window.__BFS.UI[ regionCode + "RatesForm" ].bfsFormInstance = new BFSForm( "js_" + regionCode + "_rates_form" );
+			if ( stopLoss === "" )
+				throw new Error( "Please provide a stop loss, else explicitly set it to 0." );
 
-			// Cache some references
-			var rateParametersForm = window.__BFS.UI[ regionCode + "RatesForm" ].bfsFormInstance
-				var domInputStopLoss = document.getElementById( `js_${regionCode}_rates_form_input_stop_loss` );
-				var domInputMarginPercentage = document.getElementById( `js_${regionCode}_rates_form_input_margin_percentage` );
-				var domInput22KaratPercentage = document.getElementById( `js_${regionCode}_rates_form_input_22_karat_percentage` );
-				var domInputDataPipelineFilename = document.getElementById( `js_${regionCode}_rates_form_input_data_pipeline_filename` );
+			stopLoss = parseInt( stopLoss, 10 );
+			if ( Number.isNaN( stopLoss ) )
+				throw new Error( "Please provide a valid stop loss number." );
 
-			rateParametersForm.fetchAndSetExistingData = async function fetchAndSetExistingData () {
-				let pipelineData = await fetchPipelineData( regionCode )
-				if ( ! pipelineData )
-					return
+			return stopLoss;
+		} );
 
-				domInputStopLoss.value = pipelineData.context.stopLoss
-				domInputMarginPercentage.value = pipelineData.context.marginPercentage
-				domInput22KaratPercentage.value = pipelineData.context[ "22KaratPercentage" ]
-				domInputDataPipelineFilename.value = pipelineData.path
-			};
+			// Margin percentage
+		rateParametersForm.addField( "marginPercentage", ".js_form_input_margin_percentage", function ( values ) {
+			var marginPercentage = values[ 0 ].trim();
 
-				// Stop loss
-			rateParametersForm.addField( "stopLoss", domInputStopLoss, function ( values ) {
-				var stopLoss = values[ 0 ].trim();
+			if ( marginPercentage.length === 0 )
+				throw new Error( "Please provide a margin percentage, else explicitly set it to 0." );
 
-				if ( stopLoss === "" )
-					throw new Error( "Please provide a stop loss, else explicitly set it to 0." );
+			marginPercentage = parseFloat( marginPercentage, 10 );
+			if ( Number.isNaN( marginPercentage ) )
+				throw new Error( "Please provide a valid margin percentage." );
+			else if ( marginPercentage < 0 || marginPercentage > 100 )
+				throw new Error( "Please provide a valid margin percentage, within a range of 0 to 100." );
 
-				stopLoss = parseInt( stopLoss, 10 );
-				if ( Number.isNaN( stopLoss ) )
-					throw new Error( "Please provide a valid stop loss number." );
+			return marginPercentage;
+		} )
 
-				return stopLoss;
-			} );
+			// 22 Karat percentage
+		rateParametersForm.addField( "22KaratPercentage", ".js_form_input_22_karat_percentage", function ( values ) {
+			var twentyTwoKaratPercentage = values[ 0 ].trim();
 
-				// Margin percentage
-			rateParametersForm.addField( "marginPercentage", domInputMarginPercentage, function ( values ) {
-				var marginPercentage = values[ 0 ].trim();
+			if ( twentyTwoKaratPercentage.length === 0 )
+				throw new Error( "Please provide a percentage for 22 Karat gold." );
 
-				if ( marginPercentage.length === 0 )
-					throw new Error( "Please provide a margin percentage, else explicitly set it to 0." );
+			twentyTwoKaratPercentage = parseFloat( twentyTwoKaratPercentage, 10 );
+			if ( Number.isNaN( twentyTwoKaratPercentage ) )
+				throw new Error( "Please provide a valid percentage for 22 Karat gold." );
+			else if ( twentyTwoKaratPercentage < 0 || twentyTwoKaratPercentage > 100 )
+				throw new Error( "Please provide a valid percentage for 22 Karat gold, within a range of 0 to 100." );
 
-				marginPercentage = parseFloat( marginPercentage, 10 );
-				if ( Number.isNaN( marginPercentage ) )
-					throw new Error( "Please provide a valid margin percentage." );
-				else if ( marginPercentage < 0 || marginPercentage > 100 )
-					throw new Error( "Please provide a valid margin percentage, within a range of 0 to 100." );
+			return twentyTwoKaratPercentage;
+		} )
 
-				return marginPercentage;
-			} );
+			// Data pipeline filename
+		rateParametersForm.addField( "dataPipelineFilename", ".js_form_input_data_pipeline_filename", function ( values ) {
+			var dataPipelineFilename = values[ 0 ]
+								.trim()
+								.replace( /\/+/g, "/" )
+								.replace( /(^\/|\/$)/g, "" )
 
-				// 22 Karat percentage
-			rateParametersForm.addField( "22KaratPercentage", domInput22KaratPercentage, function ( values ) {
-				var twentyTwoKaratPercentage = values[ 0 ].trim();
-
-				if ( twentyTwoKaratPercentage.length === 0 )
-					throw new Error( "Please provide a percentage for 22 Karat gold." );
-
-				twentyTwoKaratPercentage = parseFloat( twentyTwoKaratPercentage, 10 );
-				if ( Number.isNaN( twentyTwoKaratPercentage ) )
-					throw new Error( "Please provide a valid percentage for 22 Karat gold." );
-				else if ( twentyTwoKaratPercentage < 0 || twentyTwoKaratPercentage > 100 )
-					throw new Error( "Please provide a valid percentage for 22 Karat gold, within a range of 0 to 100." );
-
-				return twentyTwoKaratPercentage;
-			} );
-
-				// Data pipeline filename
-			rateParametersForm.addField( "dataPipelineFilename", domInputDataPipelineFilename, function ( values ) {
-				var dataPipelineFilename = values[ 0 ]
-									.trim()
-									.replace( /\/+/g, "/" )
-									.replace( /(^\/|\/$)/g, "" )
-
-				if ( dataPipelineFilename.length === 0 )
-					throw new Error( "Please provide the name of the data pipeline file, one that exists on the server." );
+			if ( dataPipelineFilename.length === 0 )
+				throw new Error( "Please provide the name of the data pipeline file, one that exists on the server." );
 
 
-				try {
-					new window.URL( "file://" + dataPipelineFilename );
-				}
-				catch ( e ) {
-					throw new Error( "Please provide a valid data pipeline filename, one that exists on the server." );
-				}
-
-				return dataPipelineFilename;
-			} );
-
-
-
-			rateParametersForm.submit = function submit ( data ) {
-
-				let dataPipelineFilename = data.dataPipelineFilename
-				delete data.dataPipelineFilename
-				return setPipelineData( regionCode, dataPipelineFilename, data )
-
+			try {
+				new window.URL( "file://" + dataPipelineFilename );
+			}
+			catch ( e ) {
+				throw new Error( "Please provide a valid data pipeline filename, one that exists on the server." );
 			}
 
+			return dataPipelineFilename;
+		} )
+
+		rateParametersForm.fetchAndSetExistingData = async function fetchAndSetExistingData () {
+			let regionCode = this.getFormNode().data( "regionCode" )
+			let pipelineData = await fetchPipelineData( regionCode )
+			if ( ! pipelineData )
+				return
+
+			this.fields[ "stopLoss" ].set( pipelineData.context.stopLoss )
+			this.fields[ "marginPercentage" ].set( pipelineData.context.marginPercentage )
+			this.fields[ "22KaratPercentage" ].set( pipelineData.context[ "22KaratPercentage" ] )
+			this.fields[ "dataPipelineFilename" ].set( pipelineData.path )
+		}
+
+		rateParametersForm.submit = function submit ( data ) {
+
+			let dataPipelineFilename = data.dataPipelineFilename
+			delete data.dataPipelineFilename
+
+			let $form = this.getFormNode()
+			let regionCode = this.getFormNode().data( "regionCode" )
+
+			return setPipelineData( regionCode, dataPipelineFilename, data )
+
+		}
 
 
-			rateParametersForm.fetchAndSetExistingData()
+		/*
+		 * ----- Form submission event handler
+		 */
+		$( document ).on( "submit", `.js_rate_parameters_form`, function ( event ) {
+			let $targetForm = $( event.target ).closest( "form" )
+			let form = rateParametersForm.bind( $targetForm )
 
 			/*
-			 * ----- Form submission event handler
+			 * ----- Prevent default browser behaviour
 			 */
-			$( document ).on( "submit", `.js_${regionCode}_rates_form`, function ( event ) {
+			event.preventDefault();
 
-				/*
-				 * ----- Prevent default browser behaviour
-				 */
-				event.preventDefault();
+			/*
+			 * ----- Prevent interaction with the form
+			 */
+			form.disable();
 
-				/*
-				 * ----- Prevent interaction with the form
-				 */
-				rateParametersForm.disable();
+			/*
+			 * ----- Provide feedback to the user
+			 */
+			form.giveFeedback( "Sending..." );
 
-				/*
-				 * ----- Provide feedback to the user
-				 */
-				rateParametersForm.giveFeedback( "Sending..." );
+			/*
+			 * ----- Extract data (and report issues if found)
+			 */
+			var data;
+			try {
+				data = form.getData();
+			} catch ( error ) {
+				alert( error.message )
+				console.error( error.message )
+				form.enable();
+				form.setSubmitButtonLabel();
+				form.fields[ error.fieldName ].focus()
+				return;
+			}
 
-				/*
-				 * ----- Extract data (and report issues if found)
-				 */
-				var data;
-				try {
-					data = rateParametersForm.getData();
-				} catch ( error ) {
-					alert( error.message )
-					console.error( error.message )
-					rateParametersForm.enable();
-					rateParametersForm.setSubmitButtonLabel();
-					return;
-				}
+			/*
+			 * ----- Submit data
+			 */
+			form.submit( data )
+				.then( function ( response ) {
+					/*
+					 * ----- Provide further feedback to the user
+					 */
+					 form.giveFeedback( "Saved." );
 
-				/*
-				 * ----- Submit data
-				 */
-				rateParametersForm.submit( data )
-					.then( function ( response ) {
-						/*
-						 * ----- Provide further feedback to the user
-						 */
-						 rateParametersForm.giveFeedback( "Saved." );
+					setTimeout( function () {
+						form.setSubmitButtonLabel();
+						form.enable();
+					}, 1500 )
 
-						setTimeout( function () {
-							rateParametersForm.setSubmitButtonLabel();
-							rateParametersForm.enable();
-						}, 1500 )
+				} )
 
-					} )
+		} )
 
-			} );
 
-		} );
+		/*
+		 |
+		 | Fetch and set the data for each form
+		 |
+		 */
+		rateParametersForm.getFormNode().each( function ( _i, domForm ) {
+			let form = rateParametersForm.bind( domForm )
+			rateParametersForm.fetchAndSetExistingData.call( form )
+		} )
 
 	}() );
 

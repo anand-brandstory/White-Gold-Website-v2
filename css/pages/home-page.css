@@ -487,6 +487,9 @@
 	transition: .5s ease-in-out;
 
 }
+.articles-faqs .faq .answer a {
+	text-decoration: underline;
+}
 .articles-faqs .faq > input:checked ~ .question + .answer {
 	max-height: 500px;
 	margin-bottom: var(--space-75);
@@ -494,6 +497,10 @@
 }
 
 /* -- exception -- */
+.sell-gold-faqs-section .articles-faqs .faq .answer a {
+	color: var(--yellow-2);
+}
+
 .release-gold-faqs-section .articles-faqs .faq {
 	border-bottom: solid 1px var(--neutral-2);
 }
@@ -506,6 +513,9 @@
 .release-gold-faqs-section .articles-faqs .faq .question .toggle .arrow .a2 {
 	background-color: var(--neutral-4);
 	box-shadow: 0 0 0 1px var(--neutral-4);
+}
+.release-gold-faqs-section .articles-faqs .faq .answer a {
+	color: var(--red-4);
 }
 
 /* -- END:  exception -- */

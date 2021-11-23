@@ -796,3 +796,10 @@ select { cursor: pointer; }
 
 /* -- END: Exception -- */
 
+
+/* -- Overrides -- */
+/* If CloudFlare injects a banner, don't show it */
+#cf_alert_div {
+	display: none;
+}
+/* -- END: Overrides -- */

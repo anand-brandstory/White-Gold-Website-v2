@@ -1,19 +1,9 @@
-<?php
-
-use BFS\CMS;
-
-$allCarouselSlides = CMS::getPostsOf( 'card' );
-$carouselSlides = array_filter( $allCarouselSlides, function ( $slide ) {
-	return in_array( REGION, $slide->get( 'regions_applicable' ) );
-} );
-
-?>
 <section class="landing-carousel-section fill-blue-5 position-relative" id="landing-carousel-section" data-section-title="Landing Carousel Section" data-section-slug="landing-carousel-section">
 	<div class="row carousel js_carousel_container" style="--fade-left: linear-gradient( to left, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%); --fade-right: linear-gradient( to right, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%);">
 		<div class="carousel-list js_carousel_content">
 			<?php foreach ( $carouselSlides as $slide ) : ?>
 				<div class="row carousel-list-item js_carousel_item">
-					<div class="carousel-card container space-100-top-bottom" style="background-image: url( '<?= $slide->get( 'bg_image' ) . $ver ?>' ); background-position: <?= $slide->get( 'bg_image_anchor' ) ?>;">
+					<div class="carousel-card container space-100-top-bottom" style="background-image: url( '<?= $slide->get( 'bg_image / sizes / large' ) . $ver ?>' ); background-position: <?= $slide->get( 'bg_image_anchor' ) ?>; <?php if ( $slide->get( 'bg_image_size' ) ) : ?> background-size: <?= $slide->get( 'bg_image_size' ) ?> <?php endif; ?>">
 						<div class="card-content content-block">
 							<?= $slide->get( 'card_text' ) ?>
 						</div>

@@ -54,7 +54,7 @@ require_once __ROOT__ . '/pages/snippet/menu.php';
 <section class="sticky-menu-section">
 	<div class="container">
 		<div class="row">
-			<?php navigationMenuComponent('-sticky', $contactNumbersForRegions); ?>
+			<?php navigationMenuComponent( 'sticky', $contactNumbersForRegions ); ?>
 		</div>
 	</div>
 </section>

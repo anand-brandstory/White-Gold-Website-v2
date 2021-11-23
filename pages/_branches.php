@@ -5,28 +5,16 @@
  *
  */
 
-require_once __ROOT__ . '/inc/utils.php';
-require_once __ROOT__ . '/inc/cms.php';
+require_once __ROOT__ . '/types/branches/branches.php';
+use \BFS\Types\Branches;
 
-use BFS\CMS;
-CMS::setupContext();
+$branchesInRegion = Branches::getByRegion( REGION );
+
+
 
 $postTitle = 'Find a White Gold Branch Near You';
 
-$allBranches = CMS::getPostsOf( 'branch' );
-$branches = array_values( array_filter( $allBranches, function ( $branch ) {
-	return $branch->get( 'region' ) === REGION;
-} ) );
-$branches = array_map( function ( $branch ) {
-	$image = $branch->get( 'branch_image' );
-	if ( $image ) {
-		$imageURL = $image[ 'sizes' ][ 'small' ] ?? $image[ 'sizes' ][ 'medium' ] ?? $image[ 'sizes' ][ 'large' ] ?? $image[ 'url' ];
-		$branch->set( 'branch_image', $imageURL );
-	}
-	return $branch;
-}, $branches );
-
-require_once __ROOT__ . '/inc/header.php';
+require_once __ROOT__ . '/pages/partials/header.php';
 
 ?>
 
@@ -41,12 +29,9 @@ require_once __ROOT__ . '/inc/header.php';
 	window.__BFS.settings = window.__BFS.settings || { };
 	window.__BFS.settings.region = "<?= REGION ?>";
 	window.__BFS.data = window.__BFS.data || { };
-	window.__BFS.data.branches = <?= json_encode( array_map( function ( $branch ) {
+	window.__BFS.data.branchesInRegion = <?= json_encode( array_map( function ( $branch ) {
 		return array_merge( $branch->get( 'acf' ), $branch->get( '__custom' ) );
-	}, $allBranches ) ) ?>;
-	window.__BFS.data.branchesInRegion = window.__BFS.data.branches.filter( function ( branch ) {
-		return branch.region === window.__BFS.settings.region
-	} );
+	}, $branchesInRegion ) ) ?>;
 
 </script>
 <?php /* END: Store data in JavaScript */ ?>
@@ -69,10 +54,10 @@ require_once __ROOT__ . '/inc/header.php';
 				<input id="more-branches" type="checkbox" name="more-branches" class="more-branches visuallyhidden js_more_branches">
 				<div class="branches space-50-bottom">
 					<div class="branch-grid js_branches_container">
-						<?php foreach ( $branches as $branch ) : ?>
+						<?php foreach ( $branchesInRegion as $branch ) : ?>
 							<!-- Branch -->
 							<div class="branch fill-light js_branch">
-								<div class="thumbnail fill-neutral-1 radius-25" <?php if ( $branch->get( 'branch_image' ) ) : ?>style="background-image: url( '<?= $branch->get( 'branch_image' ) ?>' );"<?php endif; ?>></div>
+								<div class="thumbnail fill-neutral-1 radius-25" <?php if ( $branch->get( 'branchImage' ) ) : ?>style="background-image: url( '<?= $branch->get( 'branchImage' ) ?>' );"<?php endif; ?>></div>
 								<div class="title h6 strong"><?= $branch->get( 'branch_name' ) ?></div>
 								<div class="timings p text-neutral-3 space-25-bottom">Open Mon to Sat</div>
 								<div class="distance h4 text-neutral-3 js_distance_from_user hidden"></div>
@@ -108,4 +93,4 @@ require_once __ROOT__ . '/inc/header.php';
 </script>
 
 
-<?php require_once __ROOT__ . '/inc/footer.php'; ?>
+<?php require_once __ROOT__ . '/pages/partials/footer.php'; ?>

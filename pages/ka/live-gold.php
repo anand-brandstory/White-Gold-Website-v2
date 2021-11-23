@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * This is the Karnataka-specific branch page.
+ * This is the Karnataka-specific live gold page.
  *
  */
 

@@ -7,4 +7,4 @@
 
 const REGION = 'test';
 
-require_once __ROOT__ . '/pages/_live-gold-new.php';
+require_once __ROOT__ . '/pages/_live-gold.php';

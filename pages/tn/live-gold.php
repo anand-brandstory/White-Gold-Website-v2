@@ -1,7 +1,7 @@
 <?php
 /*
  *
- * This is the Tamil Nadu-specific branch page.
+ * This is the Tamil Nadu-specific live gold page.
  *
  */
 
