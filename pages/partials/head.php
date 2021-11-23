@@ -21,11 +21,18 @@ $pageURL = Router::getHostnameURL() . '/' . Router::getSanitizedURLSlug();
 // Construct the document's title ( for use in the <title></title> tag )
 	// ( if an explicit one is set, use that )
 if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $documentTitle ) ) {
-	$siteTitle = $siteTitle ?? get_bloginfo( 'name' );
-	$siteTitle = interpolateString( $siteTitle, [
-		'regionName' => $regionCodesWithNames[ REGION ]
-	] );
-	$siteTagline = $siteTagline ?? get_bloginfo( 'description' );
+	$siteTitle = interpolateString(
+		$siteTitle ?? get_bloginfo( 'name' ),
+		[
+			'regionName' => $regionCodesWithNames[ REGION ]
+		]
+	);
+	$siteTagline = interpolateString(
+		$siteTagline ?? get_bloginfo( 'description' ),
+		[
+			'regionName' => $regionCodesWithNames[ REGION ]
+		]
+	);
 	$sectionTitle = $sectionTitle ?? '';
 	if ( Router::$urlSlug == '' )	// i.e. home page
 		$postTitle = $postTitle ?? '';
