@@ -1,70 +1,80 @@
 
+/**
+ |
+ | Live Gold Form
+ |
+ |
+ */
 $( function () {
 
-
-
-
+// Imports
+let BFSForm = window.__BFS.exports.BFSForm
 
 // Set up the namespace
 window.__BFS = window.__BFS || { };
 window.__BFS.UI = window.__BFS.UI || { };
 
 
-/*
- * ----- Set up the Live Gold Form
- */
-window.__BFS.UI.liveGoldForm = window.__BFS.UI.liveGoldForm || { };
-window.__BFS.UI.liveGoldForm.bfsFormInstance = new BFSForm( ".js_live_gold_form" );
 
-var liveGoldForm = window.__BFS.UI.liveGoldForm.bfsFormInstance
 
+
+let liveGoldForm = new BFSForm( ".js_live_gold_form" );
+
+// Set up the form's input fields, data validators and data assemblers
 	// Phone number
 liveGoldForm.addField( "phoneNumber", [ ".js_form_input_phone_country_code", ".js_form_input_phone_number" ], function ( values ) {
-	var phoneCountryCode = values[ 0 ]
-	var phoneNumberLocal = values[ 1 ]
-
+	let [ phoneCountryCode, phoneNumberLocal ] = values
 	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
 
 
 
 liveGoldForm.submit = async function submit ( data ) {
+	let person = Cupid.getCurrentPerson( data.phoneNumber )
+	person.setSourcePoint( "Live Gold Form" )
 
-	var __ = window.__CUPID;
+	Cupid.logPersonIn( person, { _trackSlug: "live-gold-form" } )
 
+	let interest = "Live Gold Rate"
+	if ( ! person.hasInterest( interest ) ) {
+		person.setInterests( interest )
+		Cupid.savePerson( person )
+		PersonLogger.registerInterest( person )
+	}
+
+	// Start a fresh session
 	const sessionDurationLimit = window.__BFS.CONF.goldRates.sessionDurationLimit
-	if ( await __.user.sessionHasExpiredOrHasNotBegun( "liveGoldRate", sessionDurationLimit ) )
-		await __.user.startSession( "liveGoldRate" )
+	if ( person.sessionHasExpiredOrNotEvenBegun( "liveGoldRate", sessionDurationLimit ) )
+		person.startSession( "liveGoldRate" )
 
-	return Promise.resolve();
-
+	return Promise.resolve()
 }
 
 
 
-/*
- * ----- Form submission event handler
+/**
+ | Form submission handler
+ |
  */
 $( document ).on( "submit", ".js_live_gold_form", function ( event ) {
-	let liveGoldForm = window.__BFS.UI.liveGoldForm.bfsFormInstance
 
 	/*
-	 * ----- Prevent default browser behaviour
+	 | Prevent default browser behaviour
 	 */
 	event.preventDefault();
 
 	/*
-	 * ----- Prevent interaction with the form
+	 | Prevent interaction with the form
 	 */
 	liveGoldForm.disable();
 
 	/*
-	 * ----- Provide feedback to the user
+	 | Provide feedback to the user
 	 */
 	liveGoldForm.giveFeedback( "Sending..." );
 
 	/*
-	 * ----- Extract data (and report issues if found)
+	 | Extract data (and report issues if found)
 	 */
 	var data;
 	try {
@@ -73,14 +83,13 @@ $( document ).on( "submit", ".js_live_gold_form", function ( event ) {
 		alert( error.message )
 		console.error( error.message )
 		liveGoldForm.enable();
-		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
-		liveGoldForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
+		liveGoldForm.fields[ error.fieldName ].focus()
 		liveGoldForm.setSubmitButtonLabel();
 		return;
 	}
 
 	/*
-	 * ----- Submit data
+	 | Submit data
 	 */
 	liveGoldForm.submit( data )
 		.then( window.__BFS.runUserFlow )

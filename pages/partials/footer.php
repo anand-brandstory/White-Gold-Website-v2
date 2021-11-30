@@ -106,21 +106,22 @@ $citiesInRegions = [
 <script type="text/javascript" src="/plugins/base64/base64.js__v3.7.2.min.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/plugins/js-cookie/js-cookie__v3.0.1.min.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/forms.js<?= $ver ?>"></script>
 <?php if ( ! BFS_ENV_PRODUCTION ) : ?>
 	<script type="text/javascript" src="/js/modules/disclaimer.js<?= $ver ?>"></script>
 <?php endif; ?>
 <script type="text/javascript" src="/js/modules/navigation.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/cupid/user.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/whatsapp-form.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/cupid.js<?= $ver ?>"></script>
+<!-- <script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script> -->
+<!-- <script type="text/javascript" src="/js/modules/cupid/user.js<?= $ver ?>"></script> -->
+<script type="text/javascript" src="/js/pages/whatsapp-form.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/region-selector.js<?= $ver ?>"></script>
 <!-- <script type="text/javascript" src="/js/modules/device-charge.js<?= $ver ?>"></script> -->
 <script type="text/javascript" src="/js/modules/video_embed.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/modal_box.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/carousel.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/phone-country-code.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/cupid/extensions.js<?= $ver ?>"></script>
-<script type="text/javascript" src="/js/modules/forms.js<?= $ver ?>"></script>
+<!-- <script type="text/javascript" src="/js/modules/cupid/extensions.js<?= $ver ?>"></script> -->
 <script type="text/javascript" src="/js/modules/form-utils.js<?= $ver ?>"></script>
 <?php if ( substr( Router::$urlSlug, 0, 4 ) === 'faqs' or ( WordPress::$isEnabled and WordPress::getPostType() === 'faq' ) ) : ?>
 	<script type="text/javascript" src="/js/modules/search.js<?= $ver ?>"></script>

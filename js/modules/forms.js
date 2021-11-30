@@ -1,4 +1,18 @@
 
+$( function () {
+
+
+
+// Exports
+window.__BFS = window.__BFS || { }
+window.__BFS.exports = window.__BFS.exports || { }
+window.__BFS.exports.BFSForm = BFSForm
+
+
+
+
+
+
 /*
  |
  | the Form class
@@ -72,16 +86,16 @@ BFSForm.prototype.enable = function enable ( fn ) {
 }
 BFSForm.prototype.giveFeedback = function giveFeedback ( message ) {
 	var $formNode = this.getFormNode()
-	var $submitButton = $formNode.find( ".js_submit_label" );
+	var $submitButton = $formNode.find( "[ type = 'submit' ]" )
 	// Backup the initial label of the button
 	if ( $submitButton.data( "initial-label" ) === void 0 /* i.e. `undefined` */ )
-		$submitButton.data( "initial-label", $submitButton.text() );
+		$submitButton.data( "initial-label", $submitButton.text() )
 
-	$submitButton.text( message );
+	$submitButton.text( message )
 }
 BFSForm.prototype.setSubmitButtonLabel = function setSubmitButtonLabel ( label ) {
 	var $formNode = this.getFormNode()
-	var $submitButton = $formNode.find( ".js_submit_label" );
+	var $submitButton = $formNode.find( "[ type = 'submit' ]" )
 	var label = label || $submitButton.data( "initial-label" );
 	$submitButton.text( label );
 }
@@ -90,15 +104,23 @@ BFSForm.prototype.getFieldValue = function getFieldValue ( domField ) {
 	var elementTag = domField.nodeName.toLowerCase();
 	var value;
 
-	if ( elementTag === "input" ) {
-		var inputType = domField.getAttribute( "type" );
-		if ( inputType === "radio" )
-			value = domField.checked ? domField.value : null;
-		else
+	switch ( elementTag ) {
+		case "input": {
+			let inputType = domField.getAttribute( "type" );
+			if ( inputType === "radio" )
+				value = domField.checked ? domField.value : null;
+			else
+				value = domField.value;
+			break;
+		}
+		case "select": {
 			value = domField.value;
-	}
-	else if ( elementTag === "textarea" ) {
-		value = domField.value;
+			break;
+		}
+		case "textarea": {
+			value = domField.value;
+			break;
+		}
 	}
 	return value;
 }
@@ -118,6 +140,14 @@ BFSForm.prototype.addField = function addField ( name, selectors, fn ) {
 	let field = Object.create( {
 		name,
 		selectors,
+		get () {
+			let domFields = this.selectors.map(
+				s => this.bfsForm.getFormNode().find( s ).get( 0 )
+			)
+			let valueParts = domFields.map( this.bfsForm.getFieldValue )
+			let value = this.validateAndAssemble( valueParts )
+			return value
+		},
 		set ( valueParts ) {
 			return this.bfsForm.setFieldValue( this.name, valueParts )
 		},
@@ -156,14 +186,16 @@ BFSForm.prototype.getData = function getData () {
 	var $formNode = this.getFormNode()
 
 	this.data = { };
-	var _key;
-	for ( _key in this.fields ) {
-		var field = this.fields[ _key ];
-		var domFields = field.selectors.map( s => $formNode.find( s ).get( 0 ) )
-		var valueParts = domFields.map( this.getFieldValue );
-		var value = field.validateAndAssemble( valueParts );
-		this.data[ _key ] = value;
-	}
+	// var _key;
+	// for ( _key in this.fields ) {
+		// let field = this.fields[ _key ]
+		// let domFields = field.selectors.map( s => $formNode.find( s ).get( 0 ) )
+		// let valueParts = domFields.map( this.getFieldValue )
+		// let value = field.validateAndAssemble( valueParts )
+		// this.data[ _key ] = value;
+	// }
+	for ( let _key in this.fields )
+		this.data[ _key ] = this.fields[ _key ].get()
 
 	return this.data;
 }
@@ -171,10 +203,16 @@ BFSForm.prototype.getData = function getData () {
 //  hence when a field is to be "focused" on, the index of the DOM node needs to be provided
 BFSForm.prototype.focus = function focus ( name, domNodeIndex ) {
 	var $formNode = this.getFormNode()
-	if ( typeof domNodeIndex !== "number" || Number.isNaN( domNodeIndex ) )
-		domNodeIndex = 0
 	var field = this.fields[ name ]
+	if ( typeof domNodeIndex !== "number" || Number.isNaN( domNodeIndex ) )
+		domNodeIndex = field.defaultDOMNodeFocusIndex || 0
 	var domFields = field.selectors.map( s => $formNode.find( s ).get( 0 ) )
 	if ( domFields[ domNodeIndex ] )
 		domFields[ domNodeIndex ].focus()
 }
+
+
+
+
+
+} )

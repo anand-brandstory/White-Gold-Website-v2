@@ -25,14 +25,14 @@
 
 		const $liveGoldSection = $( ".live-gold-section" )
 
-		let user = __CUPID.Person.isLoggedIn()
-		if ( ! user ) {
+		if ( !Cupid.personIsLoggedIn() ) {
 			$liveGoldSection.addClass( "otp-verify-message" )
 			throw new Error()
 		}
 
 		const sessionDurationLimit = window.__BFS.CONF.goldRates.sessionDurationLimit
-		if ( await user.sessionHasExpiredOrHasNotBegun( "liveGoldRate", sessionDurationLimit ) ) {
+		let person = Cupid.getCurrentPerson()
+		if ( person.sessionHasExpiredOrNotEvenBegun( "liveGoldRate", sessionDurationLimit ) ) {
 			$liveGoldSection.addClass( "otp-verify-message" )
 			throw new Error()
 		}
@@ -68,13 +68,13 @@
 			"number-blocked-message"
 		].join( " " ) )
 
-		let user = __CUPID.user
+		let user = Cupid.getCurrentPerson()
 
 		const sessionDurationLimit = window.__BFS.CONF.goldRates.sessionDurationLimit
-		let userSession = await user.getSession( "liveGoldRate" )
+		let userSession = user.getSession( "liveGoldRate" )
 		if ( ! ( userSession.lastStartedAt instanceof Date ) )
-			userSession = await user.startSession( "liveGoldRate" )
-		else if ( await user.sessionHasExpiredOrHasNotBegun( "liveGoldRate", sessionDurationLimit ) )
+			userSession = user.startSession( "liveGoldRate" )
+		else if ( user.sessionHasExpiredOrNotEvenBegun( "liveGoldRate", sessionDurationLimit ) )
 			return $liveGoldSection.addClass( "end-session-message" )
 
 

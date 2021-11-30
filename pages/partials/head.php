@@ -6,7 +6,7 @@ use BFS\Router;
 global $post;	// WordPress' global post object
 
 if ( ! defined( 'REGION' ) )
-	define( 'REGION', 'ka' );
+	define( 'REGION', DEFAULT_REGION );
 
 $regionCodesWithNames = [
 	'ka' => 'Karnataka',
@@ -199,12 +199,12 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 			client: "<?= CUPID_CLIENT ?>",
 			clientSlug: "<?= CUPID_CLIENT_SLUG ?>",
 			sourceMedium: "<?= CUPID_SOURCE_MEDIUM ?>",
-			cupidApiEndpoint: "<?= CUPID_API_ENDPOINT_OLD ?>",
-			authCookieName: "<?= CUPID_AUTH_COOKIE_NAME ?>"
+			cupidApiEndpoint: "<?= CUPID_API_ENDPOINT ?>",
+			authCookieName: "<?= CUPID_AUTH_COOKIE_NAME ?>",
+			forceLogoutIfLoggedInBefore: "<?= CUPID_FORCE_LOGOUT_IF_LOGGED_IN_BEFORE ?>"
 		},
 		goldRates: {
 			apiEndpoint: "<?= GOLD_RATE_API_ENDPOINT ?>",
-			trialDuration: <?= GOLD_RATE_TRIAL_DURATION ?>,
 			sessionDurationLimit: <?= GOLD_RATE_SESSION_DURATION_LIMIT ?>
 		}
 	};

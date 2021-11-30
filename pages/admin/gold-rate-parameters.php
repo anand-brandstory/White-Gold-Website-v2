@@ -16,12 +16,10 @@ if ( ! current_user_can( 'edit_gold_rate_parameters' ) )
 
 $postTitle = 'Gold Rate Parameters';
 
-$regions = [
-	'test' => 'Test',
-	'ka' => 'Karnataka',
-	'tn' => 'Tamil Nadu',
-	'kl' => 'Kerala'
-];
+$regions = array_merge(
+	[ 'test' => 'Test' ],
+	REGIONS
+);
 
 require_once __ROOT__ . '/pages/partials/header.php';
 

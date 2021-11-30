@@ -76,17 +76,17 @@ function getAPIResponse ( $endpoint, $method, $data = [ ] ) {
 function submitPerson ( $data ) {
 
 	$endpoint = 'https://docs.google.com/forms/d/e/'
-			. '1FAIpQLSd0PjANXmJ30OkuD0NGHM488C_csA7sJXcBfCoLgg_w0PFqhg/formResponse';
+			. '1FAIpQLSf56jyprBuDGep_pcEpSmEzIU8CbbeCEcbKdScZMDYAqZFx1A/formResponse';
 	$requestBody = [
-		'entry.1598701661' => $data[ 'when' ],
-		'entry.1558794406' => $data[ 'id' ] ?? '',
-		'entry.328661206' => $data[ 'phoneNumber' ] ?? '',
-		'entry.1212174579' => $data[ 'name' ] ?? '',
-		'entry.734162030' => $data[ 'emailAddress' ] ?? '',
-		'entry.2063310127' => $data[ 'sourceMedium' ] ?? '',
-		'entry.378971646' => $data[ 'sourcePoint' ] ?? '',
-		'entry.425002556' => $data[ 'interests' ] ?? '',
-		'entry.1830663146' => $data[ 'callRecording' ] ?? ''
+		'entry.1557415165' => $data[ 'when' ],
+		'entry.927794621' => $data[ 'id' ] ?? '',
+		'entry.542325372' => $data[ 'phoneNumber' ] ?? '',
+		'entry.14594668' => $data[ 'name' ] ?? '',
+		'entry.778226319' => $data[ 'emailAddress' ] ?? '',
+		'entry.1082231826' => $data[ 'sourceMedium' ] ?? '',
+		'entry.488502914' => $data[ 'sourcePoint' ] ?? '',
+		'entry.2033645995' => $data[ 'interests' ] ?? '',
+		'entry.1587856711' => $data[ 'callRecording' ] ?? ''
 	];
 
 	$response = getAPIResponse( $endpoint, 'POST', $requestBody );
@@ -100,21 +100,21 @@ function submitPerson ( $data ) {
 function submitPersonActivity ( $activity, $data ) {
 
 	$endpoint = 'https://docs.google.com/forms/d/e/'
-			. '1FAIpQLSdKATN9DD7tVtyZC-SKWSXSEdx8yrULbGMwklvETO0skLrHUw/formResponse';
+			. '1FAIpQLScXcMwlzLzUB8O1Fj0UVNYQS8kZ2kBo58r22IcyEuO3WvAthQ/formResponse';
 	$requestBody = [
-		'entry.268964798' => $data[ 'when' ],
+		'entry.555951609' => $data[ 'when' ],
 		'entry.1096718998' => $activity,
-		'entry.470084288' => $data[ 'id' ] ?? '',
-		'entry.664435746' => $data[ 'phoneNumber' ],
-		'entry.1462179210' => $data[ 'name' ] ?? '',
-		'entry.2035730286' => $data[ 'emailAddress' ] ?? '',
-		'entry.541206315' => $data[ 'verified' ] ?? '',
-		'entry.1777163392' => $data[ 'sourceMedium' ] ?? '',
-		'entry.688759612' => $data[ 'sourcePoint' ] ?? '',
-		'entry.1815278795' => $data[ 'interests' ] ?? '',
-		'entry.892238439' => $data[ 'extendedAttributes' ] ?? '',
-		'entry.413347176' => $data[ 'duration' ] ?? '',
-		'entry.1295071222' => $data[ 'callRecording' ] ?? ''
+		'entry.1252434475' => $data[ 'id' ] ?? '',
+		'entry.1860116392' => $data[ 'phoneNumber' ],
+		'entry.1330330535' => $data[ 'name' ] ?? '',
+		'entry.606650414' => $data[ 'emailAddress' ] ?? '',
+		'entry.1271044735' => $data[ 'verified' ] ?? '',
+		'entry.780318046' => $data[ 'sourceMedium' ] ?? '',
+		'entry.1308748215' => $data[ 'sourcePoint' ] ?? '',
+		'entry.2030254969' => $data[ 'interests' ] ?? '',
+		'entry.1049692193' => $data[ 'extendedAttributes' ] ?? '',
+		// 'entry.614407814' => $data[ 'duration' ] ?? '',
+		// 'entry.1785515953' => $data[ 'callRecording' ] ?? ''
 	];
 
 	$response = getAPIResponse( $endpoint, 'POST', $requestBody );

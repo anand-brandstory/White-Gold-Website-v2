@@ -111,18 +111,19 @@ $( ".js_main_menu" ).on( "click", ".js_primary_toggle_menu", function ( event ) 
 } )
 // Likewise, on opening the _WhatsApp_ menu, ensure that the _primary_ menu is closed (if not already)
 $( ".js_main_menu" ).on( "click", ".js_wa_toggle_menu", function ( event ) {
-	if ( ! window.__CUPID.Person.isLoggedIn() ) {
+	if ( !Cupid.personIsLoggedIn() ) {
 		var $menu = $( event.target ).closest( ".js_main_menu" )
 		closePrimarySubMenu( $menu )
 		return;
 	}
 
 	// Prevent the WhatsApp sub-menu from opening
-	event.preventDefault();
-	// Navigate to WhatsApp
-	let phoneNumber = window.__BFS.UI.whatsappForm.bfsFormInstance.getFormNode().data( "number" ).replace( /\s+/g, "" )
-	var url = `https://wa.me/${ phoneNumber }`
-	window.open( url, "_blank" )
+	event.preventDefault()
+
+	// Directly navigate to WhatsApp
+	let clientPhoneNumber = window.__BFS.UI.whatsappForm.getFormNode()
+						.data( "number" ).replace( /\s+/g, "" )
+	navigateToWhatsAppChat( clientPhoneNumber )
 } )
 
 function closePrimarySubMenu ( $menuContainer ) {

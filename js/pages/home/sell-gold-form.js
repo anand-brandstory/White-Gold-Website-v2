@@ -1,39 +1,34 @@
 
+/**
+ |
+ | Sell Gold Form
+ |
+ |
+ */
 $( function () {
 
-
-
-
+// Imports
+let BFSForm = window.__BFS.exports.BFSForm
 
 // Set up the namespace
 window.__BFS = window.__BFS || { };
 window.__BFS.UI = window.__BFS.UI || { };
 
 
-/*
- * ----- Set up the Sell Gold Form
- */
-window.__BFS.UI.sellGoldForm = window.__BFS.UI.sellGoldForm || { };
-window.__BFS.UI.sellGoldForm.bfsFormInstance = new BFSForm( ".js_sell_gold_form" );
 
-var sellGoldForm = window.__BFS.UI.sellGoldForm.bfsFormInstance
+
+
+let sellGoldForm = new BFSForm( ".js_sell_gold_form" );
 
 // Set up the form's input fields, data validators and data assemblers
 	// Name
-sellGoldForm.addField( "name", "#js_sell_gold_form_input_name", function ( values ) {
-	var name = values[ 0 ].trim();
-
-	if ( name === "" )
-		throw new Error( "Please provide your name." );
-
-	if ( name.match( /\d/ ) )
-		throw new Error( "Please provide a valid name." );
-
-	return name;
+sellGoldForm.addField( "name", ".js_form_input_name", function ( values ) {
+	let name = values[ 0 ]
+	return BFSForm.validators.name( name )
 } );
 
 	// Quantity
-sellGoldForm.addField( "quantity", "#js_sell_gold_form_input_quantity", function ( values ) {
+sellGoldForm.addField( "quantity", ".js_form_input_quantity", function ( values ) {
 	var quantity = values[ 0 ].trim();
 
 	if ( quantity === "" )
@@ -47,57 +42,54 @@ sellGoldForm.addField( "quantity", "#js_sell_gold_form_input_quantity", function
 } );
 
 	// Phone number
-sellGoldForm.addField( "phoneNumber", [ "#js_sell_gold_form_input_phone_country_code", "#js_sell_gold_form_input_phone" ], function ( values ) {
-	var phoneCountryCode = values[ 0 ]
-	var phoneNumberLocal = values[ 1 ]
-
+sellGoldForm.addField( "phoneNumber", [ ".js_phone_country_code", ".js_form_input_phonenumber" ], function ( values ) {
+	let [ phoneCountryCode, phoneNumberLocal ] = values
 	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
+// When programmatically focusing on this input field, which of the (two, in this case) input elements to focus on?
+sellGoldForm.fields[ "phoneNumber" ].defaultDOMNodeFocusIndex = 1
 
 
 
 sellGoldForm.submit = function submit ( data ) {
+	let person = Cupid.getCurrentPerson( data.phoneNumber )
+	person.setName( data.name )
+	person.setSourcePoint( "Sell Gold" )
 
-	var __ = window.__CUPID;
+	Cupid.logPersonIn( person, { _trackSlug: "sell-gold-form" } )
 
-	var extendedAttributes = { };
-	if ( data.quantity )
-		extendedAttributes.goldQuantityToSellInGrams = data.quantity;
+	person.setExtendedAttributes( { goldQuantityToSellInGrams: data.quantity } )
+	Cupid.savePerson( person )
+	PersonLogger.submitData( person )
 
-	__.user.name = data.name;
-	__.user.updateProfile();
-
-	__.user.appendAdditionalData( extendedAttributes );
-	__.user.submitData( extendedAttributes );
-
-	return Promise.resolve();
-
+	return Promise.resolve( person )
 }
 
 
 
-/*
- * ----- Contact Form submission handler
+/**
+ | Form submission handler
+ |
  */
 $( document ).on( "submit", ".js_sell_gold_form", function ( event ) {
 
 	/*
-	 * ----- Prevent default browser behaviour
+	 | Prevent default browser behaviour
 	 */
 	event.preventDefault();
 
 	/*
-	 * ----- Prevent interaction with the form
+	 | Prevent interaction with the form
 	 */
 	sellGoldForm.disable();
 
 	/*
-	 * ----- Provide feedback to the user
+	 | Provide feedback to the user
 	 */
 	sellGoldForm.giveFeedback( "Sending..." );
 
 	/*
-	 * ----- Extract data (and report issues if found)
+	 | Extract data (and report issues if found)
 	 */
 	var data;
 	try {
@@ -106,25 +98,32 @@ $( document ).on( "submit", ".js_sell_gold_form", function ( event ) {
 		alert( error.message )
 		console.error( error.message )
 		sellGoldForm.enable();
+		sellGoldForm.fields[ error.fieldName ].focus()
 		sellGoldForm.setSubmitButtonLabel();
-		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
-		sellGoldForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
 		return;
 	}
 
 	/*
-	 * ----- Submit data
+	 | Submit data
 	 */
 	sellGoldForm.submit( data )
 		.then( function ( response ) {
-			/*
-			 * ----- Provide further feedback to the user
-			 */
-			sellGoldForm.getFormNode().parent().addClass( "show-thankyou" )
-
+			closeFormAndGiveFeedback()
 		} )
 
 } );
+
+
+
+
+/**
+ |
+ | Helper functions
+ |
+ */
+function closeFormAndGiveFeedback () {
+	sellGoldForm.getFormNode().parent().addClass( "show-thankyou" )
+}
 
 
 

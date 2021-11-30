@@ -1,25 +1,28 @@
 
+/**
+ |
+ | Home Visit Form
+ |
+ |
+ */
 $( function () {
 
-
-
-
+// Imports
+let BFSForm = window.__BFS.exports.BFSForm
 
 // Set up the namespace
 window.__BFS = window.__BFS || { };
 window.__BFS.UI = window.__BFS.UI || { };
 
 
-/*
- * ----- Set up the Sell Gold Form
- */
-window.__BFS.UI.homeVisitForm = window.__BFS.UI.homeVisitForm || { };
-window.__BFS.UI.homeVisitForm.bfsFormInstance = new BFSForm( ".js_home_visit_form" );
 
-var homeVisitForm = window.__BFS.UI.homeVisitForm.bfsFormInstance
 
+
+let homeVisitForm = new BFSForm( ".js_home_visit_form" );
+
+// Set up the form's input fields, data validators and data assemblers
 	// Pincode
-homeVisitForm.addField( "pincode", "#js_home_visit_form_input_pincode", function ( values ) {
+homeVisitForm.addField( "pincode", ".js_form_input_pincode", function ( values ) {
 	var pincode = values[ 0 ].trim();
 
 	if ( pincode === "" )
@@ -35,57 +38,53 @@ homeVisitForm.addField( "pincode", "#js_home_visit_form_input_pincode", function
 } );
 
 	// Phone number
-homeVisitForm.addField( "phoneNumber", [ "#js_home_visit_form_input_phone_country_code", "#js_home_visit_form_input_phone" ], function ( values ) {
-	var phoneCountryCode = values[ 0 ]
-	var phoneNumberLocal = values[ 1 ]
-
+homeVisitForm.addField( "phoneNumber", [ ".js_phone_country_code", ".js_form_input_phonenumber" ], function ( values ) {
+	let [ phoneCountryCode, phoneNumberLocal ] = values
 	return BFSForm.validators.phoneNumber( phoneCountryCode, phoneNumberLocal )
 } );
+// When programmatically focusing on this input field, which of the (two, in this case) input elements to focus on?
+homeVisitForm.fields[ "phoneNumber" ].defaultDOMNodeFocusIndex = 1
 
 
 
 homeVisitForm.submit = function submit ( data ) {
+	let person = Cupid.getCurrentPerson( data.phoneNumber )
+	person.setSourcePoint( "Home Visit Form" )
 
-	var __ = window.__CUPID;
+	Cupid.logPersonIn( person, { _trackSlug: "home-visit-form" } )
 
-	var extendedAttributes = { };
-	if ( data.pincode )
-		extendedAttributes.pincode = data.pincode;
+	person.setExtendedAttributes( { pincode: data.pincode } )
+	Cupid.savePerson( person )
+	PersonLogger.submitData( person )
 
-
-	// __.user.updateProfile();
-	__.user.appendAdditionalData( extendedAttributes );
-	__.user.submitData( extendedAttributes );
-
-	return Promise.resolve();
-
+	return Promise.resolve( person )
 }
 
 
 
-/*
- * ----- Form submission event handler
+/**
+ | Form submission handler
+ |
  */
 $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
-	let homeVisitForm = window.__BFS.UI.homeVisitForm.bfsFormInstance
 
 	/*
-	 * ----- Prevent default browser behaviour
+	 | Prevent default browser behaviour
 	 */
 	event.preventDefault();
 
 	/*
-	 * ----- Prevent interaction with the form
+	 | Prevent interaction with the form
 	 */
 	homeVisitForm.disable();
 
 	/*
-	 * ----- Provide feedback to the user
+	 | Provide feedback to the user
 	 */
 	homeVisitForm.giveFeedback( "Sending..." );
 
 	/*
-	 * ----- Extract data (and report issues if found)
+	 | Extract data (and report issues if found)
 	 */
 	var data;
 	try {
@@ -94,25 +93,32 @@ $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
 		alert( error.message )
 		console.error( error.message )
 		homeVisitForm.enable();
-		let domNodeFocusIndex = error.fieldName === "phoneNumber" ? 1 : 0
-		homeVisitForm.fields[ error.fieldName ].focus( domNodeFocusIndex )
+		homeVisitForm.fields[ error.fieldName ].focus()
 		homeVisitForm.setSubmitButtonLabel();
 		return;
 	}
 
 	/*
-	 * ----- Submit data
+	 | Submit data
 	 */
 	homeVisitForm.submit( data )
 		.then( function ( response ) {
-			/*
-			 * ----- Provide further feedback to the user
-			 */
-			homeVisitForm.getFormNode().parent().addClass( "show-thankyou" )
-
+			closeFormAndGiveFeedback()
 		} )
 
 } );
+
+
+
+
+/**
+ |
+ | Helper functions
+ |
+ */
+function closeFormAndGiveFeedback () {
+	homeVisitForm.getFormNode().parent().addClass( "show-thankyou" )
+}
 
 
 
