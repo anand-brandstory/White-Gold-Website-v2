@@ -10,6 +10,13 @@ namespace CFD;
 
 class DateTime {
 
+	public static function getTimestamp__SpreadsheetCompatible ( $dateTimeInstance ) {
+		$IST_Date = empty( $dateTimeInstance ) ? self::getCurrentTimeInIST() : $dateTimeInstance;
+		$dateValue = self::getDateValue( $IST_Date );
+		$timeValue = self::getTimeValue( $IST_Date );
+		$spreadsheetDate = $dateValue + $timeValue;
+		return $spreadsheetDate;
+	}
 	public static function getCurrentTimestamp__SpreadsheetCompatible () {
 		$IST_Date = self::getCurrentTimeInIST();
 		$dateValue = self::getDateValue( $IST_Date );
@@ -17,6 +24,7 @@ class DateTime {
 		$spreadsheetDate = $dateValue + $timeValue;
 		return $spreadsheetDate;
 	}
+
 	// this one is no longer used
 	public static function getSpreadsheetDateFromISO8601 ( $iso8601 ) {
 		$date = self::parseISO8601( $iso8601 );
