@@ -33,7 +33,7 @@ liveGoldForm.submit = async function submit ( data ) {
 	let person = Cupid.getCurrentPerson( data.phoneNumber )
 	person.setSourcePoint( "Live Gold Form" )
 
-	Cupid.logPersonIn( person, { _trackSlug: "live-gold-form" } )
+	Cupid.logPersonIn( person, { trackSlug: "live-gold-form" } )
 
 	let interest = "Live Gold Rate"
 	if ( ! person.hasInterest( interest ) ) {

@@ -56,7 +56,7 @@ sellGoldForm.submit = function submit ( data ) {
 	person.setName( data.name )
 	person.setSourcePoint( "Sell Gold" )
 
-	Cupid.logPersonIn( person, { _trackSlug: "sell-gold-form" } )
+	Cupid.logPersonIn( person, { trackSlug: "sell-gold-form" } )
 
 	person.setExtendedAttributes( { goldQuantityToSellInGrams: data.quantity } )
 	Cupid.savePerson( person )

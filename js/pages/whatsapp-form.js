@@ -44,7 +44,7 @@ whatsappForm.submit = function submit ( data ) {
 	let person = Cupid.getCurrentPerson( data.phoneNumber )
 	person.setSourcePoint( "WhatsApp Form" )
 
-	Cupid.logPersonIn( person, { _trackSlug: "whatsapp-form" } )
+	Cupid.logPersonIn( person, { trackSlug: "whatsapp-form" } )
 
 	person.setExtendedAttributes( { whatsappMessage: data.message } )
 	Cupid.savePerson( person )

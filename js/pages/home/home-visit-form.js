@@ -51,7 +51,7 @@ homeVisitForm.submit = function submit ( data ) {
 	let person = Cupid.getCurrentPerson( data.phoneNumber )
 	person.setSourcePoint( "Home Visit Form" )
 
-	Cupid.logPersonIn( person, { _trackSlug: "home-visit-form" } )
+	Cupid.logPersonIn( person, { trackSlug: "home-visit-form" } )
 
 	person.setExtendedAttributes( { pincode: data.pincode } )
 	Cupid.savePerson( person )
