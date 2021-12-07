@@ -44,6 +44,22 @@ class DateTime {
 				new \DateTimeZone( 'UTC' )
 			);
 		}
+		/*
+		 |
+		 | Return the date in a format
+		 |  that is exactly what is returned by
+		 |  `( new Date ).toISOString()` in JavaScript
+		 |
+		 */
+		public static function formatAsISO8601 ( $dateTimeInstace ) {
+			return (
+				substr( $dateTimeInstace->format( \DateTime::ATOM ), 0, -6 )
+				. '.'
+				. $dateTimeInstace->format( 'v' )
+				. 'Z'
+			);
+		}
+
 		private static function toIST ( $date ) {
 			$date->setTimeZone( new \DateTimeZone( 'Asia/Kolkata' ) );
 			return $date;
