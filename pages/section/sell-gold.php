@@ -39,30 +39,10 @@
 						</div>
 					</div>
 					<!-- CARD: 2 -->
-					<div class="card sgs2 columns small-12 fill-blue-4">
-						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
-						<label for="sgs2" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">2</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Earn a Bonus</div>
-							<div class="toggle columns small-1">
-								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
-							</div>
-						</label>
-						<div class="card-content">
-							<div class="row space-50-left-right">
-								<div class="columns small-7 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
-									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
-									<div class="p space-200-top space-100-right">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
-								</div>
-							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6237.png<?php echo $ver ?>"></div>
-						</div>
-					</div>
-					<!-- CARD: 3 -->
 					<div class="card sgs3 columns small-12 fill-blue-4">
 						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs3" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">3</span></div>
+							<div class="columns small-1"><span class="index h6 medium">2</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID Proof</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -94,17 +74,18 @@
 							<div class="bg-img"><img class="block" src="/media/cutout/char-6269.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
+
 					<div class="step-break columns small-12">
 						<div class="row text-blue-3 space-75-left-right space-75-top">
 							<div class="label strong text-uppercase columns small-6">At our branch</div>
 							<div class="p strong columns small-6 text-right">&middot;&ensp;&middot;&ensp;&middot;</div>
 						</div>
 					</div>
-					<!-- CARD: 4 -->
+					<!-- CARD: 3 -->
 					<div class="card sgs4 columns small-12 fill-blue-4">
 						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs4" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">4</span></div>
+							<div class="columns small-1"><span class="index h6 medium">3</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -139,11 +120,11 @@
 							<div class="bg-img"><img class="block" src="/media/cutout/char-6319.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
-					<!-- CARD: 5 -->
+					<!-- CARD: 4 -->
 					<div class="card sgs5 columns small-12 fill-dark text-yellow-2">
 						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs5" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">5</span></div>
+							<div class="columns small-1"><span class="index h6 medium">4</span></div>
 							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -182,11 +163,11 @@
 							<div class="bg-img"><img class="block" src="/media/cutout/char-6907.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
-					<!-- CARD: 6 -->
+					<!-- CARD: 5 -->
 					<div class="card sgs6 columns small-12 fill-blue-4">
 						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs6" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">6</span></div>
+							<div class="columns small-1"><span class="index h6 medium">5</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -214,11 +195,11 @@
 							<div class="bg-img"><img class="block" src="/media/cutout/char-6932.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
-					<!-- CARD: 7 -->
+					<!-- CARD: 6 -->
 					<div class="card sgs7 columns small-12 fill-blue-4">
 						<input id="sgs7" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs7" class="card-head row block">
-							<div class="columns small-1"><span class="index h6 medium">7</span></div>
+							<div class="columns small-1"><span class="index h6 medium">6</span></div>
 							<div class="title h4 strong text-light columns small-10 space-50-left-right">Instant Payment</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
@@ -235,6 +216,26 @@
 								<div class="columns small-10 medium-5 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
 							</div>
 							<div class="bg-img"><img class="block" src="/media/cutout/char-6948.png<?php echo $ver ?>"></div>
+						</div>
+					</div>
+					<!-- CARD: 7 -->
+					<div class="card sgs2 columns small-12 fill-blue-4">
+						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
+						<label for="sgs2" class="card-head row block">
+							<div class="columns small-1"><span class="index h6 medium">7</span></div>
+							<div class="title h4 strong text-light columns small-10 space-50-left-right">Earn a Bonus</div>
+							<div class="toggle columns small-1">
+								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
+							</div>
+						</label>
+						<div class="card-content">
+							<div class="row space-50-left-right">
+								<div class="columns small-7 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
+									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
+									<div class="p space-200-top space-100-right">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
+								</div>
+							</div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-6237.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 				</div>
