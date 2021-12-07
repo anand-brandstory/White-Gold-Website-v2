@@ -14,6 +14,8 @@ require_once __DIR__ . '/../../lib/api-script-mandatory-input-parsing.php';
 require_once __DIR__ . '/../../conf.php';
 require_once __DIR__ . '/../../lib/http.php';
 
+use BFS\HTTP;
+
 /*
  |
  | Further input parsing
@@ -37,7 +39,6 @@ require_once __DIR__ . '/../../lib/datetime.php';
 require_once __DIR__ . '/../../lib/google-forms.php';
 
 use Symfony\Component\Yaml\Yaml;
-use BFS\HTTP;
 
 
 
