@@ -150,7 +150,7 @@
 						<div class="card-content">
 							<div class="row m-space space-100-top space-50-left-right">
 								<div class="columns small-10 small-offset-1 medium-6 space-50-left-right">
-									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
+									<div class="h5 medium space-200-top space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
 										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
 											<span class="picture-button-bg fill-dark" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
