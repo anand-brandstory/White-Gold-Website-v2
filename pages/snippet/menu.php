@@ -23,7 +23,7 @@ function navigationMenuComponent ( $whatsappId, $contactNumbersForRegions ) {
 					</a>
 				</div>
 				<div class="columns small-6 large-4 space-25">
-					<a class="menu-button menu-button-large block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
+					<a class="menu-button menu-button-large block fill-yellow-2 text-light disabled" href="/<?= REGION ?>/live-gold">
 						<span class="menu-button-bg fill-dark" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 						<span class="menu-button-icon">
 							<img class="block" src="/media/icon/rupee-white.svg<?php echo $ver ?>">
