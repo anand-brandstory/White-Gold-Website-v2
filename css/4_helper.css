@@ -289,6 +289,16 @@ input[type="submit"].done:focus {
 	background-color: transparent !important;
 	border-color: transparent !important;
 	background-image: none;
+}
+
+
+/*
+ * Disabled / Greyed out
+ */
+.disabled {
+	filter: grayscale( 0.5 ) blur( 0.5px );
+	pointer-events: none;
+}
 
 
 /* -- End Helpers -- */
