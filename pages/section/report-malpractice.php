@@ -8,7 +8,7 @@
 				<div class="row">
 					<div class="columns small-6">
 						<div class="fill-neutral-5 space-25 radius-25">
-							<a class="picture-button block fill-yellow-2 text-light disabled" href="/<?= REGION ?>/live-gold">
+							<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
 								<span class="picture-button-bg fill-dark" style="background-image: url( '/media/background/sell-gold.png<?= $ver ?>' ); filter: brightness( 0.5 );" alt=""></span>
 								<span class="picture-button-icon">
 									<img class="block" src="/media/icon/rupee-white.svg<?= $ver ?>">
