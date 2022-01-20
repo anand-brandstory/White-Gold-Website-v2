@@ -25,6 +25,9 @@ use BFS\HTTP;
  */
 if ( empty( $input[ 'phoneNumber' ] ) )
 	return HTTP::respond( 'Phone number not provided.', 400 );
+# If the phone number is in the exclusion list, do not proceed
+if ( in_array( $input[ 'phoneNumber' ], CUPID_EXCLUSION_LIST ) )
+     return HTTP::respond( 'This phone number is not to be considered.', 200 );
 
 
 

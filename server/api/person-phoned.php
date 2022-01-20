@@ -43,6 +43,18 @@ $callData = MCube::parse( $input );
 
 
 
+/*
+ |
+ | Further input parsing
+ |
+ |
+ */
+# If the phone number is in the exclusion list, do not proceed
+if ( in_array( $input[ 'phoneNumber' ], CUPID_EXCLUSION_LIST ) )
+     return HTTP::respond( 'This phone number is not to be considered.', 200 );
+
+
+
 /**
  |
  | Send data to a Google Sheet
