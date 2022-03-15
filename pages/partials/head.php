@@ -8,11 +8,6 @@ global $post;	// WordPress' global post object
 if ( ! defined( 'REGION' ) )
 	define( 'REGION', DEFAULT_REGION );
 
-$regionCodesWithNames = [
-	'ka' => 'Karnataka',
-	'tn' => 'Tamil Nadu',
-	'kl' => 'Kerala'
-];
 
 // Get the absolute URL of the page
 $pageURL = Router::getHostnameURL() . '/' . Router::getSanitizedURLSlug();
@@ -24,13 +19,13 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 	$siteTitle = interpolateString(
 		$siteTitle ?? get_bloginfo( 'name' ),
 		[
-			'regionName' => $regionCodesWithNames[ REGION ]
+			'regionName' => PLACES_IN_REGIONS[ REGION ]
 		]
 	);
 	$siteTagline = interpolateString(
 		$siteTagline ?? get_bloginfo( 'description' ),
 		[
-			'regionName' => $regionCodesWithNames[ REGION ]
+			'regionName' => PLACES_IN_REGIONS[ REGION ]
 		]
 	);
 	$sectionTitle = $sectionTitle ?? '';
@@ -50,11 +45,11 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 $metaDescription = $metaDescription ?? ( WordPress::$isEnabled ? get_bloginfo( 'description' ) : '' );
 // $metaDescription = $metaDescription ?? ( WordPress::$isEnabled ? WordPress::get( 'meta_description' ) : '' );
 $metaDescription = interpolateString( $metaDescription, [
-	'regionName' => $regionCodesWithNames[ REGION ]
+	'regionName' => PLACES_IN_REGIONS[ REGION ]
 ] );
 $metaDescription = htmlentities( strip_tags( $metaDescription ) );
 // if ( defined( 'REGION' ) )
-// 	$metaDescription .= ' in ' . $regionCodesWithNames[ REGION ];
+// 	$metaDescription .= ' in ' . PLACES_IN_REGIONS[ REGION ];
 // $metaDescription .= '.';
 
 $metaImage = $metaImage ?? WordPress::get( 'meta_image' ) ?? [ ];
