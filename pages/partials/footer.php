@@ -17,12 +17,6 @@ WordPress::setupContext();
 $footerPost = WordPress::findPostBySlug( 'footer', 'wp_block' );
 $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 
-$citiesInRegions = [
-	'ka' => 'bangalore',
-	'tn' => 'chennai',
-	'kl' => 'kochi'
-];
-
 ?>
 
 		<!-- Footer Section -->
@@ -71,11 +65,11 @@ $citiesInRegions = [
 					<?php /* <li><a href="/<?= REGION ?>/gold-rate">gold selling rate today</a></li> */ ?>
 					<li>
 						<a href="/<?= REGION ?>">
-							<p>gold buyers <?= $citiesInRegions[ REGION ] ?></p>
-							<p>old gold buyers <?= $citiesInRegions[ REGION ] ?></p>
-							<p>sell gold in <?= $citiesInRegions[ REGION ] ?></p>
-							<p>cash for gold in <?= $citiesInRegions[ REGION ] ?></p>
-							<p>gold selling rate in <?= $citiesInRegions[ REGION ] ?></p>
+							<p>gold buyers <?= PLACES_IN_REGIONS[ REGION ] ?></p>
+							<p>old gold buyers <?= PLACES_IN_REGIONS[ REGION ] ?></p>
+							<p>sell gold in <?= PLACES_IN_REGIONS[ REGION ] ?></p>
+							<p>cash for gold in <?= PLACES_IN_REGIONS[ REGION ] ?></p>
+							<p>gold selling rate in <?= PLACES_IN_REGIONS[ REGION ] ?></p>
 						</a>
 					</li>
 				</ul>
