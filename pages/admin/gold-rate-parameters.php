@@ -96,7 +96,9 @@ require_once __ROOT__ . '/pages/partials/header.php';
 	window.__BFS.CONF.regions = <?= json_encode( $regions ) ?>
 
 </script>
-<script type="text/javascript" src="/js/modules/cupid/utils.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/plugins/base64/base64.js__v3.7.2.min.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/plugins/js-cookie/js-cookie__v3.0.1.min.js<?= $ver ?>"></script>
+<script type="text/javascript" src="/js/modules/utils.js<?= $ver ?>"></script>
 <script type="text/javascript" src="/js/modules/forms.js<?= $ver ?>"></script>
 <script type="text/javascript">
 
@@ -159,11 +161,14 @@ require_once __ROOT__ . '/pages/partials/header.php';
 		} );
 	}
 
-	( async function main () {
+	$( function main () {
 
 		// Set up the namespace
 		window.__BFS = window.__BFS || { };
 		window.__BFS.UI = window.__BFS.UI || { };
+
+		// Imports
+		let BFSForm = window.__BFS.exports.BFSForm
 
 		/*
 		 * ----- Set up the Gold Rate Parameters forms for the various regions
@@ -330,6 +335,6 @@ require_once __ROOT__ . '/pages/partials/header.php';
 			rateParametersForm.fetchAndSetExistingData.call( form )
 		} )
 
-	}() );
+	} );
 
 </script>
