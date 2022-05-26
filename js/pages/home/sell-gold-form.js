@@ -54,7 +54,7 @@ sellGoldForm.fields[ "phoneNumber" ].defaultDOMNodeFocusIndex = 1
 sellGoldForm.submit = function submit ( data ) {
 	let person = Cupid.getCurrentPerson( data.phoneNumber )
 	person.setName( data.name )
-	person.setSourcePoint( "Sell Gold" )
+	person.setSourcePoint( "Sell Gold Form" )
 
 	Cupid.logPersonIn( person, { trackSlug: "sell-gold-form" } )
 
