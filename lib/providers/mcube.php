@@ -2,7 +2,8 @@
 
 class MCube {
 
-	public static function parse ( $log ) {
+	public static function parse ( $unparsedLog ) {
+		$log = json_decode( $unparsedLog[ 'data' ], true );
 		$call = [ ];
 
 		$call[ 'id' ] = trim( $log[ 'callid' ] );
