@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
-				<div class="h2 strong text-blue-4">Release your Gold</div>
+				<div class="h2 strong text-blue-4">Release Gold Loan</div>
 				<div class="h2 strong text-neutral-3">Eight easy steps</div>
 			</div>
 			<div class="step-cards columns small-12 large-8">

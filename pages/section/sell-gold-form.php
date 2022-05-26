@@ -5,7 +5,7 @@
 				<div class="logo space-75-bottom">
 					<img class="block" src="/media/whitegold-logo-dark.svg<?php echo $ver ?>">
 				</div>
-				<div class="h2 line-height-small">Turn your <span class="strong">gold into money</span></div>
+				<div class="h2 line-height-small">Looking for Gold <span class="strong">Buyers in <?= PLACES_IN_REGIONS[ REGION ] ?>?</span></div>
 			</div>
 			<br class="hide-large hide-xlarge">
 			<div class="columns small-9 medium-5 large-3 large-offset-1">

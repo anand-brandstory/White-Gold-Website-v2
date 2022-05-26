@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
-				<div class="h2 strong text-yellow-2">Sell your Gold</div>
+				<div class="h2 strong text-yellow-2">Sell Gold for Cash</div>
 				<div class="h2 strong text-blue-3">Seven easy steps</div>
 			</div>
 			<div class="step-cards columns small-12 large-8">
