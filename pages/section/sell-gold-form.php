@@ -35,7 +35,7 @@
 							</label>
 						</div>
 						<div class="row space-25-top space-50-left-right">
-							<div class="small text-neutral-3">I hereby authorise, WHITE GOLD to call me on this number.</div>
+							<div class="small text-neutral-3">I authorise WHITE GOLD and its representatives to contact me with updates and notifications via Email, SMS, WhatsApp and Call. This will override the registry on DND/NDNC.</div>
 						</div>
 						<div class="columns small-12 space-50-top">
 							<label class="form-label block">
