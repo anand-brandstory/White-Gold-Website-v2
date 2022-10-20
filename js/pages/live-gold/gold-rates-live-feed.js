@@ -36,7 +36,7 @@ $( function () {
 
 		// Fetch and organize the data
 		let dataPoints = await GoldRates.getRelevantRatesFromTheDay( window.__BFS.CONF.region )
-		let xValues = [
+		let allPossibleXValues = [
 			9, 9.25, 9.5, 9.75,
 			10, 10.25, 10.5, 10.75,
 			11, 11.25, 11.5, 11.75,
@@ -48,6 +48,41 @@ $( function () {
 			17, 17.25, 17.5, 17.75,
 			18
 		]
+		let xValuesAsTimestamps = allPossibleXValues.map( function ( x ) {
+			let hour = Math.floor( x )
+			let minutes = ( x - hour ) * 60
+			let date = new Date;
+				date.setHours( hour )
+				date.setMinutes( minutes )
+			// Exclude the seconds and milliseconds from the timestamp
+			return Math.floor( date.getTime() / Math.pow( 10, 5 ) )
+		} )
+
+		/*
+		 |
+		 | Exclude any _leading_ gold rate data points that have a value of 0
+		 |
+		 | Else this causes the chart to start from 0
+		 | 	and then jump to between 4000 and 5000 (the typical range).
+		 | 	The Y-axis then ends up clamping values after a certain threshold
+		 | 	and the chart effectively manifests as a plateau.
+		 |
+		 */
+		while ( dataPoints[ 0 ].cost__24KaratGold__perGram === 0 ) {
+			dataPoints.shift()	// remove the first element
+		}
+
+		let firstRelevantGoldRateValue__Index = dataPoints.findIndex( function ( dataPoint ) {
+			// Exclude the seconds and milliseconds from the comparison
+			return xValuesAsTimestamps.includes(
+				Math.floor( dataPoint.timestamp / Math.pow( 10, 5 ) )
+			)
+		} )
+		let firstRelevantXValue__Index = xValuesAsTimestamps.lastIndexOf(
+			Math.floor( dataPoints[ firstRelevantGoldRateValue__Index ].timestamp / Math.pow( 10, 5 ) )
+		)
+		dataPoints = dataPoints.slice( firstRelevantGoldRateValue__Index )
+		let xValues = allPossibleXValues.slice( firstRelevantXValue__Index )
 		let xlabels = xValues.map( function ( x ) {
 			let hour = Math.floor( x )
 			let minutes = ( ( x - hour ) * 60 ).toString().padStart( 2, 0 )
