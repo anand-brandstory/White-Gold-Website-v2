@@ -51,8 +51,20 @@ add_filter( 'robots_txt', function ( $output, $isSitePublic ) {
 				. 'Disallow: /*?'
 				. "\n";
 	}
-	else
-		$output = '';
+	else {
+		$output = 'User-agent: *'
+				. "\n"
+				. 'Disallow: /media'
+				. "\n"
+				. 'Allow: /media/*.png'
+				. "\n"
+				. 'Allow: /media/*.svg'
+				. "\n"
+				. 'Allow: /media/*.jpg'
+				. "\n"
+				. 'Allow: /media/*.jpeg'
+				. "\n";
+	}
 
 	return $output;
 }, 100, 2 );
