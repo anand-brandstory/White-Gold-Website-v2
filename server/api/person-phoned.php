@@ -39,7 +39,11 @@ use \BFS\HTTP;
  | Parse incoming call data
  |
  */
-$callData = MCube::parse( $input );
+try {
+     $callData = MCube::parse( $input );
+} catch ( \Exception $e ) {
+     return HTTP::respond( 'Input is invalid.', 400 );
+}
 
 
 
@@ -60,6 +64,19 @@ if ( in_array( $input[ 'phoneNumber' ], CUPID_EXCLUSION_LIST ) )
  | Send data to a Google Sheet
  |
  */
+// Record an entry on the Lead sheet
+$data = [ ];
+$data[ 'phoneNumber' ] = $callData[ 'phoneNumber' ];
+$data[ 'name' ] = $callData[ 'name' ] ?? null;
+$data[ 'emailAddress' ] = $callData[ 'emailAddress' ] ?? null;
+$data[ 'sourceMedium' ] = 'Phone';
+if ( !empty( $callData[ 'agentPhoneNumber' ] ) )
+     $data[ 'sourcePoint' ] = $callData[ 'agentPhoneNumber' ];
+$data[ 'when' ] = CFD\DateTime::getTimestamp__SpreadsheetCompatible( $callData[ 'endTime' ] ?? null );
+
+GoogleForms\submitPerson( $data );
+
+// Record an entry on the Activity sheet
 $data = [ ];
 $data[ 'phoneNumber' ] = $callData[ 'phoneNumber' ];
 $data[ 'sourceMedium' ] = 'Phone';
