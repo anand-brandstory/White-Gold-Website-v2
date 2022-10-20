@@ -47,18 +47,53 @@ use Symfony\Component\Yaml\Yaml;
 
 /**
  |
+ | Interpret the request data and set other data
+ |
+ */
+$when = null;	// declared properly later
+$phoneNumber = $input[ 'phoneNumber' ];
+$name = $input[ 'name' ] ?? null;
+$emailAddress = $input[ 'emailAddress' ] ?? null;
+$sourceMedium = $input[ 'sourceMedium' ];
+$sourcePoint = $input[ 'sourcePoint' ] ?? '';
+
+
+
+
+
+/**
+ |
  | Send data to a Google Sheet
  |
  */
-$data = [ ];
-$data[ 'phoneNumber' ] = $input[ 'phoneNumber' ];
-$data[ 'name' ] = $input[ 'name' ] ?? null;
-$data[ 'emailAddress' ] = $input[ 'emailAddress' ] ?? null;
-$data[ 'sourceMedium' ] = $input[ 'sourceMedium' ];
-$data[ 'sourcePoint' ] = $input[ 'sourcePoint' ] ?? '';
-$data[ 'when' ] = CFD\DateTime::getCurrentTimestamp__SpreadsheetCompatible();
+$dataForGoogleSheet = [
+	'when' => CFD\DateTime::getCurrentTimestamp__SpreadsheetCompatible(),
+	'phoneNumber' => $phoneNumber,
+	'name' => $name,
+	'emailAddress' => $emailAddress,
+	'sourceMedium' => $sourceMedium,
+	'sourcePoint' => $sourcePoint,
+];
 
-GoogleForms\submitPerson( $data );
+GoogleForms\submitPerson( $dataForGoogleSheet );
+
+
+
+/**
+ |
+ | Push webhooks
+ |
+ |
+ */
+$webhookData = [
+	'when' => CFD\DateTime::formatAsISO8601( new \DateTime( 'now' ) ),
+	'phoneNumber' => $phoneNumber,
+	'name' => $name,
+	'emailAddress' => $emailAddress,
+	'sourceMedium' => $sourceMedium,
+	'sourcePoint' => $sourcePoint,
+];
+HTTP::post( 'https://ka.whitegold.online/newuser.php', [ 'data' => $webhookData ] );
 
 
 
@@ -67,4 +102,4 @@ GoogleForms\submitPerson( $data );
 /* ------------------------------- \
  * Respond back to the client
  \-------------------------------- */
-HTTP::respond( $data, 200 );
+HTTP::respond( $webhookData, 200 );
