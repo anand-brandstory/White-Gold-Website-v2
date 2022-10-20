@@ -34,7 +34,8 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 	else
 		$postTitle = $postTitle ?? get_the_title( $post ) ?? '';
 
-	$documentTitle = implode( ' | ', array_filter( [ $postTitle, $sectionTitle, $siteTitle, $siteTagline ] ) );
+	// $documentTitle = implode( ' | ', array_filter( [ $postTitle, $sectionTitle, $siteTitle, $siteTagline ] ) );
+	$documentTitle = implode( ' | ', array_filter( [ $postTitle, $sectionTitle, $siteTitle ] ) );
 }
 
 
@@ -42,6 +43,7 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 /*
  * Meta / SEO
  */
+$metaTitle = 'Gold Buyers in ' . PLACES_IN_REGIONS[ REGION ] . ' | Cash for Gold | Release Gold Loan | Gold Rate Today';
 $metaDescription = $metaDescription ?? ( WordPress::$isEnabled ? get_bloginfo( 'description' ) : '' );
 // $metaDescription = $metaDescription ?? ( WordPress::$isEnabled ? WordPress::get( 'meta_description' ) : '' );
 $metaDescription = interpolateString( $metaDescription, [
@@ -163,7 +165,7 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <!-- Facebook Open Graph -->
 <meta property="og:url" content="<?= $pageURL ?>">
 <meta property="og:type" content="website">
-<meta property="og:title" content="<?= htmlentities( $documentTitle ) ?>">
+<meta property="og:title" content="<?= $metaTitle ?>">
 <?php if ( $metaDescription ) : ?>
 <meta property="og:description" content="<?= $metaDescription ?>">
 <?php endif; ?>
