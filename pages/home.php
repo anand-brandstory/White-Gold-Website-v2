@@ -62,7 +62,7 @@ require_once __ROOT__ . '/pages/partials/header.php';
 
 
 <!-- Sell Gold Home Visit Form Section -->
-<?php require_once __ROOT__ . '/pages/section/sell-gold-home-visit-form.php'; ?>
+<?php // require_once __ROOT__ . '/pages/section/sell-gold-home-visit-form.php'; ?>
 <!-- END: Sell Gold Home Visit Form Section -->
 
 
