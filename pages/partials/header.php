@@ -40,7 +40,7 @@ $contactNumbersForRegions = PHONE_NUMBERS;
 <!doctype html>
 <html <?= $languageAttributes ?>>
 <head>
-     <?php require_once __ROOT__ . '/pages/partials/head.php'; ?>
+	<?php require_once __ROOT__ . '/pages/partials/head.php'; ?>
 </head>
 
 <body class="<?= ( WordPress::$isEnabled and ! WordPress::$onlySetupContext ) ? implode( ' ', get_body_class() ) : 'body' ?>" id="body">
@@ -58,4 +58,4 @@ ARB
 
 <div id="page-wrapper"><!-- Page Wrapper -->
 
-     <div id="page-content"><!-- Page Content -->
+	<div id="page-content"><!-- Page Content -->
