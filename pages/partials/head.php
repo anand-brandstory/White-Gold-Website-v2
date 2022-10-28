@@ -64,9 +64,9 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <meta charset="<?= $metaCharset ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
 
-<?php if ( WordPress::$isEnabled and ! WordPress::$onlySetupContext ) : ?>
+<?php // if ( WordPress::$isEnabled and ! WordPress::$onlySetupContext ) : ?>
 <?php wp_head(); ?>
-<?php endif; ?>
+<?php // endif; ?>
 
 <?php if ( ! empty( $documentTitle ) ) : ?>
 <title><?= htmlentities( $documentTitle ) ?></title>
