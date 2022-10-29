@@ -30,7 +30,7 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 					</div>
 					<div class="columns small-12 medium-3 medium-offset-1 space-200-top">
 						<div class="footer-menu">
-							<div class="title h4 strong text-neutral-4 space-75-bottom">Quick Links:</div>
+							<div class="title h4 strong text-neutral-4 space-75-bottom">quick Links:</div>
 							<?php foreach ( $footerNavigationMenuItems as $item ) : ?>
 								<a href="/<?= $item[ 'url' ] ?>" class="link h6 strong text-yellow-2"><?= $item[ 'title' ] ?></a><br>
 							<?php endforeach; ?>
