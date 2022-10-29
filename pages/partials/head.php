@@ -210,7 +210,7 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 
 <!-- jQuery 3 -->
 <script type="text/javascript" src="/plugins/jquery/jquery-v3.6.0.min.js<?= $ver ?>"></script>
-<!-- Slick Carousel -->
+<!-- Slick Carousell -->
 <link rel="stylesheet" type="text/css" href="/plugins/slick/slick.css<?= $ver ?>"/>
 <link rel="stylesheet" type="text/css" href="/plugins/slick/slick-theme.css<?= $ver ?>"/>
 
