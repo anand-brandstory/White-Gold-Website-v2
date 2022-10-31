@@ -124,7 +124,9 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 <?php if ( WordPress::$isEnabled and ! WordPress::$onlySetupContext ) wp_footer() ?>
 
 <?= WordPress::get( 'arbitrary_code_before_body_closing' ) ?>
-
+<!-- anand -->
 </body>
 
 </html>
+
+
