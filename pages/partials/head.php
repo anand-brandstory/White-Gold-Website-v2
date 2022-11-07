@@ -29,9 +29,9 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 		]
 	);
 	$sectionTitle = $sectionTitle ?? '';
-	if ( Router::$urlSlug == '' )	// i.e. home page
-		$postTitle = $postTitle ?? '';
-	else
+	// if ( Router::$urlSlug == '' )	// i.e. home page
+	// 	$postTitle = $postTitle ?? '';
+	// else
 		$postTitle = $postTitle ?? get_the_title( $post ) ?? '';
 
 	// $documentTitle = implode( ' | ', array_filter( [ $postTitle, $sectionTitle, $siteTitle, $siteTagline ] ) );
@@ -106,6 +106,9 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 <!-- Control the behavior of search engine crawling and indexing -->
 <meta name="robots" content="index,follow"><!-- All Search Engines -->
 <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+<meta name="geo.region" content="IN-KA" />
+<meta name="geo.placename" content="Bengaluru" />
+<meta name="geo.position" content="12.9326113;77.6135921" />
 <!-- Verify website ownership -->
 <?php if ( ! empty( WordPress::get( 'google_site_verification_token' ) ?? GOOGLE_SITE_VERIFICATION_TOKEN ) ) : ?>
 <meta name="google-site-verification" content="<?= WordPress::get( 'google_site_verification_token' ) ?? GOOGLE_SITE_VERIFICATION_TOKEN; ?>"><!-- Google Search Console -->

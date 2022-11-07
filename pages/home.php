@@ -20,7 +20,7 @@ $releaseGoldFAQs = FAQs::getByRegionAndSection( REGION, 'release-gold' );
 $releaseGoldVideos = Videos::getByRegionAndSection( REGION, 'release-gold' );
 
 
-$postTitle = '';
+// $postTitle = '';
 
 require_once __ROOT__ . '/pages/partials/header.php';
 

@@ -12,7 +12,7 @@ $branchesInRegion = Branches::getByRegion( REGION );
 
 
 
-$postTitle = 'Find a White Gold Branch Near You';
+// $postTitle = 'Find a White Gold Branch Near You';
 
 require_once __ROOT__ . '/pages/partials/header.php';
 

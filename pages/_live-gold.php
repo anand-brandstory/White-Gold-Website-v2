@@ -8,7 +8,7 @@ require_once __ROOT__ . '/lib/providers/wordpress.php';
 
 \BFS\CMS\WordPress::setupContext();
 
-$postTitle = 'View the Real-time Gold Rate';
+// $postTitle = 'View the Real-time Gold Rate';
 
 require_once __ROOT__ . '/pages/partials/header.php';
 
