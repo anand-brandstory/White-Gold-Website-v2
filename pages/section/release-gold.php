@@ -48,10 +48,28 @@
 						<div class="card-content">
 							<div class="row space-50-top space-50-left-right">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Aadhaar Card</div></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Passport</div></div>
+							</div>
+							<div class="row space-50-left-right">
+								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
+									<div class="p space-50-top">Carry your Passport for fast-track verification.</div>
+								</div>
 							</div>
 							<div class="row space-50-top-bottom space-50-left-right">
 								<div class="inline-middle columns small-1"><div class="small medium text-uppercase" style="width: var(--space-75); text-align: center;">or</div></div>
+								<div class="inline-middle columns small-7 medium-3 space-50-left space-100-right"><hr class="fill-dark"></div>
+							</div>
+							<div class="row space-50-left-right">
+								<div class="columns small-1"><span class="checkmark h5 medium fill-blue-4 text-light">&check;</span></div>
+								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Aadhaar Card</div></div>
+							</div>
+							<div class="row space-50-left-right">
+								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
+									<div class="p space-50-top">Carry your Aadhaar card for easy KYC check.</div>
+								</div>
+							</div>
+							<div class="row space-50-top-bottom space-50-left-right">
+								<div class="inline-middle columns small-1"><div class="small medium text-uppercase" style="width: var(--space-75); text-align: center;">and</div></div>
 								<div class="inline-middle columns small-7 medium-3 space-50-left space-100-right"><hr class="fill-dark"></div>
 							</div>
 							<div class="row space-50-left-right">
@@ -64,11 +82,10 @@
 							</div>
 							<div class="row space-50-left-right space-200-bottom">
 								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
-									<div class="p space-200-top">Photo ID and Address proof is required.</div>
-									<div class="p space-50-top">Carry your Aadhaar card for easy KYC check.</div>
+									<div class="p space-50-top">Photo ID and Address proof is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6269.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/char-holding-up-a-passport.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 1 -->
