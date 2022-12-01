@@ -25,12 +25,18 @@
 .content-block label { font-size: var(--label); }
 .content-block small { font-size: var(--small); }
 
+.content-block .has-small-font-size { font-size: var(--small); }
+.content-block .has-normal-font-size { font-size: var(--p); }
+.content-block .has-medium-font-size { font-size: var(--h5); }
+.content-block .has-large-font-size { font-size: var(--h3); }
+.content-block .has-huge-font-size { font-size: var(--h1); }
 
-.content-block h1, 
-.content-block h2, 
-.content-block h3, 
-.content-block h4, 
-.content-block h5, 
+
+.content-block h1,
+.content-block h2,
+.content-block h3,
+.content-block h4,
+.content-block h5,
 .content-block h6{
 	display: block;
 	line-height: 1;
@@ -48,7 +54,7 @@
 	text-decoration: underline;
 }
 
-.content-block label, 
+.content-block label,
 .content-block small {
 	display: inline-block;
 	line-height: 1.375;
