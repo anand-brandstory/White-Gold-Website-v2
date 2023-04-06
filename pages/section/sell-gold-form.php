@@ -65,6 +65,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="char"><img class="block" src="/media/cutout/char-6085.png<?php echo $ver ?>"></div>
+		<?php /* Originally, the char-6085.png image was used; it was 1000x1500 and it didn't require any adjustment in CSS */ ?>
+		<div class="char"><img class="block" src="/media/cutout/2023/char-pointing-up.png<?php echo $ver ?>" alt="jewelry buyer near me"></div>
 	</div>
 </section>

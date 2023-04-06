@@ -725,6 +725,44 @@
 	width: var(--card);
 	transform: translateX(-25%) translateY(0%) scale(1);
 }
+/**
+ |
+ | Character cutout alignment
+ |
+ | Originally, a 1000x1500 image was used which didn't require any adjustments, but anyways.
+ |
+ |
+ */
+.sell-gold-form-section .char {
+	padding: 0 60px 0 20px;
+}
+@media( min-width: 360px )  {
+	.sell-gold-form-section .char {
+		padding: 0 65px 0 25px;
+	}
+}
+@media( min-width: 400px )  {
+	.sell-gold-form-section .char {
+		padding: 0 70px 0 30px;
+	}
+}
+@media( min-width: 640px )  {
+	.sell-gold-form-section .char {
+		padding: 0 100px 0 60px;
+	}
+}
+@media( min-width: 1040px ) {
+	.sell-gold-form-section .char {
+		padding: 0 110px 0 70px;
+	}
+}
+@media( min-width: 1480px ) {
+	.sell-gold-form-section .char {
+		padding: 0 180px 0 80px;
+	}
+}
+
+
 .sell-gold-form-section .char:after {
 	content: '';
 	display: block;
