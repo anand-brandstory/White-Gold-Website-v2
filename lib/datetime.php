@@ -37,7 +37,7 @@ class DateTime {
 		private static function getCurrentTimeInIST () {
 			return new \DateTime( 'now', new \DateTimeZone( 'Asia/Kolkata' ) );
 		}
-		public static function parseISO8601 ( $iso8601 ) {
+		private static function parseISO8601 ( $iso8601 ) {
 			return \DateTime::createFromFormat(
 				'Y-m-d\TH:i:s.u\Z',
 				$iso8601,
