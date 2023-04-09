@@ -27,7 +27,7 @@ if ( empty( $input[ 'phoneNumber' ] ) )
 	return HTTP::respond( 'Phone number not provided.', 400 );
 # If the phone number is in the exclusion list, do not proceed
 if ( in_array( $input[ 'phoneNumber' ], CUPID_EXCLUSION_LIST ) )
-     return HTTP::respond( 'This phone number is not to be considered.', 200 );
+	return HTTP::respond( 'This phone number is not to be considered.', 200 );
 
 
 
@@ -47,14 +47,6 @@ use Symfony\Component\Yaml\Yaml;
 
 /**
  |
- | Input validation
- |
- */
-$input[ 'extendedAttributes' ] = $input[ 'extendedAttributes' ] ?? [ ];
-
-
-/**
- |
  | Send data to a Google Sheet
  |
  */
@@ -62,15 +54,11 @@ $data = [ ];
 $data[ 'phoneNumber' ] = $input[ 'phoneNumber' ];
 $data[ 'name' ] = $input[ 'name' ] ?? null;
 $data[ 'emailAddress' ] = $input[ 'emailAddress' ] ?? null;
-$data[ 'sourceMedium' ] = $input[ 'sourceMedium' ] ?? null;
+$data[ 'sourceMedium' ] = $input[ 'sourceMedium' ];
 $data[ 'sourcePoint' ] = $input[ 'sourcePoint' ] ?? '';
-if ( ! empty( $input[ 'extendedAttributes' ] ) )
-	$data[ 'extendedAttributes' ] = Yaml::dump( $input[ 'extendedAttributes' ] );
 $data[ 'when' ] = CFD\DateTime::getCurrentTimestamp__SpreadsheetCompatible();
 
-// $activity = 'person/submitted/data';
-$activity = 'Data Submission';
-GoogleForms\submitPersonActivity( $activity, $data );
+GoogleForms\submitPerson( $data );
 
 
 

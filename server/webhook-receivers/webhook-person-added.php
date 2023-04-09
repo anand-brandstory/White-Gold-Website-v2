@@ -70,64 +70,38 @@ use Symfony\Component\Yaml\Yaml;
  * Ingest the data onto the Spreadsheet
  \-------------------------------------- */
 # Interpret the data
-$when = $input[ 'when' ];
-$id = $input[ 'id' ];
-$verified = $input[ 'verified' ];
-$phoneNumber = $input[ 'phoneNumber' ];
+$when = CFD\DateTime::getSpreadsheetDateFromISO8601( $input[ 'when' ] );
 $name = $input[ 'name' ] ?? '';
-$emailAddresses = empty( $input[ 'emailAddresses' ] ) ? [ ] : $input[ 'emailAddresses' ];
-$interests = empty( $input[ 'interests' ] ) ? [ ] : $input[ 'interests' ];
+$emailAddresses = empty( $input[ 'emailAddresses' ] ) ? '' : implode( ', ', $input[ 'emailAddresses' ] );
+$interests = empty( $input[ 'interests' ] ) ? '' : implode( ', ', $input[ 'interests' ] );
 $sourcePoint = $input[ 'source' ][ 'point' ] ?? $input[ 'agent' ][ 'name' ] ?? $input[ 'agent' ][ 'phoneNumber' ] ?? '';
-$sourceMedium = $input[ 'source' ][ 'medium' ];
 $callRecording = $input[ 'recordingURL' ] ?? '';
 $extendedAttributes = $input[ 'extendedAttributes' ] ?? [ ];
-
+if ( ! empty( $extendedAttributes ) )
+	$extendedAttributesFormatted = Yaml::dump( $extendedAttributes );
+else
+	$extendedAttributesFormatted = '';
 # Shape the data
-$dataForGoogleSheet = [
-	'when' => CFD\DateTime::getSpreadsheetDateFromISO8601( $when ),
-	'id' => $id,
-	'verified' => $verified,
-	'phoneNumber' => $phoneNumber,
+$data = [
+	'when' => $when,
+	'id' => $input[ 'id' ],
+	'phoneNumber' => $input[ 'phoneNumber' ],
 	'name' => $name,
-	'emailAddress' => implode( ', ', $emailAddresses ),
-	'sourceMedium' => $sourceMedium,
+	'emailAddress' => $emailAddresses,
+	'verified' => $input[ 'verified' ],
+	'sourceMedium' => $input[ 'source' ][ 'medium' ],
 	'sourcePoint' => $sourcePoint,
-	'interests' => implode( ', ', $interests ),
+	'interests' => $interests,
 	'callRecording' => $callRecording,
-	'extendedAttributes' => empty( $extendedAttributes ) ? '' : Yaml::dump( $extendedAttributes ),
+	'extendedAttributes' => $extendedAttributesFormatted
 ];
-
-GoogleForms\submitPerson( $dataForGoogleSheet );
+GoogleForms\submitPerson( $data );
 // $spreadsheet->addRow( $data );
-
-
-
-/**
- |
- | Push webhooks
- |
- |
- */
-$webhookData = [
-	'when' => $input[ 'timestamp' ],
-	'client' => CLIENT_SLUG,
-	'phoneNumber' => $phoneNumber,
-	// 'id' => '',     // this is no longer supported
-	'name' => $name,
-	// 'verified' => false,
-	'source' => [
-		'medium' => 'Website',
-		'point' => $sourcePoint
-	],
-	'interests' => [ ],
-	'emailAddresses' => $emailAddress
-];
-HTTP::post( 'http://139.59.50.103:8003/person/added', [ 'data' => $webhookData ] );
 
 
 
 /* ------------------------------- \
  * Respond back to the client
  \-------------------------------- */
-$output = $webhookData ?: [ ];
+$output = $data ?: [ ];
 echo json_encode( $output );
