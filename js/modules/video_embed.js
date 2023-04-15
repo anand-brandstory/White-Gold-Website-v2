@@ -9,14 +9,15 @@
  * Inject iframes into the video containers.
  * 	These iframes hold urls to the videos hosted on YouTube.
  */
-function initialiseVideoEmbed ( domElement, videoId ) {
+function initialiseVideoEmbed ( domElement, videoId, autoplay, ) {
+	autoplay = autoplay ? 1 : 0
 	var $iframe = $( "<iframe>" );
 	var videoId = videoId || domElement.dataset.src;
 	var attributes = {
 		// Add the origin parameter
  		// This is to protect against malicious third-party JavaScript being
  		// injected into the page and hijacking control of the YouTube player.
-		src: "https://www.youtube.com/embed/" + videoId + "?html5=1&color=white&disablekb=1&fs=0&autoplay=0&loop=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&origin=" + location.origin,
+		src: `https://www.youtube.com/embed/${ videoId }?html5=1&color=white&disablekb=1&fs=0&autoplay=${ autoplay }&loop=0&modestbranding=1&playsinline=1&rel=0&showinfo=0&origin=${ location.origin }`,
 		frameborder: 0,
 		allow: "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
 		allowfullscreen: ""
@@ -174,11 +175,14 @@ $( function () {
 
 		// Set the data-src attribute on the video embed element
 		$videoEmbed.data( "src", youtubeId );
+
+		var autoplay = $modalTrigger.data( "autoplay" )
+
 		// Store the id of the modal trigger element, it'll be used for destroying the player later
 		$youtubeModal.data( "player", $modalTrigger.attr( "id" ) );
 
 		// Now, actually set up the video embed
-		initialiseVideoEmbed( domVideoEmbed, youtubeId );
+		initialiseVideoEmbed( domVideoEmbed, youtubeId, autoplay );
 		// $( document ).trigger( "youtube/player/create", $modalTrigger.get( 0 ) );
 
 	} );
