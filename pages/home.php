@@ -21,6 +21,7 @@ $releaseGoldVideos = Videos::getByRegionAndSection( REGION, 'release-gold' );
 
 
 // $postTitle = '';
+require_once __ROOT__ . '/pages/components/home.php';
 
 require_once __ROOT__ . '/pages/partials/header.php';
 

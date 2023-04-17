@@ -18,24 +18,29 @@
 						<input id="sgs1" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle" checked>
 						<label for="sgs1" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">1</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Find a Branch</div>
+							<div class="title h4 strong text-light columns small-10 px-50">Find a Branch</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
 						<!-- <div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )"> -->
-						<div class="card-content">
-							<div class="row space-50-left-right space-200-top-bottom">
-								<div class="columns small-9 small-offset-1 space-50-left-right space-50-bottom">
+						<div class="card-content px-50">
+							<div class="row space-50-top">
+								<div class="columns small-9 small-offset-1 px-50 space-50-bottom">
 									<div class="h4 medium space-25-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
-									<div class="h5 medium space-200-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu and <br>Kerala</div>
+									<div class="h5 medium mb-200 md:mb-0" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu and <br>Kerala</div>
 									<a href="/<?= REGION ?>/branches" class="button fill-light" style="margin-top: var(--space-150);">
 										<span class="button-label">Find Branch&ensp;</span>
 										<img class="button-icon tall" src="/media/icon/location-tall-red.svg<?= $ver ?>">
 									</a>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6200.png<?php echo $ver ?>"></div>
+							<div class="row space-50-bottom">
+								<div class="columns small-12 medium-offset-1 medium-8 md:pl-50">
+									<?= C\VideoChip( 'Find a Branch', '03:45', 'KNHdvECeRnY', '/media/thumbnails/faq-1.jpg' ) ?>
+								</div>
+							</div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-find-a-branch.png<?php echo $ver ?>" alt="find-branch"></div>
 						</div>
 					</div>
 					<!-- CARD: 2 -->
@@ -43,52 +48,52 @@
 						<input id="sgs3" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs3" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">2</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Carry ID Proof</div>
+							<div class="title h4 strong text-light columns small-10 px-50">Carry ID Proof</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row space-50-top space-50-left-right">
+						<div class="card-content px-50">
+							<div class="row space-50-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Passport</div></div>
+								<div class="columns small-8 px-50"><div class="h5 medium">Passport</div></div>
 							</div>
-							<div class="row space-50-left-right">
-								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
+							<div class="row">
+								<div class="columns small-7 medium-4 small-offset-1 px-50">
 									<div class="p space-50-top">Carry your Passport for fast-track verification.</div>
 								</div>
 							</div>
-							<div class="row space-50-top-bottom space-50-left-right">
+							<div class="row space-50-top-bottom">
 								<div class="inline-middle columns small-1"><div class="small medium text-uppercase" style="width: var(--space-75); text-align: center;">or</div></div>
 								<div class="inline-middle columns small-7 medium-3 space-50-left space-100-right"><hr class="fill-light"></div>
 							</div>
-							<div class="row space-50-left-right">
+							<div class="row">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Aadhaar Card</div></div>
+								<div class="columns small-8 px-50"><div class="h5 medium">Aadhaar Card</div></div>
 							</div>
-							<div class="row space-50-left-right">
-								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
+							<div class="row">
+								<div class="columns small-7 medium-4 small-offset-1 px-50">
 									<div class="p space-50-top">Carry your Aadhaar card for easy KYC check.</div>
 								</div>
 							</div>
-							<div class="row space-50-top-bottom space-50-left-right">
+							<div class="row space-50-top-bottom">
 								<div class="inline-middle columns small-1"><div class="small medium text-uppercase" style="width: var(--space-75); text-align: center;">and</div></div>
 								<div class="inline-middle columns small-7 medium-3 space-50-left space-100-right"><hr class="fill-light"></div>
 							</div>
-							<div class="row space-50-left-right">
+							<div class="row">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
+								<div class="columns small-8 px-50"><div class="h5 medium">Photo ID Proof</div></div>
 							</div>
-							<div class="row space-25-top space-50-left-right">
+							<div class="row space-25-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 space-50-left-right"><div class="h5 medium">Local Address Proof</div></div>
+								<div class="columns small-8 px-50"><div class="h5 medium">Local Address Proof</div></div>
 							</div>
-							<div class="row space-50-left-right space-200-bottom">
-								<div class="columns small-7 medium-4 small-offset-1 space-50-left-right">
+							<div class="row space-200-bottom">
+								<div class="columns small-7 medium-4 small-offset-1 px-50">
 									<div class="p space-50-top">Photo ID and Address proof is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-holding-up-a-passport.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-carry-id-proof.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 
@@ -103,38 +108,30 @@
 						<input id="sgs4" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs4" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">3</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Check Gold Purity</div>
+							<div class="title h4 strong text-light columns small-10 px-50">Check Gold Purity</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row space-50-top space-50-left-right">
+						<div class="card-content px-50">
+							<div class="row space-50-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Tamper Proof</div></div>
+								<div class="columns small-10 px-50"><div class="h5 medium">Tamper Proof</div></div>
 							</div>
-							<div class="row space-25-top space-50-left-right">
+							<div class="row space-25-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-10 space-50-left-right"><div class="h5 medium">German Machines</div></div>
+								<div class="columns small-10 px-50"><div class="h5 medium">German Machines</div></div>
 							</div>
-							<div class="row space-25-top space-200-bottom space-50-left-right">
+							<div class="row space-25-top space-200-bottom">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-10 space-50-left-right"><div class="h5 medium">Accurate Valuation</div></div>
+								<div class="columns small-10 px-50"><div class="h5 medium">Accurate Valuation</div></div>
 							</div>
-							<div class="row space-200-top space-50-bottom space-50-left-right">
-								<div class="columns small-12 medium-8">
-									<a href="" class="watch-video invisible block row fill-blue-1">
-										<div class="columns small-6">
-											<div class="thumbnail" style="background-image: url('');"></div>
-										</div>
-										<div class="columns small-6 space-50-left space-25-right">
-											<div class="title h6 medium space-25-top-bottom">How is gold purity checked?</div>
-											<div class="timestamp small">02:30</div>
-										</div>
-									</a>
+							<div class="row space-200-top space-50-bottom">
+								<div class="columns small-12 medium-offset-1 medium-8 md:pl-50">
+									<?= C\VideoChip( 'How is gold purity checked?', '03:25', 'GKQ9Avhi-X8', '/media/thumbnails/faq-2.jpg' ) ?>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6319.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-purity.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 4 -->
@@ -142,14 +139,14 @@
 						<input id="sgs5" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs5" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">4</span></div>
-							<div class="title h4 strong text-yellow-2 columns small-10 space-50-left-right">Check Gold Rate</div>
+							<div class="title h4 strong text-yellow-2 columns small-10 px-50">Check Gold Rate</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row m-space space-100-top space-50-left-right">
-								<div class="columns small-10 small-offset-1 medium-6 space-50-left-right">
+						<div class="card-content px-50">
+							<div class="row space-100-top">
+								<div class="columns small-10 small-offset-1 medium-6 px-50">
 									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
 										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
@@ -162,22 +159,12 @@
 									</div>
 								</div>
 							</div>
-							<div class="row space-200-top space-50-bottom space-50-left-right">
-								<div class="columns small-12 medium-8">
-									<?php /* -- php hide -- */ /*
-									<a href="" class="watch-video block row fill-neutral-4">
-										<div class="columns small-6">
-											<div class="thumbnail" style="background-image: url('');"></div>
-										</div>
-										<div class="columns small-6 space-50-left space-25-right">
-											<div class="title h6 medium space-25-top-bottom">Why is the gold rate lower than I expected?</div>
-											<div class="timestamp small">02:30</div>
-										</div>
-									</a>
-									*/ /* -- END: php hide -- */ ?>
+							<div class="row mt-250 space-50-bottom">
+								<div class="columns small-12 medium-offset-1 medium-8 mt-250 md:mt-0 pt-150 md:pt-0 md:pl-50">
+									<?= C\VideoChip( 'Live Gold Rate', '06:50', '2ploMQRLncA', '/media/thumbnails/faq-3.jpg', 'fill-neutral-4', 'rgba( 78, 80, 85, 0.8 )' ) ?>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6907.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-rate.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 					<!-- CARD: 5 -->
@@ -185,31 +172,35 @@
 						<input id="sgs6" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs6" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">5</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">KYC Verification</div>
+							<div class="title h4 strong text-light columns small-10 px-50">KYC Verification</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row space-50-top space-50-left-right">
+						<div class="card-content px-50">
+							<div class="row space-50-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-8 medium-5 space-50-left-right"><div class="h5 medium">Photo ID Proof</div></div>
+								<div class="columns small-8 medium-5 px-50"><div class="h5 medium">Photo ID Proof</div></div>
 							</div>
-							<div class="row space-50-top space-50-left-right">
+							<div class="row space-50-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-7 medium-5 space-50-left-right">
+								<div class="columns small-7 medium-5 px-50">
 									<div class="h5 medium">Address Proof</div>
 									<div class="small space-25-top">We do a KYC check. Photo ID and Address Proof is a mandatory requirement. Your Aadhaar Card has both.</div>
 								</div>
 							</div>
-							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
+							<div class="row m-space space-50-top">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-light text-blue-4">&check;</span></div>
-								<div class="columns small-7 medium-5 space-50-left-right">
+								<div class="columns small-7 medium-5 px-50">
 									<div class="h5 medium">Verification Phone Call</div>
 									<div class="small space-25-top">As a fraud and safety feature, a verification phone call to your family is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6932.png<?php echo $ver ?>"></div>
+							<div class="mt-100 row space-50-bottom">
+								<div class="columns small-12 medium-offset-1 medium-8 md:pl-50">
+									<?= C\VideoChip( 'KYC Verification', '02:54', '9wlLRuYIdqM', '/media/thumbnails/faq-4.jpg' ) ?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- CARD: 6 -->
@@ -217,22 +208,26 @@
 						<input id="sgs7" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs7" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">6</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Instant Payment</div>
+							<div class="title h4 strong text-light columns small-10 px-50">Instant Payment</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row m-space space-50-top space-200-bottom space-50-left-right">
-								<div class="columns small-9 medium-5 small-offset-1 space-50-left-right">
+						<div class="card-content px-50">
+							<div class="row space-50-top space-50-bottom">
+								<div class="columns small-9 medium-5 small-offset-1 px-50">
 									<div class="p">For your security, we transfer the money to your bank account. You can confirm the money transfer before leaving our branch.</div>
 								</div>
 							</div>
-							<div class="row space-200-top space-50-bottom space-50-left-right">
+							<div class="row space-50-top space-50-bottom">
 								<div class="columns small-1"><span class="checkmark h5 medium fill-yellow-2 text-blue-4">&check;</span></div>
-								<div class="columns small-10 medium-5 space-50-left-right"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
+								<div class="columns small-10 medium-5 px-50"><div class="h3 text-yellow-2 medium">Your money is transferred instantly to your bank account.</div></div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6948.png<?php echo $ver ?>"></div>
+							<div class="mt-50 row space-50-bottom">
+								<div class="columns small-12 medium-offset-1 medium-8 md:pl-50">
+									<?= C\VideoChip( 'Instant Payment', '04:38', 'tJ9fh5zEU7k', '/media/thumbnails/faq-5.jpg' ) ?>
+								</div>
+							</div>
 						</div>
 					</div>
 					<!-- CARD: 7 -->
@@ -240,19 +235,19 @@
 						<input id="sgs2" type="radio" name="sell-gold-step" class="visuallyhidden js_card_toggle">
 						<label for="sgs2" class="card-head row block">
 							<div class="columns small-1"><span class="index h6 medium">7</span></div>
-							<div class="title h4 strong text-light columns small-10 space-50-left-right">Earn a Bonus</div>
+							<div class="title h4 strong text-light columns small-10 px-50">Earn a Bonus</div>
 							<div class="toggle columns small-1">
 								<div class="arrow"><span class="a1"></span><span class="a2"></span></div>
 							</div>
 						</label>
-						<div class="card-content">
-							<div class="row space-50-left-right">
-								<div class="columns small-7 medium-5 small-offset-1 space-50-left-right space-200-top-bottom">
+						<div class="card-content px-50">
+							<div class="row pt-50 pb-200">
+								<div class="columns medium-5 px-50 small-7 small-offset-1">
 									<div class="h5 medium">Earn a bonus if you have the original bill.</div>
-									<div class="p space-200-top space-100-right">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
+									<div class="mb-250 mt-100 mr-100 p">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/char-6237.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-earn-a-bonus.png<?php echo $ver ?>"></div>
 						</div>
 					</div>
 				</div>
