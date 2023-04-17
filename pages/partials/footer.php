@@ -125,6 +125,7 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 
 <?= WordPress::get( 'arbitrary_code_before_body_closing' ) ?>
 <!-- anand -->
+<!-- <span aria-hidden="true" style="display: none;" hidden></span> -->
 </body>
 
 </html>
