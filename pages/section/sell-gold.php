@@ -2,8 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="intro columns small-12 large-4">
-				<div class="h2 strong text-yellow-2">Sell Gold for Cash</div>
-				<div class="h2 strong text-blue-3">Seven easy steps</div>
+			<div class="h2 strong text-yellow-2">Sell Gold in <?php the_field('add_locationn');?> with<span class="h2 strong text-blue-3"> Seven easy steps</span></div>
 			</div>
 			<div class="step-cards columns small-12 large-8">
 				<div class="step-card-grid row">
@@ -25,13 +24,13 @@
 						</label>
 						<!-- <div class="card-content" style="--bg-image: url( '/media/background/find-branch.png<?= $ver ?>' )"> -->
 						<div class="card-content px-50">
-							<div class="row space-50-top">
+							<div class="row space-50-top _space-200-top-bottom">
 								<div class="columns small-9 small-offset-1 px-50 space-50-bottom">
 									<div class="h4 medium space-25-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
 									<div class="h5 medium mb-200 md:mb-0" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu and <br>Kerala</div>
 									<a href="/<?= REGION ?>/branches" class="button fill-light" style="margin-top: var(--space-150);">
 										<span class="button-label">Find Branch&ensp;</span>
-										<img class="button-icon tall" src="/media/icon/location-tall-red.svg<?= $ver ?>">
+										<img class="button-icon tall" alt="location" src="/media/icon/location-tall-red.svg<?= $ver ?>">
 									</a>
 								</div>
 							</div>
@@ -40,7 +39,7 @@
 									<?= C\VideoChip( 'Find a Branch', '03:45', 'KNHdvECeRnY', '/media/thumbnails/faq-1.jpg' ) ?>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-find-a-branch.png<?php echo $ver ?>" alt="find-branch"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-find-a-branch.png<?php echo $ver ?>" alt="find-branch" title="find-branch"></div>
 						</div>
 					</div>
 					<!-- CARD: 2 -->
@@ -93,7 +92,7 @@
 									<div class="p space-50-top">Photo ID and Address proof is required.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-carry-id-proof.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-carry-id-proof.png<?php echo $ver ?>" alt="best place to sell gold jewelry for cash near me" title="best place to sell gold jewelry for cash near me"></div>
 						</div>
 					</div>
 
@@ -131,7 +130,7 @@
 									<?= C\VideoChip( 'How is gold purity checked?', '03:25', 'GKQ9Avhi-X8', '/media/thumbnails/faq-2.jpg' ) ?>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-purity.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-purity.png<?php echo $ver ?>" alt="best place to sell gold near me" title="best place to sell gold near me"></div>
 						</div>
 					</div>
 					<!-- CARD: 4 -->
@@ -150,9 +149,9 @@
 									<div class="h5 medium space-100-bottom">Based on the gold purity check we will give you a quotation. Our rate is transparent. </div>
 									<div class="fill-neutral-5 radius-50 space-25" style="width: calc(var(--card)/2)">
 										<a class="picture-button block fill-yellow-2 text-light" href="/<?= REGION ?>/live-gold">
-											<span class="picture-button-bg fill-dark" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
+											<span class="picture-button-bg fill-dark" alt="cash for gold near me" style="background-image: url('/media/background/sell-gold.png<?php echo $ver ?>'); filter: brightness(0.5);" alt=""></span>
 											<span class="picture-button-icon">
-												<img class="block" src="/media/icon/rupee-white.svg<?php echo $ver ?>">
+												<img class="block" src="/media/icon/rupee-white.svg<?php echo $ver ?>" alt="gold buyers near me">
 											</span>
 											<span class="picture-button-label">Check Live Gold Rate Now</span>
 										</a>
@@ -164,7 +163,7 @@
 									<?= C\VideoChip( 'Live Gold Rate', '06:50', '2ploMQRLncA', '/media/thumbnails/faq-3.jpg', 'fill-neutral-4', 'rgba( 78, 80, 85, 0.8 )' ) ?>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-rate.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-check-gold-rate.png<?php echo $ver ?>" alt="gold sale near me" title="gold sale near me"></div>
 						</div>
 					</div>
 					<!-- CARD: 5 -->
@@ -247,7 +246,7 @@
 									<div class="mb-250 mt-100 mr-100 p">Make your White Gold experience hassle free and get a better rate. Carry the original purchase bill.</div>
 								</div>
 							</div>
-							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-earn-a-bonus.png<?php echo $ver ?>"></div>
+							<div class="bg-img"><img class="block" src="/media/cutout/2023/char-earn-a-bonus.png<?php echo $ver ?>" alt="places to sell gold near me" title="places to sell gold near me"></div>
 						</div>
 					</div>
 				</div>

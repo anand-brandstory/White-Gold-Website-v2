@@ -17,7 +17,7 @@ require_once __ROOT__ . '/pages/snippet/menu.php';
 		<div class="row">
 			<div class="columns small-6 inline-middle">
 				<a class="logo inline" href="/">
-					<img class="block" src="/media/whitegold-logo-light.svg<?php echo $ver ?>">
+					<img class="block" src="/media/whitegold-logo-light.svg<?php echo $ver ?>" alt="whitegold">
 				</a>
 			</div>
 			<div class="columns small-6 inline-middle text-right">

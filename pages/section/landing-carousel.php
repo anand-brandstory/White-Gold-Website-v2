@@ -12,8 +12,8 @@
 			<?php endforeach; ?>
 		</div>
 		<div class="carousel-controls clearfix">
-			<div class="prev float-left"><button class="carousel-button h3 fade-out js_pager" data-dir="left"><span class="country-code-divider material-icons" data-icon="arrow_back"></span></button></div>
-			<div class="next float-right"><button class="carousel-button h3 js_pager" data-dir="right"><span class="country-code-divider material-icons" data-icon="arrow_forward"></span></button></div>
+			<div class="prev float-left"><button class="carousel-button h3 fade-out js_pager" aria-label="left"  data-dir="left"><span class="country-code-divider material-icons" data-icon="arrow_back"></span></button></div>
+			<div class="next float-right"><button class="carousel-button h3 js_pager" aria-label="right"  data-dir="right"><span class="country-code-divider material-icons" data-icon="arrow_forward"></span></button></div>
 		</div>
 	</div>
 </section>
