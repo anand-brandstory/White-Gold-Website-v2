@@ -194,7 +194,7 @@ if ( ! defined( 'UPLOADS' ) )
 
 
 
-/* That's all, stop editing! Happy publishing. */
+/* That's all, stop editing! Happy publishingg. */
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) )
