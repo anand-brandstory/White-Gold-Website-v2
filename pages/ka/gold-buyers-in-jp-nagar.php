@@ -12,7 +12,7 @@
 // If a post revision or preview is being viewed, and the user is not authorized to view it, simply return to the home page
 // NOTE: The revision / preview URLs of **unpublished** posts have no URL slugs, only query parameters, i.e. they essential resemble that of the home page URL
 if ( \BFS\Router::$urlSlug == '' )
-	return require_once __ROOT__ . '/pages/ka/gold-buyers-in-basaveshwaranagar.php';
+	return require_once __ROOT__ . '/pages/ka/gold-buyers-in-jp-nagar.php';
 
 
 
@@ -422,24 +422,39 @@ $releaseGoldFAQsSection.on( "change", ".js_faq_toggle", function ( event ) {
 } );
 
 </script>
-
 <style>
-@media screen and (max-width: 980px){
-.lp-basaveshwaranagar .highlight .slick-prev {
+    .lp-jpnagar .highlight .slick-prev {
     position: absolute;
     left: 35%;
-    top: 215%;
+    top: 137%;
     z-index: 1;
 }
-.lp-basaveshwaranagar .highlight .slick-next {
+.lp-jpnagar .highlight .slick-next {
     position: absolute;
-    top: 215%;
+    top: 137%;
+    right: 36%;
+    z-index: 1;
+}
+.lp-jpnagar .highlight .slick-dots {
+    bottom: -214px!important;
+} 
+@media screen and (max-width: 980px){
+    .lp-jpnagar .highlight .slick-prev {
+    position: absolute;
+    left: 35%;
+    top: 220%;
+    z-index: 1;
+}
+.lp-jpnagar .highlight .slick-next {
+    position: absolute;
+    top: 220%;
     right: 35%;
     z-index: 1;
-}
+}  
 }
 
 </style>
+
 
 
 
