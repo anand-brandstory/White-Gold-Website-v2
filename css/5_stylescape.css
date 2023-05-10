@@ -156,6 +156,15 @@
 
 
 
+/*
+ |
+ | Widths
+ |
+ */
+.w-50 {
+	width: var( --space-50 )
+}
+
 
 
 /*
@@ -737,6 +746,16 @@ select { cursor: pointer; }
 	.xl\:mt-75 { margin-top: var( --space-75 ) }
 	.xl\:mt-150 { margin-top: var( --space-150 ) }
 }
+
+.space-x-min>:not([hidden])~:not([hidden]) {
+	margin-right: var( --space-min );
+	margin-left: var( --space-min );
+}
+.space-x-25>:not([hidden])~:not([hidden]) {
+	margin-right: var( --space-25 );
+	margin-left: var( --space-25 );
+}
+
 
 /* Padding */
 .p-0 { padding: 0 }

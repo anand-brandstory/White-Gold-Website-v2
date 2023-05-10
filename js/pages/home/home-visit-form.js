@@ -117,7 +117,7 @@ $( document ).on( "submit", ".js_home_visit_form", function ( event ) {
  |
  */
 function closeFormAndGiveFeedback () {
-	homeVisitForm.getFormNode().parent().addClass( "show-thankyou" )
+	window.location.href = "https://whitegold.money/thank-you/";
 }
 
 

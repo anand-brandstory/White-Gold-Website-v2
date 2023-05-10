@@ -79,6 +79,9 @@ GoldRates.getRelevantRatesFromTheDay = function ( region ) {
 		} )
 }
 GoldRates.prototype.render = function ( { cost__24KaratGold__perGram, cost__22KaratGold__perGram } ) {
+	if ( !this.dom22KaratPerGram && !this.dom22KaratPerGram ) {
+		return
+	}
 	let valueHasChanged = true
 	if ( this.previous ) {
 		let previous = this.previous

@@ -326,10 +326,90 @@ hr {
 	padding: 0;
 }
 
+.emailfooter{
+font-size:20px;
+color:#939b97;
+
+}
+.social-icons .fa-linkedin{
+background: #ffffff;
+    padding: 7px 8px 8px 8px;
+    border-radius: 50px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.social-icons .fa-instagram{
+background: #ffffff;
+    padding: 7px 10px 10px 8px;
+    border-radius: 50px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.social-icons .fa-facebook{
+background: #ffffff;
+    padding: 8px 10px 10px 10px;
+    border-radius: 50px;
+    margin-top: 10px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.social-icons .fa-twitter{
+background: #ffffff;
+    padding: 7px 10px 10px 8px;
+    border-radius: 50px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+.social-icons .fa-youtube-play{
+background-color: white;
+    padding: 7px 10px 10px 7px;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 17px;
+    margin-left: 0px;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.social-icons{
+margin-top:18px;
+}
+
+.social-icons h5{
+font-size:20px;
+margin-top:10px;
+color:#939b97;
+}
+
+
+
+.support a{
+color: #939b97;
+margin-top: 2px;
+font-size: 20px;
+}
+
+
 
 /* A better looking img
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 img {
 	max-width: 100%;
-	height: auto;
-}
+	height: auto;}

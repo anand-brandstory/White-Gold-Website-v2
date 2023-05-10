@@ -25,6 +25,12 @@
 	width: calc(var(--card)*1);
 	transform: scale(0.7) translateX(40%) translateY(21%);
 }
+/*.step-cards .rgs2 .card-content .bg-img {
+	bottom: 0;
+	right: 0;
+	width: calc(var(--card)*1);
+	transform: scale(0.7) translateX(40%) translateY(21%);
+}*/
 .step-cards .sgs3 .card-content .bg-img,
 .step-cards .rgs3 .card-content .bg-img {
 	bottom: 0;
@@ -44,6 +50,7 @@
 	bottom: 0;
 	right: 0;
 	width: calc(var(--card)*1);
+	/* transform: scale(0.8) translateX(0%) translateY(60%); */
 	transform: scale(0.8) translateX(0%) translateY(45%);
 }
 .step-cards .sgs5 .card-content .row.m-space,
@@ -108,6 +115,10 @@
 		width: calc(var(--card)*1.5);
 		transform: scale(0.58) translateX(25%) translateY(70%);
 	}
+	/*.step-cards .rgs2 .card-content .bg-img {
+		width: calc(var(--card)*1.5);
+		transform: scale(0.6) translateX(25%) translateY(60%);
+	}*/
 	.step-cards .sgs3 .card-content .bg-img,
 	.step-cards .rgs3 .card-content .bg-img {
 		width: calc(var(--card)*1.5);
@@ -116,11 +127,13 @@
 	.step-cards .sgs4 .card-content .bg-img,
 	.step-cards .rgs7 .card-content .bg-img {
 		width: calc(var(--card)*1.5);
+		/* transform: scale(0.65) translateX(10%) translateY(45%); */
 		transform: scale( 0.65 ) translateX( 20% ) translateY( 52% );
 	}
 	.step-cards .sgs5 .card-content .bg-img,
 	.step-cards .rgs5 .card-content .bg-img {
 		width: calc(var(--card)*1.5);
+		/* transform: scale(0.7) translateX(15%) translateY(60%); */
 		transform: scale(0.8) translateX(15%) translateY(55%);
 	}
 	.step-cards .sgs5 .card-content .row.m-space,

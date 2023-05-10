@@ -32,6 +32,9 @@ require_once __ROOT__ . '/pages/partials/header.php';
 
 
 <!-- ## General Page -->
+<script>
+	console.log( "here." )
+</script>
 <?php require_once __ROOT__ . '/pages/section/header.php'; ?>
 
 
@@ -87,9 +90,26 @@ require_once __ROOT__ . '/pages/partials/header.php';
 <?php require_once __ROOT__ . '/pages/section/release-gold-faqs.php'; ?>
 <!-- END: Release Gold FAQs Section -->
 
+<!--  START why-white-gold section -->
+<?php require_once __ROOT__ . '/pages/section/home-why-whitegold.php'; ?>
+<!-- END: why-white-gold Section -->
+
+<!-- career home Section -->
+<?php require_once __ROOT__ . '/pages/section/includes/home-career.php'; ?>
+<!-- END: career home Section -->
 
 
+<!-- START testimonials -->
+<?php require_once __ROOT__ . '/pages/section/home-testimonial.php'; ?>
+<!-- END: Testimonial Section -->
 
+<!-- START refer and earn -->
+<?php require_once __ROOT__ . '/pages/section/home-refer-and-earn.php'; ?>
+<!-- END: refer and earn -->
+
+<!-- START blog AND media -->
+<?php require_once __ROOT__ . '/pages/section/includes/home-blog-and-media.php'; ?>
+<!-- END: blog AND media -->
 
 <?php require_once __ROOT__ . '/pages/partials/footer.php'; ?>
 

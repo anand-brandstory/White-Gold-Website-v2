@@ -1,0 +1,1011 @@
+/* margins css starts  */
+.mt-2 {
+    margin-top: 0.5rem!important;
+}
+.mb-2 {
+    margin-bottom: 0.5rem!important;
+}
+.mt-3 {
+    margin-top: 1rem!important;
+}
+.mb-3 {
+    margin-bottom: 1rem!important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+.mt-4 {
+    margin-top: 1.5rem!important;
+}
+.mb-5 {
+    margin-bottom: 3rem!important;
+}
+.mt-5{
+    margin-top: 3rem!important; 
+}
+
+/* margin css end */
+.grey-box{
+    border-radius:10px;
+    height: 144px;
+    margin: 10px;
+    padding:20px;
+}
+.home-why-whitegold h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.bg-grey{
+    background-color:#F1F1F1;
+}
+.home-why-whitegold p{
+    display: block;
+}
+@media (max-width: 480px){
+.home-why-whitegold .container {
+    max-width: 358px;
+}
+}
+
+@media (min-width:1440px){
+    .mt-5-xl{
+    margin-top: 3rem!important; 
+}
+}
+.line-h-1{
+  line-height:1.4;
+}
+
+
+/* why white gold page css START */
+.cms-content .section1 h2{
+  font-size: 32px;
+    font-weight: 800;
+    color:black;
+}
+.cms-content .section1 .icon p{
+  margin-left: 6px;
+    margin-top: 9px;
+    color: #212322;
+    font-size: 16px;
+}
+
+.cms-content2 h2{
+  font-weight: 700;
+    font-size: 32px;
+}
+
+@media (min-width:1025px){
+ .why-whitegold .landing-carousel-section h1{
+  padding-top:10%;
+}
+  .cms-content2 .btn-custom-primary img{
+  margin-right: 10px;
+    line-height: 29px;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    color: white;
+    background-color: #0032A0;
+    border-radius: 53px;
+
+}
+.cms-content2 .btn-custom-primary {
+    
+    border-radius: 10px;
+    margin-right: 15px;
+    padding: 15px 15px 13px 15px;
+}
+.pd50-lg{padding: 50px;}
+.pt-35cm{padding-top:35%;}
+.pt-20cm{padding-top:20%;}
+.pt-25cm{padding-top:25%;}
+.pt-30cm{padding-top:30%;}
+.pt-10cm{padding-top:10%;}
+.pt-15cm{padding-top:15%;}
+.pt-22cm{padding-top:22%;}
+}
+.cms-content3 h2{
+  color:black;
+  font-weight: 700;
+  font-size: 32px;
+}
+.cms-content3 .map-location .icon2 p{
+margin-left: 7px;
+margin-top: 9px;
+}
+.cms-content2 .icon4 p {
+margin-left: 6px;
+margin-top: 9px;
+color:white;
+}
+@media (min-width:1440px){
+.why-whitegold .landing-carousel-section h1{
+font-size:60px!important;
+}
+  .pt-10-xl{padding-top:10%;}
+}
+
+
+
+@media (max-width:1025px){
+  .cms-content2 .btn-custom-primary {
+   
+    border-radius: 10px;
+    margin-right: 15px;
+    padding: 7px 6px 5px 5px;
+}
+  .cms-content2 .btn-custom-primary img {
+    margin-right: 10px;
+    line-height: 24px;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    color: white;
+    background-color: #0032A0;
+    border-radius: 53px;
+}
+
+  .cms-content2 .btn-custom-primary {
+  font-size: 10px;
+  }
+}
+@media (max-width:480px){
+  .cms-content .container {
+    max-width: 370px;
+}
+}
+/* why white gold page css END */
+
+/* home refer and earn STARTS */
+.terms{
+  margin-left:20px;
+  margin-top: -17px;
+  font-size: 14px;
+  margin-left: 0px!important;
+  color: #2864F0!important;
+  margin-bottom: 10px;
+
+}
+.refer-home h4{
+  display: block;
+  font-size:20px;
+  color:white;
+  font-weight:500;
+}
+
+.refer-home h5{
+  font-size:20px;
+  color:black;
+  font-weight:700;
+}
+
+.mb-4 {
+  margin-bottom: 2rem!important;
+}
+  .mt-4 {
+  margin-top: 1.5rem!important;
+}
+
+@media (min-width: 1025px){
+  .cust-box4{
+  margin-left: 53px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 37px;
+  
+}
+.d-lg-none{
+      display:none;
+  }
+}
+@media (max-width: 1025px){
+
+  /* .d-md-none{
+      display:none;
+  } */
+  .cust-box4 p{
+  margin-left: 53px;
+  margin-top: -16px;
+  color: #212322;
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+  display: block;
+}
+  .refer-home .btn-primary-blue {
+  font-size: 14px;
+  padding: 14px 15px 13px 15px;
+  position: relative;
+  background-color: #0032a0;
+  color: white;
+  border-radius: 10px;
+  
+
+}
+  .cust-box4{
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  margin-top: 30px;
+}  
+}
+
+.mb-5 {
+  margin-bottom: 3rem!important;
+}
+.refer-home h3 {
+  font-weight: 800;
+  font-size: 34.5px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1025px){
+  .cust-box4 p{
+  margin-left: 53px;
+  margin-top: -10px;
+  color: #212322;
+  font-size: 16px;
+  position: relative;
+  top: -30px;
+  display: block;
+}
+  .refer-home .btn-primary-blue {
+  font-size: 14px;
+  padding: 14px 15px 13px 15px;
+  position: relative;
+  background-color: #0032a0;
+  color: white;
+  border-radius: 10px;
+}
+}
+/* home refer and earn END */
+
+/* refer and earn page inner START */
+.refer-and-earn-p-inner .wpcf7 form .wpcf7-response-output {
+  font-size: 16px;
+  margin: 2em 0.5em 1em;
+  padding: 0.2em 1em;
+  border: 2px solid #00a0d2;
+}
+
+.how-it-works h3{
+  font-size: 24px;
+  font-weight:700;
+  display: block;
+}
+
+.label-b{
+  font-size: 16px;
+  color: #212322;
+  padding-top: 4px;
+  padding-bottom: 17px;
+}
+
+.p-30{
+padding:30px;
+}
+.inner-4 h3{
+font-size:24px;
+color:#0032A0;
+font-weight:700;
+}
+
+
+.refer-form2-inner img{
+position: relative;
+  top: 0px;
+}
+.inner-3-arrow:after{
+margin-top: 27px;
+  left: 234px;
+  position: absolute;
+content: url(https://whitegold.money/cms/../content/cms/arrow-down.svg)!important;
+}
+.refer-form2 .inner2 .inner-3 p{
+  text-align: left;
+padding-left: 10px;
+  font-size: 16px;
+padding-top: 10px;
+}
+
+.refer-form2 .inner2 .inner-3 {
+  padding: 18px;
+}
+.br16{
+  border-radius: 16px;
+}
+.refer-form2 .inner2{
+padding:30px;
+}
+
+.refer-form2-inner{
+padding: 30px;
+}
+
+
+.refer-form2 h2{
+font-size: 32px;
+font-weight:700;
+color:white;
+}
+.refer-form2 p{
+  text-align: justify;
+display: block;
+  font-size: 18px;
+  color:white;
+}
+
+.refer-form .btn-primary-blue {
+font-size: 16px;
+  padding: 22px 50px 28px 50px;
+  position: relative;
+  background-color: #0032a0;
+  color: white;
+  border-radius: 10px;
+  line-height: 9px;
+}
+.custom-label p, .inner-4 .custom-label p{
+
+  position: absolute;
+  display: block;
+  color: #B7B7B7;
+  font-size: 12px;
+  background-color: white;
+  top: -13px;
+  z-index: 1;
+}
+.inner-4 .custom-label{top: 22%;}
+.custom-label{
+left: 6%;
+top: 19%;
+position: relative;
+color:#B7B7B7;
+font-size:12px;
+}
+.refer-form-inner label, .inner-4 label{
+font-size:20px;
+color:#0032A0;
+font-weight: 500;
+}
+
+.refer-form-inner{
+background: #FFFFFF;
+box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.12);
+border-radius: 16px;
+padding:20px;
+}
+
+
+.program img{
+  text-align:center;
+}
+.program h3{
+font-size: 28px;
+  font-weight: 600;
+  color: white;
+}
+.program p{
+      text-align: justify;
+  font-size: 18px;
+  color: white;
+}
+
+.how-it-works h2, .refer-form h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: black;
+}
+
+.cust-box-6{
+height: 250px;
+padding: 30px;
+background-color:#F2F2F2;
+border-radius: 16px;
+text-align: center;
+}
+
+.how-it-works p {
+  display: block;
+  font-size: 18px;
+  color: #212322;
+}
+
+.terms a{
+color:#1E50CC;
+font-size: 16px;
+}
+
+@media (min-width: 1025px){
+  .br-tlbl{
+border-radius: 16px 0px 0px 16px;
+}
+.br-trbr{
+border-radius: 0px 16px 16px 0px;
+}
+  .refer-form img{
+  position: relative;
+  top: 28px;
+  }
+
+.pt-10cm {
+  padding-top: 10%;
+}
+.pt-9cm {
+  padding-top: 9%;
+}
+.pt-8cm {
+  padding-top: 8%;
+}
+}
+@media (min-width: 1440px){
+  .refer-form img{
+  position: relative;
+  top: 41px;
+  }
+
+.inner-3-arrow:after{
+  left: 338px;
+}
+
+.refer-form .btn-primary-blue {
+  line-height: 20px;
+}
+}
+
+@media (max-width: 400px){
+  .inner-3-arrow:after{
+  left: 163px!important;
+}  
+}
+@media (max-width: 1024px){
+  
+
+  .refer-form img{
+  position: relative;
+  top: 31px;
+  }
+  
+.inner-3-arrow:after{
+  left: 183px;
+}
+}
+
+/* file upload style starts */
+
+.image-upload{
+  position: relative;
+  max-width: 100%;
+margin: 0 auto;
+overflow: hidden;
+}
+.image-upload input {
+cursor: pointer;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+opacity: 0;
+  }
+.upload-field {
+display: block;
+border-radius: 11px;
+
+}
+
+.upload-field .file-thumbnail {
+cursor: pointer;
+border: 3px dashed #DFDFDF;
+border-radius: 8px;
+text-align: center;
+padding: 30px;
+}
+
+.upload-field .file-thumbnail img {
+  margin: 0 auto;
+  display: block;
+}
+
+.upload-field .file-thumbnail h3 {
+font-size: 12px;
+color: #000000;
+font-weight: 600;
+margin-bottom: 4px;
+}
+
+.upload-field .file-thumbnail p {
+  text-align:center;
+font-size: 12px;
+color: #212322;
+margin-bottom: 0;
+opacity: 0.5;
+}
+.refer-form2-inner .img-top{
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  top: 10px;
+  position: relative;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output {
+  font-size: 16px;
+  border-color: #ffb900;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  font-size: 16px;
+  border-color: #46b450;
+}
+.wpcf7-not-valid-tip {
+  font-size: 16px;
+  color: #dc3232;
+  font-weight: normal;
+  display: block;
+}
+
+.mt-6{margin-top: 4rem!important;}
+.mb-6{margin-bottom: 4rem!important;}
+.pt-7p{padding-top:7%;}
+/* START for landscape version android */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  .inner-3-arrow:after {
+  left: 285px;
+}
+} /* END for landscape version android */
+
+
+@media only screen  /* START for landscape version android */
+and (min-device-width: 320px) 
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  .inner-3-arrow:after {
+  left: 285px;
+}
+
+@media (min-width: 767px){
+.d-md-none{
+  display:none!important;
+}
+}
+
+.wpcf7-not-valid-tip .custom-label p, .inner-4 .custom-label p{
+  top: -16px;
+}
+
+} /* END for landscape version ios */
+/* refer and earn page inner END */
+
+/* News and Articles inner page STARTS */
+
+.mb--5{
+  margin-bottom:-5px;
+}
+
+  .col-o{
+      color:#00000075!important;
+  }
+.blog-grid a:hover{
+  color: #000000a3;
+}
+.blog-grid img{
+  border-radius:8px;
+}
+
+  .blog-newsletter ::-webkit-input-placeholder { /* WebKit browsers */
+  color: #ffffff !important;
+  opacity: 0.56;
+}
+.blog-newsletter :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #ffffff !important;
+  opacity: 0.56;
+}
+.blog-newsletter ::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #ffffff !important;
+  opacity: 0.56;
+}
+.blog-newsletter :-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #ffffff !important;
+  opacity: 0.56;
+}
+.blog-newsletter .input-field:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="text"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="date"]:focus, textarea:focus, select:focus{
+  background-color: #0000ff00;
+  outline: 0;
+  border-color: #c7c8c9;
+  color: white;
+}
+.blog-newsletter .input-field, input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], input[type="date"], textarea, select{
+  color:white;
+}
+
+
+  .btn-custom-primary {
+  font-size: 14px;
+  color: #0032A0!important;
+  background-color: white!important;
+  border-radius: 7px;
+  text-decoration: none!important;
+  font-weight: 700;
+  padding: 14px 15px 13px 15px;
+  position: relative;
+}
+  .blog-newsletter p {
+  color: white;
+  font-size: 18px;
+}
+.blog-newsletter h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: white;
+}
+@media (min-width: 1440px){
+  .blog-grid-inner .except {
+      padding-right: 82px!important;
+}
+}
+
+
+
+.bg-dark-grey {
+  background-color: #E9E9E7;
+}
+.blog-grid-inner p {
+  display: inline-block;
+  font-size: 15px;
+  color: #212322;
+}
+  .pd-10 {
+  padding: 10px;
+}
+  .except::after {
+  position: relative;
+  content: url(https://whitegold.money/cms/../content/cms/charm_arrow-right.svg);
+  left: 5px;
+  top: 3px;
+}
+.except:hover::after {
+  position: relative;
+  content: url(https://whitegold.money/cms/../content/cms/charm_arrow-right1.svg);
+  left: 5px;
+  top: 3px;
+}
+  .blog-grid-inner .except {
+  padding-right: 26px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.blog-listing .slider-banner p {
+  color: white;
+  padding-bottom: 33%;
+  font-size: 18px!important;
+}
+
+.blog-listing .slider-banner h1 {
+  font-size: 42px;
+  font-weight: 800;
+}
+/* News and Articles inner page ENDS */
+/* Home blog and media css START */
+.f-500{font-weight:500;}
+    .bg-light-grey{
+color:#000000;
+opacity: 0.5;
+
+    }
+    .mt--6{
+        margin-top: -6px;
+    }
+    .mt--20{
+        margin-top: -20px;
+    }
+.pb-30p{
+    padding-bottom: 30%;
+}
+
+ /*hide default arrows*/
+ .sample-slider [class^="swiper-button-"]::after{
+        content: "";
+    }
+    /*adjust arrow size*/
+    .sample-slider [class^="swiper-button-"]{
+        width: 55px;
+        height: 55px;
+    }
+    /*adjust arrow position*/
+    .sample-slider .swiper-button-next{
+        top: 84%;
+        right: 115px;
+    }
+    .sample-slider .swiper-button-prev{
+        top: 84%;
+        left: 115px;
+    }
+.home-blog-and-media h2 {
+    font-size: 32px;
+    font-weight: 800;
+}
+.blog-grid-inner img{
+  border-radius:8px;
+}
+.home-blog-and-media .blog-grid-inner .author-name {
+  display:block;
+    padding-left: 0px;
+}
+
+
+.home-blog-and-media .blog-grid img {
+    border-radius: 8px;
+}
+/* Style the tab */
+
+.home-blog-and-media .time-text{
+        line-height: 32px!important;
+    }
+
+    /* blog list style starts */
+    .home-blog-and-media .blog-grid a{
+        text-decoration:none;
+    }
+
+    .home-blog-and-media .d-flex-all{
+
+        display:flex!important;
+    }
+    .home-blog-and-media .blog-grid-inner .justify-content-between {
+    justify-content: space-between!important;
+}
+
+    .bg-dark-grey{
+  background-color: #E9E9E7;
+}
+
+    /* blog list style ends */
+    
+
+    .home-blog-and-media .geeks {
+    text-align: center;
+    overflow: hidden;
+    background-color: #FFC980;
+    position: relative;
+}
+.home-blog-and-media .geeks a {
+    text-decoration: none;
+    color: #0032A0;
+    padding: 14px 16px;
+    font-size: 16px;
+    display: block;
+}
+.home-blog-and-media .geeks a.icon {
+    display: block;
+    position: absolute;
+    right: 33%;
+    top: 0;
+}
+
+
+/* banner section style starts */
+.home-blog-and-media .blog-listing .slider-banner p {
+    color: white;
+    padding-bottom: 33%;
+    font-size: 18px!important;
+}
+
+.home-blog-and-media .blog-listing .slider-banner h1 {
+    font-size: 42px;
+    font-weight: 800;
+   
+}
+
+/* banner section style ends */
+
+.home-blog-and-media .duration::before{
+	top: -2px;
+    position: relative;
+	padding-right: 13px;
+    content: url(https://whitegold.money/cms/../content/cms/Vector.svg);
+    padding-left: 19px;
+}
+
+
+.home-blog-and-media .time-text::before{
+	position: relative;
+    content: url(https://whitegold.money/cms/../content/cms/fa-solid_book-open.svg);
+    right: 7px;
+    top: 2px;
+
+}
+.home-blog-and-media .blog-grid-inner .author-name {
+    padding-top: 4px;
+    padding-left: 0px;
+}
+
+.home-blog-and-media .blog-grid-inner .except {
+	font-size:20px;
+    font-weight: 700;
+}
+
+.home-blog-and-media .except::after{
+	position: relative;
+    content: url(https://whitegold.money/cms/../content/cms/charm_arrow-right.svg);
+    left: 5px;
+    top: 3px;
+}
+
+.home-blog-and-media .time-text{
+	float:right;
+}
+	
+.home-blog-and-media .blog-grid-inner .author-name {
+    padding-left: 0px;
+}
+
+.home-blog-and-media .blog-grid-inner h6 {
+    margin: 0 auto;
+    text-align: center;
+    line-height: 8px;
+    display: inline-flex;
+    background-color: #B3D4FC;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0032A0;
+    width: 119px;
+    height: 38px;
+}
+.home-blog-and-media .blog-grid-inner .post-categories{
+    margin:0 auto;
+    list-style:none;
+}
+
+
+.home-blog-and-media .tags{
+	display: unset;
+    margin-left: 10px;
+}
+
+.home-blog-and-media .date{
+	margin-left: auto;
+}
+
+.home-blog-and-media .blog-detail-box .fa{
+	margin-top: -4px;
+	font-size:24px;
+color:#0032A0;
+padding-right: 14px;
+margin-left: auto;
+
+}
+
+.home-blog-and-media .author{
+		padding-left: 15px;
+	}
+.home-blog-and-media .logo-company{
+	width: 50px;
+    height: 50px;
+}
+
+.home-blog-and-media .blog-detail-box{
+	border-radius: 16px;
+	background-color:white;
+	padding:20px;
+}
+
+.home-blog-and-media .bg-grey2{
+	background-color:#F1F1F1;
+}
+
+.home-blog-and-media .blog-detail-box .category{
+	display: table-cell;
+	background-color: #FFC980;
+    padding: 7px 15px 7px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0032A0;
+}
+.home-blog-and-media .blog-detail-box .category .post-categories{
+	background-color: #FFC980;
+    padding: 7px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0032A0;
+	list-style:none;
+}
+@media screen and (max-width:767px){
+
+  .home-blog-and-media .tabcontent {
+    display: none;
+    padding: 0px!important;
+    border-top: none;
+}
+}
+@media (max-width: 600px){
+    /* banner css for mobile starts */
+
+    .home-blog-and-media .blog-grid .container {
+    max-width: 380px;
+}
+.home-blog-and-media .blog-listing .slider-banner p {
+    color: white;
+    padding-bottom: 12%!important;
+}
+.home-blog-and-media .blog-detail-box .fa {
+    font-size: 16px;  
+}
+.home-blog-and-media .date {
+    float: right;
+}
+}
+
+@media only screen and (min-device-width: 480px) 
+                   and (max-device-width: 1000px) 
+                   and (orientation: landscape) {
+
+
+                    .home-blog-and-media .blog-listing .slider-banner p {
+    color: white;
+    padding-bottom: 3%;
+    font-size: 18px!important;
+}
+
+.home-blog-and-media .date {float: right;}
+	   }
+
+	   @media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    
+
+	.home-blog-and-media .date {float: right;}
+
+
+  }
+
+.home-blog-and-media .tab {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background-color: #e9e9e7;
+}
+
+/* Style the buttons inside the tab */
+.home-blog-and-media .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 2px 26px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: black;
+  margin-left: 10px;
+}
+
+/* Change background color of buttons on hover */
+.home-blog-and-media .tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.home-blog-and-media .tab button.active {
+    background-color: #fff;
+}
+
+/* Style the tab content */
+.home-blog-and-media .tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+/* Home blog and media css ends */

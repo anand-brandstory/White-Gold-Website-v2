@@ -122,7 +122,7 @@ $( document ).on( "submit", ".js_sell_gold_form", function ( event ) {
  |
  */
 function closeFormAndGiveFeedback () {
-	sellGoldForm.getFormNode().parent().addClass( "show-thankyou" )
+	window.location.href = "https://whitegold.money/thank-you/";
 }
 
 

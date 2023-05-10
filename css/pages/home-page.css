@@ -875,7 +875,31 @@
 	grid-gap: var(--space-50);
 }
 
-@media( min-width: 640px )  {}
+.report-malpractice-section .fg-img-container {
+	padding-bottom: 24rem;
+}
+.report-malpractice-section .fg-img {
+	transform: translate( 4rem, -1rem ) scale( 1 );
+}
+.report-malpractice-section .fg-img:after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: linear-gradient( 0deg, rgba( 33, 35, 34, 1 ) 40%, rgba( 33, 35, 34, 0 ) 60% );
+}
+
+@media( min-width: 640px )  {
+	.report-malpractice-section .fg-img-container {
+		padding-bottom: 15rem;
+	}
+	.report-malpractice-section .fg-img {
+		transform: translate( 7rem, -9rem ) scale( 0.7 );
+	}
+}
 @media( min-width: 1040px ) {
 	.report-malpractice-section .report-malpractice-grid {
 		grid-template-columns: 1fr 1fr;
@@ -884,8 +908,21 @@
 		grid-column: span 2;
 	}
 
+	.report-malpractice-section .fg-img-container {
+		padding-bottom: 10rem;
+	}
+	.report-malpractice-section .fg-img {
+		transform: translate( 9rem, -36rem ) scale( 0.6 );
+	}
 }
-@media( min-width: 1480px ) {}
+@media( min-width: 1480px ) {
+	.report-malpractice-section .fg-img-container {
+		padding-bottom: 14rem;
+	}
+	.report-malpractice-section .fg-img {
+		transform: translate( 11rem, -52rem ) scale( 0.6 );
+	}
+}
 
 
 
@@ -1035,7 +1072,7 @@
 
 
 
-/* -- Footer Section --  */ 
+/* -- Footer Section --  */
 
 .footer-section {}
 .footer-section .footer-menu .link {
@@ -1278,8 +1315,8 @@
 	bottom: 1px;
 	left: 0;
 	z-index: 1;
-	width: 100%; 
-	height: var(--space-50); 
+	width: 100%;
+	height: var(--space-50);
 	background-color: var(--dark);
 	transform: translateY(97.5%);
 }
@@ -1290,7 +1327,7 @@
 	bottom: 0;
 	left: 50%;
 	z-index: 2;
-	height: 1px; 
+	height: 1px;
 	background-color: var(--light);
 	transform: translateX(-50%);
 	opacity: 0.25;
@@ -1303,7 +1340,7 @@
 }
 .show-menu .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after,
 .home-menu-section .main-menu .toggle-whatsapp-open:checked ~ .whatsapp-form:after {
-	width: calc(100% - var(--space-100)); 
+	width: calc(100% - var(--space-100));
 }
 
 .main-menu .whatsapp-form .send-to-whatsapp {
