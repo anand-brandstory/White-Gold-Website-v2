@@ -29,9 +29,9 @@ if ( WordPress::$isEnabled and /*WordPress::$onlySetupContext and*/ empty( $docu
 		]
 	);
 	$sectionTitle = $sectionTitle ?? '';
-	// if ( Router::$urlSlug == '' )	// i.e. home page
-	// 	$postTitle = $postTitle ?? '';
-	// else
+	if ( Router::$urlSlug == '' )	// i.e. home page
+		$postTitle = $postTitle ?? '';
+	else
 		$postTitle = $postTitle ?? get_the_title( $post ) ?? '';
 
 	// $documentTitle = implode( ' | ', array_filter( [ $postTitle, $sectionTitle, $siteTitle, $siteTagline ] ) );
@@ -83,7 +83,9 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 - -->
 <!-- Short description of the document (limit to 150 characters) -->
 <!-- This content *may* be used as a part of search engine results. -->
-
+<?php if ( $metaDescription ) : ?>
+<meta name="description" content="<?= $metaDescription ?>">
+<?php endif; ?>
 
 
 <!--
@@ -92,6 +94,9 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 *
 - -->
 <!-- Links to information about the author(s) of the document -->
+<meta name="author" content="Coders for Designers">
+<link rel="author" href="/humans.txt">
+
 
 <!--
 *
@@ -160,22 +165,19 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 *	Social
 *
 - -->
-<!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://whitegold.money/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Sell Gold for Cash in Bangalore | Top Gold Buyers : White Gold">
-  <meta property="og:description" content="White Gold is the top trusted gold buyers in Bangalore. We buy all kinds of used gold and silver jewelry at the best prices with instant cash in Bangalore, Chennai and Kerala.">
-  <meta property="og:image" content="https://whitegold.money/media/logo.png">
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta property="twitter:domain" content="whitegold.money">
-  <meta property="twitter:url" content="https://whitegold.money/">
-  <meta name="twitter:title" content="Sell Gold for Cash in Bangalore | Top Gold Buyers : White Gold">
-  <meta name="twitter:description" content="White Gold is the top trusted gold buyers in Bangalore. We buy all kinds of used gold and silver jewelry at the best prices with instant cash in Bangalore, Chennai and Kerala.">
-  <meta name="twitter:image" content="https://whitegold.money/media/logo.png">
-
-  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+<!-- Facebook Open Graph -->
+<title><?= $metaTitle ?></title>
+<meta property="og:url" content="<?= $pageURL ?>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<?= $metaTitle ?>">
+<?php if ( $metaDescription ) : ?>
+<meta property="og:description" content="<?= $metaDescription ?>">
+<?php endif; ?>
+<?php if ( $metaImage ) : ?>
+<meta property="og:image" content="<?= $metaImage ?>">
+<?php endif; ?>
+<meta property="og:site_name" content="<?= $siteTitle ?>">
 
 
 <!-- Schema.org / Google+ -->
@@ -213,12 +215,10 @@ $metaCharset = WordPress::$isEnabled ? get_bloginfo( 'charset' ) : 'utf-8';
 
 <!-- jQuery 3 -->
 <script type="text/javascript" src="/plugins/jquery/jquery-v3.6.0.min.js<?= $ver ?>"></script>
-<!-- Slick Carousell -->
+<!-- Slick Carousel -->
 <link rel="stylesheet" type="text/css" href="/plugins/slick/slick.css<?= $ver ?>"/>
 <link rel="stylesheet" type="text/css" href="/plugins/slick/slick-theme.css<?= $ver ?>"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/css/custom.css"/>
-
 <!--
 *
 *	Prevent browsers from (non-smooth) scrolling when a hash is in the URL

@@ -32,9 +32,24 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 						<div class="footer-menu">
 							<div class="title h4 strong text-neutral-4 space-75-bottom">Quick Links:</div>
 							<?php foreach ( $footerNavigationMenuItems as $item ) : ?>
-								<a href="/<?= $item[ 'url' ] ?>" class="link h6 strong text-yellow-2"><?= $item[ 'title' ] ?></a><br>
+								<a href="/<?= $item[ 'url' ] ?>" aria-label="links" class="link h6 strong text-yellow-2"><?= $item[ 'title' ] ?></a><br>
 							<?php endforeach; ?>
-						</div>
+<a href="https://whitegold.money/careers/" aria-label="careers" class="link h6 strong text-yellow-2">Careers</a><br>
+	<a href="mailto:wecare@whitegold.money" aria-label="email" ><h5 class="emailfooter">Email us: wecare@whitegold.money</h5></a>
+<div class="support">
+<a href="tel://9590704444">
+<h4>Support: +91 9590704444</h4>
+</a></div>
+		<div class="social-icons">
+<h5>Connect with us: </h5><br>
+<a href="https://www.facebook.com/whitegold.money/" target="_blank" aria-label="facebook" class="fa fa-facebook"></a>
+<a href="https://www.linkedin.com/company/white-gold-india/" target="_blank" aria-label="linked-in"  class="fa fa-linkedin mr-3"></a>
+<a href="https://instagram.com/whitegold.money?igshid=YmMyMTA2M2Y=" target="_blank" aria-label="instagram" class="fa fa-instagram"></a>
+<a href="https://twitter.com/whitegold_money?s=21&t=XjezEzzMapqJvw2naUEyFg" target="_blank" aria-label="Twitter" class="fa fa-twitter"></a>
+<a href="https://youtube.com/channel/UCm2R8_Z8hRuOywELr6CjT7A" target="_blank" aria-label="youtube" class="fa fa-youtube-play"></a>
+</div>
+
+	</div>
 					</div>
 				</div>
 			</div>
@@ -117,6 +132,22 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 <script type="text/javascript" src="/js/modules/phone-country-code.js<?= $ver ?>"></script>
 <!-- <script type="text/javascript" src="/js/modules/cupid/extensions.js<?= $ver ?>"></script> -->
 <script type="text/javascript" src="/js/modules/form-utils.js<?= $ver ?>"></script>
+
+
+
+<script
+            src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+            crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" type="text/javascript"></script>
+ <script>
+
+$('.slider').slick();
+            </script>
+
+
+
+
 <?php if ( substr( Router::$urlSlug, 0, 4 ) === 'faqs' or ( WordPress::$isEnabled and WordPress::getPostType() === 'faq' ) ) : ?>
 	<script type="text/javascript" src="/js/modules/search.js<?= $ver ?>"></script>
 <?php endif; ?>
@@ -124,10 +155,7 @@ $footerNavigationMenuItems = WordPress::getNavigation( 'Footer' );
 <?php if ( WordPress::$isEnabled and ! WordPress::$onlySetupContext ) wp_footer() ?>
 
 <?= WordPress::get( 'arbitrary_code_before_body_closing' ) ?>
-<!-- anand -->
 <!-- <span aria-hidden="true" style="display: none;" hidden></span> -->
 </body>
 
 </html>
-
-
