@@ -149,7 +149,7 @@ top: 51%!important;
     display: block!important;
 }
     .slider .slick-prev {
-    z-index: 999;
+    z-index: 1;
     position: absolute;
     left: 9.9%;
 }
@@ -231,7 +231,7 @@ top: 51%!important;
 
 .slider .slick-prev {
     bottom: 57px;
-    z-index: 999;
+    z-index: 1;
     left: -16px;
 }
 .box-testimonials {
