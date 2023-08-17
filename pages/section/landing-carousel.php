@@ -1,5 +1,5 @@
 <section class="landing-carousel-section fill-blue-5 position-relative" id="landing-carousel-section" data-section-title="Landing Carousel Section" data-section-slug="landing-carousel-section">
-	<div class="row carousel js_carousel_container" style="--fade-left: linear-gradient( to left, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%); --fade-right: linear-gradient( to right, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%);">
+	<div class="row carousel js_carousel_container" style="--fade-left: linear-gradient( to left, rgba(0, 71, 167, 0) 0%, rgba(0, 71, 167, 1) 50%); --fade-right: linear-gradient( to right, rgba(0, 71, 167, 0) 0%, rgba(0, 71, 167, 1) 50%);">
 		<div class="carousel-list js_carousel_content">
 			<?php foreach ( $carouselSlides as $slide ) : ?>
 				<div class="row carousel-list-item js_carousel_item">
