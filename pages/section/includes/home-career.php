@@ -28,7 +28,7 @@
 </ul>
 <?php endif; ?>
 <div class="" onclick="window.location='https://whitegold.money/careers/';">
-<a href="https://whitegold.money/careers/"><a class="btn-custom-primary" href="https://whitegold.money/careers/">View Current Openings</a></a></div>
+<a href="https://whitegold.money/careers/" aria-label="careers"><a class="btn-custom-primary" aria-label="View Current Openings" href="https://whitegold.money/careers/">View Current Openings</a></a></div>
 </div>
 </div>
 
@@ -96,7 +96,8 @@ font-size:34.5px;
 list-style:none;
 padding-left: 20px;
 position: relative;
-    color: #ffffffe6;
+color: #ffffffe6;
+font-size:16px;
 }
 
 
