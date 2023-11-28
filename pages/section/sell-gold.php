@@ -26,7 +26,7 @@
 						<div class="card-content px-50">
 							<div class="row space-50-top _space-200-top-bottom">
 								<div class="columns small-9 small-offset-1 px-50 space-50-bottom">
-									<div class="h4 medium space-25-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">50 Branches</div>
+									<div class="h4 medium space-25-bottom" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">60+ Branches</div>
 									<div class="h5 medium mb-200 md:mb-0" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.35)">Across Karnataka, <br>Tamil Nadu and <br>Kerala</div>
 									<a href="/<?= REGION ?>/branches" class="button fill-light" style="margin-top: var(--space-150);">
 										<span class="button-label">Find Branch&ensp;</span>
