@@ -168,4 +168,8 @@ arrows: true,
     border-radius: 7px;
     text-decoration: none!important;
     font-weight: 700;
-}</style>
+}
+
+.sell-gold-section{display:none;}
+
+</style>
