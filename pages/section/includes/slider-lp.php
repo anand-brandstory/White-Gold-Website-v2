@@ -2,7 +2,7 @@
 <div class="slider-desktop">
 <section class="landing-carousel-section fill-blue-5 position-relative d-none d-md-block" id="landing-carousel-section" data-section-title="Landing Carousel Section" data-section-slug="landing-carousel-section" style="
 background-image: url(<?php the_field('add_banner_img_bg'); ?>);background-position: right -10% bottom 45%;background-size: contain;background-repeat: no-repeat;">
-	<div class="row carousel js_carousel_container" style="--fade-left: linear-gradient( to left, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%); --fade-right: linear-gradient( to right, rgba(0, 50, 160, 0) 0%, rgba(0, 50, 160, 1) 50%);">
+	<div class="row carousel js_carousel_container" style="--fade-left: linear-gradient( to left, rgba(0, 50, 160, 0) 0%, rgb(0 50 160 / 0%) 50%); --fade-right: linear-gradient( to right, rgba(0, 50, 160, 0) 0%, rgb(0 50 160 / 0%) 50%);">
 		<div class="carousel-list js_carousel_content">
 		<?php if( have_rows('add_banner_section') ): ?>
 		<?php while( have_rows('add_banner_section') ): the_row(); ?>
