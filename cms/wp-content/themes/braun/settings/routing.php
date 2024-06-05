@@ -68,3 +68,15 @@ add_filter( 'robots_txt', function ( $output, $isSitePublic ) {
 
 	return $output;
 }, 100, 2 );
+
+// Cache page routes to the CDN (CloudFlare), for 1 minute
+add_filter( 'send_headers', function () {
+	if ( is_user_logged_in() ) {
+		// ^ This does not work in this filter.
+		// 	Hence this check is performed in CloudFlare's cache rule instead,
+		// 	looking for the presence of the `wordpress_logged_in...` cookie.
+		return;
+	}
+
+	header( 'Cache-Control: s-maxage=60', true );
+}, PHP_INT_MAX );
