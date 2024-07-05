@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying for thankyou page 
+ * The template for displaying for location landing pages
  *
  * `/cms/wp-content/themes/<theme>/404.php` has been symbolically linked to this.
  *
@@ -12,7 +12,7 @@
 // If a post revision or preview is being viewed, and the user is not authorized to view it, simply return to the home page
 // NOTE: The revision / preview URLs of **unpublished** posts have no URL slugs, only query parameters, i.e. they essential resemble that of the home page URL
 if ( \BFS\Router::$urlSlug == '' )
-	return require_once __ROOT__ . '/pages/ka/gold-buyers-in-lingarajapuram.php';
+	return require_once __ROOT__ . '/pages/ka/gold-buyers-in-uttarahalli.php';
 
 
 
@@ -65,6 +65,8 @@ require_once __ROOT__ . '/pages/partials/header-custom.php';
 <!-- <script type="text/javascript" src="/js/pages/custom.js"></script> -->
 <?php
 require_once __ROOT__ . '/pages/partials/footer.php'; ?>
+
+<script type="text/javascript" src="/js/modules/lp.js<?= $ver ?>"></script>
 
 
 <script>
@@ -422,39 +424,25 @@ $releaseGoldFAQsSection.on( "change", ".js_faq_toggle", function ( event ) {
 } );
 
 </script>
+
 <style>
-    .lp-lingarajapuram .highlight .slick-prev {
-    position: absolute;
-    left: 35%;
-    top: 137%;
-    z-index: 1;
-}
-.lp-lingarajapuram .highlight .slick-next {
-    position: absolute;
-    top: 137%;
-    right: 36%;
-    z-index: 1;
-}
-.lp-lingarajapuram .highlight .slick-dots {
-    bottom: -214px!important;
-} 
+    
 @media screen and (max-width: 980px){
-    .lp-lingarajapuram .highlight .slick-prev {
+    .lp-uttarahalli .highlight .slick-prev {
     position: absolute;
     left: 35%;
-    top: 225%;
+    top: 245%;
     z-index: 1;
 }
-.lp-lingarajapuram .highlight .slick-next {
+.lp-uttarahalli .highlight .slick-next {
     position: absolute;
-    top: 225%;
+    top: 245%;
     right: 35%;
     z-index: 1;
 }  
 }
 
 </style>
-
 
 
 
